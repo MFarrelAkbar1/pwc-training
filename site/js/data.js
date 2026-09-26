@@ -1,26 +1,47 @@
 // Which tests exist, how to load them from site/data/*.json,
 // and how to build question sets (single test, mixed random set, wrong-answer redo).
 
+// prefix: first letter of every test and question id in the section ("N3", "N3-Q04").
+// minutes / questions: per test, also used for the mixed random set.
+// testMinutes / testNames: per-test overrides (Logic subtests have their own timers).
+// generated: questions were written for this site, not taken from the source PDF.
 export const SECTIONS = {
-  numerical: { name: "Numerical Reasoning", tests: [1, 2, 3, 4, 5], minutes: 17, questions: 20 },
-  verbal: { name: "Verbal Reasoning", tests: [1, 2, 3, 4, 5, 6, 7], minutes: 8, questions: 15 },
+  numerical: { name: "Numerical Reasoning", short: "Numerical", prefix: "N", tests: [1, 2, 3, 4, 5], minutes: 17, questions: 20 },
+  verbal: { name: "Verbal Reasoning", short: "Verbal", prefix: "V", tests: [1, 2, 3, 4, 5, 6, 7], minutes: 8, questions: 15 },
+  english: { name: "English (TOEFL-style)", short: "English", prefix: "E", tests: [1, 2, 3], minutes: 15, questions: 20, generated: true },
+  logic: {
+    name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4], minutes: 10, questions: 15, generated: true,
+    testMinutes: { 1: 10, 2: 12, 3: 8, 4: 12 },
+    testNames: { 1: "Number sequences", 2: "Figure patterns", 3: "Analogies", 4: "Syllogisms" },
+  },
+  technical: { name: "Technical (Risk Assurance)", short: "Technical", prefix: "T", tests: [1, 2, 3], minutes: 20, questions: 20, generated: true },
 };
 
+// "N" -> "numerical", "L" -> "logic", …
+const SECTION_BY_PREFIX = Object.fromEntries(Object.entries(SECTIONS).map(([key, s]) => [s.prefix, key]));
+
+export function sectionOfId(id) {
+  return SECTION_BY_PREFIX[id[0]];
+}
+
+export function isTestId(id) {
+  return /^[A-Z]\d+$/.test(id) && SECTIONS[sectionOfId(id)]?.tests.includes(Number(id.slice(1)));
+}
+
 export function testId(section, number) {
-  return (section === "numerical" ? "N" : "V") + number;
+  return SECTIONS[section].prefix + number;
 }
 
 export function allTestIds(section) {
   return SECTIONS[section].tests.map((n) => testId(section, n));
 }
 
-// "N3-Q04" -> "N3"; "V2-Q10" -> "verbal"
+// "N3-Q04" -> "N3"; "L2-Q10" -> "logic"
 export const testIdOf = (q) => q.id.split("-")[0];
-export const sectionOf = (q) => (q.id.startsWith("N") ? "numerical" : "verbal");
+export const sectionOf = (q) => sectionOfId(q.id);
 
 function testFile(id) {
-  const section = id.startsWith("N") ? "numerical" : "verbal";
-  return `data/${section}-${id.slice(1)}.json`;
+  return `data/${sectionOfId(id)}-${id.slice(1)}.json`;
 }
 
 const requests = new Map(); // id -> Promise<test>
@@ -74,8 +95,7 @@ export function shuffle(items) {
 
 export async function singleTestSet(id) {
   const test = await loadTest(id);
-  const section = id.startsWith("N") ? "numerical" : "verbal";
-  return { kind: "test", id, section, title: test.title, timeLimitSec: test.timeLimitSec, questions: test.questions };
+  return { kind: "test", id, section: sectionOfId(id), title: test.title, timeLimitSec: test.timeLimitSec, questions: test.questions };
 }
 
 // Random questions from every test in the section. Unscored (dropped) questions are never included.

@@ -1,0 +1,220 @@
+{
+  "id": "L1",
+  "section": "logic",
+  "test": 1,
+  "title": "Logic – Number sequences",
+  "timeLimitSec": 600,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "L1-Q01",
+      "text": "What number comes next?  2,  6,  18,  54,  162,  ?",
+      "options": {
+        "A": "485",
+        "B": "486",
+        "C": "198",
+        "D": "594",
+        "E": "488"
+      },
+      "answer": "B",
+      "explanation": "Multiply by 3 each time: 162 × 3 = 486.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q02",
+      "text": "What number comes next?  4,  4,  8,  12,  20,  32,  ?",
+      "options": {
+        "A": "51",
+        "B": "64",
+        "C": "54",
+        "D": "52",
+        "E": "50"
+      },
+      "answer": "D",
+      "explanation": "Each term is the sum of the two before it: 20 + 32 = 52.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q03",
+      "text": "What number comes next?  15,  24,  35,  48,  63,  ?",
+      "options": {
+        "A": "76",
+        "B": "65",
+        "C": "81",
+        "D": "78",
+        "E": "80"
+      },
+      "answer": "E",
+      "explanation": "Square numbers − 1: 9² − 1 = 80.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q04",
+      "text": "What number comes next?  3,  7,  10,  17,  27,  44,  ?",
+      "options": {
+        "A": "71",
+        "B": "61",
+        "C": "72",
+        "D": "73",
+        "E": "70"
+      },
+      "answer": "A",
+      "explanation": "Each term is the sum of the two before it: 27 + 44 = 71.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q05",
+      "text": "What number comes next?  27,  38,  49,  60,  71,  82,  ?",
+      "options": {
+        "A": "91",
+        "B": "94",
+        "C": "95",
+        "D": "82",
+        "E": "93"
+      },
+      "answer": "E",
+      "explanation": "Add 11 each time: 82 + 11 = 93.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q06",
+      "text": "What number comes next?  0,  3,  8,  15,  24,  ?",
+      "options": {
+        "A": "44",
+        "B": "34",
+        "C": "37",
+        "D": "35",
+        "E": "31"
+      },
+      "answer": "D",
+      "explanation": "Square numbers − 1: 6² − 1 = 35.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q07",
+      "text": "What number comes next?  5,  6,  8,  11,  15,  20,  ?",
+      "options": {
+        "A": "27",
+        "B": "24",
+        "C": "28",
+        "D": "21",
+        "E": "26"
+      },
+      "answer": "E",
+      "explanation": "The differences (1, 2, 3, 4, 5) grow by 1, so the next difference is 6: 20 + 6 = 26.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q08",
+      "text": "What number comes next?  7,  10,  16,  25,  37,  52,  ?",
+      "options": {
+        "A": "70",
+        "B": "72",
+        "C": "69",
+        "D": "68",
+        "E": "85"
+      },
+      "answer": "A",
+      "explanation": "The differences (3, 6, 9, 12, 15) grow by 3, so the next difference is 18: 52 + 18 = 70.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q09",
+      "text": "What number comes next?  17,  11,  5,  -1,  -7,  -13,  ?",
+      "options": {
+        "A": "-17",
+        "B": "-13",
+        "C": "-18",
+        "D": "-25",
+        "E": "-19"
+      },
+      "answer": "E",
+      "explanation": "Subtract 6 each time: -13 − 6 = -19.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q10",
+      "text": "What number comes next?  6,  28,  9,  25,  12,  22,  ?",
+      "options": {
+        "A": "19",
+        "B": "9",
+        "C": "15",
+        "D": "5",
+        "E": "32"
+      },
+      "answer": "C",
+      "explanation": "Two series alternate: 6, 9, 12, … (+3) and 28, 25, 22, … (-3). The next term belongs to the first series: 15.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q11",
+      "text": "What number comes next?  4,  5,  9,  14,  23,  37,  ?",
+      "options": {
+        "A": "59",
+        "B": "60",
+        "C": "74",
+        "D": "58",
+        "E": "61"
+      },
+      "answer": "B",
+      "explanation": "Each term is the sum of the two before it: 23 + 37 = 60.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q12",
+      "text": "What number comes next?  12,  13,  16,  21,  28,  37,  ?",
+      "options": {
+        "A": "49",
+        "B": "48",
+        "C": "47",
+        "D": "46",
+        "E": "39"
+      },
+      "answer": "B",
+      "explanation": "The differences (1, 3, 5, 7, 9) grow by 2, so the next difference is 11: 37 + 11 = 48.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q13",
+      "text": "What number comes next?  3,  7,  14,  18,  36,  40,  ?",
+      "options": {
+        "A": "81",
+        "B": "80",
+        "C": "84",
+        "D": "76",
+        "E": "44"
+      },
+      "answer": "B",
+      "explanation": "Alternate '+4' and '×2'. The last step is × 2: 40 × 2 = 80.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q14",
+      "text": "What number comes next?  5,  15,  45,  135,  405,  ?",
+      "options": {
+        "A": "1215",
+        "B": "1216",
+        "C": "1213",
+        "D": "1485",
+        "E": "1217"
+      },
+      "answer": "A",
+      "explanation": "Multiply by 3 each time: 405 × 3 = 1215.",
+      "source": "generated"
+    },
+    {
+      "id": "L1-Q15",
+      "text": "What number comes next?  5,  8,  16,  19,  38,  41,  ?",
+      "options": {
+        "A": "60",
+        "B": "81",
+        "C": "79",
+        "D": "80",
+        "E": "82"
+      },
+      "answer": "E",
+      "explanation": "Alternate '+3' and '×2'. The last step is × 2: 41 × 2 = 82.",
+      "source": "generated"
+    }
+  ]
+}

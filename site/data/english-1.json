@@ -1,0 +1,328 @@
+{
+  "id": "E1",
+  "section": "english",
+  "test": 1,
+  "title": "English – Test 1",
+  "timeLimitSec": 900,
+  "source": "generated",
+  "passages": {
+    "p1": {
+      "text": "In 2023, Halden Logistics replaced its paper-based invoice approval process with an automated workflow. Under the old system, an invoice passed through an average of four desks and took eleven days to approve. The new system routes each invoice directly to the budget owner and flags any amount that differs from the purchase order by more than two percent. Approval time has since fallen to three days, although managers note that the number of flagged invoices was higher than expected during the first quarter, as suppliers adjusted to the new format.",
+      "truncated": false
+    },
+    "p2": {
+      "text": "When Brightwell Consulting moved to a hybrid working model, it expected office costs to fall sharply. Rent did fall by 30 percent after the firm gave up two of its five floors, but spending on travel rose, because teams that no longer shared an office began meeting clients and each other at hotels and rented rooms. The firm's finance director argues that the net saving, about 8 percent of total premises and travel costs, understates the benefit, since staff turnover has dropped from 18 to 11 percent. Critics inside the firm point out that turnover fell across the whole industry during the same period.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "E1-Q01",
+      "skill": "structure",
+      "text": "The quarterly report, ______ was reviewed by the audit committee, showed a sharp rise in operating costs.",
+      "options": {
+        "A": "which",
+        "B": "that",
+        "C": "what",
+        "D": "it"
+      },
+      "answer": "A",
+      "explanation": "A non-restrictive clause set off by commas takes \"which\", not \"that\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q02",
+      "skill": "structure",
+      "text": "Neither the manager nor the analysts ______ aware of the new deadline.",
+      "options": {
+        "A": "has been",
+        "B": "was",
+        "C": "were",
+        "D": "is"
+      },
+      "answer": "C",
+      "explanation": "With \"neither … nor\" the verb agrees with the nearer subject, \"analysts\" (plural).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q03",
+      "skill": "structure",
+      "text": "By the time the auditors arrived, the finance team ______ the reconciliation.",
+      "options": {
+        "A": "will complete",
+        "B": "completes",
+        "C": "had completed",
+        "D": "has completed"
+      },
+      "answer": "C",
+      "explanation": "An action finished before another past action takes the past perfect: \"had completed\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q04",
+      "skill": "structure",
+      "text": "The board requested that the proposal ______ before the next meeting.",
+      "options": {
+        "A": "is revised",
+        "B": "was revised",
+        "C": "revising",
+        "D": "be revised"
+      },
+      "answer": "D",
+      "explanation": "After \"request that\", formal English uses the subjunctive base form: \"be revised\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q05",
+      "skill": "structure",
+      "text": "______ the market was volatile, the company met its revenue targets.",
+      "options": {
+        "A": "However",
+        "B": "Despite",
+        "C": "Because of",
+        "D": "Although"
+      },
+      "answer": "D",
+      "explanation": "A full clause (\"the market was volatile\") needs a conjunction; \"despite\" and \"because of\" take a noun, and \"however\" can't join clauses.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q06",
+      "skill": "structure",
+      "text": "Of the two candidates, Ms Tan is the ______ qualified.",
+      "options": {
+        "A": "more",
+        "B": "most",
+        "C": "much",
+        "D": "mostly"
+      },
+      "answer": "A",
+      "explanation": "Comparing two people uses the comparative \"more\", not the superlative.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q07",
+      "skill": "structure",
+      "text": "The new software allows staff ______ expense claims from their phones.",
+      "options": {
+        "A": "submit",
+        "B": "submitting",
+        "C": "to submit",
+        "D": "submitted"
+      },
+      "answer": "C",
+      "explanation": "\"Allow someone\" is followed by the to-infinitive: \"allows staff to submit\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q08",
+      "skill": "structure",
+      "text": "Only after the contract was signed ______ the full cost of the project.",
+      "options": {
+        "A": "realised the client",
+        "B": "the client did realise",
+        "C": "the client realised",
+        "D": "did the client realise"
+      },
+      "answer": "D",
+      "explanation": "A sentence starting with \"Only after …\" needs inverted word order: \"did the client realise\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q09",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  Each of the new employees (A) are required (B) to complete (C) the security training (D) before accessing the system.",
+      "options": {
+        "A": "are required",
+        "B": "to complete",
+        "C": "the security training",
+        "D": "before accessing"
+      },
+      "answer": "A",
+      "explanation": "\"Each\" is singular, so it should be \"is required\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q10",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  Since the company (A) introduced its new returns policy, the number of complaints (B) about late deliveries (C) have decreased (D) significantly.",
+      "options": {
+        "A": "introduced",
+        "B": "about late deliveries",
+        "C": "have decreased",
+        "D": "significantly"
+      },
+      "answer": "C",
+      "explanation": "The subject is \"the number\" (singular), so it should be \"has decreased\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q11",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  The consultant (A) recommended that the firm (B) reduces its reliance on (C) a single supplier (D) within two years.",
+      "options": {
+        "A": "recommended that the firm",
+        "B": "reduces its reliance on",
+        "C": "a single supplier",
+        "D": "within two years"
+      },
+      "answer": "B",
+      "explanation": "After \"recommend that\", use the base form: \"the firm reduce\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q12",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  The CEO (A) asked my colleague and (B) I to present (C) the findings (D) to the board.",
+      "options": {
+        "A": "asked my colleague and",
+        "B": "I to present",
+        "C": "the findings",
+        "D": "to the board"
+      },
+      "answer": "B",
+      "explanation": "The pronoun is an object of \"asked\", so it should be \"me\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q13",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "According to the passage, what happens to an invoice whose amount differs from the purchase order by more than two percent?",
+      "options": {
+        "A": "It is rejected automatically.",
+        "B": "It is flagged.",
+        "C": "It is sent to four departments.",
+        "D": "It is returned to the supplier."
+      },
+      "answer": "B",
+      "explanation": "The system \"flags any amount that differs … by more than two percent\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q14",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "It can be inferred that the high number of flagged invoices in the first quarter was",
+      "options": {
+        "A": "due to managers rejecting more invoices.",
+        "B": "likely to ease as suppliers got used to it.",
+        "C": "the main reason approval times increased.",
+        "D": "caused by errors in the new approval system."
+      },
+      "answer": "B",
+      "explanation": "It happened \"as suppliers adjusted to the new format\", which implies it should ease as they get used to it; approval time actually fell.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q15",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "The word \"routes\" in the passage is closest in meaning to",
+      "options": {
+        "A": "delays",
+        "B": "reviews",
+        "C": "prints",
+        "D": "sends"
+      },
+      "answer": "D",
+      "explanation": "The system \"routes\" (sends) each invoice directly to the budget owner.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q16",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "How long did invoice approval take under the old system?",
+      "options": {
+        "A": "Two days",
+        "B": "Eleven days",
+        "C": "Three days",
+        "D": "Four days"
+      },
+      "answer": "B",
+      "explanation": "Under the old system an invoice \"took eleven days to approve\"; three days is the new time.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q17",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "What was the main unexpected result of the move to hybrid working?",
+      "options": {
+        "A": "Rent increased.",
+        "B": "Staff turnover increased.",
+        "C": "Travel spending rose.",
+        "D": "The firm moved to a new building."
+      },
+      "answer": "C",
+      "explanation": "The firm expected costs to fall, but travel spending rose as teams met at hotels and rented rooms.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q18",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "Why does the finance director believe the 8 percent figure understates the benefit?",
+      "options": {
+        "A": "Staff turnover fell.",
+        "B": "Rent fell by 30 percent.",
+        "C": "Travel costs were overestimated.",
+        "D": "Two floors were given up."
+      },
+      "answer": "A",
+      "explanation": "The director points to turnover dropping from 18 to 11 percent as an extra benefit.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q19",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "The critics' point suggests that",
+      "options": {
+        "A": "hybrid working may not explain the drop in turnover.",
+        "B": "hybrid working actually caused turnover to increase.",
+        "C": "the finance director miscalculated the net saving.",
+        "D": "the firm should move back to all five floors."
+      },
+      "answer": "A",
+      "explanation": "If turnover fell across the whole industry, the firm's drop may have other causes.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E1-Q20",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "How many floors did the firm keep?",
+      "options": {
+        "A": "Two",
+        "B": "Five",
+        "C": "Eight",
+        "D": "Three"
+      },
+      "answer": "D",
+      "explanation": "It had five floors and gave up two, leaving three.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

@@ -1,27 +1,50 @@
 // Pieces of the question screen shared by the quiz and the results review.
 import { el, fmt } from "./dom.js";
-import { correctAnswer, testOf, testIdOf, sectionOf } from "./data.js";
+import { SECTIONS, correctAnswer, testOf, testIdOf, sectionOf } from "./data.js";
 import { drawChart, chartHeight, describeChart } from "./charts.js";
 
 // ---------- chart / table / passage panel ----------
 
 // Each question brings its own chart/table or passage from the test it belongs to.
+// Some questions (grammar, logic, technical) have neither.
+export function hasContext(q) {
+  return Boolean(q.dataset || q.passage);
+}
+
+export function contextTitle(q) {
+  return q.passage ? "Passage" : "Chart / table";
+}
+
 export function renderContext(container, q) {
   const test = testOf(q);
-  if (sectionOf(q) === "verbal") renderPassage(container, test.passages[q.passage]);
-  else renderDataset(container, test.datasets[q.dataset]);
+  if (q.passage) renderPassage(container, test.passages[q.passage]);
+  else if (q.dataset) renderDataset(container, test.datasets[q.dataset]);
 }
 
 // Identifies the chart/passage a question uses, so the panel is only redrawn when it changes.
 export function contextKey(q) {
-  return `${testIdOf(q)}:${q.dataset ?? q.passage}`;
+  return hasContext(q) ? `${testIdOf(q)}:${q.dataset ?? q.passage}` : null;
 }
 
 // "Numerical Test 3 · Question 4": where a question in a mixed or redo set comes from.
 export function sourceLabel(q) {
   const [test, number] = q.id.split("-");
-  const section = sectionOf(q) === "numerical" ? "Numerical" : "Verbal";
-  return `${section} Test ${test.slice(1)} · Question ${Number(number.slice(1))}`;
+  return `${SECTIONS[sectionOf(q)].short} Test ${test.slice(1)} · Question ${Number(number.slice(1))}`;
+}
+
+// The figure for a question that is itself a picture (Logic figure patterns).
+export function renderQuestionImage(q) {
+  if (!q.image) return null;
+  return el("img", { class: "q-image", src: q.image, alt: q.imageAlt ?? "Question figure" });
+}
+
+// Small label on questions written for this site rather than taken from the source PDF.
+export function renderGenerated(q) {
+  if (q.source !== "generated") return null;
+  return el("span", {
+    class: "chip generated",
+    title: "This question was generated for practice and hasn't been checked against an official source.",
+  }, "Generated · unverified");
 }
 
 const CUT_MARKER = "[...text cut off in source]";

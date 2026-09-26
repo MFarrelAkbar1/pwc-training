@@ -7,7 +7,7 @@
 //   #/results/<attempt id>
 // Add ?t=10 to a quiz address to shorten the timer to 10 s (a testing aid).
 import { el, clear, showModal } from "./dom.js";
-import { SECTIONS, testId, loadTests, singleTestSet, mixedSet, redoSet } from "./data.js";
+import { SECTIONS, testId, isTestId, loadTests, singleTestSet, mixedSet, redoSet } from "./data.js";
 import { loadProgress, statsFor, sectionSummary, bankIds, getAttempt, resetProgress } from "./storage.js";
 import { startQuiz, stopQuiz, isQuizRunning } from "./quiz-view.js";
 import { showResults } from "./results-view.js";
@@ -52,7 +52,7 @@ async function route() {
   window.scrollTo(0, 0);
   try {
     if (page === "section" && SECTIONS[a]) return showSection(a);
-    if (page === "quiz" && /^[NV]\d$/.test(a) && MODES.includes(b)) return run(await singleTestSet(a), b);
+    if (page === "quiz" && isTestId(a) && MODES.includes(b)) return run(await singleTestSet(a), b);
     if (page === "mixed" && SECTIONS[a] && MODES.includes(b)) return run(await mixedSet(a), b);
     if (page === "redo" && SECTIONS[a]) return openRedo(a);
     if (page === "results") return await openResults(a);
@@ -76,7 +76,8 @@ function showHome() {
     el("header", { class: "page-head" },
       el("h1", {}, "PwC Aptitude Practice"),
       el("p", { class: "muted" },
-        "Numerical and verbal reasoning practice from past test questions. Exam mode is timed like the real test; practice mode explains every answer.")),
+        "Numerical and verbal reasoning from past PwC test questions, plus generated practice sets for English, " +
+        "logic and technical (risk assurance). Exam mode is timed; practice mode explains every answer.")),
     el("div", { class: "cards" }, ...Object.entries(SECTIONS).map(([key, s]) => sectionCard(key, s))),
     el("section", { class: "progress" },
       el("h2", {}, "Your progress"),
@@ -87,10 +88,22 @@ function showHome() {
       hasProgress && el("button", { class: "btn small", onclick: confirmReset }, "Reset progress")));
 }
 
+// "4 subtests · 15 questions each · 8–12 minutes"
+function sectionDetails(section) {
+  const minutes = section.testMinutes ? Object.values(section.testMinutes) : [section.minutes];
+  const range = Math.min(...minutes) === Math.max(...minutes)
+    ? `${minutes[0]} minutes` : `${Math.min(...minutes)}–${Math.max(...minutes)} minutes`;
+  const kind = section.testNames ? "subtests" : "tests";
+  return `${section.tests.length} ${kind} · ${section.questions} questions each · ${range}`;
+}
+
 function sectionCard(key, section) {
   return el("a", { class: "card", href: `#/section/${key}` },
     el("h2", {}, section.name),
-    el("p", { class: "muted" }, `${section.tests.length} tests · ${section.questions} questions each · ${section.minutes} minutes`),
+    el("p", { class: "muted" }, sectionDetails(section)),
+    section.generated
+      ? el("p", {}, el("span", { class: "chip generated" }, "Generated · unverified"))
+      : el("p", {}, el("span", { class: "chip source-pdf" }, "From past test PDF")),
     el("p", {}, "Tests, mixed sets and wrong-answer redo →"));
 }
 
@@ -133,8 +146,11 @@ function showSection(key) {
   app.append(
     el("a", { class: "back", href: "#/" }, "← Home"),
     el("h1", {}, section.name),
-    el("p", { class: "muted" }, `${section.questions} questions · ${section.minutes} minutes per test in exam mode.`),
-    el("ul", { class: "test-list" }, ...section.tests.map((n) => testRow(testId(key, n), `Test ${n}`))),
+    el("p", { class: "muted" }, sectionDetails(section) + " in exam mode."),
+    section.generated && el("p", { class: "flag generated-note" },
+      "These questions were generated for practice. They follow the style of the real test but haven't been " +
+      "checked against an official source, so treat an answer you disagree with as a possible error."),
+    el("ul", { class: "test-list" }, ...section.tests.map((n) => testRow(key, n))),
     el("h2", {}, "More practice"),
     el("ul", { class: "test-list" },
       el("li", { class: "test-row" },
@@ -158,13 +174,18 @@ function showSection(key) {
             : el("button", { class: "btn", disabled: true }, "Start redo")))));
 }
 
-function testRow(id, label) {
+function testRow(key, n) {
+  const section = SECTIONS[key];
+  const id = testId(key, n);
+  const name = section.testNames?.[n];
+  const label = name ? `Subtest ${n}: ${name}` : `Test ${n}`;
+  const minutes = section.testMinutes?.[n] ?? section.minutes;
   const stats = statsFor(id);
   const summary = stats.attempts
     ? `${stats.attempts} attempt${stats.attempts > 1 ? "s" : ""} · best ${stats.best}% · last ${stats.last}%`
     : "Not attempted yet";
   return el("li", { class: "test-row" },
-    el("div", {}, el("strong", {}, label), el("p", { class: "muted" }, summary)),
+    el("div", {}, el("strong", {}, label), el("p", { class: "muted" }, `${minutes} min · ${summary}`)),
     el("div", { class: "actions" },
       el("a", { class: "btn primary", href: `#/quiz/${id}/exam` }, "Exam"),
       el("a", { class: "btn", href: `#/quiz/${id}/practice` }, "Practice")));

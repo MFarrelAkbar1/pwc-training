@@ -1,0 +1,328 @@
+{
+  "id": "E2",
+  "section": "english",
+  "test": 2,
+  "title": "English – Test 2",
+  "timeLimitSec": 900,
+  "source": "generated",
+  "passages": {
+    "p1": {
+      "text": "Northgate Bank introduced a machine-learning model in 2022 to identify suspicious card transactions. The previous rule-based system blocked any purchase above a fixed amount made in a foreign country, which meant that many legitimate travellers had their cards declined. The new model considers dozens of factors, including the customer's usual spending pattern and whether the merchant has been linked to fraud before. In its first year, the bank reported that fraud losses fell by 22 percent and that the number of legitimate transactions wrongly declined was halved. However, the bank's internal audit team noted that few employees could explain why the model flagged a particular transaction, which made it harder to respond to customer complaints.",
+      "truncated": false
+    },
+    "p2": {
+      "text": "To cut purchasing costs, Arden Foods reduced its number of packaging suppliers from fourteen to three. Larger orders allowed the company to negotiate unit prices about 9 percent lower than before. Six months later, a fire at one of the three remaining suppliers halted deliveries for five weeks. Arden had no approved alternative and was forced to buy packaging at short notice, paying nearly twice the usual price. The company now requires that every critical material has at least two approved suppliers.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "E2-Q01",
+      "skill": "structure",
+      "text": "If the invoice ______ earlier, the payment would not have been delayed.",
+      "options": {
+        "A": "was approved",
+        "B": "has been approved",
+        "C": "had been approved",
+        "D": "would be approved"
+      },
+      "answer": "C",
+      "explanation": "A third conditional (\"would not have been\") needs the past perfect in the if-clause: \"had been approved\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q02",
+      "skill": "structure",
+      "text": "The auditor asked where ______.",
+      "options": {
+        "A": "is the file stored",
+        "B": "stored the file",
+        "C": "was the file stored",
+        "D": "the file was stored"
+      },
+      "answer": "D",
+      "explanation": "An embedded (reported) question uses statement word order: \"where the file was stored\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q03",
+      "skill": "structure",
+      "text": "Sales rose ______ 12 percent in the second quarter.",
+      "options": {
+        "A": "with",
+        "B": "by",
+        "C": "on",
+        "D": "at"
+      },
+      "answer": "B",
+      "explanation": "The size of a change takes \"by\": \"rose by 12 percent\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q04",
+      "skill": "structure",
+      "text": "The team was unable to finish the analysis ______ the data arrived late.",
+      "options": {
+        "A": "because",
+        "B": "so",
+        "C": "although",
+        "D": "despite"
+      },
+      "answer": "A",
+      "explanation": "The late data is the reason, and it's a full clause, so \"because\" fits.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q05",
+      "skill": "structure",
+      "text": "Neither of the proposals ______ the budget limit.",
+      "options": {
+        "A": "meet",
+        "B": "meets",
+        "C": "are meeting",
+        "D": "meeting"
+      },
+      "answer": "B",
+      "explanation": "\"Neither of …\" is treated as singular in formal English: \"neither … meets\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q06",
+      "skill": "structure",
+      "text": "The CFO, together with her deputies, ______ attending the conference.",
+      "options": {
+        "A": "is",
+        "B": "have been",
+        "C": "are",
+        "D": "were"
+      },
+      "answer": "A",
+      "explanation": "\"Together with …\" doesn't change the subject; \"the CFO\" is singular, so \"is\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q07",
+      "skill": "structure",
+      "text": "The report must be submitted no later ______ Friday.",
+      "options": {
+        "A": "then",
+        "B": "to",
+        "C": "than",
+        "D": "of"
+      },
+      "answer": "C",
+      "explanation": "The fixed expression is \"no later than\"; \"then\" is about time order.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q08",
+      "skill": "structure",
+      "text": "Hardly had the meeting started ______ the fire alarm went off.",
+      "options": {
+        "A": "than",
+        "B": "then",
+        "C": "when",
+        "D": "that"
+      },
+      "answer": "C",
+      "explanation": "\"Hardly had … when\" is the correct pair (\"than\" goes with \"no sooner\").",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q09",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  (A) Less employees (B) attended the training (C) this year than (D) in any previous year.",
+      "options": {
+        "A": "Less employees",
+        "B": "attended the training",
+        "C": "this year than",
+        "D": "in any previous year"
+      },
+      "answer": "A",
+      "explanation": "\"Employees\" can be counted, so it should be \"fewer employees\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q10",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  The award (A) was given to the manager (B) who's team (C) delivered the project (D) ahead of schedule.",
+      "options": {
+        "A": "was given to the manager",
+        "B": "who's team",
+        "C": "delivered the project",
+        "D": "ahead of schedule"
+      },
+      "answer": "B",
+      "explanation": "The possessive is \"whose\"; \"who's\" means \"who is\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q11",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  Neither the auditors (A) nor the manager (B) were (C) able to locate (D) the signed contract.",
+      "options": {
+        "A": "nor the manager",
+        "B": "were",
+        "C": "able to locate",
+        "D": "the signed contract"
+      },
+      "answer": "B",
+      "explanation": "With \"neither … nor\", the verb agrees with the nearer subject, \"the manager\": \"was\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q12",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  The survey shows that customer satisfaction (A) has risen (B) over the past year (C) and is expected to grow (D) steady.",
+      "options": {
+        "A": "has risen",
+        "B": "over the past year",
+        "C": "and is expected to grow",
+        "D": "steady"
+      },
+      "answer": "D",
+      "explanation": "\"Grow\" is modified by an adverb: \"steadily\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q13",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "What is the passage mainly about?",
+      "options": {
+        "A": "Results and a drawback of a new fraud model",
+        "B": "The history and growth of Northgate Bank",
+        "C": "How internal audit teams investigate card fraud",
+        "D": "Why purchases made abroad are especially risky"
+      },
+      "answer": "A",
+      "explanation": "The passage describes the model's results (lower losses, fewer wrong declines) and one concern (it's hard to explain).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q14",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "What was a problem with the previous system?",
+      "options": {
+        "A": "It was too expensive for the bank to run.",
+        "B": "It relied entirely on machine learning.",
+        "C": "It ignored the size of each transaction.",
+        "D": "It declined many genuine purchases abroad."
+      },
+      "answer": "D",
+      "explanation": "It blocked large foreign purchases, so \"many legitimate travellers had their cards declined\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q15",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "According to the passage, what happened to the number of legitimate transactions wrongly declined?",
+      "options": {
+        "A": "It doubled.",
+        "B": "It fell by 22 percent.",
+        "C": "It stayed the same.",
+        "D": "It was cut by half."
+      },
+      "answer": "D",
+      "explanation": "It \"was halved\"; the 22 percent figure refers to fraud losses.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q16",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "The concern raised by internal audit relates mainly to",
+      "options": {
+        "A": "fraud losses rising after launch.",
+        "B": "changes in customer spending patterns.",
+        "C": "the model's lack of explainability.",
+        "D": "the cost of building the model."
+      },
+      "answer": "C",
+      "explanation": "Few employees could explain why the model flagged a transaction.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q17",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "Why did Arden reduce its number of suppliers?",
+      "options": {
+        "A": "To lower purchasing costs",
+        "B": "To improve quality",
+        "C": "Because suppliers had closed",
+        "D": "To meet a new regulation"
+      },
+      "answer": "A",
+      "explanation": "The passage opens: \"To cut purchasing costs, Arden Foods reduced its number of packaging suppliers\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q18",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "The word \"halted\" in the passage is closest in meaning to",
+      "options": {
+        "A": "slowed",
+        "B": "doubled",
+        "C": "stopped",
+        "D": "reported"
+      },
+      "answer": "C",
+      "explanation": "The fire \"halted\" (stopped) deliveries for five weeks.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q19",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "What can be inferred about the company's new policy?",
+      "options": {
+        "A": "It will lower unit prices even further.",
+        "B": "It aims to avoid relying on one supplier.",
+        "C": "It applies only to packaging materials.",
+        "D": "It was introduced before the fire happened."
+      },
+      "answer": "B",
+      "explanation": "Requiring two approved suppliers per critical material responds to the fire, where one supplier's outage left Arden without an alternative.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E2-Q20",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "How many packaging suppliers did Arden have after the change?",
+      "options": {
+        "A": "Nine",
+        "B": "Fourteen",
+        "C": "Two",
+        "D": "Three"
+      },
+      "answer": "D",
+      "explanation": "It went from fourteen suppliers to three.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

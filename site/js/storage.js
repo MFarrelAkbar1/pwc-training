@@ -1,6 +1,7 @@
 // Progress saved in this browser (localStorage).
 // Storage can be blocked (private windows, strict settings), so every access is
 // wrapped in try/catch and the site keeps working, just without saving.
+import { SECTIONS } from "./data.js";
 
 const KEY = "pwc.progress.v1";
 const inMemory = []; // attempts from this visit, in case storage is blocked
@@ -77,17 +78,16 @@ export function statsFor(setId) {
   return summarise(loadProgress().attempts.filter((a) => a.testId === setId));
 }
 
-// Question ids in the wrong-answer bank for one section ("N…" or "V…").
+// Question ids in the wrong-answer bank for one section.
 export function bankIds(section) {
-  const prefix = section === "numerical" ? "N" : "V";
+  const { prefix } = SECTIONS[section];
   return Object.keys(loadProgress().wrongBank).filter((id) => id.startsWith(prefix));
 }
 
 // Home-screen summary for a section: attempts, best full-test score, bank size.
 export function sectionSummary(section) {
-  const prefix = section === "numerical" ? "N" : "V";
-  const attempts = loadProgress().attempts.filter((a) => a.testId.startsWith(prefix) || a.section === section);
-  const fullTests = attempts.filter((a) => /^[NV]\d+$/.test(a.testId));
+  const attempts = loadProgress().attempts.filter((a) => a.section === section);
+  const fullTests = attempts.filter((a) => a.kind === "test");
   const best = fullTests.length ? fullTests.reduce((x, y) => (pct(y) > pct(x) ? y : x)) : null;
   return {
     attempts: attempts.length,

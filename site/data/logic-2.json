@@ -1,0 +1,250 @@
+{
+  "id": "L2",
+  "section": "logic",
+  "test": 2,
+  "title": "Logic – Figure patterns",
+  "timeLimitSec": 720,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "L2-Q01",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q01.svg",
+      "imageAlt": "Figures 1 to 4: 1 outlined circle; 2 filled circles; 3 outlined circles; 4 filled circles. Options: A: 4 filled circles; B: 6 outlined circles; C: 4 outlined circles; D: 5 filled circles; E: 5 outlined circles.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "E",
+      "explanation": "One more circle is added each step and the fill alternates, so figure 5 shows 5 outlined circles (option E).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q02",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q02.svg",
+      "imageAlt": "Figures 1 to 4: 1 outlined arrow, pointing left; 1 filled arrow, pointing up; 1 outlined arrow, pointing right; 1 filled arrow, pointing down. Options: A: 1 outlined arrow, pointing right; B: 1 outlined arrow, pointing up; C: 1 filled arrow, pointing down; D: 1 outlined arrow, pointing left; E: 2 outlined arrows, pointing left.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "D",
+      "explanation": "The arrow turns 90° clockwise each step and the fill alternates, so figure 5 shows 1 outlined arrow, pointing left (option D).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q03",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q03.svg",
+      "imageAlt": "Figures 1 to 4: 1 filled arrow, pointing up; 1 outlined arrow, pointing right; 1 filled arrow, pointing down; 1 outlined arrow, pointing left. Options: A: 2 filled arrows, pointing up; B: 1 filled arrow, pointing left; C: 1 outlined arrow, pointing left; D: 1 filled arrow, pointing up; E: 1 filled arrow, pointing down.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "D",
+      "explanation": "The arrow turns 90° clockwise each step and the fill alternates, so figure 5 shows 1 filled arrow, pointing up (option D).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q04",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q04.svg",
+      "imageAlt": "Figures 1 to 4: 5 filled arrows, pointing down; 4 filled arrows, pointing left; 3 filled arrows, pointing up; 2 filled arrows, pointing right. Options: A: 2 filled arrows, pointing right; B: 2 filled arrows, pointing down; C: 1 filled arrow, pointing left; D: 1 filled arrow, pointing down; E: 1 filled arrow, pointing up.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "D",
+      "explanation": "One arrow disappears each step and the arrows turn 90° clockwise each step, so figure 5 shows 1 filled arrow, pointing down (option D).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q05",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q05.svg",
+      "imageAlt": "Figures 1 to 4: 1 filled L, rotated 270°; 1 filled L, rotated 0°; 1 filled L, rotated 90°; 1 filled L, rotated 180°. Options: A: 1 filled L, rotated 90°; B: 1 filled L, rotated 180°; C: 2 filled Ls, rotated 270°; D: 1 filled L, rotated 270°; E: 1 outlined L, rotated 270°.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "D",
+      "explanation": "The L turns 90° clockwise each step, so figure 5 shows 1 filled L, rotated 270° (option D).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q06",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q06.svg",
+      "imageAlt": "Figures 1 to 4: 1 outlined triangle, pointing up, dot bottom-right; 1 outlined triangle, pointing down, dot top-right; 1 outlined triangle, pointing up, dot top-left; 1 outlined triangle, pointing down, dot bottom-left. Options: A: 1 outlined triangle, pointing up, dot bottom-right; B: 1 outlined triangle, pointing up, dot bottom-left; C: 1 outlined triangle, pointing right, dot bottom-right; D: 2 outlined triangles, pointing up, dot bottom-right; E: 1 outlined triangle, pointing down, dot bottom-right.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "A",
+      "explanation": "The dot moves one corner anticlockwise each step and the triangle flips each step, so figure 5 shows 1 outlined triangle, pointing up, dot bottom-right (option A).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q07",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q07.svg",
+      "imageAlt": "Figures 1 to 4: 1 filled arrow, pointing left; 1 filled arrow, pointing down-left; 1 filled arrow, pointing down; 1 filled arrow, pointing down-right. Options: A: 1 filled arrow, pointing down-right; B: 1 filled arrow, pointing left; C: 1 filled arrow, pointing up-right; D: 1 filled arrow, pointing down; E: 1 filled arrow, pointing right.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "E",
+      "explanation": "The arrow turns 45° anticlockwise each step, so figure 5 shows 1 filled arrow, pointing right (option E).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q08",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q08.svg",
+      "imageAlt": "Figures 1 to 4: 5 filled arrows, pointing right; 4 filled arrows, pointing down; 3 filled arrows, pointing left; 2 filled arrows, pointing up. Options: A: 1 outlined arrow, pointing right; B: 1 filled arrow, pointing left; C: 1 filled arrow, pointing right; D: 2 filled arrows, pointing right; E: 2 filled arrows, pointing up.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "C",
+      "explanation": "One arrow disappears each step and the arrows turn 90° clockwise each step, so figure 5 shows 1 filled arrow, pointing right (option C).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q09",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q09.svg",
+      "imageAlt": "Figures 1 to 4: 5 filled arrows, pointing down; 4 filled arrows, pointing right; 3 filled arrows, pointing up; 2 filled arrows, pointing left. Options: A: 1 outlined arrow, pointing down; B: 1 filled arrow, pointing left; C: 1 filled arrow, pointing down; D: 1 filled arrow, pointing up; E: 2 filled arrows, pointing left.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "C",
+      "explanation": "One arrow disappears each step and the arrows turn 90° anticlockwise each step, so figure 5 shows 1 filled arrow, pointing down (option C).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q10",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q10.svg",
+      "imageAlt": "Figures 1 to 4: 1 outlined triangle, pointing up, dot top-left; 1 outlined triangle, pointing down, dot top-right; 1 outlined triangle, pointing up, dot bottom-right; 1 outlined triangle, pointing down, dot bottom-left. Options: A: 1 outlined triangle, pointing down, dot bottom-left; B: 1 outlined triangle, pointing up, dot top-left; C: 1 outlined triangle, pointing down, dot top-left; D: 1 filled triangle, pointing up, dot top-left; E: 1 outlined triangle, pointing up, dot top-right.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "B",
+      "explanation": "The dot moves one corner clockwise each step and the triangle flips each step, so figure 5 shows 1 outlined triangle, pointing up, dot top-left (option B).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q11",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q11.svg",
+      "imageAlt": "Figures 1 to 4: 1 outlined triangle, pointing down, dot bottom-left; 1 outlined triangle, pointing up, dot top-left; 1 outlined triangle, pointing down, dot top-right; 1 outlined triangle, pointing up, dot bottom-right. Options: A: 1 outlined triangle, pointing down, dot bottom-left; B: 1 filled triangle, pointing down, dot bottom-left; C: 1 outlined triangle, pointing up, dot bottom-left; D: 1 outlined triangle, pointing left, dot bottom-left; E: 1 outlined triangle, pointing down, dot top-left.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "A",
+      "explanation": "The dot moves one corner clockwise each step and the triangle flips each step, so figure 5 shows 1 outlined triangle, pointing down, dot bottom-left (option A).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q12",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q12.svg",
+      "imageAlt": "Figures 1 to 4: 1 outlined circle; 2 filled circles; 3 outlined circles; 4 filled circles. Options: A: 5 outlined circles; B: 6 outlined circles; C: 4 filled circles; D: 5 filled circles; E: 4 outlined circles.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "A",
+      "explanation": "One more circle is added each step and the fill alternates, so figure 5 shows 5 outlined circles (option A).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q13",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q13.svg",
+      "imageAlt": "Figures 1 to 4: 1 filled arrow, pointing left; 1 filled arrow, pointing up-left; 1 filled arrow, pointing up; 1 filled arrow, pointing up-right. Options: A: 2 filled arrows, pointing right; B: 1 filled arrow, pointing down; C: 1 filled arrow, pointing left; D: 1 filled arrow, pointing down-right; E: 1 filled arrow, pointing right.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "E",
+      "explanation": "The arrow turns 45° clockwise each step, so figure 5 shows 1 filled arrow, pointing right (option E).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q14",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q14.svg",
+      "imageAlt": "Figures 1 to 4: 1 filled arrow, pointing right; 1 outlined arrow, pointing down; 1 filled arrow, pointing left; 1 outlined arrow, pointing up. Options: A: 1 filled arrow, pointing left; B: 1 filled arrow, pointing right; C: 1 outlined arrow, pointing right; D: 1 outlined arrow, pointing up; E: 1 filled arrow, pointing down.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "B",
+      "explanation": "The arrow turns 90° clockwise each step and the fill alternates, so figure 5 shows 1 filled arrow, pointing right (option B).",
+      "source": "generated"
+    },
+    {
+      "id": "L2-Q15",
+      "text": "Which figure comes next in the sequence?",
+      "image": "img/logic/L2-Q15.svg",
+      "imageAlt": "Figures 1 to 4: 1 outlined square; 2 filled squares; 3 outlined squares; 4 filled squares. Options: A: 4 filled squares; B: 5 filled squares; C: 6 outlined squares; D: 4 outlined squares; E: 5 outlined squares.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D",
+        "E": "Figure E"
+      },
+      "answer": "E",
+      "explanation": "One more square is added each step and the fill alternates, so figure 5 shows 5 outlined squares (option E).",
+      "source": "generated"
+    }
+  ]
+}

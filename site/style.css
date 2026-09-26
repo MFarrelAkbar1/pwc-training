@@ -346,3 +346,24 @@ thead th:first-child, tbody th { text-align: left; white-space: normal; font-wei
 .modal h2 { margin-top: 0; font-size: 1.2rem; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
 .error { background: var(--bad-bg); border-radius: var(--radius); padding: 16px 20px; }
+
+/* ---------- generated sections ---------- */
+.chip.generated { background: var(--info-bg); color: var(--info); text-transform: none; letter-spacing: 0; }
+.chip.source-pdf { background: var(--surface-2); color: var(--text-muted); text-transform: none; letter-spacing: 0; }
+.generated-note { border-left-color: var(--info); background: var(--info-bg); }
+
+/* Questions without a chart or passage use one centred column. */
+.quiz-body.no-context { grid-template-columns: minmax(0, 780px); justify-content: center; }
+.quiz-body.no-context .context-panel { display: none; }
+
+/* Figure-pattern questions: the SVG has its own white background, so it reads in dark mode too. */
+.q-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 8px 0 4px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}

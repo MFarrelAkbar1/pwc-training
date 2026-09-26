@@ -1,0 +1,330 @@
+{
+  "id": "T1",
+  "section": "technical",
+  "test": 1,
+  "title": "Technical (Risk Assurance) – Test 1",
+  "timeLimitSec": 1200,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "T1-Q01",
+      "type": "definition",
+      "level": "easy",
+      "text": "Which set best describes the usual areas covered by IT general controls (ITGCs)?",
+      "options": {
+        "A": "Preventive, detective and corrective controls over financial reporting",
+        "B": "Revenue, purchasing, payroll and treasury cycles across all business units",
+        "C": "Access to programs and data, program changes, development and IT operations",
+        "D": "Input, processing and output checks built into a single application"
+      },
+      "answer": "C",
+      "explanation": "ITGCs cover access, change, development and IT operations across systems; input/processing/output controls are application controls.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q02",
+      "type": "scenario",
+      "level": "easy",
+      "text": "An auditor finds that several employees who left the company months ago still have active accounts in the finance application. Which control would best address this risk?",
+      "options": {
+        "A": "Encrypt the finance database and restrict who holds the encryption keys",
+        "B": "Require formal approval and testing before any change goes live",
+        "C": "Review the password policy each year and enforce much stronger complexity rules",
+        "D": "Remove access promptly on HR leaver notice, backed by periodic access reviews"
+      },
+      "answer": "D",
+      "explanation": "Timely de-provisioning driven by HR leaver notifications, plus periodic reviews to catch misses, directly targets leavers' access.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q03",
+      "type": "scenario",
+      "level": "easy",
+      "text": "A developer can move their own code changes into the production environment. What is the main risk?",
+      "options": {
+        "A": "System performance may drop during busy processing periods",
+        "B": "Nightly backups may fail if production changes too often",
+        "C": "Unreviewed or untested changes can reach production",
+        "D": "Software licences may be exceeded as more users are added"
+      },
+      "answer": "C",
+      "explanation": "Developing and migrating to production are incompatible duties; combining them lets changes bypass independent approval.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q04",
+      "type": "definition",
+      "level": "easy",
+      "text": "In an audit finding structured as condition, criteria, cause and effect, what does \"criteria\" mean?",
+      "options": {
+        "A": "The underlying reason the issue was able to happen",
+        "B": "The policy or standard the condition is measured against",
+        "C": "The facts the auditor actually observed during testing",
+        "D": "The actual or potential impact of the issue on the business"
+      },
+      "answer": "B",
+      "explanation": "Condition is \"what is\"; criteria is \"what should be\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q05",
+      "type": "definition",
+      "level": "easy",
+      "text": "Under the IIA Three Lines Model, who provides independent assurance to the governing body?",
+      "options": {
+        "A": "Operational management",
+        "B": "Internal audit",
+        "C": "Risk management and compliance functions",
+        "D": "External regulators"
+      },
+      "answer": "B",
+      "explanation": "Internal audit is the third line. Regulators and external auditors sit outside the three lines.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q06",
+      "type": "definition",
+      "level": "medium",
+      "text": "Which sampling method gives every item in the population an equal, known chance of being selected?",
+      "options": {
+        "A": "Judgmental sampling",
+        "B": "Haphazard sampling",
+        "C": "Random sampling",
+        "D": "Block sampling"
+      },
+      "answer": "C",
+      "explanation": "Random selection gives each item an equal chance. Haphazard sampling avoids deliberate bias but isn't truly random.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q07",
+      "type": "definition",
+      "level": "easy",
+      "text": "Which of these is an application control?",
+      "options": {
+        "A": "A system three-way match of order, receipt and invoice before payment",
+        "B": "A change advisory board that approves all ERP changes each week",
+        "C": "A nightly backup of the ERP database copied to a second data centre",
+        "D": "A quarterly review of all ERP user accounts by the IT security team"
+      },
+      "answer": "A",
+      "explanation": "The three-way match is built into the purchasing process of one application; the others are IT general controls.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q08",
+      "type": "definition",
+      "level": "easy",
+      "text": "What is the main objective of change management controls?",
+      "options": {
+        "A": "A complete list of software licences is kept up to date",
+        "B": "Users can adjust their own access when their role changes",
+        "C": "Only authorised, tested and approved changes reach production",
+        "D": "Changes reach production as quickly as the business requests them"
+      },
+      "answer": "C",
+      "explanation": "Change management ensures production changes are authorised, tested and approved before release.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q09",
+      "type": "definition",
+      "level": "medium",
+      "text": "In backup and disaster recovery, what does the recovery point objective (RPO) define?",
+      "options": {
+        "A": "The maximum acceptable downtime after a disruption",
+        "B": "The maximum acceptable data loss, measured in time",
+        "C": "The distance required between primary and backup sites",
+        "D": "The number of backup copies that must be retained"
+      },
+      "answer": "B",
+      "explanation": "RPO is how much data (time since the last good copy) can be lost; RTO is how long systems can be down.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q10",
+      "type": "definition",
+      "level": "easy",
+      "text": "How many components does the COSO Internal Control – Integrated Framework (2013) have?",
+      "options": {
+        "A": "Three",
+        "B": "Eight",
+        "C": "Seventeen",
+        "D": "Five"
+      },
+      "answer": "D",
+      "explanation": "Five components: control environment, risk assessment, control activities, information and communication, monitoring activities (supported by 17 principles).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q11",
+      "type": "definition",
+      "level": "easy",
+      "text": "What is ISO/IEC 27001 mainly?",
+      "options": {
+        "A": "A framework for the governance and management of enterprise IT",
+        "B": "A certifiable standard for an information security management system",
+        "C": "A professional standard for the audit of annual financial statements",
+        "D": "An internal control framework for reliable financial reporting"
+      },
+      "answer": "B",
+      "explanation": "ISO/IEC 27001 sets the requirements for an ISMS and organisations can be certified against it; COBIT and COSO are the other frameworks described.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q12",
+      "type": "definition",
+      "level": "easy",
+      "text": "What are the three elements of the fraud triangle?",
+      "options": {
+        "A": "Planning, fieldwork and reporting",
+        "B": "Prevention, detection and incident response",
+        "C": "Motive, means and method",
+        "D": "Pressure, opportunity and rationalisation"
+      },
+      "answer": "D",
+      "explanation": "Fraud is more likely when someone feels pressure, has the opportunity, and can rationalise the act.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q13",
+      "type": "scenario",
+      "level": "medium",
+      "text": "Four IT staff share the password of one generic administrator account on the ERP system. What is the main risk?",
+      "options": {
+        "A": "Scheduled backups may fail to run overnight",
+        "B": "The ERP may run out of named user licences",
+        "C": "The shared password may expire too often",
+        "D": "Actions can't be traced to one person"
+      },
+      "answer": "D",
+      "explanation": "Shared privileged accounts remove individual accountability, so misuse can't be attributed to a person.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q14",
+      "type": "definition",
+      "level": "medium",
+      "text": "Which audit evidence is generally the most reliable?",
+      "options": {
+        "A": "A scanned copy of an invoice emailed to the auditor by the auditee",
+        "B": "A confirmation sent directly to the auditor by a third party",
+        "C": "A detailed verbal explanation given by the finance manager",
+        "D": "A spreadsheet prepared internally by the auditee's own team"
+      },
+      "answer": "B",
+      "explanation": "Evidence from independent external sources, obtained directly by the auditor, is generally more reliable than internal or oral evidence.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q15",
+      "type": "scenario",
+      "level": "medium",
+      "text": "An auditor tests 25 change tickets and finds 3 changes deployed without approval. What is the best next step?",
+      "options": {
+        "A": "Replace the 3 exceptions with new items from the population",
+        "B": "Accept the result, since 88% of the sample was approved",
+        "C": "Stop the audit and report that all change controls failed",
+        "D": "Find the cause, check the 3 changes and report the exceptions"
+      },
+      "answer": "D",
+      "explanation": "Exceptions must be followed up and reported, not replaced or ignored; understanding the cause and impact shapes the finding.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q16",
+      "type": "definition",
+      "level": "easy",
+      "text": "In an audit finding, what does the \"cause\" explain?",
+      "options": {
+        "A": "Why the condition happened",
+        "B": "What the policy requires",
+        "C": "What the auditor observed",
+        "D": "The impact on the organisation"
+      },
+      "answer": "A",
+      "explanation": "The cause is the underlying reason for the gap between condition and criteria; recommendations should target it.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q17",
+      "type": "definition",
+      "level": "medium",
+      "text": "In the system development life cycle (SDLC), when should security requirements ideally be defined?",
+      "options": {
+        "A": "During the requirements and design phases",
+        "B": "After go-live, during the first internal audit",
+        "C": "Only during user acceptance testing",
+        "D": "When the system is retired"
+      },
+      "answer": "A",
+      "explanation": "Building security in from requirements and design is cheaper and more effective than adding it later.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q18",
+      "type": "scenario",
+      "level": "hard",
+      "text": "The monthly user access review for the payroll system is performed by the IT administrator who also grants the access. What is the main weakness?",
+      "options": {
+        "A": "The review should cover all company systems at the same time",
+        "B": "Monthly reviews are more frequent than is necessary",
+        "C": "The reviewer is checking access they granted themselves",
+        "D": "Payroll access doesn't need to be reviewed at all"
+      },
+      "answer": "C",
+      "explanation": "Reviews should be done by business owners independent of the person granting access; otherwise the reviewer checks their own work.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q19",
+      "type": "definition",
+      "level": "easy",
+      "text": "What is inherent risk?",
+      "options": {
+        "A": "The risk before considering the effect of controls",
+        "B": "The risk left after controls are applied",
+        "C": "The risk that the auditor fails to detect an error",
+        "D": "The risk the organisation is willing to accept"
+      },
+      "answer": "A",
+      "explanation": "Inherent risk exists before controls; residual risk remains after them.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T1-Q20",
+      "type": "scenario",
+      "level": "hard",
+      "text": "A small company cannot separate the person who records cash receipts from the person who deposits them. Which is the best compensating control?",
+      "options": {
+        "A": "An independent monthly review of the bank reconciliations",
+        "B": "Asking the employee to sign the code of conduct each year",
+        "C": "Rotating the employee to a different desk each quarter",
+        "D": "Raising the employee's pay to reduce any financial pressure"
+      },
+      "answer": "A",
+      "explanation": "An independent review of reconciliations would detect receipts that were recorded but not deposited (or vice versa), compensating for the missing segregation.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

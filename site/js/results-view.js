@@ -2,7 +2,8 @@
 // The tests the questions came from must be loaded first (app.js does this).
 import { el, clear, formatTime } from "./dom.js";
 import { findQuestion } from "./data.js";
-import { renderContext, sourceLabel, renderOptions, renderAnswerReview, renderFlag } from "./render.js";
+import { renderContext, hasContext, contextTitle, sourceLabel, renderOptions, renderAnswerReview,
+  renderFlag, renderGenerated, renderQuestionImage } from "./render.js";
 
 const FILTERS = { all: "All questions", wrong: "Wrong or unanswered", flagged: "Flagged in source" };
 
@@ -72,12 +73,11 @@ function reviewItem(q, r, number, showSource) {
   const [tone, label] = !r.scored ? ["neutral", "Not scored"]
     : r.chosen == null ? ["bad", "Not answered"]
     : r.isCorrect ? ["good", "Correct"] : ["bad", "Wrong"];
-  const isVerbal = q.id.startsWith("V");
-
   // The chart/passage is only drawn when you open it.
-  const context = el("details", { class: "review-context" },
-    el("summary", {}, isVerbal ? "Show passage" : "Show chart / table"));
-  context.addEventListener("toggle", () => {
+  const context = hasContext(q) // null (not false) when there's nothing to show, so ?. below works
+    ? el("details", { class: "review-context" }, el("summary", {}, `Show ${contextTitle(q).toLowerCase()}`))
+    : null;
+  context?.addEventListener("toggle", () => {
     if (context.open && !context.dataset.drawn) {
       context.dataset.drawn = "yes";
       const body = el("div", { class: "context-body" });
@@ -90,8 +90,10 @@ function reviewItem(q, r, number, showSource) {
     el("div", { class: "review-head" },
       el("span", { class: "q-num" }, `Question ${number}`),
       showSource && el("span", { class: "source" }, sourceLabel(q)),
+      renderGenerated(q),
       el("span", { class: `badge ${tone}` }, label)),
     el("p", { class: "q-text" }, q.text),
+    renderQuestionImage(q),
     renderOptions(q, { chosen: r.chosen, revealed: true }),
     renderAnswerReview(q, r.chosen),
     renderFlag(q, true),

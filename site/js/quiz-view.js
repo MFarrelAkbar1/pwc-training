@@ -3,7 +3,8 @@
 import { el, clear, showModal, closeModals, formatTime } from "./dom.js";
 import { correctAnswer, sectionOf } from "./data.js";
 import { createQuiz, buildAttempt, secondsLeft, elapsedSeconds } from "./quiz.js";
-import { renderContext, contextKey, sourceLabel, renderOptions, renderAnswerReview, renderFlag } from "./render.js";
+import { renderContext, contextKey, contextTitle, sourceLabel, renderOptions, renderAnswerReview, renderFlag,
+  renderGenerated, renderQuestionImage } from "./render.js";
 import { destroyCharts } from "./charts.js";
 import { recordAttempt } from "./storage.js";
 
@@ -61,12 +62,11 @@ function buildLayout() {
   const question = el("section", { class: "question-panel", "aria-live": "polite" });
   const navigator = el("nav", { class: "navigator", "aria-label": "Question navigator" });
 
-  const root = el("div", { class: "quiz" },
-    header,
-    el("div", { class: "quiz-body" },
-      el("aside", { class: "context-panel" }, contextBox),
-      el("div", { class: "question-col" }, question, navigator)));
-  return { root, timer, context, contextBox, contextTitle, question, navigator, contextKey: null };
+  const body = el("div", { class: "quiz-body" },
+    el("aside", { class: "context-panel" }, contextBox),
+    el("div", { class: "question-col" }, question, navigator));
+  const root = el("div", { class: "quiz" }, header, body);
+  return { root, body, timer, context, contextBox, contextTitle, question, navigator, contextKey: undefined };
 }
 
 // ---------- drawing ----------
@@ -75,14 +75,17 @@ function show(index) {
   quiz.index = index;
   const q = current();
   // Only redraw the chart/passage when it changes, so it doesn't flicker between questions.
-  const key = contextKey(q);
+  const key = contextKey(q); // null when the question has no chart or passage
   if (key !== view.contextKey) {
     destroyCharts();
     clear(view.context);
-    renderContext(view.context, q);
-    view.contextTitle.textContent = sectionOf(q) === "verbal" ? "Passage" : "Chart / table";
+    if (key) {
+      renderContext(view.context, q);
+      view.contextTitle.textContent = contextTitle(q);
+      view.contextBox.open = true;
+    }
+    view.body.classList.toggle("no-context", !key); // single column when there's nothing to show
     view.contextKey = key;
-    view.contextBox.open = true;
   }
   drawQuestion();
   drawNavigator();
@@ -97,9 +100,11 @@ function drawQuestion() {
     el("div", { class: "q-head" },
       el("span", { class: "q-num" }, `Question ${quiz.index + 1} of ${quiz.questions.length}`),
       quiz.set.kind !== "test" && el("span", { class: "source" }, sourceLabel(q)),
+      renderGenerated(q),
       quiz.marked.has(q.id) && el("span", { class: "chip marked" }, "Marked for review")),
     renderFlag(q, revealed),
     el("p", { class: "q-text" }, q.text),
+    renderQuestionImage(q),
     sectionOf(q) === "numerical" &&
       el("p", { class: "hint" }, "Estimate first, then calculate. Rule out options that are clearly too big or too small."),
     renderOptions(q, { chosen, revealed, onPick: pick }),

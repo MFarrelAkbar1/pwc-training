@@ -190,3 +190,52 @@ Every verbal statement now has a one-line explanation that matches the answer th
 - **V4-Q15** reads "?8m" in the PDF itself (the currency symbol is missing in the source image). I kept it as printed.
 - The PDF's own typos are kept word for word (e.g. "to a large extend inherited", "its incidence vary", "pouring over books", "that that the animals").
 - Two passages had scrambled word order in the PDF's text layer (V3 earthquakes, V5 smoke-free law). I transcribed those from the page images. Every other passage sentence and statement was machine-checked against the PDF text.
+
+---
+
+# Generated sections: English, Logic, Technical
+
+These 180 questions were **written for this site**, not taken from the PDF. Every one has
+`"source": "generated"` and shows a "Generated · unverified" label. The section pages say that
+the questions haven't been checked against an official source.
+
+| Section | Tests | Questions | Timer | How answers were produced |
+|---|---|---|---|---|
+| English (TOEFL-style) | E1–E3 | 3 × 20 (8 sentence completion, 4 error spotting, 8 reading from 2 passages) | 15 min each | Written and checked by hand |
+| Logic (TPA-style) | L1–L4 | 4 × 15 | 10 / 12 / 8 / 12 min | **Computed** by `tools/gen_logic.py` (L1, L2, L4); L3 written by hand |
+| Technical (Risk Assurance) | T1–T3 | 3 × 20 (18 of 60 scenario-based; easy, medium and hard mixed) | 20 min each | Written and checked by hand |
+
+Regenerate the Logic tests with `python tools/gen_logic.py` (seeded, so the output is the same each time).
+`python tools/check_data.py` checks the structure of all 22 test files.
+
+## Least sure: please review these
+
+### English
+| Question | Issue |
+|---|---|
+| **Format** | Follows TOEFL ITP / paper-based style (structure, error spotting, reading). The current TOEFL iBT has no grammar section, so this matches the older format. |
+| E1-Q06 | "Of the two candidates … the **more** qualified": a strict grammar rule. "Most" is common in everyday speech and some test-takers will pick it. |
+| E1-Q02, E2-Q11 | "Neither … nor" agrees with the nearer subject: the formal rule, but plural agreement is widely used in practice. |
+| E2-Q05 | "Neither of the proposals **meets**": formal (singular). "Meet" is accepted in informal English. |
+| E1-Q14, E2-Q19, E3-Q15 | Inference questions are always somewhat arguable. I reworded E1-Q14 option B as you asked. |
+
+### Logic
+| Question | Issue |
+|---|---|
+| **L2 (all)** | The figure patterns are drawn from rules (rotation, alternating fill, count change, a dot moving between corners), and each wrong option breaks exactly one attribute. The answer is computed, but the *pictures* should be looked at: a distractor could still look confusingly similar at small sizes. |
+| L1 (all) | The generator rejects a sequence if a constant-difference or constant-ratio rule would give a different answer. More exotic alternative rules aren't checked. |
+| L3-Q05 | Drought : **Famine** (cause-effect). "Desert" is a tempting wrong answer; drought doesn't *cause* a desert in the same direct sense. |
+| L3-Q11 | Friction : **Heat** (cause-effect). Friction also opposes motion, but "Motion" isn't offered, to avoid ambiguity. |
+| L3-Q15 | Scene : **Play** (part-whole). "Script" was deliberately left out as an option because scenes are also parts of scripts. |
+| L4-Q15 | "No auditors are approvers; all approvers are managers → some managers are not auditors." This is valid **only if the groups aren't empty**. The checker assumes every group has at least one member, as these tests usually do. |
+| L4 explanations | They're generic ("true in every situation…" / "none follows"). Correct, but less instructive than the hand-written ones. |
+
+### Technical
+| Question | Issue |
+|---|---|
+| T2-Q12 | "93 Annex A controls" is **ISO/IEC 27001:2022**. The 2013 edition had 114 (the explanation says so). |
+| T1-Q10, T2-Q02, T3-Q11 | These follow **COSO 2013** (5 components, 17 principles). |
+| T2-Q14 | "Report functionally to the board / audit committee." That's standard IIA guidance, but wording differs between the IIA Standards versions. |
+| T1-Q14 | Evidence reliability ranking: a general rule with exceptions (e.g. a forged external document). |
+| T3-Q17, T3-Q20 | The "best next step" for suspected fraud and for leavers' active accounts can depend on firm policy. The answers follow common practice (escalate, don't act yourself). |
+| **All (fixed)** | The correct option used to be the longest in 52 of 60 Technical questions. `tools/rebalance_options.py` rewrote the options (shorter correct answers, longer distractors); now no Technical question has a correct option that is 3+ characters longer than every distractor, and each test uses A/B/C/D exactly 5 times. The only English exception is E3-Q02 ("would have bought" vs "had bought"), where the length difference *is* the grammar being tested. |

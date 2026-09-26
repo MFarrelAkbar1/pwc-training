@@ -1,0 +1,235 @@
+{
+  "id": "L3",
+  "section": "logic",
+  "test": 3,
+  "title": "Logic – Analogies",
+  "timeLimitSec": 480,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "L3-Q01",
+      "text": "Abundant : Plentiful  =  Scarce : ?",
+      "options": {
+        "A": "Useful",
+        "B": "Rare",
+        "C": "Empty",
+        "D": "Wealthy",
+        "E": "Many"
+      },
+      "answer": "B",
+      "explanation": "Relation: synonym (the two words mean the same). Abundant → Plentiful, so Scarce → Rare.",
+      "source": "generated",
+      "relation": "synonym"
+    },
+    {
+      "id": "L3-Q02",
+      "text": "Expand : Contract  =  Increase : ?",
+      "options": {
+        "A": "Decrease",
+        "B": "Raise",
+        "C": "Maintain",
+        "D": "Multiply",
+        "E": "Grow"
+      },
+      "answer": "A",
+      "explanation": "Relation: antonym (the two words are opposites). Expand → Contract, so Increase → Decrease.",
+      "source": "generated",
+      "relation": "antonym"
+    },
+    {
+      "id": "L3-Q03",
+      "text": "Page : Book  =  Petal : ?",
+      "options": {
+        "A": "Leaf",
+        "B": "Stem",
+        "C": "Flower",
+        "D": "Colour",
+        "E": "Garden"
+      },
+      "answer": "C",
+      "explanation": "Relation: part-whole (the first is a part of the second). Page → Book, so Petal → Flower.",
+      "source": "generated",
+      "relation": "part-whole"
+    },
+    {
+      "id": "L3-Q04",
+      "text": "Pen : Write  =  Spade : ?",
+      "options": {
+        "A": "Soil",
+        "B": "Farmer",
+        "C": "Dig",
+        "D": "Garden",
+        "E": "Plant"
+      },
+      "answer": "C",
+      "explanation": "Relation: tool-function (the second is what the first is used to do). Pen → Write, so Spade → Dig.",
+      "source": "generated",
+      "relation": "tool-function"
+    },
+    {
+      "id": "L3-Q05",
+      "text": "Rain : Flood  =  Drought : ?",
+      "options": {
+        "A": "Desert",
+        "B": "Cloud",
+        "C": "Famine",
+        "D": "Water",
+        "E": "Summer"
+      },
+      "answer": "C",
+      "explanation": "Relation: cause-effect (the first causes the second). Rain → Flood, so Drought → Famine.",
+      "source": "generated",
+      "relation": "cause-effect"
+    },
+    {
+      "id": "L3-Q06",
+      "text": "Fruit : Mango  =  Vehicle : ?",
+      "options": {
+        "A": "Driver",
+        "B": "Truck",
+        "C": "Engine",
+        "D": "Wheel",
+        "E": "Road"
+      },
+      "answer": "B",
+      "explanation": "Relation: category-member (the second is a member of the first category). Fruit → Mango, so Vehicle → Truck.",
+      "source": "generated",
+      "relation": "category-member"
+    },
+    {
+      "id": "L3-Q07",
+      "text": "Candid : Frank  =  Diligent : ?",
+      "options": {
+        "A": "Wealthy",
+        "B": "Lazy",
+        "C": "Brave",
+        "D": "Industrious",
+        "E": "Clever"
+      },
+      "answer": "D",
+      "explanation": "Relation: synonym (the two words mean the same). Candid → Frank, so Diligent → Industrious.",
+      "source": "generated",
+      "relation": "synonym"
+    },
+    {
+      "id": "L3-Q08",
+      "text": "Transparent : Opaque  =  Permanent : ?",
+      "options": {
+        "A": "Stable",
+        "B": "Solid",
+        "C": "Lasting",
+        "D": "Temporary",
+        "E": "Fixed"
+      },
+      "answer": "D",
+      "explanation": "Relation: antonym (the two words are opposites). Transparent → Opaque, so Permanent → Temporary.",
+      "source": "generated",
+      "relation": "antonym"
+    },
+    {
+      "id": "L3-Q09",
+      "text": "Keyboard : Laptop  =  Engine : ?",
+      "options": {
+        "A": "Car",
+        "B": "Speed",
+        "C": "Road",
+        "D": "Driver",
+        "E": "Fuel"
+      },
+      "answer": "A",
+      "explanation": "Relation: part-whole (the first is a part of the second). Keyboard → Laptop, so Engine → Car.",
+      "source": "generated",
+      "relation": "part-whole"
+    },
+    {
+      "id": "L3-Q10",
+      "text": "Microscope : Magnify  =  Scale : ?",
+      "options": {
+        "A": "Draw",
+        "B": "Cut",
+        "C": "Count",
+        "D": "Heat",
+        "E": "Weigh"
+      },
+      "answer": "E",
+      "explanation": "Relation: tool-function (the second is what the first is used to do). Microscope → Magnify, so Scale → Weigh.",
+      "source": "generated",
+      "relation": "tool-function"
+    },
+    {
+      "id": "L3-Q11",
+      "text": "Virus : Infection  =  Friction : ?",
+      "options": {
+        "A": "Speed",
+        "B": "Surface",
+        "C": "Rubber",
+        "D": "Heat",
+        "E": "Oil"
+      },
+      "answer": "D",
+      "explanation": "Relation: cause-effect (the first causes the second). Virus → Infection, so Friction → Heat.",
+      "source": "generated",
+      "relation": "cause-effect"
+    },
+    {
+      "id": "L3-Q12",
+      "text": "Mammal : Whale  =  Bird : ?",
+      "options": {
+        "A": "Nest",
+        "B": "Butterfly",
+        "C": "Penguin",
+        "D": "Bat",
+        "E": "Feather"
+      },
+      "answer": "C",
+      "explanation": "Relation: category-member (the second is a member of the first category). Mammal → Whale, so Bird → Penguin.",
+      "source": "generated",
+      "relation": "category-member"
+    },
+    {
+      "id": "L3-Q13",
+      "text": "Frugal : Extravagant  =  Humble : ?",
+      "options": {
+        "A": "Arrogant",
+        "B": "Modest",
+        "C": "Kind",
+        "D": "Quiet",
+        "E": "Poor"
+      },
+      "answer": "A",
+      "explanation": "Relation: antonym (the two words are opposites). Frugal → Extravagant, so Humble → Arrogant.",
+      "source": "generated",
+      "relation": "antonym"
+    },
+    {
+      "id": "L3-Q14",
+      "text": "Exercise : Fitness  =  Study : ?",
+      "options": {
+        "A": "Teacher",
+        "B": "Knowledge",
+        "C": "Exam",
+        "D": "School",
+        "E": "Book"
+      },
+      "answer": "B",
+      "explanation": "Relation: cause-effect (the first causes the second). Exercise → Fitness, so Study → Knowledge.",
+      "source": "generated",
+      "relation": "cause-effect"
+    },
+    {
+      "id": "L3-Q15",
+      "text": "Chapter : Novel  =  Scene : ?",
+      "options": {
+        "A": "Ticket",
+        "B": "Play",
+        "C": "Actor",
+        "D": "Curtain",
+        "E": "Stage"
+      },
+      "answer": "B",
+      "explanation": "Relation: part-whole (the first is a part of the second). Chapter → Novel, so Scene → Play.",
+      "source": "generated",
+      "relation": "part-whole"
+    }
+  ]
+}

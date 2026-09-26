@@ -1,0 +1,220 @@
+{
+  "id": "L4",
+  "section": "logic",
+  "test": 4,
+  "title": "Logic – Syllogisms",
+  "timeLimitSec": 720,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "L4-Q01",
+      "text": "Statements: All managers are employees. All employees are insured people. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All insured people are managers.",
+        "B": "All managers are insured people.",
+        "C": "Some employees are not insured people.",
+        "D": "No managers are insured people.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "B",
+      "explanation": "'All managers are insured people.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q02",
+      "text": "Statements: No auditors are sales staff. All trainees are sales staff. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some auditors are trainees.",
+        "B": "All sales staff are trainees.",
+        "C": "No trainees are auditors.",
+        "D": "Some sales staff are auditors.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "C",
+      "explanation": "'No trainees are auditors.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q03",
+      "text": "Statements: All reports are documents. Some documents are confidential items. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some reports are confidential items.",
+        "B": "All confidential items are reports.",
+        "C": "No reports are confidential items.",
+        "D": "Some confidential items are not documents.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows: the premises leave open how the groups overlap. For example, 'Some reports are confidential items.' could be true or false.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q04",
+      "text": "Statements: Some engineers are managers. All managers are graduates. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All engineers are graduates.",
+        "B": "Some graduates are not engineers.",
+        "C": "No managers are engineers.",
+        "D": "Some engineers are graduates.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "'Some engineers are graduates.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q05",
+      "text": "Statements: All analysts are Excel users. Some consultants are not Excel users. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some consultants are not analysts.",
+        "B": "Some analysts are not consultants.",
+        "C": "No consultants are analysts.",
+        "D": "All Excel users are analysts.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "'Some consultants are not analysts.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q06",
+      "text": "Statements: No contractors are permanent staff. Some permanent staff are auditors. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "No auditors are contractors.",
+        "B": "Some contractors are auditors.",
+        "C": "All auditors are permanent staff.",
+        "D": "Some auditors are not contractors.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "'Some auditors are not contractors.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q07",
+      "text": "Statements: All internal auditors are certified employees. Some certified employees are finance staff. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some internal auditors are finance staff.",
+        "B": "All finance staff are certified employees.",
+        "C": "No internal auditors are finance staff.",
+        "D": "Some finance staff are internal auditors.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows: the premises leave open how the groups overlap. For example, 'Some internal auditors are finance staff.' could be true or false.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q08",
+      "text": "Statements: All servers are backed-up systems. No backed-up systems are systems at risk of data loss. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some servers are systems at risk of data loss.",
+        "B": "All systems at risk of data loss are servers.",
+        "C": "Some backed-up systems are not servers.",
+        "D": "No servers are systems at risk of data loss.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "'No servers are systems at risk of data loss.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q09",
+      "text": "Statements: All directors are shareholders. No shareholders are interns. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "No interns are directors.",
+        "B": "Some interns are directors.",
+        "C": "All shareholders are directors.",
+        "D": "Some shareholders are interns.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "'No interns are directors.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q10",
+      "text": "Statements: Some suppliers are local firms. No local firms are listed companies. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "No suppliers are listed companies.",
+        "B": "Some listed companies are suppliers.",
+        "C": "All local firms are suppliers.",
+        "D": "Some suppliers are not listed companies.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "'Some suppliers are not listed companies.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q11",
+      "text": "Statements: All trainees are induction attendees. All auditors are induction attendees. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All trainees are auditors.",
+        "B": "Some auditors are trainees.",
+        "C": "No trainees are auditors.",
+        "D": "Some induction attendees are not trainees.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows: the premises leave open how the groups overlap. For example, 'All trainees are auditors.' could be true or false.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q12",
+      "text": "Statements: No laptops are shared devices. Some company assets are laptops. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some company assets are not shared devices.",
+        "B": "No company assets are shared devices.",
+        "C": "Some shared devices are company assets.",
+        "D": "All laptops are company assets.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "'Some company assets are not shared devices.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q13",
+      "text": "Statements: All approved invoices are paid invoices. Some paid invoices are late invoices. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some approved invoices are late invoices.",
+        "B": "No approved invoices are late invoices.",
+        "C": "All late invoices are approved invoices.",
+        "D": "Some late invoices are not paid invoices.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows: the premises leave open how the groups overlap. For example, 'Some approved invoices are late invoices.' could be true or false.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q14",
+      "text": "Statements: Some employees are part-time workers. All part-time workers are hourly-paid workers. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All employees are hourly-paid workers.",
+        "B": "No hourly-paid workers are employees.",
+        "C": "Some employees are hourly-paid workers.",
+        "D": "Some part-time workers are not hourly-paid workers.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "C",
+      "explanation": "'Some employees are hourly-paid workers.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    },
+    {
+      "id": "L4-Q15",
+      "text": "Statements: No auditors are approvers. All approvers are managers. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "No managers are auditors.",
+        "B": "Some auditors are managers.",
+        "C": "All managers are approvers.",
+        "D": "Some managers are not auditors.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "'Some managers are not auditors.' is true in every situation where both statements are true; each other option can be false while the statements still hold.",
+      "source": "generated"
+    }
+  ]
+}

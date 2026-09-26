@@ -1,0 +1,330 @@
+{
+  "id": "T3",
+  "section": "technical",
+  "test": 3,
+  "title": "Technical (Risk Assurance) – Test 3",
+  "timeLimitSec": 1200,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "T3-Q01",
+      "type": "definition",
+      "level": "easy",
+      "text": "Which is an IT general control over computer operations?",
+      "options": {
+        "A": "Monitoring batch jobs and following up failures",
+        "B": "Segregating approval of journal entries",
+        "C": "Credit limit checks on new customer orders",
+        "D": "A three-way match check in the ERP purchasing module"
+      },
+      "answer": "A",
+      "explanation": "Job scheduling and failure monitoring are IT operations controls; the others are business or application controls.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q02",
+      "type": "scenario",
+      "level": "medium",
+      "text": "Emergency changes are released to production without approval and are never reviewed afterwards. What should the auditor recommend?",
+      "options": {
+        "A": "Test every emergency change fully before any release to production",
+        "B": "Allow them, but review and approve each soon after release",
+        "C": "Ban all emergency changes to production immediately",
+        "D": "Only allow emergency changes to be made at weekends"
+      },
+      "answer": "B",
+      "explanation": "Emergency changes are sometimes necessary; the control is a timely retrospective review and approval so none slip through unchecked.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q03",
+      "type": "definition",
+      "level": "easy",
+      "text": "In purchasing, which combination of duties is incompatible and should be separated?",
+      "options": {
+        "A": "Creating vendors and approving payments to them",
+        "B": "Reading system reports and printing those reports",
+        "C": "Receiving goods and storing them in the warehouse",
+        "D": "Attending training and signing the code of conduct"
+      },
+      "answer": "A",
+      "explanation": "One person able to create a vendor and approve payments to it could pay a fictitious vendor.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q04",
+      "type": "definition",
+      "level": "easy",
+      "text": "Who should perform user acceptance testing (UAT) in the SDLC?",
+      "options": {
+        "A": "Business users, to confirm it meets their needs",
+        "B": "The external auditor, as part of the year-end audit",
+        "C": "The database administrator, just before go-live",
+        "D": "The developers who wrote and unit-tested the code"
+      },
+      "answer": "A",
+      "explanation": "UAT is done by the business, who are best placed to confirm the system does what they need.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q05",
+      "type": "scenario",
+      "level": "medium",
+      "text": "A new ERP went live, but nobody reconciled the balances migrated from the old system with those loaded into the new one. What is the main risk?",
+      "options": {
+        "A": "Licence costs may rise in the following year",
+        "B": "Users may need more training on the new ERP",
+        "C": "Migrated data may be incomplete or inaccurate",
+        "D": "The old system may never be switched off"
+      },
+      "answer": "C",
+      "explanation": "Without a data migration reconciliation, missing or changed balances can carry into the new system unnoticed.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q06",
+      "type": "definition",
+      "level": "easy",
+      "text": "What does a risk-based internal audit plan do?",
+      "options": {
+        "A": "Audits only the areas that management selects",
+        "B": "Audits every area with equal effort each year",
+        "C": "Covers IT systems but not business processes",
+        "D": "Focuses audit effort on the highest-risk areas"
+      },
+      "answer": "D",
+      "explanation": "A risk-based plan prioritises the areas where the risk to objectives is greatest.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q07",
+      "type": "definition",
+      "level": "medium",
+      "text": "Audit evidence must be \"sufficient\" and \"appropriate\". What does \"appropriate\" refer to?",
+      "options": {
+        "A": "Whether the evidence is held electronically",
+        "B": "The relevance and reliability of the evidence",
+        "C": "Whether management agrees with the evidence",
+        "D": "The amount of evidence the auditor collects"
+      },
+      "answer": "B",
+      "explanation": "Sufficiency is about quantity; appropriateness is about quality, meaning relevance and reliability.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q08",
+      "type": "scenario",
+      "level": "hard",
+      "text": "User access reviews were all signed off on time, but in several cases access marked \"remove\" by reviewers was still active months later. What should the auditor conclude?",
+      "options": {
+        "A": "Only the reviewers who signed need further training",
+        "B": "No conclusion is possible without testing a larger sample",
+        "C": "The control works, because every review was signed on time",
+        "D": "The control isn't operating: review results aren't acted on"
+      },
+      "answer": "D",
+      "explanation": "A review only works if its results are acted on; signed reviews with unremoved access mean the control failed in operation.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q09",
+      "type": "definition",
+      "level": "easy",
+      "text": "What should the executive summary of an audit report mainly contain?",
+      "options": {
+        "A": "The overall conclusion and the key findings",
+        "B": "Every test performed, described step by step",
+        "C": "The auditors' detailed working papers",
+        "D": "A full list of everyone who was interviewed"
+      },
+      "answer": "A",
+      "explanation": "Senior readers need the overall conclusion and key issues; the detail goes in the body and working papers.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q10",
+      "type": "definition",
+      "level": "easy",
+      "text": "What should a good management action plan for an audit finding include?",
+      "options": {
+        "A": "A general promise to look into the issue",
+        "B": "The auditor's own opinion of the finding and nothing else",
+        "C": "The names of the audit team members",
+        "D": "A specific action, an owner and a target date"
+      },
+      "answer": "D",
+      "explanation": "Clear actions with an accountable owner and deadline make follow-up possible.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q11",
+      "type": "definition",
+      "level": "medium",
+      "text": "Which COSO component covers integrity, ethical values, board oversight and \"tone at the top\"?",
+      "options": {
+        "A": "Risk assessment",
+        "B": "Control activities",
+        "C": "Control environment",
+        "D": "Monitoring activities"
+      },
+      "answer": "C",
+      "explanation": "The control environment is the foundation: ethics, oversight, structure and commitment to competence.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q12",
+      "type": "definition",
+      "level": "hard",
+      "text": "Which document does ISO/IEC 27001 require, listing the Annex A controls and whether each is applied?",
+      "options": {
+        "A": "The business continuity plan",
+        "B": "The risk appetite statement",
+        "C": "The Statement of Applicability",
+        "D": "The internal audit charter"
+      },
+      "answer": "C",
+      "explanation": "The Statement of Applicability records which Annex A controls apply, their status and the justification for any exclusions.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q13",
+      "type": "scenario",
+      "level": "medium",
+      "text": "An accounts payable clerk changes a supplier's bank details after a phone call from someone claiming to be the supplier. Which control would best prevent this kind of fraud?",
+      "options": {
+        "A": "Review all supplier payments together at year end",
+        "B": "Ask the caller to confirm the change request by email instead",
+        "C": "Pay the supplier by cheque for the next invoice only",
+        "D": "Call the supplier back on contact details already on file"
+      },
+      "answer": "D",
+      "explanation": "Independent call-back verification using trusted, existing contact details stops impersonation fraud before money is sent.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q14",
+      "type": "definition",
+      "level": "medium",
+      "text": "What is \"skimming\"?",
+      "options": {
+        "A": "Inflating personal expense claims",
+        "B": "Taking cash before it is recorded",
+        "C": "Recording sales that never happened",
+        "D": "Paying invoices from a fake supplier"
+      },
+      "answer": "B",
+      "explanation": "Skimming takes cash before it enters the accounting records, which makes it hard to detect.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q15",
+      "type": "definition",
+      "level": "easy",
+      "text": "What is residual risk?",
+      "options": {
+        "A": "The risk left after controls are applied",
+        "B": "The risk of choosing the wrong sample",
+        "C": "The total risk the organisation will accept",
+        "D": "The risk before any controls are applied"
+      },
+      "answer": "A",
+      "explanation": "Residual risk is what remains after controls; it's compared with the risk appetite.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q16",
+      "type": "definition",
+      "level": "easy",
+      "text": "What does \"risk appetite\" mean?",
+      "options": {
+        "A": "The likelihood that a given risk occurs",
+        "B": "The number of risks in the risk register",
+        "C": "The risk that remains once all the controls operate",
+        "D": "The risk an organisation is willing to take on"
+      },
+      "answer": "D",
+      "explanation": "Risk appetite sets how much risk the organisation will take on to achieve its goals.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q17",
+      "type": "scenario",
+      "level": "hard",
+      "text": "During fieldwork, an auditor finds strong signs that a manager is falsifying expense claims. What is the best next step?",
+      "options": {
+        "A": "Confront the manager straight away and ask for a full explanation",
+        "B": "Ignore it, because fraud is outside the audit's scope",
+        "C": "Escalate confidentially per the fraud procedure and keep evidence",
+        "D": "Warn the manager's team so they can watch out for it"
+      },
+      "answer": "C",
+      "explanation": "Suspected fraud is escalated confidentially and evidence protected; confronting the suspect or spreading the news can compromise an investigation.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q18",
+      "type": "definition",
+      "level": "medium",
+      "text": "What is a key benefit of using data analytics in auditing?",
+      "options": {
+        "A": "No longer needing to plan the audit work",
+        "B": "Guaranteeing that no fraud has occurred",
+        "C": "Testing the whole population, not just a sample",
+        "D": "Replacing the controls that management operates day to day"
+      },
+      "answer": "C",
+      "explanation": "Analytics can test whole populations and pinpoint exceptions, though it doesn't replace judgement or guarantee the absence of fraud.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q19",
+      "type": "definition",
+      "level": "medium",
+      "text": "Why is it important to identify the root cause of a finding?",
+      "options": {
+        "A": "So the audit fee can be justified to management",
+        "B": "So the fix addresses the problem, not just the symptom",
+        "C": "So the right person can be blamed for the issue",
+        "D": "So the audit report looks more thorough to all its readers"
+      },
+      "answer": "B",
+      "explanation": "Recommendations aimed at the root cause stop the issue recurring; fixing only the symptom doesn't.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T3-Q20",
+      "type": "scenario",
+      "level": "hard",
+      "text": "An auditor finds five contractors whose contracts ended three months ago still have payroll system access, and logs show one account was used last week. What is the best next step?",
+      "options": {
+        "A": "Disable the accounts yourself using admin rights",
+        "B": "Report it to management now to remove access and investigate",
+        "C": "Note it down and include it in next year's internal audit plan",
+        "D": "Wait and include it in the final audit report"
+      },
+      "answer": "B",
+      "explanation": "Active use of a leaver's account is urgent: escalate immediately so management removes access and investigates. Auditors shouldn't make the change themselves.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "id": "E3",
+  "section": "english",
+  "test": 3,
+  "title": "English – Test 3",
+  "timeLimitSec": 900,
+  "source": "generated",
+  "passages": {
+    "p1": {
+      "text": "A telecommunications company noticed that about one in five customers who called its support line more than three times in a month cancelled their contract within the following quarter. Among customers who called once or not at all, fewer than one in twenty cancelled. The customer service director proposed hiring more support staff to shorten waiting times. The head of analytics was more cautious: she pointed out that frequent callers might already be dissatisfied with the network itself, in which case faster answers alone would not keep them.",
+      "truncated": false
+    },
+    "p2": {
+      "text": "Many internal audit teams began conducting audits remotely during 2020. Remote work reduced travel costs and allowed auditors to review more documents in less time, because files were already in electronic form. It was less effective for tasks that rely on direct observation, such as checking physical inventory or watching how a process is actually carried out on the shop floor. Several audit leaders now plan a mixed approach: planning and document review will stay remote, while observation-based testing will return to site visits.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "E3-Q01",
+      "skill": "structure",
+      "text": "The new policy will take effect ______ 1 July.",
+      "options": {
+        "A": "at",
+        "B": "on",
+        "C": "in",
+        "D": "since"
+      },
+      "answer": "B",
+      "explanation": "Specific dates take \"on\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q02",
+      "skill": "structure",
+      "text": "Had we known about the price increase, we ______ more stock.",
+      "options": {
+        "A": "had bought",
+        "B": "would buy",
+        "C": "will buy",
+        "D": "would have bought"
+      },
+      "answer": "D",
+      "explanation": "\"Had we known\" is an inverted third conditional, so the result is \"would have bought\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q03",
+      "skill": "structure",
+      "text": "The figures, ______ were checked twice, still contained an error.",
+      "options": {
+        "A": "what",
+        "B": "which",
+        "C": "who",
+        "D": "whose"
+      },
+      "answer": "B",
+      "explanation": "A non-restrictive clause about things takes \"which\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q04",
+      "skill": "structure",
+      "text": "Not only ______ the deadline, but it also exceeded the budget.",
+      "options": {
+        "A": "did the project miss",
+        "B": "missed the project",
+        "C": "the project missed",
+        "D": "the project did miss"
+      },
+      "answer": "A",
+      "explanation": "A sentence starting with \"Not only\" needs inverted word order: \"did the project miss\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q05",
+      "skill": "structure",
+      "text": "The manager insisted on ______ every invoice personally.",
+      "options": {
+        "A": "check",
+        "B": "to check",
+        "C": "checked",
+        "D": "checking"
+      },
+      "answer": "D",
+      "explanation": "A preposition (\"on\") is followed by the -ing form.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q06",
+      "skill": "structure",
+      "text": "There ______ several reasons for the delay.",
+      "options": {
+        "A": "has been",
+        "B": "is",
+        "C": "are",
+        "D": "was"
+      },
+      "answer": "C",
+      "explanation": "The real subject, \"several reasons\", is plural, so \"there are\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q07",
+      "skill": "structure",
+      "text": "This year's results are ______ than last year's.",
+      "options": {
+        "A": "more better",
+        "B": "best",
+        "C": "more good",
+        "D": "better"
+      },
+      "answer": "D",
+      "explanation": "The comparative of \"good\" is \"better\"; \"more\" isn't added.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q08",
+      "skill": "structure",
+      "text": "The committee has not reached a decision ______.",
+      "options": {
+        "A": "still",
+        "B": "ever",
+        "C": "yet",
+        "D": "already"
+      },
+      "answer": "C",
+      "explanation": "In negative sentences, \"yet\" goes at the end: \"has not … yet\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q09",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  The analysts (A) have been working (B) on the budget (C) since three weeks (D) and expect to finish soon.",
+      "options": {
+        "A": "have been working",
+        "B": "on the budget",
+        "C": "since three weeks",
+        "D": "and expect to finish soon"
+      },
+      "answer": "C",
+      "explanation": "A length of time takes \"for\": \"for three weeks\" (\"since\" needs a starting point).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q10",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  Every one of the branches (A) were audited (B) last year, (C) and none (D) was found to be non-compliant.",
+      "options": {
+        "A": "were audited",
+        "B": "last year,",
+        "C": "and none",
+        "D": "was found to be non-compliant"
+      },
+      "answer": "A",
+      "explanation": "\"Every one\" is singular, so it should be \"was audited\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q11",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  The new system is (A) easier to maintain (B) than the old one and (C) processes transactions (D) more faster.",
+      "options": {
+        "A": "easier to maintain",
+        "B": "than the old one",
+        "C": "processes transactions",
+        "D": "more faster"
+      },
+      "answer": "D",
+      "explanation": "\"Faster\" is already comparative, so \"more\" must be removed.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q12",
+      "skill": "written expression",
+      "text": "Which part is incorrect?  The project team (A) delivered the system (B) despite of the delays (C) and stayed (D) within budget.",
+      "options": {
+        "A": "delivered the system",
+        "B": "despite of the delays",
+        "C": "and stayed",
+        "D": "within budget"
+      },
+      "answer": "B",
+      "explanation": "It's \"despite the delays\" or \"in spite of the delays\"; \"despite of\" is wrong.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q13",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "What pattern did the company notice?",
+      "options": {
+        "A": "Waiting times rose every quarter.",
+        "B": "Most customers called more than three times a month.",
+        "C": "Customers who called often were more likely to cancel.",
+        "D": "Customers who never called cancelled most often."
+      },
+      "answer": "C",
+      "explanation": "About one in five frequent callers cancelled, against fewer than one in twenty of the others.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q14",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "Roughly what share of frequent callers cancelled their contract?",
+      "options": {
+        "A": "20 percent",
+        "B": "5 percent",
+        "C": "50 percent",
+        "D": "75 percent"
+      },
+      "answer": "A",
+      "explanation": "\"About one in five\" is 20 percent.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q15",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "The head of analytics suggests that",
+      "options": {
+        "A": "customers who call once are the least satisfied.",
+        "B": "hiring more support staff would certainly cut cancellations.",
+        "C": "frequent callers may already be unhappy with the network.",
+        "D": "the call data was probably collected incorrectly."
+      },
+      "answer": "C",
+      "explanation": "She says frequent callers may already be unhappy with the network, so shorter waits alone wouldn't keep them.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q16",
+      "skill": "reading",
+      "passage": "p1",
+      "text": "The word \"cautious\" in the passage is closest in meaning to",
+      "options": {
+        "A": "angry",
+        "B": "careful",
+        "C": "confident",
+        "D": "quick"
+      },
+      "answer": "B",
+      "explanation": "She was \"more cautious\": careful not to assume that more staff would solve the problem.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q17",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "Which advantage of remote audits is mentioned?",
+      "options": {
+        "A": "Lower travel costs",
+        "B": "Better observation of processes",
+        "C": "More site visits",
+        "D": "Easier inventory counts"
+      },
+      "answer": "A",
+      "explanation": "\"Remote work reduced travel costs.\"",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q18",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "According to the passage, remote audits were less suitable for",
+      "options": {
+        "A": "checking physical inventory.",
+        "B": "planning the scope of the audit.",
+        "C": "reducing the cost of travel.",
+        "D": "reviewing electronic documents."
+      },
+      "answer": "A",
+      "explanation": "Tasks needing direct observation, \"such as checking physical inventory\", worked less well remotely.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q19",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "What does the \"mixed approach\" involve?",
+      "options": {
+        "A": "Returning fully to on-site visits for all audit work",
+        "B": "Remote document review, on-site observation",
+        "C": "Doing every part of the audit remotely",
+        "D": "Replacing audits with self-assessments"
+      },
+      "answer": "B",
+      "explanation": "Planning and document review stay remote, while observation-based testing returns to site visits.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E3-Q20",
+      "skill": "reading",
+      "passage": "p2",
+      "text": "According to the passage, remote document review worked well because",
+      "options": {
+        "A": "inventory levels were lower that year.",
+        "B": "managers travelled less during 2020.",
+        "C": "auditors were more experienced.",
+        "D": "the files were already electronic."
+      },
+      "answer": "D",
+      "explanation": "Auditors could review more documents \"because files were already in electronic form\".",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}
