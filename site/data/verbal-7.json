@@ -1,0 +1,230 @@
+{
+  "id": "V7",
+  "section": "verbal",
+  "test": 7,
+  "title": "Verbal Reasoning – Test 7",
+  "timeLimitSec": 480,
+  "passages": {
+    "p1": {
+      "text": "All of the private addresses that we deliver to have been entered onto our \"Matrix 9.0\" database and have reviewed the figures. On the basis of this, we have decided to cease making deliveries to private addresses as we lack the resources to make this profitable (on average we lose £1.34 on each delivery). We have seen a rapid growth in our business deliveries and will focus on these instead as profits average £14.22 for each of these. Inevitably this means that we will cease some individual deliveries that are profitable and continue with some that are not, but overall this strategy should maximise the profitable use of our available resources in both personnel and vehicles. Please note that E.P. Wilson has two entries on the Matrix 9.0 database.",
+      "truncated": false
+    },
+    "p2": {
+      "text": "Social researchers had for some time been predicting the growth in sporting activity that we have experienced over the past five years. They now point to the changing economic situation, the increased availability of (and funding for) sporting facilities and the success of Irish athletes as the key reasons for this growth. They also note that increasing Irish athletic success has helped achieve this greater funding for sporting facilities, which has in turn increased the number of world class Irish athletes.",
+      "truncated": false
+    },
+    "p3": {
+      "text": "Each year we send the report out in the first week of January and start getting feedback the following week. Last year, for the first time, we sent out e-mail reminders two days after the reports were posted and the amount of feedback we received increased dramatically over previous years. The response rate is affected by many factors, not least whether there is a down turn in the economy and if the weather is bad. The level of service we provide has less impact than these factors, though more than the price we charge, which has almost no impact at all. Almost all of the feedback we receive is very useful, though some people just send in complaints, which is far from useful. Most of the complaints are about things we have no control over at all.",
+      "truncated": false
+    },
+    "p4": {
+      "text": "Damage to tree stocks has increased gradually over the last 30 years, due mainly to the increasing numbers of pests, the greater resistance of the pests to chemical means of controlling them and also because of the unusually high levels of pollution in the area. It is ironic that at least some of the pollution is because more people are driving into the area to view the trees, and it is the same visitors who are responsible for accidentally transporting some of the pests. The pesticide CH44 has had progressively less impact over the last five years and is expected to be no longer cost effective within two years, whilst CH72 is now useless.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "V7-Q01",
+      "passage": "p1",
+      "text": "No individual deliveries to private addresses are profitable.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Some of the private deliveries being cut are profitable.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q02",
+      "passage": "p1",
+      "text": "No deliveries will be made to E.P. Wilson in future.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "E.P. Wilson has two database entries, but we aren't told whether they're private or business addresses.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q03",
+      "passage": "p1",
+      "text": "The overall profit from business deliveries is greater than the overall profit from deliveries to private addresses.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Private deliveries lose £1.34 on average, while business deliveries make £14.22 on average.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q04",
+      "passage": "p2",
+      "text": "Without the success of Irish athletes there would not have been any growth in sporting activity over the past five years.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Athletic success is one of several reasons; we can't say there would have been no growth without it.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q05",
+      "passage": "p2",
+      "text": "Irish athletic success has led to a fall in the number of world class Irish athletes.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Athletic success helped increase funding, which increased the number of world class athletes.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q06",
+      "passage": "p2",
+      "text": "Without the greater levels of funding for sporting facilities there would have been fewer world class Irish athletes.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "verifiedAnswer": "A",
+      "answerSource": "recomputed",
+      "explanation": "Greater funding for facilities has increased the number of world class Irish athletes.",
+      "flag": {
+        "type": "recomputed",
+        "note": "The PDF says Cannot say. The passage states that greater funding 'has in turn increased the number of world class Irish athletes', so without it there would have been fewer."
+      }
+    },
+    {
+      "id": "V7-Q07",
+      "passage": "p2",
+      "text": "Some of the key reasons for the recent growth in sporting activity are related to each other.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Athletic success helped win more funding for facilities, so these reasons are linked.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q08",
+      "passage": "p3",
+      "text": "The amount of feedback received two years ago was lower than the amount received last year.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Last year's feedback increased dramatically over previous years.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q09",
+      "passage": "p3",
+      "text": "More complaints were received last year than in previous years.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Complaints are mentioned, but not how many were received each year.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q10",
+      "passage": "p3",
+      "text": "The level of service is not related to the response rate.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Service level does affect the response rate, just less than the economy and the weather.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q11",
+      "passage": "p3",
+      "text": "Complaints about things we have no control over make up less than half of the feedback we receive.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Almost all feedback is useful, so complaints (which aren't useful) are a small minority.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q12",
+      "passage": "p4",
+      "text": "CH44 was an effective pesticide 30 years ago.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "CH44's decline is described only over the last five years.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q13",
+      "passage": "p4",
+      "text": "CH44 is more effective now than CH72.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "CH44 still has some impact, while CH72 is now useless.",
+      "flag": null
+    },
+    {
+      "id": "V7-Q14",
+      "passage": "p4",
+      "text": "If visitors did not drive to the area to see the trees, the level of damage to tree stocks would not have increased in the last 30 years.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Visitors cause only some of the pollution and pests; pest resistance and other pollution would still have driven damage up. The source key was False; some readings differ.",
+      "flag": {
+        "type": "disputed",
+        "note": "Alternative reading: Cannot say. Visitors cause only 'some' of the pollution and 'some' of the pests; other causes (pest resistance to chemicals, other pollution) would remain. That makes an increase likely, but the passage doesn't quantify the causes, so we can't be sure damage would still have increased."
+      }
+    },
+    {
+      "id": "V7-Q15",
+      "passage": "p4",
+      "text": "If the level of pollution fell, so would the number of pests.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Pollution and pests are given as separate causes; the passage doesn't link one to the other.",
+      "flag": null
+    }
+  ]
+}

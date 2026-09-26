@@ -1,0 +1,310 @@
+{
+  "id": "N2",
+  "section": "numerical",
+  "test": 2,
+  "title": "Numerical Reasoning – Test 2",
+  "timeLimitSec": 1020,
+  "datasets": {
+    "ipg": {
+      "title": "Operating Performance for International Paper Goods (IPG), EUR million",
+      "image": "img/p13.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["EUR million", "1995", "1996", "1997", "1998", "1999", "2000"],
+          "rows": [
+            ["Net sales", 1600, 2158, 2568, 2375, 2508, 2709],
+            ["Cost of goods sold", 1089, 1487, 1661, 1508, 1568, 1716],
+            ["Sales margin", 511, 671, 886, 867, 922, 993],
+            ["Fixed costs", 289, 411, 582, 578, 592, 596],
+            ["Operating cash flow", 222, 260, 304, 289, 331, 397]
+          ]
+        }
+      ]
+    },
+    "demographics": {
+      "title": "Demographic and Infrastructure Information",
+      "image": "img/p14.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["", "South Africa", "Australia", "Argentina"],
+          "rows": [
+            ["Population (m)", 36.5, 19.2, 35.6],
+            ["GNP (USA $m)", 122675, 315500, 227500],
+            ["Economically Active Pop. (%)", 36.1, 50.1, 39.0],
+            ["Urban : Rural Pop. (%)", "61.1 : 38.9", "86.0 : 14.0", "86.4 : 13.6"],
+            ["Telephones (m)", 3.82, 8.51, 4.35],
+            ["Vehicles – Cars (m)", 3.5, 8.1, 4.1],
+            ["Vehicles – Trucks & Buses (m)", 1.9, 2.0, 1.6],
+            ["Total Road Length (m of km)", 0.19, 0.82, 0.22]
+          ],
+          "note": "m = millions"
+        }
+      ]
+    },
+    "tinco": {
+      "title": "Tinco plc, Annual Expenditure by Division",
+      "image": "img/p15.png",
+      "blocks": [
+        {
+          "kind": "pie",
+          "title": "2008 – £4,000,000",
+          "unit": "%",
+          "labels": ["Mining", "Logistics", "Exploration", "Personnel", "Other"],
+          "series": [{ "name": "2008", "values": [12, 15, 29, 37, 7] }],
+          "total": 4000000
+        },
+        {
+          "kind": "pie",
+          "title": "2007 – £3,400,000",
+          "unit": "%",
+          "labels": ["Mining", "Logistics", "Exploration", "Personnel", "Other"],
+          "series": [{ "name": "2007", "values": [19, 18, 20, 36, 7] }],
+          "total": 3400000
+        }
+      ]
+    },
+    "vehicles": {
+      "title": "Annual Production of Vehicles in UK ('000)",
+      "image": "img/p17.png",
+      "blocks": [
+        {
+          "kind": "line",
+          "unit": "'000",
+          "axisLabel": "Vehicle Production '000",
+          "labels": ["2004", "2005", "2006", "2007", "2008"],
+          "series": [
+            { "name": "Ford", "values": [25, 27.5, 30, 30, 35] },
+            { "name": "Nissan", "values": [30, 25, 22.5, 25, 20] },
+            { "name": "Mercedes", "values": [10, 12.5, 10, 15, 17.5] },
+            { "name": "Jaguar", "values": [17.5, 17.5, 15, 10, 7.5] }
+          ]
+        }
+      ]
+    },
+    "airTraffic": {
+      "title": "Annual Air Traffic (billions of passengers)",
+      "image": "img/p19.png",
+      "blocks": [
+        {
+          "kind": "stackedBar",
+          "unit": "bn",
+          "labels": ["5 years ago", "Today"],
+          "series": [
+            { "name": "USA", "values": [1.0, 1.2] },
+            { "name": "Asia-Pacific", "values": [0.7, 1.0] },
+            { "name": "Europe", "values": [0.3, 0.9] },
+            { "name": "Rest of World", "values": [0.1, 0.4] }
+          ]
+        }
+      ]
+    },
+    "greenco": {
+      "title": "Greenco Subsidiaries (EUR million; number of companies in brackets)",
+      "image": "img/p21.png",
+      "blocks": [
+        {
+          "kind": "bar",
+          "title": "1994",
+          "unit": "EUR m",
+          "labels": ["Water (25)", "Wind (16)", "Solar (31)"],
+          "series": [
+            { "name": "Revenue", "values": [13.4, 4.6, 9.0] },
+            { "name": "Operating Profit", "values": [-0.2, 1.6, 1.8] }
+          ]
+        },
+        {
+          "kind": "bar",
+          "title": "2000",
+          "unit": "EUR m",
+          "labels": ["Water (20)", "Wind (25)", "Solar (23)"],
+          "series": [
+            { "name": "Revenue", "values": [16, 7.2, 12.0] },
+            { "name": "Operating Profit", "values": [2.0, 3.0, 4.0] }
+          ]
+        }
+      ]
+    },
+    "oecd": {
+      "title": "Donations made by the six largest donors of the OECD Development Assistance Committee",
+      "image": "img/p23.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["Country", "Aid in $US millions", "Population in millions"],
+          "rows": [
+            ["Australia", 1556, 20.3],
+            ["Canada", 2597, 32.3],
+            ["New Zealand", 184, 4.1],
+            ["Norway", 2042, 4.6],
+            ["UK", 6671, 60.1],
+            ["US", 22580, 296.5]
+          ]
+        }
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": "N2-Q01", "dataset": "ipg",
+      "text": "The average annual growth rate in Net Sales for the industry from 1995 onwards was 20%. By how many EUR did the Net Sales of IPG exceed the industry average by 1997?",
+      "options": { "A": "320m", "B": "324m", "C": "328m", "D": "332m", "E": "None of these" },
+      "answer": "E",
+      "explanation": "Start from 1,600 in 1995 and grow 20% a year: 1996 = 1,920; 1997 = 2,304. IPG 1997 = 2,568, so it exceeds by 264m — not an option.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q02", "dataset": "ipg",
+      "text": "What was the average annual percentage growth in Net Sales for 1999 and 2000?",
+      "options": { "A": "3.2%", "B": "4.4%", "C": "5.6%", "D": "6.8%", "E": "7.9%" },
+      "answer": "E", "verifiedAnswer": "D", "answerSource": "recomputed",
+      "explanation": "1999 growth: (2,508 − 2,375) ÷ 2,375 = 5.6%. 2000 growth: (2,709 − 2,508) ÷ 2,508 = 8.0%. Average = (5.6 + 8.0) ÷ 2 = 6.8%.",
+      "flag": { "type": "recomputed", "note": "The PDF only computes 2000's growth (and 201 ÷ 2,508 is actually 8.0%). The question asks for the average over 1999 and 2000: 1999 growth = (2,508 − 2,375) ÷ 2,375 = 5.6%; 2000 growth = 8.0%; average = 6.8% (D). PDF working: (2,709 − 2,508) ÷ 2,508 = 7.9% (2000 only)." }
+    },
+    {
+      "id": "N2-Q03", "dataset": "demographics",
+      "text": "If 90% of cars in Argentina are owned by urban dwellers, what percentage of urban dwellers own cars (assuming a maximum of one car per person)?",
+      "options": { "A": "0.22%", "B": "2.23%", "C": "5.85%", "D": "12%", "E": "16.42%" },
+      "answer": "D",
+      "explanation": "Cars owned by urban dwellers = 90% × 4.1m = 3.69m. Urban population = 86.4% × 35.6m = 30.76m. 3.69 ÷ 30.76 = 12%.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q04", "dataset": "tinco",
+      "text": "What was the total expenditure of mining and logistics in 2007?",
+      "options": { "A": "£884,000", "B": "£10,800,000", "C": "£1,258,000", "D": "£918,000", "E": "£91,800" },
+      "answer": "C",
+      "explanation": "2007: (19% + 18%) × £3,400,000 = 37% × 3.4m = £1,258,000.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q05", "dataset": "tinco",
+      "text": "What was the percentage increase in the cost of exploration from 2007 to 2008?",
+      "options": { "A": "71%", "B": "69%", "C": "70%", "D": "72%", "E": "Cannot Say" },
+      "answer": "A",
+      "explanation": "2007: 20% × 3.4m = 680,000. 2008: 29% × 4m = 1,160,000. (1,160,000 − 680,000) ÷ 680,000 = 70.6% ≈ 71%.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q06", "dataset": "tinco",
+      "text": "What was the percentage decrease in the cost of mining from 2007 to 2008?",
+      "options": { "A": "41.32%", "B": "34.58%", "C": "25.7%", "D": "23.5%", "E": "28%" },
+      "answer": "C",
+      "explanation": "2007: 19% × 3.4m = 646,000. 2008: 12% × 4m = 480,000. (646,000 − 480,000) ÷ 646,000 = 25.7%.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q07", "dataset": "tinco",
+      "text": "In 2009 an additional £100,000 will be spent on exploration. If total annual expenditure increases by 8%, what proportion of overall expenditure will exploration account for?",
+      "options": { "A": "29.7%", "B": "31.31%", "C": "38.43%", "D": "30.3%", "E": "Cannot Say" },
+      "answer": "B",
+      "explanation": "PDF: new total = 1.08 × 4,000,000 = 4,320,000. Exploration = 29% × 4,320,000 + 100,000 = 1,352,800. 1,352,800 ÷ 4,320,000 = 31.31%.",
+      "flag": { "type": "disputed", "note": "Ambiguous. The PDF grows exploration by 8% too and then adds £100,000. Reading 'an additional £100,000' as 2008 exploration + £100,000 gives (1,160,000 + 100,000) ÷ 4,320,000 = 29.2%, which matches no option exactly." }
+    },
+    {
+      "id": "N2-Q08", "dataset": "vehicles",
+      "text": "What was the percentage decrease in production of vehicles by Nissan from 2004 - 2008?",
+      "options": { "A": "32.42%", "B": "38.32%", "C": "33.33%", "D": "30%", "E": "40%" },
+      "answer": "C",
+      "explanation": "Nissan: 30,000 (2004) → 20,000 (2008). 10,000 ÷ 30,000 = 33.33%.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q09", "dataset": "vehicles",
+      "text": "If Ford production decreased by 20% in 2009 how many vehicles would be produced in that year?",
+      "options": { "A": "28000", "B": "280000", "C": "2800000", "D": "420000", "E": "400000" },
+      "answer": "A",
+      "explanation": "Ford 2008 = 35,000. 0.8 × 35,000 = 28,000.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q10", "dataset": "vehicles",
+      "text": "If all four car manufacturers consistently annually accounted for 23% of annual vehicle production in the UK, how many vehicles in total were produced in the UK in 2006 to the nearest '000 (thousand)?",
+      "options": { "A": "337000", "B": "775000", "C": "336000", "D": "178000", "E": "170000" },
+      "answer": "A",
+      "explanation": "2006: 30 + 22.5 + 10 + 15 = 77.5 thousand. 77,500 ÷ 0.23 = 336,957 ≈ 337,000.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q11", "dataset": "vehicles",
+      "text": "If the percentage increase in production of vehicles by Ford between 2007 and 2008 were repeated annually how many years would it be before Ford produced at least 5,800,000 vehicles in the UK?",
+      "options": { "A": "5", "B": "4", "C": "3", "D": "2", "E": "1" },
+      "answer": "B",
+      "explanation": "Ford grew (35,000 − 30,000) ÷ 30,000 = 16.7%. Repeating: 40,833 → 47,639 → 55,579 → 64,842, so 4 years to pass 58,000.",
+      "flag": { "type": "disputed", "note": "The question says 5,800,000, but the chart is in thousands; the PDF's working uses 58,000. With 58,000 the answer is 4 years (B). Read literally, 5,800,000 would take about 33 years." }
+    },
+    {
+      "id": "N2-Q12", "dataset": "airTraffic",
+      "text": "The average distance flown per passenger departing within Europe 5 years ago was 1,000km. Today this figure has decreased by 20%. By how many percent has the total distance travelled by flights departing in Europe changed today?",
+      "options": { "A": "30% decrease", "B": "15% decrease", "C": "No change", "D": "120% increase", "E": "140% increase" },
+      "answer": "E",
+      "explanation": "5 years ago: 0.3bn passengers × 1,000 km = 300bn km. Today: 0.9bn × 800 km = 720bn km. (720 − 300) ÷ 300 = +140%.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q13", "dataset": "airTraffic",
+      "text": "What is the percentage increase in global passenger air traffic over the past five years?",
+      "options": { "A": "37%", "B": "47%", "C": "57%", "D": "67%", "E": "None of these" },
+      "answer": "D",
+      "explanation": "5 years ago: 1.0 + 0.7 + 0.3 + 0.1 = 2.1bn. Today: 1.2 + 1.0 + 0.9 + 0.4 = 3.5bn. (3.5 − 2.1) ÷ 2.1 = 67%.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q14", "dataset": "airTraffic",
+      "text": "If the increase in global passenger air traffic continues at the current rate, approximately how many annual air passengers (billions) will there be in 5 years time?",
+      "options": { "A": "0.583b", "B": "0.539b", "C": "5.83b", "D": "53.9b", "E": "None of these" },
+      "answer": "C",
+      "explanation": "Growth of 67% per 5 years: 3.5 × 1.67 = 5.83bn.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q15", "dataset": "greenco",
+      "text": "How many more Euros operating profit did Greenco generate per Water Company in 2000 than in 1994?",
+      "options": { "A": "EUR 54,000", "B": "EUR 108,000", "C": "EUR 216,000", "D": "EUR 432,000", "E": "None of these" },
+      "answer": "B",
+      "explanation": "1994: −0.2m ÷ 25 = −8,000. 2000: 2.0m ÷ 20 = 100,000. Difference = 108,000.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q16", "dataset": "greenco",
+      "text": "Approximately how much revenue did Greenco generate per company on average in 1994?",
+      "options": { "A": "EUR 350,000", "B": "EUR 375,000", "C": "EUR 400,000", "D": "EUR 425,000", "E": "EUR 450,000" },
+      "answer": "B",
+      "explanation": "1994 revenue = 13.4 + 4.6 + 9.0 = 27m. Companies = 25 + 16 + 31 = 72. 27m ÷ 72 = 375,000.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q17", "dataset": "greenco",
+      "text": "The total growth in Revenue for the water sector between 1994 and 2000 is equivalent to what constant annual rate of growth?",
+      "options": { "A": "3%", "B": "3.3%", "C": "3.6%", "D": "3.9%", "E": "Cannot say" },
+      "answer": "B", "verifiedAnswer": "A", "answerSource": "recomputed",
+      "explanation": "A constant annual rate compounds: (16 ÷ 13.4)^(1/6) − 1 = 3.0%. Check: 13.4 × 1.03⁶ ≈ 16.0.",
+      "flag": { "type": "recomputed", "note": "A constant annual rate compounds: (16 ÷ 13.4)^(1/6) − 1 = 3.0% (A). Check: 13.4 × 1.03^6 = 16.0. The PDF divides simple growth by 6 (and 19.4% ÷ 6 is 3.2%, not 3.3%). PDF working: (16 − 13.4) ÷ 13.4 = 20% over 6 years; 20% ÷ 6 = 3.3%." }
+    },
+    {
+      "id": "N2-Q18", "dataset": "oecd",
+      "text": "In millions of US$, what was the average (mean) amount donated by the six largest donors of the OECD Development Assistance Committee?",
+      "options": { "A": "7126", "B": "5938.33", "C": "4271.67", "D": "2319.5", "E": "4000" },
+      "answer": "B",
+      "explanation": "Total = 1,556 + 2,597 + 184 + 2,042 + 6,671 + 22,580 = 35,630. ÷ 6 = 5,938.33.",
+      "flag": null
+    },
+    {
+      "id": "N2-Q19", "dataset": "oecd",
+      "text": "Which of these six countries donated the most per capita?",
+      "options": { "A": "United Kingdom", "B": "Canada", "C": "Norway", "D": "New Zealand", "E": "US" },
+      "answer": "C",
+      "explanation": "Aid ÷ population: Norway 2,042 ÷ 4.6 = 444 — far above the rest (UK 111, Canada 80, US 76, NZ 45).",
+      "flag": null
+    },
+    {
+      "id": "N2-Q20", "dataset": "oecd",
+      "text": "The total amount donated by all member countries of the OECD Development Assistance Committee was $US 79,191 million. If a pie chart is drawn for all countries, what would be the angle (to the nearest degree) representing the donation of the United Kingdom?",
+      "options": { "A": "9", "B": "12", "C": "30", "D": "67", "E": "70" },
+      "answer": "C",
+      "explanation": "6,671 ÷ 79,191 × 360° = 30.3° ≈ 30°.",
+      "flag": null
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "id": "N4",
+  "section": "numerical",
+  "test": 4,
+  "title": "Numerical Reasoning – Test 4",
+  "timeLimitSec": 1020,
+  "datasets": {
+    "gdp": {
+      "title": "GDP per person (£), UK vs France, and 2009 country figures",
+      "image": "img/p39.png",
+      "blocks": [
+        {
+          "kind": "line",
+          "unit": "£",
+          "axisLabel": "GDP per person (£)",
+          "labels": ["2005", "2006", "2007", "2008", "2009"],
+          "series": [
+            { "name": "UK", "values": [22000, 23250, 23750, 23000, 24000] },
+            { "name": "France", "values": [23500, 23250, 23000, 24000, 24500] }
+          ]
+        },
+        {
+          "kind": "table",
+          "title": "2009",
+          "columns": ["Country", "Gross Domestic Product (£billion)", "GDP Per person (£1000s)"],
+          "rows": [
+            ["UK", 2.05, 24],
+            ["France", 2.4, 24.5],
+            ["Germany", 3.1, 25.7],
+            ["Spain", 1.4, 20.5],
+            ["Italy", 1.95, 23.6]
+          ]
+        }
+      ]
+    },
+    "areaSales": {
+      "title": "Breakdown of sales for each key product grouping by area – 2009 (%)",
+      "image": "img/p41.png",
+      "blocks": [
+        {
+          "kind": "stackedBar",
+          "unit": "%",
+          "labels": ["Food", "Drinks", "Books", "Magazine"],
+          "series": [
+            { "name": "South", "values": [25, 20, 31, 35] },
+            { "name": "West", "values": [17, 18, 20, 15] },
+            { "name": "East", "values": [41, 51, 35, 22] },
+            { "name": "North", "values": [17, 11, 14, 28] }
+          ]
+        }
+      ]
+    },
+    "fund": {
+      "title": "Current Breakdown of Global Equity Fund (Total Fund Value = $160 million)",
+      "image": "img/p43.png",
+      "blocks": [
+        {
+          "kind": "pie",
+          "unit": "%",
+          "labels": ["US", "Japan", "Emerging Markets", "S.E. Asia", "Europe", "UK"],
+          "series": [{ "name": "Holding", "values": [38, 18, 7, 12, 15, 10] }],
+          "total": 160
+        }
+      ]
+    },
+    "rooms": {
+      "title": "Conference and Meeting Room Hire Charges",
+      "image": "img/p44.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["Rooms", "Seating for", "Cost for room per day (€)"],
+          "rows": [
+            ["Brahms Room", 30, 250],
+            ["Dylan Room", 45, 400],
+            ["Haydn Room", 30, 300],
+            ["Lennon Room", 50, 420],
+            ["Verdi Room", 110, 510]
+          ],
+          "note": "Refreshments only – €10 per person per day. Lunch & Refreshments – €28 per person per day."
+        }
+      ]
+    },
+    "mailshots": {
+      "title": "Sales and enquiries generated per 10,000 direct mailshots by age",
+      "image": "img/p47.png",
+      "blocks": [
+        {
+          "kind": "bar",
+          "labels": ["16-24 yo", "25-34 yo", "35-44 yo", "45-54 yo", "55-64 yo", "65 & over yo"],
+          "series": [
+            { "name": "Sales", "values": [12, 14, 10, 8, 15, 9] },
+            { "name": "Enquiries", "values": [36, 39, 21, 23, 32, 15] }
+          ]
+        }
+      ]
+    },
+    "fax": {
+      "title": "Fax machine prices",
+      "image": "img/p49.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["Fax Machine", "Pre-Discount Price per Unit (€)", "Discount Price per Unit (€)", "Pages Printed per Minute"],
+          "rows": [
+            ["Info-Fax", 500, 350, 12],
+            ["Speed-Fax", 760, 520, 17],
+            ["Tele-Fax", 980, 700, 18],
+            ["Zoom-Fax", 1110, 825, 20],
+            ["Compact-Fax", 675, 495, 16]
+          ]
+        }
+      ]
+    },
+    "survey": {
+      "title": "Customer Service Survey – number of responses",
+      "image": "img/p50.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["Level of satisfaction", "Sales Unit", "Finance Unit", "Complaints Unit", "Claims Unit"],
+          "rows": [
+            ["Less than satisfactory", 3, 5, 14, 18],
+            ["Satisfactory", 65, 48, 44, 54],
+            ["Excellent", 112, 82, 122, 48]
+          ]
+        }
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": "N4-Q01", "dataset": "gdp",
+      "text": "In which year (or years) was there more than a 3.3% difference in the GDP per person for France compared to the UK?",
+      "options": { "A": "2005, 2007", "B": "2006, 2008", "C": "2007, 2008", "D": "2008, 2005", "E": "2009, 2005" },
+      "answer": "D",
+      "explanation": "Difference ÷ UK: 2005 1,500/22,000 = 6.8%; 2006 0%; 2007 −750/23,750 = −3.2%; 2008 1,000/23,000 = 4.3%; 2009 500/24,000 = 2.1%. Only 2005 and 2008 exceed 3.3%.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q02", "dataset": "gdp",
+      "text": "Which two countries had the smallest difference in GDP per person in 2009?",
+      "options": { "A": "UK, Italy", "B": "France, Italy", "C": "Germany, Italy", "D": "Spain, Italy", "E": "Spain, France" },
+      "answer": "A",
+      "explanation": "UK 24.0 vs Italy 23.6 → difference 0.4 (thousand £), the smallest.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q03", "dataset": "gdp",
+      "text": "Between which years were the GDPs per person increasing in both France and the UK?",
+      "options": { "A": "2008-2009", "B": "2007-2008", "C": "2006-2007", "D": "2005-2006", "E": "Cannot say" },
+      "answer": "A",
+      "explanation": "Both lines point upwards only between 2008 and 2009.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q04", "dataset": "gdp",
+      "text": "What was the average GDP per person for France and the UK across the 5 years shown?",
+      "options": { "A": "£23,500 and £23,200", "B": "£23,650 and £23,500", "C": "£23,500 and £23,000", "D": "£23,000 and £23,500", "E": "£23,650 and £23,200" },
+      "answer": "E",
+      "explanation": "France: 118,250 ÷ 5 = £23,650. UK: 116,000 ÷ 5 = £23,200.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q05", "dataset": "areaSales",
+      "text": "If total food sales for the four Regions are €2,400,000, what is the value of food sales for the North Region?",
+      "options": { "A": "199200", "B": "40800", "C": "408000", "D": "29166", "E": "583000" },
+      "answer": "C",
+      "explanation": "North = 17% of food: 0.17 × 2,400,000 = 408,000.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q06", "dataset": "areaSales",
+      "text": "If North Region sold €390,000 worth of Magazines, what was the value of South Region's magazine sales?",
+      "options": { "A": "487500", "B": "109200", "C": "403333", "D": "1365000", "E": "136500" },
+      "answer": "A",
+      "explanation": "Magazines: North 28%, South 35%. South = 390,000 × 35/28 = 487,500.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q07", "dataset": "areaSales",
+      "text": "Which Region had the lowest overall sales?",
+      "options": { "A": "North", "B": "East", "C": "West", "D": "South", "E": "Cannot Say" },
+      "answer": "E",
+      "explanation": "The chart shows only percentages within each product group; without the value of each group's total sales, regions can't be compared overall.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q08", "dataset": "fund",
+      "text": "What is the value of the Japanese holding in the Fund?",
+      "options": { "A": "$24.0 million", "B": "$28.8 million", "C": "$32.8 million", "D": "$44.8 million", "E": "$60.8 million" },
+      "answer": "B",
+      "explanation": "18% × $160m = $28.8m.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q09", "dataset": "fund",
+      "text": "By how much do the value of the holdings in the US and Japan exceed that of the value of all the other holdings?",
+      "options": { "A": "$16.4 million", "B": "$18.8 million", "C": "$19.2 million", "D": "$22.8 million", "E": "$26.4 million" },
+      "answer": "C",
+      "explanation": "US + Japan = 56% → $89.6m. Others = 44% → $70.4m. Difference = 12% × 160 = $19.2m.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q10", "dataset": "fund",
+      "text": "Last year, the value of the S.E. Asia holding was 10% less than what it is now. What was the value of the S.E. Asia holding last year?",
+      "options": { "A": "$17.28m", "B": "$17.45m", "C": "$17.96m", "D": "$18.48m", "E": "$19.05m" },
+      "answer": "A",
+      "explanation": "Now: 12% × 160 = $19.2m. Last year: 0.9 × 19.2 = $17.28m.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q11", "dataset": "rooms",
+      "text": "You need to book two rooms which between them will seat 72 people. Which of the options given below would offer this at the lowest price?",
+      "options": { "A": "Haydn & Lennon", "B": "Brahms & Haydn", "C": "Brahms & Lennon", "D": "Dylan & Haydn", "E": "Brahms & Dylan" },
+      "answer": "E",
+      "explanation": "Seats / price per day: Haydn & Lennon 80 / €720; Brahms & Haydn 60 (too few); Brahms & Lennon 80 / €670; Dylan & Haydn 75 / €700; Brahms & Dylan 75 / €650 — the cheapest that seats 72.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q12", "dataset": "rooms",
+      "text": "You have booked the Dylan Room for five days with lunch and refreshments for 43 people but have to increase this to 49 people so you will use the Lennon Room instead. How much more will these changes cost you?",
+      "options": { "A": "8960", "B": "860", "C": "940", "D": "1440", "E": "188" },
+      "answer": "C",
+      "explanation": "Dylan: 5 × 400 + 43 × 5 × 28 = 2,000 + 6,020 = €8,020. Lennon: 5 × 420 + 49 × 5 × 28 = 2,100 + 6,860 = €8,960. Difference = €940.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q13", "dataset": "rooms",
+      "text": "You book the Verdi Room for four days and are given a 25% discount on Lunch and Refreshments (but not on the Room Hire). If you have total budget of €8,100 to cover the cost of the room, Lunch and Refreshments, how many delegates could you afford each day if you have to buy them Lunch and Refreshments?",
+      "options": { "A": "72", "B": "78", "C": "54", "D": "110", "E": "90" },
+      "answer": "A",
+      "explanation": "Room: 4 × 510 = €2,040. Left for food: 8,100 − 2,040 = 6,060 → €1,515 per day. Discounted lunch = 0.75 × 28 = €21. 1,515 ÷ 21 = 72.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q14", "dataset": "rooms",
+      "text": "You have to book three rooms for three days that will seat a total of 107 people between them each day. You also need refreshments for the first two days and lunch and refreshments on the third for all 107. What is the cheapest you can get this for if you have a voucher offering a 5% discount on the Lennon Room (but not for food and refreshments) for all three days?",
+      "options": { "A": "6913", "B": "6085", "C": "7983", "D": "5015", "E": "5136" },
+      "answer": "C",
+      "explanation": "Cheapest 3 rooms seating ≥ 107: Brahms + Haydn + Lennon (110 seats) = 250 + 300 + 399 (5% off 420) = €949/day → €2,847. Food: 107 × 10 × 2 + 107 × 28 = 2,140 + 2,996 = €5,136. Total = €7,983.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q15", "dataset": "mailshots",
+      "text": "Which age range shows the smallest number of sales per enquiry?",
+      "options": { "A": "16-24 years", "B": "25-34 years", "C": "35-44 years", "D": "45-54 years", "E": "55-64 years" },
+      "answer": "A",
+      "explanation": "Sales ÷ enquiries: 16-24 0.33; 25-34 0.36; 35-44 0.48; 45-54 0.35; 55-64 0.47; 65+ 0.60. Smallest: 16-24.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q16", "dataset": "mailshots",
+      "text": "Assuming 400,000 mail shots were sent out to 25-34 year olds, how many more enquiries would be generated compared to actual sales?",
+      "options": { "A": "800", "B": "900", "C": "1000", "D": "1100", "E": "1200" },
+      "answer": "C",
+      "explanation": "400,000 = 40 × 10,000. Enquiries 39 × 40 = 1,560; sales 14 × 40 = 560. Difference = 1,000.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q17", "dataset": "mailshots",
+      "text": "Last year there were 630 sales recorded for the 45-54 year old group. How many mail shots would have been sent out to reach this figure?",
+      "options": { "A": "630500", "B": "625000", "C": "685500", "D": "760000", "E": "787500" },
+      "answer": "E",
+      "explanation": "8 sales per 10,000 mailshots. 630 ÷ 8 × 10,000 = 787,500.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q18", "dataset": "mailshots",
+      "text": "In one year, there were 1.9 million mail shots sent out to people aged 65 and over compared to 1.1 million mail shots sent out to people aged 16-24 years old. How many more sales were likely to have been made to people aged 65 and over?",
+      "options": { "A": "270", "B": "336", "C": "390", "D": "484", "E": "533" },
+      "answer": "C",
+      "explanation": "65+: 9 × 190 = 1,710. 16-24: 12 × 110 = 1,320. Difference = 390.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q19", "dataset": "fax",
+      "text": "If 45 Tele-fax, 24 Zoom-fax and 12 Info-fax machines were purchased at the Discount Price, how much was saved on these products?",
+      "options": { "A": "€21,240", "B": "€20,500", "C": "€29,480", "D": "€31,000", "E": "€22,250" },
+      "answer": "A",
+      "explanation": "Saving per unit × quantity: Tele-Fax 280 × 45 = 12,600; Zoom-Fax 285 × 24 = 6,840; Info-Fax 150 × 12 = 1,800. Total = €21,240.",
+      "flag": null
+    },
+    {
+      "id": "N4-Q20", "dataset": "survey",
+      "text": "Which Unit(s) had the highest percentage of responses in the 'Excellent' category in the Customer Service Survey?",
+      "options": { "A": "Sales", "B": "Finance", "C": "Complaints", "D": "Claims", "E": "Sales & Claims tied" },
+      "answer": "C",
+      "explanation": "Excellent ÷ total responses: Sales 112/180 = 62.2%; Finance 82/135 = 60.7%; Complaints 122/180 = 67.8%; Claims 48/120 = 40.0%.",
+      "flag": null
+    }
+  ]
+}

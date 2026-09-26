@@ -1,0 +1,13 @@
+# Source PDF (third-party material, not published)
+dlstudocu.com_pwc-aptitude-test-past-questions-and-solutions.pdf
+/*.pdf
+
+# Generated text dumps from tools/dump_text.py
+tools/out/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Claude Code local settings
+.claude/

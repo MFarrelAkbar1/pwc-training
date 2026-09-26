@@ -1,0 +1,242 @@
+{
+  "id": "V3",
+  "section": "verbal",
+  "test": 3,
+  "title": "Verbal Reasoning – Test 3",
+  "timeLimitSec": 480,
+  "passages": {
+    "p1": {
+      "text": "Some commentators argue that in times of global economic uncertainty governments should be boosting flagging economies by investing in major infrastructure projects. Many people are of the opinion that governments should grasp the opportunities presented to tackle global climate change at the same time as stimulating the economy, by using this public sector investment to move towards a new low-carbon infrastructure which would be an effective way of reducing carbon emissions and of ensuring security of energy supplies. They claim investment is needed in projects like renewable energy generation, modernising buildings to be more energy efficient, improving transport networks and even building pipelines to carry captured CO2 to undersea storage facilities. They acknowledge, however, that the political will has to be found and that this has to be done on a global level if positive results are to be realised",
+      "truncated": false
+    },
+    "p2": {
+      "text": "Existing targets for reducing carbon emissions worldwide acknowledge that the current high levels of greenhouse gasses in our atmosphere are an accumulation over many decades that can be directly attributed to today’s developed economies. This situation has led to developing economies like India, China and Mexico having less aggressive targets for emissions reduction than the developed countries. There is concern though that unless these large emerging economies are fully committed to reducing carbon emissions, their desire for rapid economic growth coupled with less stringent emission targets will encourage them to continue to use traditional production methods rather than introduce cleaner and more sustainable technologies. If the reduction of carbon emissions worldwide has any hope of success, the emerging economies must be able to contribute on an equal basis to the decision making processes which will determine how this is to be achieved.",
+      "truncated": false
+    },
+    "p3": {
+      "text": "A new government body is about to publish a number of scenarios hypothesising how our climate might change by the year 2100. The information provided will be used to help decide how to start adapting our society to changes resulting from global warming which will be particularly important when considering large infrastructure projects with a long lifespan. Whilst all agree that there is some degree of global warming, some scientists argue that we are overemphasising this long-term approach and should instead be focusing on shorter range natural variability which is not well understood and often difficult to predict. They claim that there is no way of knowing how accurate these long range hypotheses will be, and also question how useful the hypotheses will be for predicting the climate for the next 10 years. All existing long-term predictions suggest that within fifty years our summer will be drier and heat waves will be the norm, but what, if anything, does that tell us about the next [...text cut off in source]",
+      "truncated": true
+    },
+    "p4": {
+      "text": "Predicting earthquakes using observable phenomena like phases of the moon, cloud formations, weather conditions or animal behaviour is a controversial and, some would say, impossible task. There is little or no verifiable evidence to link any of these phenomena to predictions of actual seismic activity. Early detection, as a means of advance warning, is far more reliable than future prediction and can be done by measuring primary waves (referred to as P-Waves). These non-destructive waves travel faster through the earth’s crust than the harmful and destructive secondary waves and so can provide a valuable, albeit short, advance warning. This effect of different speed waves can be likened to the relationship between light and sound; we see lightning before we hear the thunder. Some people believe that animals can detect P-Waves and that this is what causes them to start behaving strangely. Other theories advanced to explain their behaviour are that that the animals are reacting to chang [...text cut off in source]",
+      "truncated": true
+    },
+    "p5": {
+      "text": "Scientists have been able to successfully genetically modify plants, animals and micro organisms for a number of years. They do this by manipulating genes to produce genetic changes (which could in theory occur naturally). Supporters of genetic modification claim that the benefits, such as being able to produce crops that are resistant to disease, will help alleviate world food shortages. Many environmentalists believe that the accidental release of genetically modified organisms into the environment is genetic pollution and they fear that the uncontrolled interbreeding of modified organisms with those occurring naturally will contaminate the environment in unforeseen and possibly dangerous ways. They point out that experiments done by researchers to reassure the public about the safety of GM crops have been carried out under scientifically controlled conditions which are far removed from the actual working conditions of food producers.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "V3-Q01",
+      "passage": "p1",
+      "text": "Some commentators believe the best way to boost a flagging economy would be for governments to invest in major ’green’-related infrastructure projects.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": null,
+      "verifiedAnswer": "C",
+      "answerSource": "recomputed",
+      "explanation": "Commentators argue for infrastructure investment in general, not specifically 'green' projects, and nobody calls it the best way.",
+      "flag": {
+        "type": "missing-key",
+        "note": "No key in source; this answer is a judgment call. The commentators argue for investing in major infrastructure projects (not specifically ’green’ ones) and never say it is the ‘best’ way; the green angle is the opinion of ‘many people’."
+      }
+    },
+    {
+      "id": "V3-Q02",
+      "passage": "p1",
+      "text": "Some people believe that a flagging economy should be good for ’green’ projects.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Many people think governments should use the economic stimulus as an opportunity to build low-carbon infrastructure.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q03",
+      "passage": "p1",
+      "text": "Renewable energy generation projects will have a positive impact regardless of their scale.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Scale matters: action has to be taken on a global level for positive results.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q04",
+      "passage": "p2",
+      "text": "Developing economies have less stringent emissions reduction targets than developed economies do.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Developing economies such as India, China and Mexico have less aggressive targets than developed countries.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q05",
+      "passage": "p2",
+      "text": "The developing countries will resist any move to stricter emissions targets.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "There is concern they may keep old methods, but nothing says they will resist stricter targets.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q06",
+      "passage": "p2",
+      "text": "Currently, developing economies produce less carbon dioxide per year than developed countries do",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage covers historic accumulation and targets, not current annual emissions.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q07",
+      "passage": "p3",
+      "text": "Over the next 50 years the summer each year will be hotter and drier.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Drier summers are predicted 'within fifty years', but these are predictions, and nothing says every year will be hotter.",
+      "flag": {
+        "type": "truncated",
+        "note": "The passage is cut off in the sentence about what 50-year predictions tell us about the near term. From the visible text, Cannot say holds: these are only predictions, and they say 'within fifty years', not 'each year'."
+      }
+    },
+    {
+      "id": "V3-Q08",
+      "passage": "p3",
+      "text": "Some scientists do not agree that global warming is happening.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "The passage says all agree there is some degree of global warming.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q09",
+      "passage": "p3",
+      "text": "Government scientists are not able to accurately forecast what the weather will do between now and the year 2100.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "verifiedAnswer": "C",
+      "answerSource": "recomputed",
+      "explanation": "Only some scientists claim the accuracy of the long-range scenarios can't be known; the passage doesn't establish it.",
+      "flag": {
+        "type": "recomputed",
+        "note": "The PDF says True. Only 'some scientists' claim the accuracy of long-range scenarios can't be known — an opinion in the passage, not an established fact."
+      }
+    },
+    {
+      "id": "V3-Q10",
+      "passage": "p4",
+      "text": "If animals can detect primary waves, they could be used to predict earthquakes.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "P-waves allow early detection, which the passage contrasts with prediction.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q11",
+      "passage": "p4",
+      "text": "Primary waves travel at the speed of sound.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Light and sound are only an analogy; no wave speeds are given.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q12",
+      "passage": "p4",
+      "text": "P-Waves, and the low-frequency electromagnetic signals some believe animals can sense, are not the same thing.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Electromagnetic signals aren't in the surviving text; the source key relies on the part of the passage that is cut off.",
+      "flag": {
+        "type": "truncated",
+        "note": "Electromagnetic signals aren't mentioned in the visible text — they were presumably in the cut-off 'other theories' sentence. From what survives, the answer would be Cannot say; the PDF key (True) relies on the missing text."
+      }
+    },
+    {
+      "id": "V3-Q13",
+      "passage": "p5",
+      "text": "Experiments that produced results showing the safety of GM crops did not yield scientifically valid results.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "The experiments were scientifically controlled; the criticism is that conditions were unrealistic, not that results were invalid.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q14",
+      "passage": "p5",
+      "text": "Genetic change in plants is not always evidence of the intervention of genetic scientists.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "The genetic changes scientists make 'could in theory occur naturally'.",
+      "flag": null
+    },
+    {
+      "id": "V3-Q15",
+      "passage": "p5",
+      "text": "Some supporters of genetic modification believe that unless we expand our use of GM crops, increased global food shortages are inevitable.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Supporters say GM will help ease shortages, not that shortages are inevitable without it.",
+      "flag": null
+    }
+  ]
+}

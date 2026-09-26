@@ -1,0 +1,222 @@
+{
+  "id": "V5",
+  "section": "verbal",
+  "test": 5,
+  "title": "Verbal Reasoning – Test 5",
+  "timeLimitSec": 480,
+  "passages": {
+    "p1": {
+      "text": "On 1st July 2007 the smoke-free law was introduced in England with the aim of protecting employees in their places of work, and the general public in enclosed public places, from the effects of secondhand smoking. These law changes mean that all public transport and work vehicles used by more than one person must now be smoke-free, no smoking signs must be displayed in all smoke-free premises and vehicles, and staff smoking rooms are no longer allowed; staff who want to smoke must go outside. Local councils in England have the responsibility of enforcing the law but it is the legal responsibility of the managers of smoke-free premises and vehicles to make sure people don’t smoke. Individuals can be fined or prosecuted for breaking the law and employers can be fined if they do not display the no-smoking signs or if they allow smoking to continue on their premises.",
+      "truncated": false
+    },
+    "p2": {
+      "text": "Many businesses have endeavoured to make comment cards available at all of their customer service outlets and a few are considering the feasibility of establishing customer panels on a pilot basis. However, some businesses have acknowledged that the response to customer surveys in the past has been poor, possibly reflecting the frequently voiced customer complaints of too much form filling. It may also be an indication that progress has been made and that customers are more satisfied with the customer service being offered.",
+      "truncated": false
+    },
+    "p3": {
+      "text": "Companies are seeking to improve their Web-Site so that requests for information can be dealt with more promptly and their new site will also contain customer services information. Also, \"Direct Dial Inwards\" (DDI) has been introduced along with VPN (Virtual Private Network) service. This facilitates calls between the Company and other VPN sites. As most sites have converted to DDI this means that staff should be in a position to dial desk to desk. This also means that customers can be transferred to the appropriate agency without having to make a second phone call. Staffs are encouraged to use proper voice mail recordings with up to date information.",
+      "truncated": false
+    },
+    "p4": {
+      "text": "Many colleges are now taking a more progressive approach towards education and training. Colleges now offer a greater variety of academic courses to meet the needs of today’s employer. Students are encouraged to explore all training and career options before they decide on a particular course. Advice is available from career guidance counsellors who will help the student to choose a course that will suit their needs. Because the courses are also provided through distance education it allows the individual to study at home and correspond with lecturers by using e-mail and facsimile machine. Obtaining qualifications which have credibility with employers and which accurately reflect the scope and level of the individual’s abilities and achievements is vital for all those trying to access the job market.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "V5-Q01",
+      "passage": "p1",
+      "text": "Secondhand smoking can cause lung cancer, bronchitis and other respiratory diseases.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage doesn't say which diseases secondhand smoke causes.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q02",
+      "passage": "p1",
+      "text": "Truck drivers working alone are not allowed to smoke under the new law.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Only work vehicles used by more than one person must be smoke-free; whether a lone driver's truck is shared isn't stated.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q03",
+      "passage": "p1",
+      "text": "It is no longer legal for internal smoking rooms to be provided for employees.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Staff smoking rooms are no longer allowed.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q04",
+      "passage": "p2",
+      "text": "Numerous businesses have attempted to make comment cards available at their customer service outlets.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Many businesses have tried to make comment cards available at their outlets.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q05",
+      "passage": "p2",
+      "text": "The response to customer surveys decreases when customers are satisfied with the customer service being offered.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Customer satisfaction is offered only as a possible reason for the poor response.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q06",
+      "passage": "p2",
+      "text": "Some businesses are investigating the viability of setting up customer panels on a pilot basis.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "A few businesses are considering the feasibility of pilot customer panels.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q07",
+      "passage": "p2",
+      "text": "The number of forms to be filled in by customers causes some people to complain.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Customers frequently complain of too much form filling.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q08",
+      "passage": "p3",
+      "text": "One reason why companies are trying to develop their web-sites is to respond to queries more quickly.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Websites are being improved so requests for information are dealt with more promptly.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q09",
+      "passage": "p3",
+      "text": "All staff can now dial from desk to desk.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Only most sites, not all, have converted to DDI.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q10",
+      "passage": "p3",
+      "text": "DDI can only operate on VPN systems.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "DDI was introduced alongside VPN; nothing says it can only work with it.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q11",
+      "passage": "p3",
+      "text": "It is obligatory for staff to abide by the rules regarding proper voice mail recording.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Staff are only 'encouraged' to use proper voice mail recordings.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q12",
+      "passage": "p4",
+      "text": "There are a greater number of academic courses available from colleges aimed at meeting the needs of employers.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Colleges offer a greater variety of courses, which isn't necessarily a greater number.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q13",
+      "passage": "p4",
+      "text": "Academic courses are only provided through distance education.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Courses are 'also' provided through distance education, so not only that way.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q14",
+      "passage": "p4",
+      "text": "Many courses are provided at honours degree and post graduate level.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Course levels aren't mentioned.",
+      "flag": null
+    },
+    {
+      "id": "V5-Q15",
+      "passage": "p4",
+      "text": "Before deciding on an academic course, students are advised to investigate all choices available to them.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Students are encouraged to explore all training and career options before deciding.",
+      "flag": null
+    }
+  ]
+}

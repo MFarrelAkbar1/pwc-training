@@ -1,0 +1,192 @@
+# Review: problems found in the source PDF
+
+Nothing from the PDF is overwritten. Every question keeps the PDF key in `answer`.
+When there's a problem, the question also gets:
+
+| Field | Meaning |
+|---|---|
+| `verifiedAnswer` | The answer the site scores against (`null` = not scored) |
+| `answerSource` | `"recomputed"` (my answer replaces the PDF key) or `"dropped"` (no option is correct) |
+| `flag` | `{ type: "recomputed" \| "dropped" \| "disputed" \| "missing-key" \| "truncated", note }`, shown to you in the quiz |
+
+**Rules for numerical (agreed):**
+- My recomputed answer matches an option and differs from the key → **recomputed** (use mine, show note).
+- No option is correct → **dropped** (shown in review, not scored).
+- The question is ambiguous → **disputed** (keep PDF key, show note).
+
+**Rules for verbal (agreed):**
+- I disagree with the key → **disputed** (keep PDF key, give my answer in the note).
+- The passage *clearly contradicts* the key → **recomputed** (use mine).
+- No key in the PDF → **missing-key** (my answer is used).
+- The statement depends on a passage that is cut off → **truncated** (keep PDF key).
+
+Recheck any time with `python tools/verify_numerical.py` (answers) and `python tools/check_data.py` (structure).
+
+**Status:** All 12 tests are checked. Numerical: 100 questions, 99 scored. Verbal: 104 questions (V4 has 14), all scored.
+
+## Numerical summary
+
+| Question | PDF key | Used | Decision |
+|---|---|---|---|
+| N1-Q01 | B | **D** | recomputed |
+| N1-Q02 | B | **D** | recomputed |
+| N1-Q07 | C | **E** | recomputed |
+| N1-Q19 | B | — | dropped |
+| N2-Q02 | E | **D** | recomputed |
+| N2-Q07 | B | B | disputed |
+| N2-Q11 | B | B | disputed (typo in question) |
+| N2-Q17 | B | **A** | recomputed |
+| N3-Q01 | C | C | disputed |
+| N3-Q04 | B | **E** | disputed, uses E (your decision) |
+| N3-Q08 | D | **E** | recomputed |
+
+In total: 6 recomputed, 1 dropped (N1-Q19), 3 disputed with the PDF key kept, and 1 disputed using my answer (N3-Q04). Tests 4 and 5 have no key problems.
+
+For every question where the site uses my answer, the `explanation` shows the correct working, so it always matches the answer that's scored. The PDF's original working is kept at the end of the flag note ("PDF working: …").
+
+---
+
+## Numerical Test 1
+
+| Question | PDF key | Used | Decision | Reasoning |
+|---|---|---|---|---|
+| N1-Q01 | B (32,000) | **D (64,000)** | recomputed | The chart shows Radio Advertising at **20% in 2003**; 10% is its 2004 bar. Total 2003 = 27,200 ÷ 8.5% = 320,000; 20% of that = 64,000. |
+| N1-Q02 | B (52,500) | **D (56,000)** | recomputed | "100,000 in 2004, an increase of 25% from 2003" → 2003 = 100,000 ÷ 1.25 = **80,000** (the PDF used 75,000). Total 2003 = 320,000; Newspaper 17.5% = 56,000. |
+| N1-Q07 | C (525) | **E (None of these)** | recomputed | The question asks for the *increase*: 525 − 300 = **225**, not an option. 525 is the new total. The PDF's own explanation says "implies a 225 increase". |
+| N1-Q19 | B (24%) | not scored | dropped | The PDF's formula (142,034 − 41,175) ÷ 41,175 gives **245%**. No reading matches an option (Amber Hill ÷ Kinsop = 29%; difference ÷ Kinsop = 71%). |
+
+Explanation slips, key still right (the site shows corrected working):
+- **N1-Q04**: "0.15 × 46,000 = 69,000" should be 46,000 × 15/10 = 69,000.
+- **N1-Q17**: the PDF uses 64,651 vehicles; the table says 64,561.
+
+---
+
+## Numerical Test 2
+
+| Question | PDF key | Used | Decision | Reasoning |
+|---|---|---|---|---|
+| N2-Q02 | E (7.9%) | **D (6.8%)** | recomputed | "Average annual growth for 1999 and 2000" = average of 1999 growth (2,375 → 2,508 = 5.6%) and 2000 growth (2,508 → 2,709 = 8.0%) = **6.8%**. The PDF only computed 2000, and 201 ÷ 2,508 is 8.0%, not 7.9%. |
+| N2-Q07 | B (31.31%) | B (31.31%) | disputed | Ambiguous. The PDF grows exploration by 8% too, then adds £100k: (0.29 × 4.32m + 0.1m) ÷ 4.32m = 31.31%. Reading it as 2008 exploration + £100k gives 1.26m ÷ 4.32m = **29.2%**, which matches no option exactly (closest is A, 29.7%). |
+| N2-Q11 | B (4) | B (4) | disputed | The question says **5,800,000** vehicles, but the chart is in thousands and the PDF works with 58,000. With 58,000: 35 → 40.8 → 47.6 → 55.6 → 64.8, so **4 years**. Read literally, 5.8m would take ~33 years. Almost certainly a typo in the question. |
+| N2-Q17 | B (3.3%) | **A (3%)** | recomputed | "Constant annual rate of growth" compounds: (16 ÷ 13.4)^(1/6) − 1 = **3.0%** (check: 13.4 × 1.03⁶ = 16.0). The PDF divided simple growth by 6, and 19.4% ÷ 6 = 3.2%, not 3.3%. |
+
+Checked because you flagged them; **keys are correct** (only the explanations are sloppy):
+- **N2-Q03**: the PDF writes 1.1m cars, then 4.1m, then 3.6m. The table says 4.1m. 90% × 4.1 = 3.69m cars; urban pop = 86.4% × 35.6 = 30.76m; 3.69 ÷ 30.76 = **12%** (D).
+- **N2-Q12**: the PDF mixes units. Europe: 0.3bn passengers × 1,000 km = 300bn km → 0.9bn × 800 km = 720bn km = **+140%** (E).
+
+Other explanation slips, key still right:
+- **N2-Q09**: "(1 − 0.02) × 35,000" should be (1 − 0.2).
+
+---
+
+## Numerical Test 3
+
+| Question | PDF key | Used | Decision | Reasoning |
+|---|---|---|---|---|
+| N3-Q01 | C (Korea) | C (Korea) | disputed | The chart shows only each drug's **percentage split** by region, not dollar totals, so "exceed (in $)" can't strictly be answered. But **no option is "Cannot say"**: all five are regions. The only reading that gives an answer is by share: Korea, where Parnol has 37% vs Tequental's 15%. |
+| N3-Q04 | B (400,000 higher) | **E (Cannot say)** | disputed (your decision: use E) | Hire Purchase is 25% (Printing) + 50% (Design); the other departments are 0%. If each department spends an equal $400k, HP = $300k, and +20% = **$60,000 higher**, which isn't an option. The PDF contradicts itself: the working ends "40,000 higher" and the key says 400,000. The chart never says how the $2m is split between departments, so the effect can't be calculated: **Cannot say**. |
+| N3-Q08 | D (2000) | **E (Cannot say)** | recomputed | The unemployment rate is a % of the **workforce**, and the workforce size isn't given (only population can be derived from GDP ÷ GDP per head). The PDF's own explanation concludes "Cannot say". |
+
+Checked because you flagged them; **keys are correct**:
+- **N3-Q02**: the chart shows Production Lease Purchase = 30%, and 30% × 575,000 = **172,500** (B). The explanation's "35/100" is a typo (35% would give 201,250).
+- **N3-Q07**: Year 2 → 3 fell by a factor of 8.5 ÷ 10.6 = 0.802; Year 4 = 8.5 × 0.802 = **£6.8m** (D).
+
+Other notes:
+- **N3-Q18**: the explanation says "84% qualified" but uses 2,494 staff, which is 86% (100% − 14%). 86% is correct, and so is the key (D).
+- **Machinery chart**: as printed, Printing's bars add up to **105%** (45 + 35 + 25). No answer depends on the total, so I transcribed it as printed and noted it on the chart.
+- **N3-Q09**: the explanation writes 1.02 for a 20% rise (should be 1.2). The key is right.
+
+---
+
+## Numerical Test 4
+
+**No key problems.** All 20 keys match the chart data. Slips in the PDF's working:
+- **N4-Q11**: the last line of the working lists "Haydn & Lennon 75 / €650"; that should be **Brahms & Dylan**, which is key E.
+- **N4-Q19**: the working writes a Tele-Fax discount total of 32,500; it's 45 × 700 = 31,500. The final saving of €21,240 is right.
+- **N4-Q20**: the working gives Complaints 65.9% and Claims 48%. From the table they're 122/180 = **67.8%** and 48/120 = **40.0%**. Complaints is still highest, so key C holds. (I checked the full page: the table has only three rows.)
+
+---
+
+## Numerical Test 5
+
+**No key problems.** All 20 keys match the chart data.
+- **N5-Q16**: the question asks how much was *gambled*, but the chart gives casino *revenue*. The PDF treats them as the same, and I kept that. 140,000 ÷ 1,520,000 = £0.092 ≈ £0.09 (E).
+
+---
+
+## Verbal summary
+
+I judged all 104 statements using only the passage. **I disagree with 12 keys** (10 disputed, 2 switched). V3-Q01 has no key, and V3-Q12 can't be checked because its passage is cut off. The table lists all 18 flagged statements, including 4 truncated ones where I agree with the key. "Confidence" is how sure I am of *my* answer.
+
+| Question | PDF key | My answer | Used | Flag | Confidence |
+|---|---|---|---|---|---|
+| V1-Q13 | True | Cannot say | **Cannot say** | recomputed (your decision) | high |
+| V2-Q02 | False | Cannot say | False | disputed | medium |
+| V2-Q03 | True | Cannot say | **Cannot say** | recomputed (your decision) | high |
+| V2-Q10 | Cannot say | Cannot say | Cannot say | truncated | — (agree) |
+| V2-Q11 | Cannot say | True | **True** | recomputed (your decision) | medium |
+| V2-Q13 | True | Cannot say | True | disputed | low |
+| V2-Q15 | False | Cannot say | False | disputed | low |
+| V3-Q01 | *none* | Cannot say | **Cannot say** | no key in source (my judgment, confirmed) | high |
+| V3-Q07 | Cannot say | Cannot say | Cannot say | truncated | — (agree) |
+| V3-Q09 | True | Cannot say | **Cannot say** | recomputed (your decision) | medium |
+| V3-Q12 | True | Cannot say* | True | truncated | — (*from visible text only) |
+| V4-Q05 | True | **False** | **False** | recomputed (confirmed) | high |
+| V4-Q06 | False | **True** | **True** | recomputed (confirmed) | high |
+| V4-Q09 | Cannot say | Cannot say | Cannot say | truncated | — (agree) |
+| V4-Q15 | Cannot say | Cannot say | Cannot say | truncated | — (agree) |
+| V6-Q14 | True | Cannot say | True | disputed | medium |
+| V7-Q06 | Cannot say | True | **True** | recomputed (your decision) | low |
+| V7-Q14 | False | Cannot say | False | disputed | medium |
+
+**After your decisions:** 7 recomputed (the 2 switches plus 5 where you chose my answer), 5 disputed with the PDF key kept (V2-Q02, V2-Q13, V2-Q15, V6-Q14, V7-Q14), 1 with no key in source, and 5 truncated with the PDF key kept (V3-Q12 stays True).
+
+Every verbal statement now has a one-line explanation that matches the answer the site uses. For the disputed ones, the explanation ends with "The source key was X; some readings differ."
+
+---
+
+## Verbal: details
+
+### Switched: the passage clearly contradicts the key
+- **V4-Q05**: "In Japan and Germany less than 60% of the population is under 65." The passage says the 65+ share there "is set to **rise to** 40%". So today it's below 40%, which means more than 60% are under 65. Even once it reaches 40%, exactly 60% would be under 65, not *less than* 60%. The statement is **False**; the PDF says True.
+- **V4-Q06**: "Birth rate decreases are not restricted to developed countries." The passage says underdeveloped countries "have experienced **a much smaller decrease** in birth rates". A smaller decrease is still a decrease, so the statement is **True**; the PDF says False.
+
+### No key in the PDF
+- **V3-Q01**: "Some commentators believe the best way to boost a flagging economy would be… 'green'-related infrastructure projects." The commentators argue for *major infrastructure projects* in general. The green angle belongs to "many people", and nobody calls it "the best way". **Cannot say.**
+- (V3-Q15's key is C, on the next page, as you found. It's in the JSON.)
+
+### Disputed: my reasoning (you chose **my answer** for V1-Q13, V2-Q03, V2-Q11, V3-Q09 and V7-Q06; the rest keep the PDF key)
+- **V1-Q13** (key True → mine Cannot say). The passage says forecasts depend on "the individual analyst's general approach, with some being bolder than others". It never connects boldness to *optimism*; optimism appears only as the usual direction of error.
+- **V2-Q02** (key False → mine Cannot say). The passage says the law requires immediate threats to be cleaned up. It says nothing about how law (or litigation) treats long-term hazards, so we can't tell whether it "draws a distinction".
+- **V2-Q03** (key True → mine Cannot say). "**Much of**" soil contamination isn't hazardous while undisturbed, so not all of it. And contaminated ground water is given as an immediate threat with no mention of disturbance. The statement "has to be disturbed before…" is too strong.
+- **V2-Q11** (key Cannot say → mine True). Employees who rated their boss incompetent had 25% higher heart-disease risk, with external factors controlled. That's a stated link. The only argument for Cannot say is that the bosses were *rated* incompetent, not *shown* to be.
+- **V2-Q13** (key True → mine Cannot say, low). The directors want high *funding*; "work flowing to national industries" is a consequence of funding, not something the passage says they want.
+- **V2-Q15** (key False → mine Cannot say, low). Costs have risen (the budget almost doubled) and are met by "the participating countries", including Italy and Britain. Whether *only* Italy and Britain pay isn't stated either way.
+- **V3-Q09** (key True → mine Cannot say). Only "some scientists *claim*" the long-range accuracy is unknowable. That's an opinion in the passage, not an established fact.
+- **V6-Q14** (key True → mine Cannot say). The passage implies staff have passwords, but never says *all department managers* have *their own*.
+- **V7-Q06** (key Cannot say → mine True, low). "Greater funding… **has in turn increased** the number of world class Irish athletes" is a direct causal claim, so without it there'd be fewer. The key's view is that counterfactuals are never strictly proven.
+- **V7-Q14** (key False → mine Cannot say). Visitors cause only *some* of the pollution and *some* of the pests, and other causes remain. So damage would *probably* still have increased, but the passage doesn't quantify the causes.
+
+### Looked at closely, as you asked
+- **V1-Q13, V2-Q11, V4-Q05, V4-Q06, V6-Q14, V7-Q14**: all six are in the tables above. I switched two of them (V4-Q05 and V4-Q06) and disputed the other four.
+
+---
+
+## Verbal: source problems
+
+**Cut-off passages** (six, not four). Each is transcribed exactly and ends with "[...text cut off in source]":
+
+| Passage | Ends with | Statements flagged "truncated" |
+|---|---|---|
+| V2 p3: bosses & heart disease | "…managers should be given training to help them improve" | **V2-Q10** (asks what the training should improve) |
+| V3 p3: climate scenarios | "…what, if anything, does that tell us about the next" | **V3-Q07** |
+| V3 p4: earthquakes | "…the animals are reacting to chang" | **V3-Q12**: its "electromagnetic signals" never appear in the visible text, so the key can't be checked |
+| V4 p2: ageing population | "…healthcare and education for the" | none (Q5 and Q6 don't depend on the missing end) |
+| V4 p3: work stress | "…thirty percent of men said that the" | **V4-Q09** (a statistic about men) |
+| V4 p5: U3b Networks | "…five satellites circling" | **V4-Q15** (satellite cost) |
+
+**Other:**
+- **V4-Q04** doesn't exist in the PDF, so Verbal 4 has **14 questions**. The JSON notes this and skips from Q03 to Q05.
+- **V4-Q15** reads "?8m" in the PDF itself (the currency symbol is missing in the source image). I kept it as printed.
+- The PDF's own typos are kept word for word (e.g. "to a large extend inherited", "its incidence vary", "pouring over books", "that that the animals").
+- Two passages had scrambled word order in the PDF's text layer (V3 earthquakes, V5 smoke-free law). I transcribed those from the page images. Every other passage sentence and statement was machine-checked against the PDF text.

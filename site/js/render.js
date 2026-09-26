@@ -1,0 +1,157 @@
+// Pieces of the question screen shared by the quiz and the results review.
+import { el, fmt } from "./dom.js";
+import { correctAnswer, testOf, testIdOf, sectionOf } from "./data.js";
+import { drawChart, chartHeight, describeChart } from "./charts.js";
+
+// ---------- chart / table / passage panel ----------
+
+// Each question brings its own chart/table or passage from the test it belongs to.
+export function renderContext(container, q) {
+  const test = testOf(q);
+  if (sectionOf(q) === "verbal") renderPassage(container, test.passages[q.passage]);
+  else renderDataset(container, test.datasets[q.dataset]);
+}
+
+// Identifies the chart/passage a question uses, so the panel is only redrawn when it changes.
+export function contextKey(q) {
+  return `${testIdOf(q)}:${q.dataset ?? q.passage}`;
+}
+
+// "Numerical Test 3 · Question 4": where a question in a mixed or redo set comes from.
+export function sourceLabel(q) {
+  const [test, number] = q.id.split("-");
+  const section = sectionOf(q) === "numerical" ? "Numerical" : "Verbal";
+  return `${section} Test ${test.slice(1)} · Question ${Number(number.slice(1))}`;
+}
+
+const CUT_MARKER = "[...text cut off in source]";
+
+function renderPassage(container, passage) {
+  const cut = passage.text.endsWith(CUT_MARKER);
+  const text = cut ? passage.text.slice(0, -CUT_MARKER.length).trimEnd() : passage.text;
+  container.append(el("p", { class: "passage" },
+    text,
+    cut && el("span", { class: "cut-marker" }, " […text cut off in source]")));
+}
+
+function renderDataset(container, dataset) {
+  container.append(el("h3", { class: "ds-title" }, dataset.title));
+  for (const block of dataset.blocks) {
+    const figure = el("figure", { class: "block" }, block.title && el("figcaption", {}, block.title));
+    container.append(figure);
+    if (block.kind === "table") {
+      figure.append(renderTable(block));
+    } else {
+      const canvas = el("canvas", { role: "img", "aria-label": describeChart(block) });
+      figure.append(el("div", { class: "chart", style: `height:${chartHeight(block)}px` }, canvas));
+      try {
+        drawChart(canvas, block);
+      } catch (err) {
+        figure.append(el("p", { class: "ds-note" }, `${err.message}. Use "Show original" below.`));
+      }
+    }
+    if (block.note) figure.append(el("p", { class: "ds-note" }, block.note));
+  }
+  const image = el("img", { src: dataset.image, alt: "Original chart from the source PDF", loading: "lazy", hidden: true });
+  const toggle = el("button", {
+    class: "btn small",
+    onclick: () => {
+      image.hidden = !image.hidden;
+      toggle.textContent = image.hidden ? "Show original from PDF" : "Hide original";
+    },
+  }, "Show original from PDF");
+  container.append(el("div", { class: "original" }, toggle, image));
+}
+
+function renderTable(block) {
+  return el("div", { class: "table-wrap" },
+    el("table", {},
+      el("thead", {}, el("tr", {}, ...block.columns.map((c) => el("th", { scope: "col" }, c)))),
+      el("tbody", {}, ...block.rows.map((row) =>
+        el("tr", {}, el("th", { scope: "row" }, fmt(row[0])), ...row.slice(1).map((v) => el("td", {}, fmt(v))))))));
+}
+
+// ---------- answer options ----------
+
+export function optionLabel(q, letter) {
+  return `${letter} (${q.options[letter]})`;
+}
+
+// revealed = show which option is right/wrong. Without onPick the buttons are read-only.
+export function renderOptions(q, { chosen, revealed, onPick }) {
+  const correct = correctAnswer(q);
+  return el("div", { class: "options", role: "radiogroup", "aria-label": "Answer options" },
+    ...Object.entries(q.options).map(([letter, text]) => {
+      const classes = ["option"];
+      if (letter === chosen) classes.push("selected");
+      if (revealed && correct != null) {
+        if (letter === correct) classes.push("correct");
+        else if (letter === chosen) classes.push("wrong");
+      }
+      return el("button", {
+        class: classes.join(" "),
+        role: "radio",
+        "aria-checked": String(letter === chosen),
+        disabled: revealed || !onPick,
+        onclick: () => onPick(letter),
+      }, el("span", { class: "letter" }, letter), el("span", { class: "option-text" }, text));
+    }));
+}
+
+// Verdict + explanation, shown after answering (practice) and on the results screen.
+export function renderAnswerReview(q, chosen) {
+  const correct = correctAnswer(q);
+  let verdict;
+  if (correct == null) verdict = el("p", { class: "verdict neutral" }, "Not scored");
+  else if (chosen == null) verdict = el("p", { class: "verdict bad" }, `Not answered. Correct answer: ${optionLabel(q, correct)}`);
+  else if (chosen === correct) verdict = el("p", { class: "verdict good" }, "✓ Correct");
+  else verdict = el("p", { class: "verdict bad" }, `✗ Your answer: ${optionLabel(q, chosen)}. Correct answer: ${optionLabel(q, correct)}`);
+  return el("div", { class: "review" },
+    verdict,
+    q.explanation && el("p", { class: "explanation" }, el("strong", {}, "Explanation: "), q.explanation));
+}
+
+// ---------- notes on questions with a problem in the source ----------
+
+const FLAGS = {
+  recomputed: {
+    label: "Answer corrected",
+    before: "The source PDF's answer key is wrong here, so this site uses a checked answer. Details after you answer.",
+  },
+  disputed: {
+    label: "Disputed in source",
+    before: "The source answer is debatable. Details after you answer.",
+  },
+  dropped: {
+    label: "Not scored",
+    before: "None of the options is correct in the source, so this question doesn't count. Answer it for practice.",
+  },
+  "missing-key": {
+    label: "No key in source",
+    before: "The source PDF gives no answer here; the answer used is a judgment. Details after you answer.",
+  },
+  truncated: {
+    label: "Passage cut off in source",
+    before: "Part of the passage is missing in the source PDF. Details after you answer.",
+  },
+};
+
+// Before answering (exam) only a short warning is shown, so the note can't give the answer away.
+export function renderFlag(q, revealed) {
+  const type = q.flag?.type;
+  if (!type) return null;
+  const info = FLAGS[type];
+  const box = el("div", { class: `flag flag-${type}` }, el("strong", {}, `⚠ ${info.label}`));
+  if (!revealed) {
+    box.append(el("p", {}, info.before));
+    return box;
+  }
+  if (q.answer != null && q.answerSource === "recomputed") {
+    box.append(el("p", { class: "flag-keys" },
+      `Source PDF key: ${optionLabel(q, q.answer)} · This site uses: ${optionLabel(q, q.verifiedAnswer)}`));
+  } else if (q.answer != null && q.answerSource === "dropped") {
+    box.append(el("p", { class: "flag-keys" }, `Source PDF key: ${optionLabel(q, q.answer)} · Not scored here`));
+  }
+  box.append(el("p", {}, q.flag.note));
+  return box;
+}

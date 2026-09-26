@@ -1,0 +1,230 @@
+{
+  "id": "V4",
+  "section": "verbal",
+  "test": 4,
+  "title": "Verbal Reasoning – Test 4",
+  "timeLimitSec": 480,
+  "note": "Question 4 is missing from the source PDF, so this test has 14 questions.",
+  "passages": {
+    "p1": {
+      "text": "The population of the world is increasing by around 83 million per year. This figure actually represents a decline by almost 50% in the growth rate from its peak of 2.2% in 1963 and further reductions are expected over the coming decades. The 20th century saw the biggest global increase of all time in the population and if the current levels of growth continue the world population will be around 9 billion by the year 2042. The increases are due to increased life expectancy and reduced mortality rates resulting from improvements in healthcare and agricultural productivity. Growth rates vary by region. There are estimates that over 90% of population growth in the future will be in developing countries. Central and Eastern Europe are experiencing a net decrease of population with Japan and some Western European countries expected to follow suit within the next 10 years",
+      "truncated": false
+    },
+    "p2": {
+      "text": "There are statistics which suggest that in some of the most underdeveloped countries almost one half of the population is now in the 10-19 age range. These countries have experienced a much smaller decrease in birth rates than has been seen in more developed countries. Charities and other agencies are calling for additional funds to be made available to provide improved education for these young people as well as easier access to contraception. There has also been a rapid increase in the number of people aged 65 or older. In the next 50 years, 95% of this increase will happen in developing countries like India, while in countries like Japan, Germany and Italy the percentage of the population aged 65 or more is set to rise to 40%. Increases in the numbers of the very young and the very old place stress on societies and governments may find it difficult to cope with the demands of an increasing number of dependent elderly citizens in addition to providing healthcare and education for the [...text cut off in source]",
+      "truncated": true
+    },
+    "p3": {
+      "text": "Work-related stress is one of the biggest causes of sick leave in the UK. If you’ve noticed you always seem to be rushing about, or miss meal breaks, take work home or don’t have enough time for relaxation, for your family or for exercise, then you may well find yourself under stress, especially at work. There is often no single cause of work-related stress, but it can be caused by poor working conditions, long hours, relationship problems with colleagues, or lack of job security. Stress is often the result of a combination of these factors that builds up over time. Work-related stress can result in both physical problems, such as headaches, muscular tension, back or neck pain, tiredness, digestive problems and sweating; or emotional problems, such as a lower sex drive, feelings of inadequacy, irritability and lack of concentration. According to recent surveys, one in six of all working individuals in the UK said their job is very stressful, and thirty percent of men said that the [...text cut off in source]",
+      "truncated": true
+    },
+    "p4": {
+      "text": "For many years the hunt has been on to find an effective way to treat cancerous tumours using physical rather than chemical means. That hunt may now be over with the latest breakthrough made by Dr. Jennifer West at Rice University in Houston, Texas. West has done tests on animals using a non-chemical procedure known as Photothermal Ablation. She injected millions of nanoparticles, which can absorb infrared light, into the animals’ bloodstreams. These particles go straight to the tumours because, unlike healthy tissue, tumours have abnormal blood capillaries that will let them through. A few hours later an optical fibre is inserted into the tumour and a blast of infrared light is passed down the fibre, which heats the particles and effectively cooks the tumour.",
+      "truncated": false
+    },
+    "p5": {
+      "text": "U3b Networks (short for the \"Underprivileged three billion\" who lack internet access) is a new company in Jersey set up by Greg Wyler, former owner of Rwanda’s national telephone company. He intends to provide cheap, high-speed internet access to remote areas in developing countries, which up to now has been the reserve of developed countries. Mr Wyler plans to charge $500 per megabit per month, compared with the $4,000 charged by existing companies. Mr Wyler has so far raised $40m from investors, but this seems like a risky investment, especially as billions were lost on similar projects a decade ago. So why are they investing in the hope of finding customers in the world’s poorest regions? The reason is that previous projects were over-ambitious and set out to provide global coverage, whereas U3b’s project is far less ambitious and its services will only be available to a ribbon around the equator, covering most developing countries. It will initially use just five satellites circling [...text cut off in source]",
+      "truncated": true
+    }
+  },
+  "questions": [
+    {
+      "id": "V4-Q01",
+      "passage": "p1",
+      "text": "The annual rate of increase of the global population has fallen by 50% per annum since 1963.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "The growth rate has fallen by almost 50% in total since 1963, not by 50% every year.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q02",
+      "passage": "p1",
+      "text": "The European Union will suffer a net decrease in population over the next 10 years.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Only some Western European countries are expected to decline; the EU as a whole isn't discussed.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q03",
+      "passage": "p1",
+      "text": "Global population is predicted to reach 9 billion by 2042 as the annual global population growth rate continues to rise.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "The growth rate is falling, not rising.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q05",
+      "passage": "p2",
+      "text": "In Japan and Germany less than 60% of the population is under 65 years of age.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "verifiedAnswer": "B",
+      "answerSource": "recomputed",
+      "explanation": "The 65+ share is 'set to rise' to 40%, so today more than 60% are under 65.",
+      "flag": {
+        "type": "recomputed",
+        "note": "The passage says the share aged 65+ in Japan and Germany 'is set to rise to 40%' — so today it is below 40%, meaning more than 60% are under 65. Even once it reaches 40%, exactly 60% would be under 65, not less. The statement is False."
+      }
+    },
+    {
+      "id": "V4-Q06",
+      "passage": "p2",
+      "text": "Birth rate decreases are not restricted to developed countries.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "verifiedAnswer": "A",
+      "answerSource": "recomputed",
+      "explanation": "Underdeveloped countries have seen a smaller decrease in birth rates — still a decrease.",
+      "flag": {
+        "type": "recomputed",
+        "note": "The passage says the most underdeveloped countries 'have experienced a much smaller decrease in birth rates than has been seen in more developed countries' — a smaller decrease is still a decrease, so decreases are not restricted to developed countries. The statement is True."
+      }
+    },
+    {
+      "id": "V4-Q07",
+      "passage": "p3",
+      "text": "Stress at work is often caused by relationship problems with your partner.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage mentions relationship problems with colleagues, not partners.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q08",
+      "passage": "p3",
+      "text": "Work-related stress can result in tiredness and a lack of concentration.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Tiredness and lack of concentration are both listed as effects of work-related stress.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q09",
+      "passage": "p3",
+      "text": "One in six working men said their job is very stressful.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "'One in six' refers to all working individuals; the figure for men is cut off.",
+      "flag": {
+        "type": "truncated",
+        "note": "The passage is cut off in the middle of a statistic about men ('thirty percent of men said that the…'). From the visible text, Cannot say holds: 'one in six' refers to all working individuals, not men specifically."
+      }
+    },
+    {
+      "id": "V4-Q10",
+      "passage": "p3",
+      "text": "If you spend more time with your family, you will not suffer from stress.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Lack of family time is a possible sign of stress, but nothing says family time prevents it.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q11",
+      "passage": "p4",
+      "text": "Photothermal Ablation is the latest breakthrough in chemical treatment for cancer.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Photothermal Ablation is a non-chemical procedure.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q12",
+      "passage": "p4",
+      "text": "Nanoparticles are objects whose dimensions are measured in nanometres, or billionths of a metre.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage doesn't define nanoparticles or give their size.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q13",
+      "passage": "p4",
+      "text": "Nanoparticles can absorb infrared light.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "The nanoparticles used 'can absorb infrared light'.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q14",
+      "passage": "p5",
+      "text": "Mr Wyler had a background in telecoms before starting U3b Networks.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "He was formerly the owner of Rwanda's national telephone company.",
+      "flag": null
+    },
+    {
+      "id": "V4-Q15",
+      "passage": "p5",
+      "text": "The satellites for the project will cost ?8m each.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "No satellite costs are given; the passage is cut off as it starts describing the satellites.",
+      "flag": {
+        "type": "truncated",
+        "note": "The passage is cut off just as it starts describing the satellites, so any cost figure would be in the missing text. From the visible text, Cannot say holds. ('?8m' is exactly as printed — the currency symbol is missing in the source.)"
+      }
+    }
+  ]
+}

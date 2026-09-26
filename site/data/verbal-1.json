@@ -1,0 +1,227 @@
+{
+  "id": "V1",
+  "section": "verbal",
+  "test": 1,
+  "title": "Verbal Reasoning – Test 1",
+  "timeLimitSec": 480,
+  "passages": {
+    "p1": {
+      "text": "The biggest risk facing the world’s insurance company is possibly the rapid change now taking place within their own ranks. sluggish growth in core markets and intense price competition, coupled with shifting patterns of customer demand and the rising cost of losses, are threatening to overwhelm those too slow to react.",
+      "truncated": false
+    },
+    "p2": {
+      "text": "Nearsightedness is to a large extend inherited; its incidence vary from one family to another. The reason behind the link between the common incidence of nearsightedness and high intelligence is unclear. Previous generations thought that eyes could become strained by years spent pouring over books, but a few decades ago the popular medical views was that nearsighted people gravitated towards the library because they find it hard to excel at sports. Recently there has been partial support for a theory that intelligence and nearsightedness may, in fact, be part of a genetic package.",
+      "truncated": false
+    },
+    "p3": {
+      "text": "Current marketing strategy has shifted attention away from how consumers chose brands towards how they use products. Expanding the use of a product can have an enormous impact on sales. Inducing existing customers to use a product in a new context is also more cost effective than either soliciting non-users to try the product, or luring people away from the competition.",
+      "truncated": false
+    },
+    "p4": {
+      "text": "Recent research has shown that many financial analysts are often inaccurate when forecasting company profits. Typically they tend to be over optimistic about prospects, although some can be very pessimistic and significantly underestimate actual results. Much depends on the individual analyst’s general approach, with some being bolder than others. It has been shown, however, that more accurate forecast could be produced if analysts applied the average company profits increase across the whole economy to each company proportion to its market share.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "V1-Q01",
+      "passage": "p1",
+      "text": "Insuring of assets is one of the best means of securing it.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage is about risks facing insurers, not how well insurance secures assets.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q02",
+      "passage": "p1",
+      "text": "Insurance companies are experiencing a depression in their core markets.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Core markets have 'sluggish growth' — slow growth, which isn't necessarily a depression.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q03",
+      "passage": "p1",
+      "text": "Insurance companies are competing to provide the best prices to customers.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "The passage cites 'intense price competition' among insurers.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q04",
+      "passage": "p1",
+      "text": "More and more insurance companies are likely to be driven out of business in the near future.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Change threatens to overwhelm slow insurers, but the passage doesn't say how many will go out of business.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q05",
+      "passage": "p2",
+      "text": "The link between high intelligence and nearsightedness is genetically based.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "There is only 'partial support' for the genetic theory; the reason for the link is still unclear.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q06",
+      "passage": "p2",
+      "text": "Nearsightedness can be corrected by wearing concave glasses.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage says nothing about how nearsightedness is corrected.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q07",
+      "passage": "p2",
+      "text": "People from all families stand an equal chance of being nearsighted.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Nearsightedness is largely inherited and its incidence varies from family to family.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q08",
+      "passage": "p2",
+      "text": "There is a link between farsightedness and low intelligence",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Only nearsightedness and high intelligence are discussed; farsightedness isn't mentioned.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q09",
+      "passage": "p3",
+      "text": "There is an increasing focus on how people select brands and products.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Attention has shifted away from how consumers choose brands, towards how they use products.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q10",
+      "passage": "p3",
+      "text": "In the past the emphasis in marketing was on how customers choose brands.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Marketing has 'shifted attention away from' brand choice, so brand choice was the earlier focus.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q11",
+      "passage": "p3",
+      "text": "Canvassing new users to try a product is more cost effective than encouraging wider use of a product by existing customers.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Getting existing customers to use a product in new ways is more cost effective than soliciting non-users.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q12",
+      "passage": "p3",
+      "text": "In the future, marketing strategy will depend considerably on how products are being used by consumers.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage describes current strategy only; it makes no prediction about the future.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q13",
+      "passage": "p4",
+      "text": "How bold an analyst is in forecasting depends on his or her general level of optimism.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "verifiedAnswer": "C",
+      "answerSource": "recomputed",
+      "explanation": "Forecasts depend on each analyst's general approach and some are bolder than others, but boldness is never linked to optimism.",
+      "flag": {
+        "type": "recomputed",
+        "note": "The PDF says True. The passage ties forecasts to each analyst's general approach and says some are bolder than others, but it never links boldness to optimism."
+      }
+    },
+    {
+      "id": "V1-Q14",
+      "passage": "p4",
+      "text": "Most analysts are accurate when forecasting company profits.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Research shows many analysts are often inaccurate, typically over-optimistic.",
+      "flag": null
+    },
+    {
+      "id": "V1-Q15",
+      "passage": "p4",
+      "text": "Many analysts could improve the accuracy of their forecast",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Forecasts could be more accurate if analysts applied the economy-wide average profit increase.",
+      "flag": null
+    }
+  ]
+}

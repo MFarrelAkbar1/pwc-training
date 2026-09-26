@@ -1,0 +1,248 @@
+{
+  "id": "V2",
+  "section": "verbal",
+  "test": 2,
+  "title": "Verbal Reasoning – Test 2",
+  "timeLimitSec": 480,
+  "passages": {
+    "p1": {
+      "text": "Most companies involved in manufacturing and heavy industry have to manage environmental problems created by past activities, either of their own or a predecessor’s making. In some cases, the practices that lead to this are no longer acceptable. Much of the industrial contamination of soil does not pose an immediate hazard, as long as the property is left undisturbed. Contamination that is an immediate threat to people and the environment, such as contaminated ground water, has to be cleaned up in most countries as a matter of law, with the company responsible bearing the cost.",
+      "truncated": false
+    },
+    "p2": {
+      "text": "New documentation for unit trust investors is part of a push by regulators to provide information and protection similar to that provided to buyers of life insurance and pension plans. They have also established a cooling-off period, during which the purchase of a unit trust can be cancelled without charge. This applies only when advice has been received, typically from an independent financial advisor. Purchases made directly, for example in response to advertising, are not covered.",
+      "truncated": false
+    },
+    "p3": {
+      "text": "In a study of 3,000 employed men in the 19-70 age range over a period of 10 years, researchers found that those working for inconsiderate bosses were more likely to suffer from stress and stress-related illness than those working for more considerate and enlightened bosses. Previous research had shown that employees with inconsiderate bosses suffered from high blood pressure which is known to increase the risk of heart disease. In the latest survey the researchers asked employees to assess the competence of their bosses as leaders. They found that those who had categorised their boss as incompetent were 25% more at risk of serious heart disease and that this level of risk increased the longer they continued to work for the same boss. The statistics took into account external factors such as social class, educational background, lifestyle and any existing illness. The researchers recommended that should their findings be confirmed, managers should be given training to help them improve [...text cut off in source]",
+      "truncated": true
+    },
+    "p4": {
+      "text": "The European Space Agency (ESA) is the body which decides the scope and direction of European space initiatives. It is funded by its participating states, currently 18 in number. Each contributes according to its own economic power. The body controls the funding of existing activities such as the planar rocket and space station projects but is also responsible for the initiation of new projects like a new generation of weather satellites. Some of the programs are compulsory but others are not and member states are free to choose in which of the latter they will become involved. There is a direct correlation between the amount of money that a state agrees to invest in a program and the amount of benefit it can expect in return through contracts awarded to its domestic space industry. ESA directors are keen to maintain a high level of funding from its member states even in times of global economic downturn. They believe that a longer term view is needed.",
+      "truncated": false
+    },
+    "p5": {
+      "text": "Britain is still firmly committed to the EXOMars Robot project even though the scope and the cost have grown in the three years since it was first initiated. The shape of the project has changed dramatically, mainly due to the increased expectations of scientists. According to the ESA, this change in direction justifies the almost doubling of the original budget. The increased cost will, however, have to be met by the participating countries that originally signed up to fund this program. Both Italy, the project leader, which provided much of the initial program funding, and Britain, will have to significantly increase their share of funding for this project. Britain considers that this project makes the most of its expertise in robotics. To date Britain has not been involved in other high-profile ESA program such as the Columbus science laboratory and the Ariane Rocket project. The ESA now hopes to send the robot to Mars in 2016.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "V2-Q01",
+      "passage": "p1",
+      "text": "Acceptable practices have lead to environmental problems.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "The practices that caused the problems are 'no longer acceptable', implying they were acceptable at the time.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q02",
+      "passage": "p1",
+      "text": "In most countries, litigation draws no distinction between long and short-term hazards to the environment.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "The law requires immediate threats to be cleaned up, while contamination that isn't an immediate hazard is treated differently — so a distinction is drawn. The source key was False; some readings differ.",
+      "flag": {
+        "type": "disputed",
+        "note": "Alternative reading: Cannot say. The passage says immediate threats must be cleaned up by law in most countries, but says nothing about how the law (let alone litigation) treats long-term hazards — so we can't tell whether a distinction is drawn."
+      }
+    },
+    {
+      "id": "V2-Q03",
+      "passage": "p1",
+      "text": "Contaminated land has to be disturbed before it poses an immediate threat to people.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "verifiedAnswer": "C",
+      "answerSource": "recomputed",
+      "explanation": "Only 'much of' soil contamination is harmless while undisturbed, and ground water can be an immediate threat without disturbance, so the claim can't be confirmed.",
+      "flag": {
+        "type": "recomputed",
+        "note": "The PDF says True. Only 'much of' soil contamination is harmless while undisturbed, and contaminated ground water is an immediate threat with no mention of disturbance."
+      }
+    },
+    {
+      "id": "V2-Q04",
+      "passage": "p1",
+      "text": "Contaminated ground water has the greatest threat to individuals and the environment.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Ground water is given as an example of an immediate threat, not as the greatest one.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q05",
+      "passage": "p2",
+      "text": "The cooling off period does not apply to sales of pension.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage covers unit trusts; it doesn't say whether pensions have a cooling-off period.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q06",
+      "passage": "p2",
+      "text": "The sole aim of the new documentation is to provide information to purchasers of unit trust.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The wider push aims at 'information and protection', but the passage doesn't say what the documentation alone is for.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q07",
+      "passage": "p2",
+      "text": "The establishment of new documentation is the only new intervention introduced to protect purchasers of unit trusts.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "A cooling-off period has also been introduced.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q08",
+      "passage": "p2",
+      "text": "Buyers of life Insurance are shielded by regulators.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Regulators already provide information and protection to buyers of life insurance.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q09",
+      "passage": "p3",
+      "text": "Twenty five percent of the 3,000 men in the study group suffer stress due to inconsiderate bosses.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The 25% is the extra heart-disease risk, not the share of men suffering stress.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q10",
+      "passage": "p3",
+      "text": "Managers should be given training to help them improve their working relationships.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Training is recommended only if the findings are confirmed, and the passage is cut off before saying what it should improve.",
+      "flag": {
+        "type": "truncated",
+        "note": "The passage is cut off exactly where it says what managers should be trained to improve. From the visible text, Cannot say holds: the researchers only recommend training 'should their findings be confirmed'."
+      }
+    },
+    {
+      "id": "V2-Q11",
+      "passage": "p3",
+      "text": "There is a link between high risk rates of cardiac illness among employees that have incompetent bosses.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "verifiedAnswer": "A",
+      "answerSource": "recomputed",
+      "explanation": "Employees who rated their boss incompetent were 25% more at risk of serious heart disease, even after other factors were accounted for.",
+      "flag": {
+        "type": "recomputed",
+        "note": "The PDF says Cannot say. Employees who rated their boss incompetent were 25% more at risk of serious heart disease, with external factors taken into account — that is a stated link."
+      }
+    },
+    {
+      "id": "V2-Q12",
+      "passage": "p4",
+      "text": "Space industries in the larger ESA contributor member states get more work from the ESA than the smaller contributors.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "States contribute according to economic power, and contracts are directly correlated with how much a state invests.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q13",
+      "passage": "p4",
+      "text": "Even in tough economic times, ESA directors wish to maintain a high level of work flowing through to the space industries of member states.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Directors want funding kept high even in a downturn, and funding translates directly into contracts for member states' space industries. The source key was True; some readings differ.",
+      "flag": {
+        "type": "disputed",
+        "note": "Alternative reading (less likely): Cannot say. The directors want to maintain a high level of funding from member states; the passage doesn't say their aim is work for national industries — that's only a consequence of the funding/contracts link."
+      }
+    },
+    {
+      "id": "V2-Q14",
+      "passage": "p4",
+      "text": "Member states can choose to spend their money on the planar rocket or new weather satellites.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "Some programmes are optional, but the passage doesn't say which, so we can't tell whether these two are.",
+      "flag": null
+    },
+    {
+      "id": "V2-Q15",
+      "passage": "p5",
+      "text": "Italy and Britain are covering the cost of the ESA’s EXOMars Robot project and the costs have risen significantly over the past three years.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "The extra cost falls on all the participating countries that signed up, not just Italy and Britain. The source key was False; some readings differ.",
+      "flag": {
+        "type": "disputed",
+        "note": "Alternative reading (less likely): Cannot say. Costs have risen (the budget almost doubled) and are met by 'the participating countries', including Italy and Britain. The passage doesn't say whether other countries participate, so it neither confirms nor rules out that Italy and Britain cover the cost."
+      }
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "id": "N5",
+  "section": "numerical",
+  "test": 5,
+  "title": "Numerical Reasoning – Test 5",
+  "timeLimitSec": 1020,
+  "datasets": {
+    "claims": {
+      "title": "Business Insurance claims per annum per 100,000 policies",
+      "image": "img/p51.png",
+      "blocks": [
+        {
+          "kind": "hbar",
+          "labels": ["Construction", "Hotels & Restaurants", "Transport & Distribution", "Manufacturing", "Agriculture & Fishing", "Other"],
+          "series": [
+            { "name": "USA", "values": [36, 9, 18, 23, 21, 5] },
+            { "name": "EUROPE", "values": [32, 12, 15, 20, 17, 9] }
+          ]
+        }
+      ]
+    },
+    "houses": {
+      "title": "Apline house sales by price (£) – number of houses sold",
+      "image": "img/p53.png",
+      "blocks": [
+        {
+          "kind": "bar",
+          "labels": ["£200,000", "£300,000", "£400,000", "£500,000"],
+          "series": [
+            { "name": "Jan to June 2009", "values": [310, 460, 230, 150] },
+            { "name": "July to Dec 2009", "values": [340, 490, 270, 175] }
+          ]
+        }
+      ]
+    },
+    "regions": {
+      "title": "TOTAL SALES (£ millions)",
+      "image": "img/p56.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["Region", "Previous year", "Current year", "Next yr's projection"],
+          "rows": [
+            ["Northern", 310, 310, 320],
+            ["Southern", 170, 160, 165],
+            ["Eastern", 290, 300, 275],
+            ["Western", 255, 280, 270],
+            ["Central", 110, 90, 125]
+          ]
+        }
+      ]
+    },
+    "casino": {
+      "title": "Calewall casino revenue (£100,000s) and annual attendances",
+      "image": "img/p59.png",
+      "blocks": [
+        {
+          "kind": "stackedBar",
+          "unit": "£100,000s",
+          "labels": ["2006", "2007", "2008", "2009", "2010 Predicted"],
+          "series": [
+            { "name": "Roulette", "values": [0.8, 0.6, 0.6, 0.7, 0.5] },
+            { "name": "Slot machines", "values": [1.3, 1.4, 1.8, 1.5, 1.1] },
+            { "name": "Other table games", "values": [4.4, 4.2, 4.5, 4.8, 4.7] }
+          ]
+        },
+        {
+          "kind": "table",
+          "columns": ["Year", "Annual attendances (100,000s)"],
+          "rows": [
+            ["2006", 14.6],
+            ["2007", 15.2],
+            ["2008", 16.3],
+            ["2009", 16.8],
+            ["2010 Predicted", 16.5]
+          ]
+        }
+      ]
+    },
+    "flights": {
+      "title": "Business Flights booked during January to March inclusive",
+      "image": "img/p60.png",
+      "blocks": [
+        {
+          "kind": "bar",
+          "axisLabel": "Number of flights",
+          "labels": ["Australia", "Europe", "Hong Kong", "Malaysia", "USA"],
+          "series": [{ "name": "Flights", "values": [50, 20, 45, 80, 70] }]
+        }
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": "N5-Q01", "dataset": "claims",
+      "text": "Assuming there were 1,250,000 insurance policies issued annually in Europe to cover the Manufacturing sector, how many claims would be expected per year?",
+      "options": { "A": "250", "B": "400", "C": "500", "D": "550", "E": "600" },
+      "answer": "A",
+      "explanation": "Europe Manufacturing = 20 claims per 100,000 policies. 1,250,000 ÷ 100,000 = 12.5 → 12.5 × 20 = 250.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q02", "dataset": "claims",
+      "text": "Comparing the USA with Europe, which business sector has the most similar number of claims on a proportional basis?",
+      "options": { "A": "Construction", "B": "Hotels & Restaurants", "C": "Transport & Distribution", "D": "Manufacturing", "E": "Agriculture & Fishing" },
+      "answer": "A",
+      "explanation": "Difference ÷ sum: Construction 4/68 = 0.06; Manufacturing 3/43 = 0.07; Transport 3/33 = 0.09; Agriculture 4/38 = 0.11; Hotels 3/21 = 0.14; Other 4/14 = 0.29. Construction is closest.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q03", "dataset": "claims",
+      "text": "There are on average 6 times as many claims made per annum in the USA compared to Europe in the Transport & Distribution sector. How many more policies are issued in the US compared to Europe in this sector?",
+      "options": { "A": "3.3 times as many", "B": "4 times as many", "C": "4.3 times as many", "D": "5.0 times as many", "E": "5.5 times as many" },
+      "answer": "D",
+      "explanation": "Claims = rate × policies. USA rate 18, Europe 15. Policies ratio = 6 × 15 ÷ 18 = 5.0.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q04", "dataset": "claims",
+      "text": "Last year there were 630 claims made in the USA against policies written out in the Agriculture & Fishing sector. How many policies were issued that year for that sector?",
+      "options": { "A": "2670000", "B": "3000000", "C": "4330000", "D": "5000000", "E": "6300000" },
+      "answer": "B",
+      "explanation": "USA Agriculture = 21 claims per 100,000. 630 ÷ 21 × 100,000 = 3,000,000.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q05", "dataset": "houses",
+      "text": "The total number of £400,000 Apline houses sold in 2009 represented 80% of the annual sales target. If this target was split equally across 5 salerooms, what was the individual sales target for each salesroom?",
+      "options": { "A": "155", "B": "120", "C": "125", "D": "325", "E": "225" },
+      "answer": "C",
+      "explanation": "£400,000 houses: 230 + 270 = 500 = 80% of target → target 625. 625 ÷ 5 = 125.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q06", "dataset": "houses",
+      "text": "Stamp duty of 3% is paid on house sales over £250,000. How much stamp duty is paid by purchasers of Apline houses in 2009?",
+      "options": { "A": "£16,425,000", "B": "£18,550,000", "C": "£19,425,000", "D": "£6,000,000", "E": "£8,550,000" },
+      "answer": "C",
+      "explanation": "Sales over £250k: 950 × £300k + 500 × £400k + 325 × £500k = £647.5m. 3% = £19,425,000.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q07", "dataset": "houses",
+      "text": "What is the total value of 2009 Apline house sales?",
+      "options": { "A": "£127.5 million", "B": "£777.5 million", "C": "£115 million", "D": "£162.5 million", "E": "£353,409 million" },
+      "answer": "B",
+      "explanation": "650 × £200k = £130m; 950 × £300k = £285m; 500 × £400k = £200m; 325 × £500k = £162.5m. Total = £777.5m.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q08", "dataset": "houses",
+      "text": "In 2010, the absolute difference in Apline house sales between 2009's July-Dec and Jan-June periods is expected to increase by a fifth. What is the projected difference in Apline house sales between July-Dec and Jan-June for 2010 (in £million)?",
+      "options": { "A": "43.5", "B": "52.2", "C": "100", "D": "125", "E": "125.5" },
+      "answer": "B",
+      "explanation": "Jan-June value = £367m; July-Dec = £410.5m. Difference = 43.5 × 1.2 = £52.2m.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q09", "dataset": "houses",
+      "text": "A marketing drive in 2009 is to be used to increase the level of Jan-June house sales to the level of July-December house sales. If the ratio of marketing spend to additional sales is 1:3, then what level of marketing spend is required?",
+      "options": { "A": "£156.6m", "B": "£75.4m", "C": "£52.2m", "D": "£36.6m", "E": "£14.5m" },
+      "answer": "E",
+      "explanation": "Additional sales needed = £43.5m. Spend = 43.5 ÷ 3 = £14.5m.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q10", "dataset": "regions",
+      "text": "If the sales projections for next year prove accurate, which region will have maintained or increased sales levels each year from the previous year to next year?",
+      "options": { "A": "Northern region", "B": "Southern region", "C": "Eastern region", "D": "Western region", "E": "Central region" },
+      "answer": "A",
+      "explanation": "Northern: 310 → 310 → 320 never falls. Every other region drops at least once.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q11", "dataset": "regions",
+      "text": "What is the absolute difference between the lowest and the highest performing region (to the nearest £million) in the current year?",
+      "options": { "A": "£216 million", "B": "£217 million", "C": "£218 million", "D": "£219 million", "E": "£220 million" },
+      "answer": "E",
+      "explanation": "Current year: Northern 310 − Central 90 = £220m.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q12", "dataset": "regions",
+      "text": "If next year's forecasts are scaled back by a quarter for the Northern and Western region, and by a fifth for the Southern and Eastern regions, what will be the total projected sales for all 5 regions?",
+      "options": { "A": "£1,155 million", "B": "£924 million", "C": "£919.50 million", "D": "£942 million", "E": "£866.25 million" },
+      "answer": "C",
+      "explanation": "Northern 320 × ¾ = 240; Southern 165 × ⅘ = 132; Eastern 275 × ⅘ = 220; Western 270 × ¾ = 202.5; Central 125. Total = £919.5m.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q13", "dataset": "regions",
+      "text": "What were the ratios for the Central : Eastern regional sales for the Previous Year compared to the Current Year?",
+      "options": { "A": "9:30 ; 3:11", "B": "20:50 ; 3:11", "C": "10:30 ; 5:11", "D": "11:29 ; 3:10", "E": "5:11 ; 11:29" },
+      "answer": "D",
+      "explanation": "Previous year 110 : 290 = 11 : 29. Current year 90 : 300 = 3 : 10.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q14", "dataset": "regions",
+      "text": "Put the regions in increasing order of total combined sales for the current year and next year's projection.",
+      "options": {
+        "A": "Central Southern Western Eastern Northern",
+        "B": "Southern Central Western Eastern Northern",
+        "C": "Central Western Southern Eastern Northern",
+        "D": "Central Southern Western Northern Eastern",
+        "E": "Central Southern Northern Western Eastern"
+      },
+      "answer": "A",
+      "explanation": "Current + next: Central 215; Southern 325; Western 550; Eastern 575; Northern 630.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q15", "dataset": "casino",
+      "text": "How much did the combined revenue from Slot machines and Roulette differ from that of other table games between 2006-2009 inclusive (in £millions)?",
+      "options": { "A": "0.9", "B": "9", "C": "9.2", "D": "0.92", "E": "None of these" },
+      "answer": "D",
+      "explanation": "2006-2009 (in £100,000s): Slots 6.0 + Roulette 2.7 = 8.7; Other table games 17.9. Difference 9.2 × £100,000 = £0.92m. (Watch the units — 9.2 is a trap.)",
+      "flag": null
+    },
+    {
+      "id": "N5-Q16", "dataset": "casino",
+      "text": "What was the average amount gambled on Slot machines in 2007 by each individual who attended Calewall casino?",
+      "options": { "A": "£90.00", "B": "£9.00", "C": "£0.90", "D": "£900.00", "E": "£0.09" },
+      "answer": "E",
+      "explanation": "2007 slot revenue = 1.4 × 100,000 = £140,000. Attendance = 15.2 × 100,000 = 1,520,000. 140,000 ÷ 1,520,000 ≈ £0.09.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q17", "dataset": "flights",
+      "text": "How many more flights were booked to the USA than to Europe?",
+      "options": { "A": "20", "B": "30", "C": "40", "D": "50", "E": "60" },
+      "answer": "D",
+      "explanation": "USA 70 − Europe 20 = 50.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q18", "dataset": "flights",
+      "text": "A 10% discount is offered to flights to Hong Kong booked between January and March. What was the total cost of all flights to Hong Kong in the period January to March?",
+      "options": { "A": "$3500", "B": "$17500", "C": "$27500", "D": "$35000", "E": "Cannot say" },
+      "answer": "E",
+      "explanation": "No flight prices are given, so the cost can't be calculated.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q19", "dataset": "flights",
+      "text": "What was the number of UK flights booked as a percentage of the Malaysian flights if UK flights booked is 20% of the total Europe flights?",
+      "options": { "A": "15%", "B": "1.5%", "C": "50%", "D": "5%", "E": "35%" },
+      "answer": "D",
+      "explanation": "UK = 20% × 20 = 4. 4 ÷ 80 (Malaysia) = 5%.",
+      "flag": null
+    },
+    {
+      "id": "N5-Q20", "dataset": "flights",
+      "text": "In April to June the planned number of flights to Hong Kong is 30. What is this decrease as a percentage of the number of flights booked in January to March?",
+      "options": { "A": "25.5%", "B": "33.3%", "C": "45.3%", "D": "50%", "E": "66.6%" },
+      "answer": "B",
+      "explanation": "Hong Kong Jan-Mar = 45. (45 − 30) ÷ 45 = 33.3%.",
+      "flag": null
+    }
+  ]
+}

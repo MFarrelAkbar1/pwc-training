@@ -1,0 +1,345 @@
+{
+  "id": "N3",
+  "section": "numerical",
+  "test": 3,
+  "title": "Numerical Reasoning – Test 3",
+  "timeLimitSec": 1020,
+  "datasets": {
+    "drugs": {
+      "title": "Regional Drug Sales: Tequental & Parnol (% of each drug's sales)",
+      "image": "img/p25.png",
+      "blocks": [
+        {
+          "kind": "stackedBar",
+          "unit": "%",
+          "labels": ["Tequental", "Parnol"],
+          "series": [
+            { "name": "Hong Kong", "values": [35, 20] },
+            { "name": "Japan", "values": [21, 21] },
+            { "name": "Korea", "values": [15, 37] },
+            { "name": "Rest of Asia", "values": [19, 17] },
+            { "name": "Rest of World", "values": [10, 5] }
+          ]
+        }
+      ]
+    },
+    "machinery": {
+      "title": "Machinery spend by Department and purchase type (%)",
+      "image": "img/p26.png",
+      "blocks": [
+        {
+          "kind": "stackedBar",
+          "unit": "%",
+          "labels": ["Printing", "Production", "Media", "Design", "Market Research"],
+          "series": [
+            { "name": "Lease Purchase", "values": [45, 30, 50, 25, 40] },
+            { "name": "Finance Purchase", "values": [35, 70, 50, 25, 60] },
+            { "name": "Hire Purchase", "values": [25, 0, 0, 50, 0] }
+          ],
+          "note": "As printed in the source, Printing's bars add up to 105%."
+        }
+      ]
+    },
+    "timeUsage": {
+      "title": "Departmental Time Usage – Hours per annum",
+      "image": "img/p28.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["Department (no. of employees)", "Available Time Resources", "Support / Admin", "New Products", "Product Extensions"],
+          "rows": [
+            ["Engineering (5)", 10000, 4000, 6000, 432],
+            ["Technical Services (8)", 16000, 3700, 9540, 673],
+            ["Marketing (3)", 6000, 3600, 2000, 0],
+            ["Specifications (3)", 6000, 3000, 2000, 33],
+            ["Development (4)", 8000, 5000, 1500, 324]
+          ],
+          "note": "The last three columns are Time Used."
+        }
+      ]
+    },
+    "darwin": {
+      "title": "Darwin Enterprises Financial Information",
+      "image": "img/p29.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["", "Year1", "Year2", "Year3"],
+          "rows": [
+            ["Turnover (£m)", 11.4, 10.6, 8.5],
+            ["Income (£m)", 9.2, 3.1, 1.1],
+            ["Assets (£m)", 42.3, 28.7, 32.6],
+            ["Debt (£m)", 9.7, 6.5, 17.8],
+            ["Profit Margin (%)", 80.70, 29.25, 12.94],
+            ["Share Price (pence)", 108.0, 85.6, 56.6],
+            ["Number of Shares (m)", 50, 50, 50]
+          ],
+          "note": "m = millions"
+        }
+      ]
+    },
+    "philippines": {
+      "title": "Philippine Economic Summary",
+      "image": "img/p30.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["", "1997", "1998", "1999", "2000"],
+          "rows": [
+            ["Total GDP ($1,000 million)", 66.00, 64.35, 80.19, 84.00],
+            ["GDP per head of population ($)", 1100, 990, 1188, 1200],
+            ["GDP growth per head (% change p.a.)", "10.0%", "-10.0%", "20.0%", "1.0%"],
+            ["Unemployment rate (% of workforce)", "8.7%", "10.0%", "10.5%", "15.0%"]
+          ]
+        }
+      ]
+    },
+    "exports": {
+      "title": "Projected Consumer Goods Exports (Hong Kong Dollar, million)",
+      "image": "img/p31.png",
+      "blocks": [
+        {
+          "kind": "line",
+          "unit": "HKD m",
+          "labels": ["Y", "Y+1", "Y+2", "Y+3", "Y+4"],
+          "series": [
+            { "name": "Hong Kong", "values": [300, 330, 350, 420, 450] },
+            { "name": "Singapore", "values": [60, 70, 80, 80, 90] }
+          ],
+          "note": "Exchange rates for Year Y: $4.50 HKD = $1 SGD; $1.60 SGD = $1 USD."
+        }
+      ]
+    },
+    "xda": {
+      "title": "XDA Software Suppliers – Annual Costs (%)",
+      "image": "img/p32.png",
+      "blocks": [
+        {
+          "kind": "pie",
+          "title": "Jan – June",
+          "unit": "%",
+          "labels": ["Advertising & Marketing", "Rent & Rates", "Wages & Salaries", "Maintenance", "Insurance", "Heating & Lighting", "Sundry Others"],
+          "series": [{ "name": "Jan – June", "values": [13, 16, 45, 4, 4, 12, 6] }]
+        },
+        {
+          "kind": "pie",
+          "title": "July – Dec",
+          "unit": "%",
+          "labels": ["Advertising & Marketing", "Rent & Rates", "Wages & Salaries", "Maintenance", "Insurance", "Heating & Lighting", "Sundry Others"],
+          "series": [{ "name": "July – Dec", "values": [16, 14, 43, 6, 4, 12, 5] }]
+        }
+      ]
+    },
+    "advertising": {
+      "title": "Advertising expenditure (€, recorded to the nearest €50)",
+      "image": "img/p33.png",
+      "blocks": [
+        {
+          "kind": "line",
+          "unit": "€",
+          "labels": ["Jan", "Feb", "Mar", "Apr"],
+          "series": [
+            { "name": "Alpha inc", "values": [800, 900, 900, 1000] },
+            { "name": "Sigma inc", "values": [600, 700, 800, 900] },
+            { "name": "Beta inc", "values": [500, 450, 450, 500] },
+            { "name": "Delta inc", "values": [300, 600, 650, 600] },
+            { "name": "Gamma inc", "values": [300, 350, 350, 400] }
+          ]
+        }
+      ]
+    },
+    "photocopiers": {
+      "title": "Photocopier service & running costs (assume 52 weeks per year, 13 weeks per quarter)",
+      "image": "img/p34.png",
+      "blocks": [
+        {
+          "kind": "table",
+          "columns": ["Photocopier", "Expected average cost per week ($)", "Actual Spend Jan-Mar ($)", "Actual Spend Apr-Jun ($)"],
+          "rows": [
+            ["PHTCPR01", 120, 1872, 1968],
+            ["PHTCPR02", 125, 1975, 1425],
+            ["PHTCPR03", 130, 1924, 2340],
+            ["PHTCPR04", 160, 2400, 2112],
+            ["PHTCPR05", 140, 2716, 2772],
+            ["PHTCPR06", 175, 3605, 2730]
+          ]
+        }
+      ]
+    },
+    "staff": {
+      "title": "Proportion of the organisation's 2,900 staff qualified at each Level",
+      "image": "img/p36.png",
+      "blocks": [
+        {
+          "kind": "pie",
+          "unit": "%",
+          "labels": ["No quals.", "Level 1", "Level 2", "Level 3", "Level 4"],
+          "series": [{ "name": "Staff", "values": [14, 13, 44, 21, 8] }],
+          "total": 2900
+        }
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": "N3-Q01", "dataset": "drugs",
+      "text": "In which region do Parnol sales exceed (in $) Tequental sales?",
+      "options": { "A": "Rest of World", "B": "Rest of Asia", "C": "Korea", "D": "Japan", "E": "Hong Kong" },
+      "answer": "C",
+      "explanation": "Compare each drug's share per region: Korea is the only region where Parnol's share (37%) exceeds Tequental's (15%).",
+      "flag": { "type": "disputed", "note": "The chart only shows each drug's percentage split, not dollar totals, so a $ comparison can't strictly be made. There is no 'Cannot say' option, so the intended reading must be 'share of sales' → Korea." }
+    },
+    {
+      "id": "N3-Q02", "dataset": "machinery",
+      "text": "If the total amount spent by Production was $575,000, how much did they spend on Lease Purchase schemes?",
+      "options": { "A": "17250", "B": "172500", "C": "345000", "D": "402500", "E": "Cannot say" },
+      "answer": "B",
+      "explanation": "Production Lease Purchase = 30%. 30% × 575,000 = 172,500.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q03", "dataset": "machinery",
+      "text": "If the total number of units produced was 800,000 and the Printing department spent $90,000 on Lease Purchase agreements, what was the approximate ratio of units produced to total machinery spend for the Printing department?",
+      "options": { "A": "2:1", "B": "3:1", "C": "4:1", "D": "5:1", "E": "6:1" },
+      "answer": "C",
+      "explanation": "Printing Lease Purchase = 45%, so total Printing spend = 90,000 ÷ 0.45 = 200,000. 800,000 : 200,000 = 4 : 1.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q04", "dataset": "machinery",
+      "text": "If the amount spent on Hire Purchase agreements was increased by 20% across all five departments what would be the effect on the overall spend (if the overall spend was $2,000,000 originally)?",
+      "options": { "A": "380,000 less", "B": "400,000 higher", "C": "380,000 higher", "D": "40,000 higher", "E": "Cannot say" },
+      "answer": "B", "verifiedAnswer": "E", "answerSource": "recomputed",
+      "explanation": "The chart gives each department's split in %, but not how the $2,000,000 is divided between departments, so the Hire Purchase total — and the effect of raising it — can't be calculated.",
+      "flag": { "type": "disputed", "note": "The chart shows each department's split in %, but not how the $2,000,000 is divided between departments, so the effect can't be calculated → Cannot say (E). The PDF assumes equal spend per department; even then the answer is $60,000 higher (25% × 400k + 50% × 400k = 300k; +20% = 60k), which isn't an option, and its working contradicts its key (40,000 vs 400,000). PDF working: 75/500 × 2,000,000 = 300,000; '(175/500) × 200,000 = 700,000 … this is 40,000 higher'." }
+    },
+    {
+      "id": "N3-Q05", "dataset": "timeUsage",
+      "text": "On average how many more hours were worked per employee in Marketing than in Specifications?",
+      "options": { "A": "149", "B": "159", "C": "169", "D": "179", "E": "189" },
+      "answer": "E",
+      "explanation": "Marketing: (3,600 + 2,000 + 0) ÷ 3 = 1,866.7. Specifications: (3,000 + 2,000 + 33) ÷ 3 = 1,677.7. Difference = 189.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q06", "dataset": "darwin",
+      "text": "If Darwin Enterprise's Share Price/Income ratio had remained constant from Year 1 onwards, what would the Share Price have been in Year 3?",
+      "options": { "A": "12.9p", "B": "25.7p", "C": "37.3p", "D": "48.5p", "E": "Cannot say" },
+      "answer": "A",
+      "explanation": "Year 1 ratio = 108 ÷ 9.2 = 11.74. Year 3 share price = 11.74 × 1.1 = 12.9p.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q07", "dataset": "darwin",
+      "text": "What would the Turnover be in Year 4 if it continued to decrease at the same rate as between Year 2 and Year 3?",
+      "options": { "A": "£5.9m", "B": "£6.1m", "C": "£6.4m", "D": "£6.8m", "E": "£6.6m" },
+      "answer": "D",
+      "explanation": "Year 2 → 3: 10.6 → 8.5, a 19.8% fall (factor 0.802). Year 4 = 8.5 × 0.802 = £6.8m.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q08", "dataset": "philippines",
+      "text": "In which year was the greatest number of people unemployed in the Philippines?",
+      "options": { "A": "1997", "B": "1998", "C": "1999", "D": "2000", "E": "Cannot say" },
+      "answer": "D", "verifiedAnswer": "E", "answerSource": "recomputed",
+      "explanation": "PDF: the unemployment rate is given as a percentage of the workforce, but the workforce size isn't given (only total population can be derived). Hence the correct answer is Cannot say.",
+      "flag": { "type": "recomputed", "note": "The PDF's own explanation concludes 'Cannot say' (E), but its key says D (2000)." }
+    },
+    {
+      "id": "N3-Q09", "dataset": "exports",
+      "text": "At one time Hong Kong's consumer goods exports were projected to rise at 20% per year from Y+2 onwards. According to this projection, what would be the value (in $m HKD) of Hong Kong's exports in Y+4?",
+      "options": { "A": "$500m", "B": "$501m", "C": "$502m", "D": "$503m", "E": "$504m" },
+      "answer": "E",
+      "explanation": "Y+2 = 350. Y+3 = 350 × 1.2 = 420. Y+4 = 420 × 1.2 = 504.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q10", "dataset": "xda",
+      "text": "If the cost of Insurance increases by an average of 35% overall in the second half of the year, what will be the cost of maintenance in that half if advertising and marketing increased by 17%?",
+      "options": { "A": "1000", "B": "4000", "C": "4600", "D": "5000", "E": "Cannot Say" },
+      "answer": "E",
+      "explanation": "The charts give only percentages, with no money amounts, so no cost can be calculated.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q11", "dataset": "xda",
+      "text": "If the wages & salaries cost was £814,995 in the first half of the year, and if the total expenditure increased by 10% in the second half of the year, what would be the wages & salaries expenditure in the second half?",
+      "options": { "A": "£778,773", "B": "£847,595", "C": "£856,650", "D": "£880,195", "E": "£896,494" },
+      "answer": "C",
+      "explanation": "First-half total = 814,995 ÷ 45% = 1,811,100. Second half = 1.1 × 1,811,100 = 1,992,210. Wages = 43% × 1,992,210 = £856,650.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q12", "dataset": "xda",
+      "text": "If heating and lighting costs had been reduced by 10% in the second half of the year by how much would this reduce total expenditure over the whole of Year 5?",
+      "options": { "A": "5%", "B": "10%", "C": "15%", "D": "20%", "E": "Cannot say" },
+      "answer": "E",
+      "explanation": "The totals for each half of the year aren't given, so the effect on the whole year can't be calculated.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q13", "dataset": "advertising",
+      "text": "What was the difference in the total amount spent on advertising by all five companies between March and April?",
+      "options": { "A": "€1,000", "B": "€180", "C": "€200", "D": "€250", "E": "€275" },
+      "answer": "D",
+      "explanation": "March: 900 + 800 + 450 + 650 + 350 = 3,150. April: 1,000 + 900 + 500 + 600 + 400 = 3,400. Difference = €250.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q14", "dataset": "photocopiers",
+      "text": "On which photocopier is there the least amount of budget left to spend this year?",
+      "options": { "A": "PHTCPR01", "B": "PHTCPR02", "C": "PHTCPR03", "D": "PHTCPR04", "E": "PHTCPR05" },
+      "answer": "E",
+      "explanation": "Budget left = 52 × weekly cost − (Jan-Mar + Apr-Jun). 01: 2,400; 02: 3,100; 03: 2,496; 04: 3,808; 05: 1,792; 06: 2,765. PHTCPR05 has the least.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q15", "dataset": "photocopiers",
+      "text": "By what proportion should the service and running costs for Photocopier PHTCPR05 be increased next year if the actual spend recorded between January and June is a true reflection of service and running costs?",
+      "options": { "A": "38.9%", "B": "43.6%", "C": "48.7%", "D": "50.8%", "E": "53.3%" },
+      "answer": "D",
+      "explanation": "Actual Jan-Jun = 2,716 + 2,772 = 5,488. Expected = 140 × 26 = 3,640. (5,488 − 3,640) ÷ 3,640 = 50.8%.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q16", "dataset": "photocopiers",
+      "text": "By how much is the annual spend on Photocopier PHTCPR01 likely to exceed that of Photocopier PHTCPR02 if the current spend recorded between January and June is a true reflection of actual service and running costs?",
+      "options": { "A": "$740", "B": "$820", "C": "$880", "D": "$960", "E": "$1,120" },
+      "answer": "C",
+      "explanation": "Half-year: 01 = 3,840; 02 = 3,400. Difference 440 × 2 = $880 for the year.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q17", "dataset": "staff",
+      "text": "How many staff in the organisation have no qualification?",
+      "options": { "A": "406", "B": "390", "C": "482", "D": "712", "E": "140" },
+      "answer": "A",
+      "explanation": "14% × 2,900 = 406.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q18", "dataset": "staff",
+      "text": "If each Level 1 course takes a maximum of 29 staff and costs £1,170 to run, how much would it cost to get to the position where 90% of the organisation's staff are qualified at Level 1 or higher (assuming unqualified staff must start with a Level 1 course and that all staff who take the course achieve the Level 1 qualification)?",
+      "options": { "A": "€1,520", "B": "€14,742", "C": "€117,000", "D": "€4,680", "E": "€780" },
+      "answer": "D",
+      "explanation": "Qualified now = 86% × 2,900 = 2,494. Target 90% = 2,610. Need 116 more = 116 ÷ 29 = 4 courses × 1,170 = 4,680.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q19", "dataset": "staff",
+      "text": "Half of the staff with no qualification are aged under 21, compared with a quarter of those qualified at Level 2 and a third of those qualified at Level 3. None of those qualified at Level 1 or Level 4 are aged under 21. How many staff in the organisation are aged under 21?",
+      "options": { "A": "2291", "B": "203", "C": "722", "D": "725", "E": "406" },
+      "answer": "D",
+      "explanation": "No quals: 406 ÷ 2 = 203. Level 2: 1,276 ÷ 4 = 319. Level 3: 609 ÷ 3 = 203. Total = 725.",
+      "flag": null
+    },
+    {
+      "id": "N3-Q20", "dataset": "staff",
+      "text": "If 1,000 new staff join the organisation and none leave, and half of the new staff have no training and half have Level 1, approximately what percentage of the organisation's staff have no training?",
+      "options": { "A": "31.2%", "B": "43.3%", "C": "55.3%", "D": "23.2%", "E": "36.1%" },
+      "answer": "D",
+      "explanation": "(406 + 500) ÷ 3,900 = 23.2%.",
+      "flag": null
+    }
+  ]
+}
