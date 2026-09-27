@@ -1,0 +1,241 @@
+{
+  "id": "V8",
+  "section": "verbal",
+  "test": 8,
+  "title": "Verbal Reasoning – Test 8",
+  "timeLimitSec": 900,
+  "passages": {
+    "swap": {
+      "title": "Instructions: word swap",
+      "text": "In each question, two words in the sentence have been swapped: the first word has moved to the place of the second, and the second has moved to the place of the first. Nothing else has changed. Choose the pair of words that were swapped. Each option lists a pair in the order the words appear in the sentence (the incorrect order).",
+      "truncated": false
+    },
+    "acids": {
+      "text": "Sour tasting things contain acids. They are only weak solutions of acid as something that is strongly acidic will burn human skin. A bee sting contains an acid, our stomach contains hydrochloric acid and a car battery contains a very strong solution of sulphuric acid. Acids are very widely used in the chemical industry. Pollution from power stations causes acid rain, which kills trees and fish.",
+      "truncated": false
+    },
+    "match": {
+      "title": "Instructions: matching",
+      "text": "Each question gives three words: a pair of words, and a single word whose partner is missing. Work out the relationship between the complete pair, then choose the word from the list that has a similar relationship with the single word.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "V8-Q01",
+      "passage": "swap",
+      "text": "Which two words have been swapped?  “Bound about the Alps to the north, the boot-shaped peninsula of mainland Italy stretches by 800km into the Mediterranean Sea.”",
+      "options": {
+        "A": "Bound / stretches",
+        "B": "Alps / north",
+        "C": "about / by",
+        "D": "peninsula / Italy"
+      },
+      "answer": "C",
+      "explanation": "Swapping “about” and “by” back gives “Bound by the Alps… stretches about 800km”.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q02",
+      "passage": "swap",
+      "text": "Which two words have been swapped?  “In the long fight for racial rights for black Americans Martin Luther King stands out for his great commitment to equal equality.”",
+      "options": {
+        "A": "racial / equal",
+        "B": "long / great",
+        "C": "fight / commitment",
+        "D": "racial / rights"
+      },
+      "answer": "A",
+      "explanation": "Swapping “racial” and “equal” back gives “the fight for equal rights… commitment to racial equality”.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q03",
+      "passage": "swap",
+      "text": "Which two words have been swapped?  “Kites can be simple flat structures made from a complex of thin sticks covered with paper or more framework designs including data wings and aerofoils.”",
+      "options": {
+        "A": "simple / flat",
+        "B": "sticks / paper",
+        "C": "framework / designs",
+        "D": "complex / framework"
+      },
+      "answer": "D",
+      "explanation": "Swapping “complex” and “framework” back gives “made from a framework of thin sticks… or more complex designs”.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q04",
+      "passage": "swap",
+      "text": "Which two words have been swapped?  “Laws regulate government and state, between relationship the government and individuals and the conduct of individuals towards each other.”",
+      "options": {
+        "A": "government / state",
+        "B": "between / the",
+        "C": "relationship / conduct",
+        "D": "government / individuals"
+      },
+      "answer": "B",
+      "explanation": "Swapping “between” and the “the” before “government” back gives “the relationship between government and individuals”.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q05",
+      "passage": "swap",
+      "text": "Which two words have been swapped?  “Scientists use businesses to test their theories, engineers use it to design new machines and entrepreneurs use it to manage their mathematics.”",
+      "options": {
+        "A": "Scientists / entrepreneurs",
+        "B": "theories / machines",
+        "C": "businesses / mathematics",
+        "D": "use / manage"
+      },
+      "answer": "C",
+      "explanation": "Swapping “businesses” and “mathematics” back gives “Scientists use mathematics to test their theories… entrepreneurs use it to manage their businesses”.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q06",
+      "passage": "acids",
+      "text": "It can be inferred from the passage that the hydrochloric acid in our stomachs is weak.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "verifiedAnswer": "C",
+      "answerSource": "recomputed",
+      "explanation": "The passage says our stomach contains hydrochloric acid, but nothing about how strong it is, so the statement can't be inferred either way.",
+      "flag": {
+        "type": "recomputed",
+        "note": "The PDF says False. The passage only says that the stomach contains hydrochloric acid; it says nothing about how strong stomach acid is, and it doesn't say stomach acid is sour-tasting. The statement is neither supported nor contradicted → Cannot say (C). PDF working: “the passage states that we must only taste weak solutions of acid but nothing is said about the acid in our stomachs other than it is hydrochloric acid and so it is false that we can infer that the acid in our stomach is weak”."
+      }
+    },
+    {
+      "id": "V8-Q07",
+      "passage": "acids",
+      "text": "The primary purpose of the passage is to describe the properties of things that taste sour.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "The passage describes acids: their properties, where they are found and how they are used. Being sour-tasting is just one property, so this isn't its main purpose.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q08",
+      "passage": "acids",
+      "text": "It can be inferred from the passage that the acid in a car battery would burn if it made contact with our skin.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "A",
+      "explanation": "Strongly acidic things burn skin, and a car battery contains a very strong solution of sulphuric acid, so battery acid can be inferred to burn skin.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q09",
+      "passage": "acids",
+      "text": "A wasp sting contains an acid.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "C",
+      "explanation": "The passage says a bee sting contains an acid but never mentions wasp stings.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q10",
+      "passage": "acids",
+      "text": "Lemon juice is an example of a sour tasting thing that is mentioned in the passage.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cannot say"
+      },
+      "answer": "B",
+      "explanation": "Lemon juice is sour, but the passage doesn't mention it; it gives no examples of sour-tasting things at all.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q11",
+      "passage": "match",
+      "text": "Boat, Sails, Car?",
+      "options": {
+        "A": "Engine",
+        "B": "Tyres",
+        "C": "Journeys",
+        "D": "Motorbikes"
+      },
+      "answer": "A",
+      "explanation": "A boat is powered by its sails and a car by its engine.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q12",
+      "passage": "match",
+      "text": "Fire, Smoke, Words?",
+      "options": {
+        "A": "Letters",
+        "B": "Sentences",
+        "C": "Voices",
+        "D": "Dictionary"
+      },
+      "answer": "B",
+      "explanation": "One product of fire is smoke; words can be used to produce sentences.",
+      "flag": {
+        "type": "disputed",
+        "note": "Ambiguous relation. The PDF reads it as “fire produces smoke, words produce sentences”, but sentences are built out of words (a part–whole link) rather than produced the way smoke is by fire. “Letters” (which make up words) or “Voices” (which speak them) fit other readings. PDF key kept (B, Sentences)."
+      }
+    },
+    {
+      "id": "V8-Q13",
+      "passage": "match",
+      "text": "Telephone, River, Sea?",
+      "options": {
+        "A": "Receiver",
+        "B": "Ring tone",
+        "C": "Conversation",
+        "D": "Exchange"
+      },
+      "answer": "D",
+      "explanation": "A river runs to the sea; a telephone connects to an exchange.",
+      "flag": null
+    },
+    {
+      "id": "V8-Q14",
+      "passage": "match",
+      "text": "Surface, Fuzzy, Smooth?",
+      "options": {
+        "A": "Veneer",
+        "B": "Interior",
+        "C": "Appearance",
+        "D": "Horizontal"
+      },
+      "answer": "B",
+      "explanation": "Smooth is the opposite of fuzzy, and interior is the opposite of surface.",
+      "flag": {
+        "type": "disputed",
+        "note": "Ambiguous relation. The PDF reads Fuzzy/Smooth as opposites, so the opposite of Surface is Interior. But fuzzy and smooth can also be read as ways a surface can feel or look, which would point to Veneer or Appearance. PDF key kept (B, Interior)."
+      }
+    },
+    {
+      "id": "V8-Q15",
+      "passage": "match",
+      "text": "Jailed, Fraud, Expelled?",
+      "options": {
+        "A": "School",
+        "B": "Smoking",
+        "C": "Kick off",
+        "D": "Child"
+      },
+      "answer": "B",
+      "explanation": "You can be jailed for the crime of fraud and expelled from school for smoking.",
+      "flag": null
+    }
+  ]
+}

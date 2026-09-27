@@ -3,11 +3,18 @@
 
 // prefix: first letter of every test and question id in the section ("N3", "N3-Q04").
 // minutes / questions: per test, also used for the mixed random set.
-// testMinutes / testNames: per-test overrides (Logic subtests have their own timers).
+// testMinutes / testQuestions / testNames: per-test overrides (Logic subtests have their own timers,
+// and the entrance-test papers V8 and N6 are 15 questions in 15 minutes).
 // generated: questions were written for this site, not taken from the source PDF.
 export const SECTIONS = {
-  numerical: { name: "Numerical Reasoning", short: "Numerical", prefix: "N", tests: [1, 2, 3, 4, 5], minutes: 17, questions: 20 },
-  verbal: { name: "Verbal Reasoning", short: "Verbal", prefix: "V", tests: [1, 2, 3, 4, 5, 6, 7], minutes: 8, questions: 15 },
+  numerical: {
+    name: "Numerical Reasoning", short: "Numerical", prefix: "N", tests: [1, 2, 3, 4, 5, 6], minutes: 17, questions: 20,
+    testMinutes: { 6: 15 }, testQuestions: { 6: 15 },
+  },
+  verbal: {
+    name: "Verbal Reasoning", short: "Verbal", prefix: "V", tests: [1, 2, 3, 4, 5, 6, 7, 8], minutes: 8, questions: 15,
+    testMinutes: { 8: 15 },
+  },
   english: { name: "English (TOEFL-style)", short: "English", prefix: "E", tests: [1, 2, 3], minutes: 15, questions: 20, generated: true },
   logic: {
     name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4], minutes: 10, questions: 15, generated: true,

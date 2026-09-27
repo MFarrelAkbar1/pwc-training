@@ -11,8 +11,10 @@ export function hasContext(q) {
   return Boolean(q.dataset || q.passage);
 }
 
+// A passage can carry its own title (e.g. "Instructions: word swap"); otherwise it's just "Passage".
 export function contextTitle(q) {
-  return q.passage ? "Passage" : "Chart / table";
+  if (q.passage) return testOf(q).passages[q.passage].title ?? "Passage";
+  return "Chart / table";
 }
 
 export function renderContext(container, q) {

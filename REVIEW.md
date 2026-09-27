@@ -22,7 +22,7 @@ When there's a problem, the question also gets:
 
 Recheck any time with `python tools/verify_numerical.py` (answers) and `python tools/check_data.py` (structure).
 
-**Status:** All 12 tests are checked. Numerical: 100 questions, 99 scored. Verbal: 104 questions (V4 has 14), all scored.
+**Status:** All 14 tests are checked. Numerical: 115 questions, 114 scored (N6 is the entrance-test paper, see below). Verbal: 119 questions (V4 has 14; V8 is the entrance-test paper), all scored.
 
 ## Numerical summary
 
@@ -190,6 +190,61 @@ Every verbal statement now has a one-line explanation that matches the answer th
 - **V4-Q15** reads "?8m" in the PDF itself (the currency symbol is missing in the source image). I kept it as printed.
 - The PDF's own typos are kept word for word (e.g. "to a large extend inherited", "its incidence vary", "pouring over books", "that that the animals").
 - Two passages had scrambled word order in the PDF's text layer (V3 earthquakes, V5 smoke-free law). I transcribed those from the page images. Every other passage sentence and statement was machine-checked against the PDF text.
+
+---
+
+# PwC entrance test: Verbal V8 and Numerical N6
+
+Source: `pdf-pwc-entrance-test-amp-answer_compress.pdf` (30 questions, then an answer section). The PDF is not committed.
+The answer section relabels the options E–H; they are mapped back to A–D. The letter keys are **yellow highlights on the
+page images**, not in the PDF's text, so they were read from the rendered pages (the numeracy and matching questions have no
+"Answer:" line at all). The site numbers the tests V8 and N6; the PDF's question numbers are in the tables below.
+
+| Test | Questions | Timer | Layout |
+|---|---|---|---|
+| V8 | 5 word swap, 5 True/False/Cannot say (acids passage), 5 matching | 15 min | The instructions or passage sit next to each group of questions |
+| N6 | 10 numeracy, then 5 data interpretation (centenarians passage) | 15 min | Passage beside Q11–Q15; Q1–Q10 are single-column |
+
+Both papers use 4 options (A–D). Both also join the section's mixed random set and the wrong-answer bank like any other test.
+`python tools/verify_entrance.py` recomputes all 15 N6 answers and checks the V8 word-swap options; `python tools/check_data.py`
+checks the structure.
+
+## Decisions
+
+| Question | PDF Q | PDF key | Used | Decision | Reasoning |
+|---|---|---|---|---|---|
+| V8-Q06 | 36 | B (False) | **C (Cannot say)** | recomputed (your decision) | The passage only says the stomach contains hydrochloric acid. It says nothing about how strong stomach acid is. |
+| V8-Q12 | 42 | B (Sentences) | B | disputed (ambiguous relation) | Fire → smoke is "produces", but sentences are built from words (part–whole). Letters or Voices fit other readings. Key kept. |
+| V8-Q14 | 44 | B (Interior) | B | disputed (ambiguous relation) | Fuzzy/Smooth as opposites gives Surface/Interior, but both words can describe a surface (Veneer, Appearance). Key kept. |
+| N6-Q06 | 51 | C (63) | **A (42)** | recomputed, flagged **disputed** (your decision) | 21 heads in 50 tosses is 42%, so 42 in a further 100. 63 is 42% of 150 (all tosses), not of the further 100. A fair-coin argument gives 50, which isn't an option. |
+| N6-Q15 | 60 | A (516,350; E in the PDF) | **B (464,800; F in the PDF)** | recomputed, flagged **disputed** (your decision) | 1 in 50 × 9,296 centenarians (2008) = 464,800. The PDF key can't be reproduced from the passage, and the PDF gives no working. |
+| V8-Q04 | 34 | "Between and (the first) the" | between / the | corrected pair (your decision) | See below. |
+
+The two "ambiguous relation" questions use the **disputed** flag type with a note that starts "Ambiguous relation."
+
+All other keys are correct as printed. Recomputing the numeracy questions matched the PDF key every time except N6-Q06 and N6-Q15
+above (`tools/verify_entrance.py`). Working: N6-Q02 sum = 521 × 370 = 192,770 (under 200,000); Q04 √55 = 7.4; Q05 180,000 ÷ 600 = 300;
+Q09 1.5 ÷ 100.5 = 1.49%; Q11 6,250 − 2,000 = 4,250; Q12 8,296 × 6/8 = 6,222; Q13 1,000 ÷ 8,296 = 12.05%; Q14 100,500 − 100,000 = 500.
+
+## Word-swap questions (V8-Q01 to Q05)
+
+The PDF asks for the two words in a free-text box. On the site each question has 4 options, each a pair of words from the sentence
+in the order they appear, with one correct pair and 3 plausible wrong pairs. `tools/verify_entrance.py` un-swaps every option and
+checks that exactly one restores the corrected sentence.
+
+- **V8-Q04 (PDF Q34).** The PDF's "(the first) the" is confusing. The corrected pair is **between** and the **the** just before "government":
+  swapping them gives "the relationship between government and individuals". (That "the" is the only one that works; a swap can't
+  add a second "the" before "government".)
+- **V8-Q02 (PDF Q32).** "racial rights … equal equality" has two readings: swapping *rights* and *equality* also gives a grammatical
+  sentence ("racial equality … equal rights"). The PDF key is *racial / equal*, and that pair is the only one offered, so the
+  question still has exactly one correct option.
+- The PDF's typos are kept in the sentences ("data wings" in Q33, "equal equality" in Q32).
+
+## Explanations
+
+The PDF's explanations were used for the matching and True/False questions and reworded where garbled ("we must only taste weak
+solutions", "soluations", "It is be inferred"). V8-Q06's explanation is rewritten for Cannot say. The numeracy explanations
+(the PDF has none) show the calculation.
 
 ---
 

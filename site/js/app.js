@@ -88,13 +88,16 @@ function showHome() {
       hasProgress && el("button", { class: "btn small", onclick: confirmReset }, "Reset progress")));
 }
 
-// "4 subtests · 15 questions each · 8–12 minutes"
+// "4 subtests · 15 questions each · 8–12 minutes"; a range when the tests differ ("6 tests · 15–20 questions · …")
 function sectionDetails(section) {
-  const minutes = section.testMinutes ? Object.values(section.testMinutes) : [section.minutes];
-  const range = Math.min(...minutes) === Math.max(...minutes)
-    ? `${minutes[0]} minutes` : `${Math.min(...minutes)}–${Math.max(...minutes)} minutes`;
+  const perTest = (overrides, fallback) => section.tests.map((n) => overrides?.[n] ?? fallback);
+  const span = (values, unit, each) => {
+    const [lo, hi] = [Math.min(...values), Math.max(...values)];
+    return lo === hi ? `${lo} ${unit}${each ? " each" : ""}` : `${lo}–${hi} ${unit}`;
+  };
   const kind = section.testNames ? "subtests" : "tests";
-  return `${section.tests.length} ${kind} · ${section.questions} questions each · ${range}`;
+  return `${section.tests.length} ${kind} · ${span(perTest(section.testQuestions, section.questions), "questions", true)}` +
+    ` · ${span(perTest(section.testMinutes, section.minutes), "minutes")}`;
 }
 
 function sectionCard(key, section) {
@@ -147,9 +150,10 @@ function showSection(key) {
     el("a", { class: "back", href: "#/" }, "← Home"),
     el("h1", {}, section.name),
     el("p", { class: "muted" }, sectionDetails(section) + " in exam mode."),
-    section.generated && el("p", { class: "flag generated-note" },
+    // (app.append would print "undefined"/"false" for a missing element, so only add it when needed)
+    ...(section.generated ? [el("p", { class: "flag generated-note" },
       "These questions were generated for practice. They follow the style of the real test but haven't been " +
-      "checked against an official source, so treat an answer you disagree with as a possible error."),
+      "checked against an official source, so treat an answer you disagree with as a possible error.")] : []),
     el("ul", { class: "test-list" }, ...section.tests.map((n) => testRow(key, n))),
     el("h2", {}, "More practice"),
     el("ul", { class: "test-list" },

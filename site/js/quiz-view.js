@@ -96,7 +96,8 @@ function drawQuestion() {
   const chosen = quiz.answers[q.id];
   const revealed = quiz.mode === "practice" && chosen != null;
   clear(view.question);
-  view.question.append(
+  // (native append prints null/false as text, so the optional parts are filtered out first)
+  view.question.append(...[
     el("div", { class: "q-head" },
       el("span", { class: "q-num" }, `Question ${quiz.index + 1} of ${quiz.questions.length}`),
       quiz.set.kind !== "test" && el("span", { class: "source" }, sourceLabel(q)),
@@ -109,7 +110,8 @@ function drawQuestion() {
       el("p", { class: "hint" }, "Estimate first, then calculate. Rule out options that are clearly too big or too small."),
     renderOptions(q, { chosen, revealed, onPick: pick }),
     revealed && renderAnswerReview(q, chosen),
-    navButtons());
+    navButtons(),
+  ].filter(Boolean));
 }
 
 function navButtons() {

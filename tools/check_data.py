@@ -11,6 +11,9 @@ FLAGS = {"recomputed", "dropped", "disputed", "missing-key", "truncated"}
 TIME_LIMIT = {"numerical": 1020, "verbal": 480, "english": 900, "technical": 1200,
               "logic": {1: 600, 2: 720, 3: 480, 4: 720}}  # Logic: per subtest
 OPTION_COUNT = {"numerical": 5, "verbal": 3, "english": 4, "logic": 5, "technical": 4}
+# PwC entrance-test papers: 15 questions in 15 minutes, 4 options (verbal V8 also has 3-option True/False/Cannot say
+# questions), and N6's data-interpretation questions use a passage instead of a chart.
+ENTRANCE = {"V8": {"timeLimitSec": 900, "extraOptionCount": 4}, "N6": {"timeLimitSec": 900, "optionCount": 4}}
 GENERATED = {"english", "logic", "technical"}  # sections written for the site, not from the PDF
 VERBAL_OPTIONS = {"A": "True", "B": "False", "C": "Cannot say"}
 CUT_MARKER = "[...text cut off in source]"
@@ -19,6 +22,11 @@ CUT_MARKER = "[...text cut off in source]"
 def effective_answer(q):
     """The answer the site scores against (None = not scored)."""
     return q["verifiedAnswer"] if "verifiedAnswer" in q else q.get("answer")
+
+
+def extra_option_count(test):
+    """Verbal tests may only deviate from True / False / Cannot say if they are entrance-test papers."""
+    return ENTRANCE.get(test["id"], {}).get("extraOptionCount")
 
 
 def check_passages(test, say):
@@ -31,7 +39,7 @@ def check_passages(test, say):
         if not any(q.get("passage") == key for q in test["questions"]):
             say(f"passage {key}: not used by any question")
     for q in test["questions"]:
-        if test["section"] == "verbal" and q["options"] != VERBAL_OPTIONS:
+        if test["section"] == "verbal" and q["options"] != VERBAL_OPTIONS and len(q["options"]) != extra_option_count(test):
             say(f"{q['id']}: options are not True / False / Cannot say")
         flag = q.get("flag") or {}
         if flag.get("type") == "truncated" and not passages.get(q.get("passage"), {}).get("truncated"):
@@ -47,6 +55,7 @@ def check_test(path):
 
     section = test["section"]
     expected = TIME_LIMIT[section][test["test"]] if section == "logic" else TIME_LIMIT[section]
+    expected = ENTRANCE.get(test["id"], {}).get("timeLimitSec", expected)
     if test.get("timeLimitSec") != expected:
         say(f"timeLimitSec is {test.get('timeLimitSec')}, expected {expected}")
     check_passages(test, say)
@@ -73,12 +82,15 @@ def check_test(path):
         if not qid.startswith(test["id"] + "-Q"):
             say(f"{qid}: id doesn't match test {test['id']}")
         # numerical needs a chart/table, verbal a passage; English passages are optional; others have none
-        if section == "numerical" and q.get("dataset") not in test.get("datasets", {}):
+        # (entrance-test numerical questions are plain sums, or use a passage instead of a chart)
+        if section == "numerical" and test["id"] not in ENTRANCE and q.get("dataset") not in test.get("datasets", {}):
             say(f"{qid}: unknown dataset {q.get('dataset')!r}")
         if (section == "verbal" or "passage" in q) and q.get("passage") not in test.get("passages", {}):
             say(f"{qid}: unknown passage {q.get('passage')!r}")
-        if len(q["options"]) != OPTION_COUNT[section]:
-            say(f"{qid}: {len(q['options'])} options, expected {OPTION_COUNT[section]}")
+        expected_counts = {ENTRANCE.get(test["id"], {}).get("optionCount", OPTION_COUNT[section]),
+                           extra_option_count(test) or OPTION_COUNT[section]}
+        if len(q["options"]) not in expected_counts:
+            say(f"{qid}: {len(q['options'])} options, expected {' or '.join(map(str, sorted(expected_counts)))}")
         if len(set(q["options"].values())) != len(q["options"]) or not all(str(v).strip() for v in q["options"].values()):
             say(f"{qid}: options are empty or repeated")
         if q.get("image") and not (SITE / q["image"]).exists():
