@@ -253,7 +253,7 @@ thead th:first-child, tbody th { text-align: left; white-space: normal; font-wei
   font-size: 0.9rem;
 }
 .flag p { margin: 0.3rem 0 0; }
-.flag-dropped { border-left-color: var(--info); background: var(--info-bg); }
+.flag-dropped, .flag-ambiguous { border-left-color: var(--info); background: var(--info-bg); }
 .flag-keys { font-weight: 600; }
 
 .review { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 6px; }
@@ -350,6 +350,7 @@ thead th:first-child, tbody th { text-align: left; white-space: normal; font-wei
 /* ---------- generated sections ---------- */
 .chip.generated { background: var(--info-bg); color: var(--info); text-transform: none; letter-spacing: 0; }
 .chip.imported { background: var(--warn-bg); color: var(--warn); text-transform: none; letter-spacing: 0; margin-left: 8px; }
+.chip.source-ref { background: var(--surface-2); color: var(--text-muted); text-transform: none; letter-spacing: 0; margin-left: 8px; white-space: nowrap; }
 .chip.source-pdf { background: var(--surface-2); color: var(--text-muted); text-transform: none; letter-spacing: 0; }
 .generated-note { border-left-color: var(--info); background: var(--info-bg); }
 

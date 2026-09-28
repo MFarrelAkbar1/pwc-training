@@ -64,6 +64,11 @@ export function renderGenerated(q) {
   }, "Generated · unverified");
 }
 
+// The question's number in the outside set it was imported from ("Bank no. 57"), so it can be looked up there.
+export function renderSourceRef(q) {
+  return q.sourceRef ? el("span", { class: "chip source-ref" }, q.sourceRef) : null;
+}
+
 const CUT_MARKER = "[...text cut off in source]";
 
 function renderPassage(container, passage) {
@@ -162,6 +167,11 @@ const FLAGS = {
   disputed: {
     label: "Disputed in source",
     before: "The source answer is debatable. Details after you answer.",
+  },
+  ambiguous: {
+    label: "Ambiguous, not scored",
+    before: "More than one option fits the rule here (or two options look the same), so this question doesn't count. " +
+      "Answer it for practice; details after you answer.",
   },
   dropped: {
     label: "Not scored",

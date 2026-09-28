@@ -1,0 +1,317 @@
+{
+ "id": "L7",
+ "section": "logic",
+ "test": 7,
+ "title": "Logic – Odd one out (imported)",
+ "source": "imported",
+ "questions": [
+  {
+   "id": "L7-Q01",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-028.png",
+   "imageAlt": "Bank question 28 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 28",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "Three figures have two shapes; A has only one.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q02",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-029.png",
+   "imageAlt": "Bank question 29 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 29",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "Three figures have two shapes; A has only one.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q03",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-031.png",
+   "imageAlt": "Bank question 31 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 31",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "Three figures are shaded (dots, cross-hatch, hatch); D is empty.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q04",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-033.png",
+   "imageAlt": "Bank question 33 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 33",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "Two rules single out different figures: A is the only shaded figure; D is the only one with an odd number of sides (square 4, hexagons 6, pentagon 5)."
+   }
+  },
+  {
+   "id": "L7-Q05",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-034.png",
+   "imageAlt": "Bank question 34 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 34",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "Two rules single out different figures: A is the only one with an odd number of sides (triangle; hexagon 6, star 10); B is the only curved figure."
+   }
+  },
+  {
+   "id": "L7-Q06",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-035.png",
+   "imageAlt": "Bank question 35 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 35",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "explanation": "Three figures have two shapes; C has only one.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q07",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-037.png",
+   "imageAlt": "Bank question 37 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 37",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "Three figures are the same pair of circles; A is a single star.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q08",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-039.png",
+   "imageAlt": "Bank question 39 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 39",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "Two rules single out different figures: C is the only one with an odd number of sides and the only one pointing down; B is the only curved figure."
+   }
+  },
+  {
+   "id": "L7-Q09",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-040.png",
+   "imageAlt": "Bank question 40 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 40",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "Two rules single out different figures: A is the only tilted figure (and the only odd-sided one); D is the only curved figure."
+   }
+  },
+  {
+   "id": "L7-Q10",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-041.png",
+   "imageAlt": "Bank question 41 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 41",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "Three figures are the same star; A is a triangle.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q11",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-042.png",
+   "imageAlt": "Bank question 42 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 42",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "D is the only tilted figure (B and C are the same upright hexagon, A is an upright star).",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q12",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-043.png",
+   "imageAlt": "Bank question 43 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 43",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "Three figures are filled grey; D is empty.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q13",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-044.png",
+   "imageAlt": "Bank question 44 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 44",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "explanation": "Three figures have two shapes; B has only one.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q14",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-045.png",
+   "imageAlt": "Bank question 45 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 45",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "Two rules single out different figures: B is the only tilted figure; C is the only curved figure (A and D are the same star)."
+   }
+  },
+  {
+   "id": "L7-Q15",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-047.png",
+   "imageAlt": "Bank question 47 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 47",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "explanation": "Three figures have two shapes; C has only one.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q16",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-049.png",
+   "imageAlt": "Bank question 49 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 49",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "Three figures are filled grey; A is empty.",
+   "source": "imported"
+  },
+  {
+   "id": "L7-Q17",
+   "text": "Three of the four figures share a rule; one does not. Which figure is the odd one out?",
+   "image": "img/figbank-050.png",
+   "imageAlt": "Bank question 50 (odd one out), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 50",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "Two rules single out different figures: A is the only one with an odd number of sides (B and C are the same square); D is the only curved figure."
+   }
+  }
+ ]
+}

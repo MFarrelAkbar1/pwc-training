@@ -7,7 +7,7 @@ from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent / "site"
 SOURCES = {"recomputed", "dropped"}
-FLAGS = {"recomputed", "dropped", "disputed", "missing-key", "truncated"}
+FLAGS = {"recomputed", "dropped", "disputed", "missing-key", "truncated", "ambiguous"}
 TIME_LIMIT = {"numerical": 1020, "verbal": 480, "english": 900, "technical": 1200,
               "logic": {1: 600, 2: 720, 3: 480, 4: 720}}  # Logic: per subtest
 OPTION_COUNT = {"numerical": 5, "verbal": 3, "english": 4, "logic": 5, "technical": 4}
@@ -18,7 +18,9 @@ GENERATED = {"english", "logic", "technical"}  # sections written for the site, 
 # Tests imported from an outside question set (source "imported", key from that source). They are image-only:
 # every question is a picture with the options drawn in it, so an explanation is optional (empty when the rule
 # is unclear, see REVIEW.md). Their timer lives in site/js/data.js (SECTIONS.<section>.testMinutes), not in the JSON.
-IMPORTED = {"L5": {"optionCounts": {5, 6}, "questions": 17}}
+# L6–L9 come from the figural question bank PDF (tools/import_figural_bank.py): 4 options, 17 questions each.
+IMPORTED = {"L5": {"optionCounts": {5, 6}, "questions": 17},
+            **{f"L{n}": {"optionCounts": {4}, "questions": 17} for n in (6, 7, 8, 9)}}
 VERBAL_OPTIONS = {"A": "True", "B": "False", "C": "Cannot say"}
 CUT_MARKER = "[...text cut off in source]"
 
@@ -117,6 +119,8 @@ def check_test(path):
                 say(f"{qid}: imported (image-only) question has no image")
             if not isinstance(q.get("explanation"), str):
                 say(f"{qid}: explanation must be a string (empty when the rule is unclear)")
+            if (q.get("flag") or {}).get("type") == "ambiguous" and q.get("answerSource") != "dropped":
+                say(f"{qid}: ambiguous question must be dropped (not scored)")
         elif section in GENERATED:
             if q.get("source") != "generated":
                 say(f"{qid}: generated section but source is {q.get('source')!r}")

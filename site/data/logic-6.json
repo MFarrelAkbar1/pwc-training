@@ -1,0 +1,293 @@
+{
+ "id": "L6",
+ "section": "logic",
+ "test": 6,
+ "title": "Logic – Figural analogies (imported)",
+ "source": "imported",
+ "questions": [
+  {
+   "id": "L6-Q01",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-005.png",
+   "imageAlt": "Bank question 5 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 5",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "The plus turns 45° into an X and gets a grey dotted fill; a turned circle looks the same, so the answer is a grey dotted circle.",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q02",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-007.png",
+   "imageAlt": "Bank question 7 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 7",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "The shape becomes three smaller copies turned 45°, so the pentagon becomes three small turned pentagons.",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q03",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-009.png",
+   "imageAlt": "Bank question 9 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 9",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "The shape becomes three smaller turned copies; a turned circle looks the same, so the answer is three small circles.",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q04",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-010.png",
+   "imageAlt": "Bank question 10 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 10",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The shape turns 180° and gets a grey fill, so the triangle becomes a grey triangle pointing down.",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q05",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-011.png",
+   "imageAlt": "Bank question 11 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 11",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The example changes a square only by the cross-hatching; turning a square 90° shows nothing, so you can't tell whether it was turned too. The star with the cross-hatching is B if it wasn't turned and C if it was: both fit."
+   }
+  },
+  {
+   "id": "L6-Q06",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-012.png",
+   "imageAlt": "Bank question 12 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 12",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "explanation": "",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q07",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-013.png",
+   "imageAlt": "Bank question 13 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 13",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "explanation": "The shape gets bigger and grey, so the answer is a big grey hexagon.",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q08",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-014.png",
+   "imageAlt": "Bank question 14 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 14",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "explanation": "The shape turns 90° and gets hatched; a diamond turned 90° looks the same, so the answer is a hatched diamond.",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q09",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-015.png",
+   "imageAlt": "Bank question 15 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 15",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The shape becomes two smaller copies, so the circle becomes two small circles.",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q10",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-016.png",
+   "imageAlt": "Bank question 16 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 16",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The shape gets bigger and grey, so the answer is a big grey square (B and C are the same, both too small).",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q11",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-017.png",
+   "imageAlt": "Bank question 17 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 17",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The shape turns 180° and gets a grey fill; a cross turned 180° looks the same, so the answer is a grey cross of the same size (A is too big).",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q12",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-018.png",
+   "imageAlt": "Bank question 18 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 18",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "explanation": "The shape is flipped upside down, made bigger and hatched; a flipped square looks the same, so the answer is a big hatched square (A is not bigger).",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q13",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-019.png",
+   "imageAlt": "Bank question 19 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 19",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The shape gets bigger and grey, so the answer is a big grey square (A and B are the same, both too small).",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q14",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-020.png",
+   "imageAlt": "Bank question 20 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 20",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "explanation": "The shape turns 180° and gets cross-hatched, so the answer is a cross-hatched triangle pointing down (A is not turned).",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q15",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-021.png",
+   "imageAlt": "Bank question 21 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 21",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The example changes a square only by the dots; turning a square 90° shows nothing, so you can't tell whether it was turned too. The star with the dots is A if it wasn't turned and B if it was: both fit."
+   }
+  },
+  {
+   "id": "L6-Q16",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-022.png",
+   "imageAlt": "Bank question 22 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 22",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The shape turns 180° and gets a grey fill; a turned circle looks the same, so the answer is a grey circle.",
+   "source": "imported"
+  },
+  {
+   "id": "L6-Q17",
+   "text": "A is to B as C is to ? The top row is the analogy (A : B = C : ?); the bottom row is the options A–D.",
+   "image": "img/figbank-024.png",
+   "imageAlt": "Bank question 24 (figural analogies), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 24",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The shape turns a little and gets a grey cross-hatched fill, so the answer is the turned grey cross-hatched star.",
+   "source": "imported"
+  }
+ ]
+}

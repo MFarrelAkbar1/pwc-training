@@ -154,8 +154,7 @@ function showSection(key) {
     ...(section.generated ? [el("p", { class: "flag generated-note" },
       "These questions were generated for practice. They follow the style of the real test but haven't been " +
       "checked against an official source, so treat an answer you disagree with as a possible error." +
-      (section.importedTests ? ` Subtest ${section.importedTests.join(", ")} is imported from an outside question set ` +
-        "and uses that set's answer key." : ""))] : []),
+      (section.importedTests ? ` ${importedNote(section.importedTests)}` : ""))] : []),
     el("ul", { class: "test-list" }, ...section.tests.map((n) => testRow(key, n))),
     el("h2", {}, "More practice"),
     el("ul", { class: "test-list" },
@@ -178,6 +177,12 @@ function showSection(key) {
           bank
             ? el("a", { class: "btn primary", href: `#/redo/${key}` }, "Start redo")
             : el("button", { class: "btn", disabled: true }, "Start redo")))));
+}
+
+// "Subtest 5 is imported …" / "Subtests 5, 6, 7 are imported …"
+function importedNote(tests) {
+  const range = tests.length > 1 ? `Subtests ${tests.join(", ")} are` : `Subtest ${tests[0]} is`;
+  return `${range} imported from outside question sets and use those sets' answer keys.`;
 }
 
 function testRow(key, n) {

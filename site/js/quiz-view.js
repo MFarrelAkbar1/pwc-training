@@ -4,7 +4,7 @@ import { el, clear, showModal, closeModals, formatTime } from "./dom.js";
 import { isScored, isAccepted, sectionOf } from "./data.js";
 import { createQuiz, buildAttempt, secondsLeft, elapsedSeconds } from "./quiz.js";
 import { renderContext, contextKey, contextTitle, sourceLabel, renderOptions, renderAnswerReview, renderFlag,
-  renderGenerated, renderQuestionImage } from "./render.js";
+  renderGenerated, renderSourceRef, renderQuestionImage } from "./render.js";
 import { destroyCharts } from "./charts.js";
 import { recordAttempt } from "./storage.js";
 
@@ -102,6 +102,7 @@ function drawQuestion() {
       el("span", { class: "q-num" }, `Question ${quiz.index + 1} of ${quiz.questions.length}`),
       quiz.set.kind !== "test" && el("span", { class: "source" }, sourceLabel(q)),
       renderGenerated(q),
+      renderSourceRef(q),
       quiz.marked.has(q.id) && el("span", { class: "chip marked" }, "Marked for review")),
     renderFlag(q, revealed),
     el("p", { class: "q-text" }, q.text),

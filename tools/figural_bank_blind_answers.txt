@@ -1,0 +1,73 @@
+# Blind answers for the figural bank import, from the re-laid images, before looking at the keys.
+# Caveat: while parsing the PDF structure I printed the start of section D (keys 1-160) once to the terminal;
+# I did not use it. Format: bank no, my answer, confidence, rule / ambiguity note
+5 A high   plus->X: rotate 45 + grey dotted fill; circle rotated is unchanged -> grey dotted circle. B is white-dotted (different fill)
+7 A high   one big arrow -> three small copies turned 45 deg ccw; pentagon -> three small turned pentagons
+9 A high   triangle -> three small rotated triangles; circle -> three small circles (rotation invisible, but only A has three)
+10 D high  rotate 180 + grey fill; triangle -> grey triangle pointing down
+11 B AMBIGUOUS  square -> cross-hatched square: only the hatch is visible (a 90 deg turn of a square shows nothing). Star + hatch = B (upright); C is the hatched star turned. If the hidden rule includes a turn, C. Two options fit
+12 B medium  diamond -> bigger + hatched (a 90 deg turn of the diamond would be invisible). Only B is bigger and hatched, but B is also turned; no option is an upright big hatched star
+13 B high  bigger + grey fill -> big grey hexagon
+14 C high  hexagon turned 90 (pointy top -> flat top) + hatch; diamond turned 90 looks the same, hatched -> C (only hatched option)
+15 D high  one shape -> two small copies; circle -> two small circles
+16 D high  bigger + grey fill -> big grey square. NOTE: B and C are identical (same-size grey squares), both wrong; answer still unique
+17 D high  turn 180 + grey fill; cross turned 180 looks the same -> grey cross of the same size (A is grey but bigger)
+18 C high  flipped upside down + bigger + hatched; square flipped looks the same -> big hatched square (A is hatched but not bigger)
+19 D high  bigger + grey -> big grey square. NOTE: A and B identical (same-size grey squares), both wrong
+20 C high  turn 180 + cross-hatch (+ slightly bigger); triangle -> big cross-hatched triangle pointing down
+21 A AMBIGUOUS  square -> dotted square: a 90 deg turn of a square is invisible. Dotted upright star = A, dotted turned star = B. Two options fit
+22 D high  turn 180 + grey; circle turned looks the same -> grey circle (only grey option)
+24 D high  small turn + grey cross-hatch -> turned grey cross-hatched star (only one)
+28 A high  count: A has one shape, the others two
+29 A high  count: A has one shape, the others two
+31 D high  fill: D is the only empty shape (dots, cross-hatch, hatch on the others)
+33 AMBIGUOUS (A or D)  A is the only shaded shape; but D is the only odd-sided shape (square 4, hexagons 6, pentagon 5). Two rules, two answers
+34 AMBIGUOUS (A or B)  B is the only curved shape (no corners); A is the only odd-sided one (triangle 3; hexagon 6, star 10). Two rules
+35 C high  count: C has one shape, the others two
+37 A high  B, C, D are the same pair of circles; A is a single star
+39 AMBIGUOUS (B or C)  B is the only curved shape; C is the only odd-sided shape (triangle; hexagon 6, square 4) and the only one pointing down
+40 A medium  A (arrow) is the only tilted, concave, odd-sided (7) shape. Weak alternative: D is the only curved shape
+41 A high  B, C, D are identical stars; A is a triangle
+42 D medium  B and C are identical hexagons, so the odd one is A or D; D is the only tilted shape (all four have an even number of sides)
+43 D high  fill: D is the only unshaded shape
+44 B high  count: B has one shape, the others two
+45 AMBIGUOUS (B or C)  A and D are identical stars; B is the only tilted shape, C the only curved one
+47 C high  count: C has one shape, the others two
+49 A high  fill: A is the only unshaded shape
+50 AMBIGUOUS (A or D)  B and C are identical squares; A is the only odd-sided shape (triangle), D the only curved one
+51 AMBIGUOUS (A = D)  fill cycles none, hatch, cross-hatch -> 5 is hatched; A and D are the same hatched circle
+52 AMBIGUOUS (B = C)  square turns 30 deg per step (45, 75, 105, 135=45) -> 5 looks like frame 2; B and C are both that square (same drawing)
+53 A high  arrow turns 30 deg anticlockwise and grows each step (0, 30, 60, 90 -> 120): big arrow pointing up-left, steep (D is at ~150)
+54 AMBIGUOUS (A = B)  square turns 30 deg per step (0, 30, 60, 90=0) -> 5 looks like frame 2; A and B are both that square
+55 AMBIGUOUS (C = D)  cycle of 3 (one big white, two hatched, three cross-hatched) -> 5 = two hatched circles; C and D are the same (zoomed: only the hatch phase differs)
+56 AMBIGUOUS (A = B)  same cycle with hexagons -> two hatched hexagons; A and B the same (zoomed)
+57 AMBIGUOUS (B = C)  same cycle with crosses -> two hatched crosses; B and C the same (zoomed)
+59 AMBIGUOUS (C = D)  arrow grows each step -> bigger than 4; C and D are the same big arrow (A is frame-4 size, B small)
+60 AMBIGUOUS (A = B)  fill cycles none, hatch, cross-hatch -> 5 hatched; A and B are the same hatched pentagon
+61 AMBIGUOUS (B = D)  same fill cycle -> 5 hatched; B and D are the same hatched star
+62 C high  star turns 45 deg each step (0, 45, 90, 135 -> 180): upside-down star, one point straight down
+64 AMBIGUOUS (A = D)  same fill cycle -> 5 hatched; A and D are the same hatched square
+68 D medium  circle diameter grows by ~20 px a step (83, 102, 123, 142 -> ~162): D is 163, C is 172. Only measurement separates C and D by eye they are close
+70 AMBIGUOUS (A = B)  arrow grows each step -> bigger than 4; A and B are the same big arrow (169 vs 170 px)
+71 AMBIGUOUS (no option)  count 1, 2, 3, 4 -> 5 diamonds; no option has 5. B, C, D are the same four diamonds, A has two
+72 A medium  same as 68: next diameter ~162; A is 163, B is 173 (close by eye)
+73 A high  pentagon grows and turns 45 deg a step (0, 45, 90, 135 -> 180): bigger pentagon with a point straight down
+227 A high  each row one shape turning 90 deg per column; fill cycles none/hatch/cross shifted per row -> row 3: cross, none, hatch; pentagon turned 180 = hatched pentagon pointing down (A)
+228 B high  same scheme: row 3 star, cross/none/hatch, turned 180 -> hatched upside-down star
+229 AMBIGUOUS (A = C)  row 3 diamond -> hatched diamond (a turn of a diamond is invisible); A and C are the same hatched diamond (zoomed)
+231 AMBIGUOUS (B = C)  sizes small/medium/large and fills rotate per row; row 3 circle -> medium hatched circle; B and C are the same (zoomed)
+232 C high  size small/medium/large, fill none/hatch/cross, turn 90 per column, each shifted per row; row 3 pentagon -> medium hatched pentagon pointing down
+234 B high  same scheme; row 3 triangle -> medium hatched triangle pointing down (D is cross-hatched)
+235 A high  same scheme; row 3 circle -> medium hatched circle
+236 AMBIGUOUS (A = B)  same scheme; row 3 diamond -> medium hatched diamond; A and B look the same (zoomed: same)
+237 B high  same scheme; row 3 triangle -> medium hatched triangle pointing down
+238 AMBIGUOUS (A = C)  row 3 cross: cross-hatch, none, ? -> hatched cross (a turn of a cross is invisible); A and C look the same (zoomed: same)
+239 D high  row 3 pentagon: cross, none (turned 90), ? -> hatched pentagon turned 180, point down
+242 C high  row 3 diamond: cross, none, ? -> hatched diamond (A is cross-hatched)
+245 D high  row 3 pentagon: cross, none (turned 90), ? -> hatched pentagon turned 180, point down (B is cross-hatched)
+246 AMBIGUOUS (A = D)  row 3 diamond -> hatched diamond; A and D look the same (zoomed: same)
+247 D high  row 3 triangle: cross, none (pointing left), ? -> hatched triangle pointing down (C is cross-hatched)
+248 B high  row 3 square: cross, none, ? -> hatched square (D is a hatched square turned 45 deg, not a turn the matrix uses)
+250 A high  size + fill + turn scheme; row 3 pentagon -> medium hatched pentagon, point down
+# After the comparison (not blind): 40 reclassified as AMBIGUOUS for consistency with 39 (same pattern: one
+# figure singled out by tilt/sides, another by being the only curved one). Nothing else changed.

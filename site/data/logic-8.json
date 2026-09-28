@@ -1,0 +1,353 @@
+{
+ "id": "L8",
+ "section": "logic",
+ "test": 8,
+ "title": "Logic – Figural series (imported)",
+ "source": "imported",
+ "questions": [
+  {
+   "id": "L8-Q01",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-051.png",
+   "imageAlt": "Bank question 51 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 51",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a hatched circle (fill cycles none, hatched, cross-hatched), but options A and D are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L8-Q02",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-052.png",
+   "imageAlt": "Bank question 52 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 52",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives the square turned like figure 2 (it turns 30° a step and repeats every 90°), but options B and C are the same drawing."
+   }
+  },
+  {
+   "id": "L8-Q03",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-053.png",
+   "imageAlt": "Bank question 53 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 53",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "The arrow turns 30° anticlockwise and gets bigger each step (0°, 30°, 60°, 90°), so next is a bigger arrow at 120°, pointing up-left.",
+   "source": "imported"
+  },
+  {
+   "id": "L8-Q04",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-054.png",
+   "imageAlt": "Bank question 54 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 54",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives the square turned like figure 2 (it turns 30° a step and repeats every 90°), but options A and B are the same drawing."
+   }
+  },
+  {
+   "id": "L8-Q05",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-055.png",
+   "imageAlt": "Bank question 55 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 55",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives two hatched circles (the cycle one plain, two hatched, three cross-hatched repeats), but options C and D are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L8-Q06",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-056.png",
+   "imageAlt": "Bank question 56 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 56",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives two hatched hexagons (the cycle one plain, two hatched, three cross-hatched repeats), but options A and B are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L8-Q07",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-057.png",
+   "imageAlt": "Bank question 57 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 57",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives two hatched crosses (the cycle one plain, two hatched, three cross-hatched repeats), but options B and C are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L8-Q08",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-059.png",
+   "imageAlt": "Bank question 59 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 59",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives an arrow bigger than figure 4, but options C and D are the same drawing."
+   }
+  },
+  {
+   "id": "L8-Q09",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-060.png",
+   "imageAlt": "Bank question 60 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 60",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a hatched pentagon (fill cycles none, hatched, cross-hatched), but options A and B are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L8-Q10",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-061.png",
+   "imageAlt": "Bank question 61 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 61",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a hatched star (fill cycles none, hatched, cross-hatched), but options B and D are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L8-Q11",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-062.png",
+   "imageAlt": "Bank question 62 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 62",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "explanation": "The star turns 45° each step (0°, 45°, 90°, 135°), so next it is turned 180°, one point straight down.",
+   "source": "imported"
+  },
+  {
+   "id": "L8-Q12",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-064.png",
+   "imageAlt": "Bank question 64 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 64",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a hatched square (fill cycles none, hatched, cross-hatched), but options A and D are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L8-Q13",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-068.png",
+   "imageAlt": "Bank question 68 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 68",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The circle's diameter grows by the same amount each step, so next is the circle one step bigger than figure 4 (D; C is bigger still).",
+   "source": "imported"
+  },
+  {
+   "id": "L8-Q14",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-070.png",
+   "imageAlt": "Bank question 70 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 70",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives an arrow bigger than figure 4, but options A and B are the same drawing."
+   }
+  },
+  {
+   "id": "L8-Q15",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-071.png",
+   "imageAlt": "Bank question 71 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 71",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The count goes 1, 2, 3, 4, so figure 5 should have 5 diamonds, but no option has 5. B, C and D are the same four diamonds."
+   }
+  },
+  {
+   "id": "L8-Q16",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-072.png",
+   "imageAlt": "Bank question 72 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 72",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "The circle's diameter grows by the same amount each step, so next is the circle one step bigger than figure 4 (A; B is bigger still).",
+   "source": "imported"
+  },
+  {
+   "id": "L8-Q17",
+   "text": "Figures 1–4 form a series. Which option is figure 5? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figbank-073.png",
+   "imageAlt": "Bank question 73 (figural series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 73",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "The pentagon gets bigger and turns 45° each step (0°, 45°, 90°, 135°), so next is a bigger pentagon turned 180°, point down.",
+   "source": "imported"
+  }
+ ]
+}

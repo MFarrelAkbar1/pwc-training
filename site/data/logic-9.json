@@ -1,0 +1,311 @@
+{
+ "id": "L9",
+ "section": "logic",
+ "test": 9,
+ "title": "Logic – Figural matrices (imported)",
+ "source": "imported",
+ "questions": [
+  {
+   "id": "L9-Q01",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-227.png",
+   "imageAlt": "Bank question 227 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 227",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "Each row keeps one shape; across a row it turns 90° a step and the fill goes through plain, hatched and cross-hatched in a shifted order, so the missing cell is a hatched pentagon turned 180° (point down).",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q02",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-228.png",
+   "imageAlt": "Bank question 228 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 228",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "explanation": "Each row keeps one shape; across a row it turns 90° a step and the fill goes through plain, hatched and cross-hatched in a shifted order, so the missing cell is a hatched star turned 180° (point down).",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q03",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-229.png",
+   "imageAlt": "Bank question 229 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 229",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a hatched diamond (turning a diamond shows nothing), but options A and C are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L9-Q04",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-231.png",
+   "imageAlt": "Bank question 231 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 231",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a medium hatched circle, but options B and C are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L9-Q05",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-232.png",
+   "imageAlt": "Bank question 232 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 232",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "explanation": "Each row keeps one shape; size (small, medium, large), fill (plain, hatched, cross-hatched) and a 90° turn per column rotate through the rows, so the missing cell is a medium hatched pentagon turned 180° (point down).",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q06",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-234.png",
+   "imageAlt": "Bank question 234 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 234",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "explanation": "Each row keeps one shape; size (small, medium, large), fill (plain, hatched, cross-hatched) and a 90° turn per column rotate through the rows, so the missing cell is a medium hatched triangle pointing down.",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q07",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-235.png",
+   "imageAlt": "Bank question 235 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 235",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "Each row keeps one shape; size (small, medium, large), fill (plain, hatched, cross-hatched) and a 90° turn per column rotate through the rows, so the missing cell is a medium hatched circle.",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q08",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-236.png",
+   "imageAlt": "Bank question 236 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 236",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a medium hatched diamond, but options A and B are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L9-Q09",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-237.png",
+   "imageAlt": "Bank question 237 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 237",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "explanation": "Each row keeps one shape; size (small, medium, large), fill (plain, hatched, cross-hatched) and a 90° turn per column rotate through the rows, so the missing cell is a medium hatched triangle pointing down.",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q10",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-238.png",
+   "imageAlt": "Bank question 238 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 238",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a hatched cross (turning a cross by 90° or 180° shows nothing), but options A and C are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L9-Q11",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-239.png",
+   "imageAlt": "Bank question 239 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 239",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "Each row keeps one shape; across a row it turns 90° a step and the fill goes through plain, hatched and cross-hatched in a shifted order, so the missing cell is a hatched pentagon turned 180° (point down).",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q12",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-242.png",
+   "imageAlt": "Bank question 242 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 242",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "C",
+   "explanation": "Each row keeps one shape; across a row it turns 90° a step and the fill goes through plain, hatched and cross-hatched in a shifted order, so the missing cell is a hatched diamond (A is cross-hatched).",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q13",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-245.png",
+   "imageAlt": "Bank question 245 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 245",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "Each row keeps one shape; across a row it turns 90° a step and the fill goes through plain, hatched and cross-hatched in a shifted order, so the missing cell is a hatched pentagon turned 180° (point down).",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q14",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-246.png",
+   "imageAlt": "Bank question 246 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 246",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The rule gives a hatched diamond (turning a diamond shows nothing), but options A and D are the same drawing (only the hatch lines' position differs)."
+   }
+  },
+  {
+   "id": "L9-Q15",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-247.png",
+   "imageAlt": "Bank question 247 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 247",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "Each row keeps one shape; across a row it turns 90° a step and the fill goes through plain, hatched and cross-hatched in a shifted order, so the missing cell is a hatched triangle pointing down.",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q16",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-248.png",
+   "imageAlt": "Bank question 248 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 248",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "explanation": "Each row keeps one shape; across a row it turns 90° a step and the fill goes through plain, hatched and cross-hatched in a shifted order, so the missing cell is a hatched square (D is turned 45°, which the matrix never does).",
+   "source": "imported"
+  },
+  {
+   "id": "L9-Q17",
+   "text": "Each row and column of the 3×3 matrix follows a rule (shape, rotation and/or shading). Which option fills the cell marked ?  The grid is on top; the bottom row is the options A–D.",
+   "image": "img/figbank-250.png",
+   "imageAlt": "Bank question 250 (figural matrices), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Bank no. 250",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "Each row keeps one shape; size (small, medium, large), fill (plain, hatched, cross-hatched) and a 90° turn per column rotate through the rows, so the missing cell is a medium hatched pentagon turned 180° (point down).",
+   "source": "imported"
+  }
+ ]
+}

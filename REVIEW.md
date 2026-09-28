@@ -264,7 +264,7 @@ the questions haven't been checked against an official source.
 | Technical (Risk Assurance) | T1–T3 | 3 × 20 (18 of 60 scenario-based; easy, medium and hard mixed) | 20 min each | Written and checked by hand |
 
 Regenerate the Logic tests with `python tools/gen_logic.py` (seeded, so the output is the same each time).
-`python tools/check_data.py` checks the structure of all 22 test files.
+`python tools/check_data.py` checks the structure of every test file in `site/data`.
 
 ## Least sure: please review these
 
@@ -776,3 +776,91 @@ and `OVERRIDES[9]`), then re-run the script.
 3. **Q3 / Q4**: the big symbol is certain (C or D); the small letter that decides between them is not.
 4. **Q11**: the one disagreement; recheck by comparing option A with frame 2.
 5. **Q7**: counting lines in small teeth. The 1, 3, 5 progression is my reading of a low-resolution image.
+
+## Logic Subtests 6–9: imported figural question bank
+
+68 picture questions from `[4]Bank_Soal_Psikotes_Figural_Spasial.pdf` (not committed; neither are any full-page
+renders). Built by `python tools/import_figural_bank.py`, which reads the PDF (it is never modified), takes each
+question's embedded image and re-lays its cells on a grid (stimulus rows, a line, then options A–D) so it stays
+readable at phone width, and writes `site/img/figbank-NNN.png` and `site/data/logic-6.json` … `logic-9.json`. All
+review decisions live in the script's tables (`AMBIGUOUS`, `DISPUTED`, `EXPLANATIONS`), so re-running it keeps them.
+Every question has `"source": "imported"`, the "Imported, key from source" label, and a small "Bank no. N" label
+(`sourceRef`) with its number in the PDF. Timer: 17 minutes for each subtest, one value (`FIGURAL_BANK_MINUTES` in
+`site/js/data.js`).
+
+| Subtest | Topic in the PDF | Bank numbers (sedang + sulit only) | Scored |
+|---|---|---|---|
+| L6 Figural analogies | Analogi Figural (1–25) | 5, 7, 9–22, 24 | 15 of 17 |
+| L7 Odd one out | Klasifikasi & Pengelompokan Bentuk (26–50) | 28, 29, 31, 33–35, 37, 39–45, 47, 49, 50 | 11 of 17 |
+| L8 Figural series | Seri/Pola Figural (51–75) | 51–57, 59–62, 64, 68, 70–73 | **5 of 17** |
+| L9 Figural matrices | Matriks Figural (226–250) | 227–229, 231, 232, 234–239, 242, 245–248, 250 | 12 of 17 |
+
+The classification topic's first cell ("Cari 1 gambar yang berbeda", find the odd one out) is left out of the
+picture; the English question text says the same.
+
+**Key cross-check (section B vs section D).** They agree for all 68 imported questions (and for all 250). The script
+stops if they ever differ.
+
+**Blind check.** I solved every question from the re-laid images and wrote my answers with a confidence level to
+`tools/figural_bank_blind_answers.txt` before comparing. Caveats: while working out the PDF's structure I printed the
+start of section D (keys 1–160) to the terminal once, and I saw the "Submateri" line (e.g. `"rotate90+hatch"`) of a
+few analogy questions; I didn't use either. Result: **every question I answered with a single letter matches the
+key (43 of 43). No question is disputed.** The two "disagreements" (bank 11 and 21) are cases I had already marked
+ambiguous, and the key picks the other option of the pair.
+
+**Ambiguity check: 25 questions dropped** (`answerSource: "dropped"`, `verifiedAnswer: null`, flag `ambiguous`, key kept
+in `answer`). They are shown with an "Ambiguous, not scored" note, are left out of the mixed set and the wrong-answer
+bank, and the results screen counts them as not scored. In every case the source key is one of the options that fit.
+
+| Bank | Subtest | Key | Why |
+|---|---|---|---|
+| 11 | L6 | C | The example (square → cross-hatched square) can't show a 90° turn. Hatched upright star (B) and hatched turned star (C) both fit |
+| 21 | L6 | B | Same with dots: upright dotted star (A) and turned dotted star (B) both fit |
+| 33 | L7 | D | A is the only shaded figure; D is the only odd-sided one |
+| 34 | L7 | A | A is the only odd-sided figure; B (circle) the only curved one |
+| 39 | L7 | C | C is the only odd-sided / pointing-down figure; B (circle) the only curved one |
+| 40 | L7 | A | A is the only tilted figure; D (circle) the only curved one. *Blind I had A (medium) with D as a weak alternative; I reclassified it after the comparison, for consistency with 39* |
+| 45 | L7 | B | B is the only tilted figure; C (circle) the only curved one |
+| 50 | L7 | A | A is the only odd-sided figure; D (circle) the only curved one |
+| 51, 60, 61, 64 | L8 | D, A, D, D | Fill cycles plain → hatched → cross-hatched, so the answer is hatched, but two options are the same hatched figure (A=D, A=B, B=D, A=D) |
+| 52, 54 | L8 | B, B | A square turning 30° a step repeats every 90°, so the answer looks like figure 2; two options are that same square (B=C, A=B) |
+| 55, 56, 57 | L8 | D, A, C | Cycle "one plain, two hatched, three cross-hatched" → two hatched shapes; two options are the same (C=D, A=B, B=C) |
+| 59, 70 | L8 | C, A | Arrow grows each step; the two bigger arrows are the same (C=D 169/170 px, A=B) |
+| 71 | L8 | B | Count 1, 2, 3, 4 → 5, but no option has 5 shapes; B, C and D are the same four diamonds |
+| 229, 246 | L9 | C, D | Answer is a hatched diamond (turning it shows nothing); two options are the same (A=C, A=D) |
+| 231 | L9 | C | Medium hatched circle; B and C the same |
+| 236 | L9 | A | Medium hatched diamond; A and B the same |
+| 238 | L9 | C | Hatched cross (a 90°/180° turn shows nothing); A and C the same |
+
+"Same" was checked by zooming the two options side by side: they differ only in where the hatch lines start. A
+pixel comparison doesn't catch this reliably because the hatch position shifts, so I relied on the zoomed view.
+
+How I drew the line for odd-one-out (L7): when the key's rule is **count** or **fill** (a clear 3-versus-1 split
+independent of the shapes), a lone circle doesn't make the question ambiguous (bank 29, 44: kept). When the key's
+rule is a shape property (odd/even sides, tilt/orientation), "the only curved figure" is an equally good answer, so
+the question is dropped. This is a judgment call; see "least sure" below.
+
+**Kept and scored, but note:**
+- **16, 19** (L6): two wrong options are the same drawing (16: B=C, 19: A=B). The answer D is still the only one that fits.
+- **42** (L7): B and C are the same hexagon; D is still the only tilted figure.
+- **68, 72** (L8): circles grow by ~20 px a step (83, 102, 123, 142 px). The right option is 163 px; the "too big" one is
+  172–173 px. Measurable, but hard to see by eye.
+- **12** (L6): the example is a diamond getting bigger and hatched. B is the only big hatched star, but it is also turned,
+  which the diamond can't show (the source's rule is "rotate90+hatch+scale"). Kept because no other option fits at all.
+
+**Explanations.** The PDF's section E explanations are templates and were not used. A one-line explanation is
+written for 42 of the 43 scored questions. **Empty: bank 12** (the turn in the answer isn't shown by the example, so I
+can't state the rule with certainty). The 25 dropped questions have no explanation; their flag note says why.
+
+### Least sure (figural bank)
+1. **29** and **44** (L7, scored A / B): count rule is clear, but B (29) and C (44) are the only curved figures. Under the
+   rule I used for 34/39/40/45/50 they'd be dropped too if you count "curved" as a rule here.
+2. **40** (L7, dropped): reclassified after seeing the key; A is the stronger answer on several attributes.
+3. **33** (L7, dropped, key D): A being the only shaded figure is arguably the *more* obvious answer than the key's parity rule.
+4. **12** (L6, scored B): answer is turned; the example can't show that turn.
+5. **68** (L8, scored D): C and D differ by ~6% in size.
+6. **72** (L8, scored A): same as 68 (A vs B).
+7. **42** (L7, scored D): rests on tilt alone.
+8. **53** (L8, scored A): A and D are both big arrows pointing up-left, about 120° vs 150°.
+9. **20** (L6, scored C): C and A are both cross-hatched triangles; only the 180° turn separates them.
+10. **248** (L9, scored B): D is the same hatched square turned 45°; relies on the matrix only using 90° turns.

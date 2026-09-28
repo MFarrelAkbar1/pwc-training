@@ -3,7 +3,7 @@
 import { el, clear, formatTime } from "./dom.js";
 import { findQuestion } from "./data.js";
 import { renderContext, hasContext, contextTitle, sourceLabel, renderOptions, renderAnswerReview,
-  renderFlag, renderGenerated, renderQuestionImage } from "./render.js";
+  renderFlag, renderGenerated, renderSourceRef, renderQuestionImage } from "./render.js";
 
 const FILTERS = { all: "All questions", wrong: "Wrong or unanswered", flagged: "Flagged in source" };
 
@@ -58,7 +58,8 @@ export function showResults(app, attempt) {
         : `Time spent: ${formatTime(attempt.timeUsedSec)}`),
       attempt.autoSubmitted && el("p", { class: "flag" }, "Time ran out, so your answers were submitted automatically."),
       notScored > 0 && el("p", { class: "muted" },
-        `${notScored} question${notScored > 1 ? "s aren't" : " isn't"} scored because no option is correct in the source.`),
+        `${notScored} question${notScored > 1 ? "s aren't" : " isn't"} scored because the source has no single correct option ` +
+        "(none is correct, or the question is ambiguous). See the \"Flagged in source\" filter."),
       el("p", { class: "muted" }, attempt.kind === "redo"
         ? "A question leaves your wrong-answer bank after you get it right twice in a row."
         : "Questions you got wrong are saved to your wrong-answer bank."),
@@ -91,6 +92,7 @@ function reviewItem(q, r, number, showSource) {
       el("span", { class: "q-num" }, `Question ${number}`),
       showSource && el("span", { class: "source" }, sourceLabel(q)),
       renderGenerated(q),
+      renderSourceRef(q),
       el("span", { class: `badge ${tone}` }, label)),
     el("p", { class: "q-text" }, q.text),
     renderQuestionImage(q),
