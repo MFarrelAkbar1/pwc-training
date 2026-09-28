@@ -349,6 +349,7 @@ thead th:first-child, tbody th { text-align: left; white-space: normal; font-wei
 
 /* ---------- generated sections ---------- */
 .chip.generated { background: var(--info-bg); color: var(--info); text-transform: none; letter-spacing: 0; }
+.chip.imported { background: var(--warn-bg); color: var(--warn); text-transform: none; letter-spacing: 0; margin-left: 8px; }
 .chip.source-pdf { background: var(--surface-2); color: var(--text-muted); text-transform: none; letter-spacing: 0; }
 .generated-note { border-left-color: var(--info); background: var(--info-bg); }
 
@@ -366,4 +367,8 @@ thead th:first-child, tbody th { text-align: left; white-space: normal; font-wei
   border: 1px solid var(--border);
   border-radius: 8px;
   background: #fff;
+  cursor: zoom-in;
 }
+/* Tap to zoom: twice the width, scrolled sideways inside the wrapper. */
+.q-image-wrap { overflow-x: auto; }
+.q-image.zoomed { width: 200%; max-width: none; cursor: zoom-out; }

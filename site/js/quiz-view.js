@@ -209,12 +209,12 @@ function tick() {
   }
 }
 
-// Keys: A–E or 1–5 choose an answer, ← / → move between questions.
+// Keys: A–F or 1–6 choose an answer, ← / → move between questions.
 function onKey(e) {
   if (e.altKey || e.ctrlKey || e.metaKey || document.querySelector(".modal-overlay")) return;
   const letters = Object.keys(current().options);
   const byLetter = letters.indexOf(e.key.toUpperCase());
-  const byNumber = e.key.length === 1 ? "12345".indexOf(e.key) : -1;
+  const byNumber = e.key.length === 1 ? "123456".indexOf(e.key) : -1;
   const choice = byLetter >= 0 ? byLetter : byNumber;
   if (choice >= 0 && choice < letters.length) {
     pick(letters[choice]);

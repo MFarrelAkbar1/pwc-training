@@ -1,0 +1,20 @@
+# My own answers to figural-test-extra-hard-part-1, worked out from the images before the comparison.
+# Caveat: jawaban.txt had already been read once (step 1, format check), so this is not strictly blind.
+# confidence: high / medium / low
+1 A high     arrow turns -90,-45 alternately (S,E,NE,NW,W -> S); hook flips down/up -> up
+2 B medium   order of the 4 end-symbols alternates rotate-left / swap-pairs, side flips; period 4 -> frame 2
+3 C low      big symbol = previous small symbol flipped top-bottom (C or D); small symbol: C chosen only because S would repeat frame 1
+4 C low      same puzzle as 3
+5 E high     polygon with n sides split into n regions, n = 3..7 -> octagon with 8 regions
+6 D high     circle, triangle, square; each new shape first appears small inside the previous one -> square holding a pentagon
+7 B medium   right side loses 1, then 3 lines on even frames -> 5 lines removed
+8 A medium   arrow jumps 2 sectors (dir SE,SW,NW cycle), dot moves 1 sector clockwise
+9 C low      no rule found that singles out one option; C is a guess
+10 E medium  one symbol moves per step, 2,3,4,2 cells anticlockwise round the border -> X moves 3 to bottom-middle
+11 A high    frame 5 = frame 1; middle bar and top+bottom bars take turns rotating 180 -> frame 6 = frame 2 = A
+12 B high    2 squares on a diagonal alternating with 4 squares; diagonals alternate -> TL-BR pair
+13 D low     each frame = previous rotated 90 cw + one extra line; B and D both fit, D not clearly better than B
+14 F high    dots 2..6, arrows 1..5 as a fan starting 45 deg further clockwise each step -> S,SW,W,NW,N
+15 C medium  outer shape gains a side; inner and outer small shapes swap; outer small shape sits top-right
+16 C medium  big shape joined with its shaded mirror image; rectangles become triangles, middle one shaded
+17 A medium  top and bottom small shapes swap; shape in the black block loses one side (6 -> 5)

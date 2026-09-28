@@ -35,13 +35,28 @@ export function sourceLabel(q) {
 }
 
 // The figure for a question that is itself a picture (Logic figure patterns).
+// Tapping it toggles a zoomed view that scrolls sideways, for small details on a phone.
 export function renderQuestionImage(q) {
   if (!q.image) return null;
-  return el("img", { class: "q-image", src: q.image, alt: q.imageAlt ?? "Question figure" });
+  const image = el("img", {
+    class: "q-image",
+    src: q.image,
+    alt: q.imageAlt ?? "Question figure",
+    title: "Tap to zoom",
+    onclick: () => image.classList.toggle("zoomed"),
+  });
+  return el("div", { class: "q-image-wrap" }, image);
 }
 
-// Small label on questions written for this site rather than taken from the source PDF.
+// Small label on questions written for this site rather than taken from the source PDF,
+// or imported from an outside source (answer key taken from that source, not checked against an official one).
 export function renderGenerated(q) {
+  if (q.source === "imported") {
+    return el("span", {
+      class: "chip imported",
+      title: "Imported from an outside question set; the answer key is that source's key.",
+    }, "Imported, key from source");
+  }
   if (q.source !== "generated") return null;
   return el("span", {
     class: "chip generated",

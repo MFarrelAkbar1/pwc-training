@@ -15,6 +15,10 @@ OPTION_COUNT = {"numerical": 5, "verbal": 3, "english": 4, "logic": 5, "technica
 # questions), and N6's data-interpretation questions use a passage instead of a chart.
 ENTRANCE = {"V8": {"timeLimitSec": 900, "extraOptionCount": 4}, "N6": {"timeLimitSec": 900, "optionCount": 4}}
 GENERATED = {"english", "logic", "technical"}  # sections written for the site, not from the PDF
+# Tests imported from an outside question set (source "imported", key from that source). They are image-only:
+# every question is a picture with the options drawn in it, so an explanation is optional (empty when the rule
+# is unclear, see REVIEW.md). Their timer lives in site/js/data.js (SECTIONS.<section>.testMinutes), not in the JSON.
+IMPORTED = {"L5": {"optionCounts": {5, 6}, "questions": 17}}
 VERBAL_OPTIONS = {"A": "True", "B": "False", "C": "Cannot say"}
 CUT_MARKER = "[...text cut off in source]"
 
@@ -54,10 +58,17 @@ def check_test(path):
     say = problems.append
 
     section = test["section"]
-    expected = TIME_LIMIT[section][test["test"]] if section == "logic" else TIME_LIMIT[section]
-    expected = ENTRANCE.get(test["id"], {}).get("timeLimitSec", expected)
-    if test.get("timeLimitSec") != expected:
-        say(f"timeLimitSec is {test.get('timeLimitSec')}, expected {expected}")
+    imported = IMPORTED.get(test["id"])
+    if imported:
+        if "timeLimitSec" in test:
+            say("imported test: the timer belongs in data.js testMinutes, not timeLimitSec")
+        if len(test["questions"]) != imported["questions"]:
+            say(f"{len(test['questions'])} questions, expected {imported['questions']}")
+    else:
+        expected = TIME_LIMIT[section][test["test"]] if section == "logic" else TIME_LIMIT[section]
+        expected = ENTRANCE.get(test["id"], {}).get("timeLimitSec", expected)
+        if test.get("timeLimitSec") != expected:
+            say(f"timeLimitSec is {test.get('timeLimitSec')}, expected {expected}")
     check_passages(test, say)
 
     for key, ds in test.get("datasets", {}).items():
@@ -89,13 +100,24 @@ def check_test(path):
             say(f"{qid}: unknown passage {q.get('passage')!r}")
         expected_counts = {ENTRANCE.get(test["id"], {}).get("optionCount", OPTION_COUNT[section]),
                            extra_option_count(test) or OPTION_COUNT[section]}
+        if imported:
+            expected_counts = imported["optionCounts"]
+            if list(q["options"]) != list("ABCDEF"[:len(q["options"])]):
+                say(f"{qid}: options must be lettered A, B, C… in order (the letters are printed in the image)")
         if len(q["options"]) not in expected_counts:
             say(f"{qid}: {len(q['options'])} options, expected {' or '.join(map(str, sorted(expected_counts)))}")
         if len(set(q["options"].values())) != len(q["options"]) or not all(str(v).strip() for v in q["options"].values()):
             say(f"{qid}: options are empty or repeated")
         if q.get("image") and not (SITE / q["image"]).exists():
             say(f"{qid}: image {q['image']} missing")
-        if section in GENERATED:
+        if imported:
+            if q.get("source") != "imported":
+                say(f"{qid}: imported test but source is {q.get('source')!r}")
+            if not q.get("image"):
+                say(f"{qid}: imported (image-only) question has no image")
+            if not isinstance(q.get("explanation"), str):
+                say(f"{qid}: explanation must be a string (empty when the rule is unclear)")
+        elif section in GENERATED:
             if q.get("source") != "generated":
                 say(f"{qid}: generated section but source is {q.get('source')!r}")
             if not q.get("explanation"):

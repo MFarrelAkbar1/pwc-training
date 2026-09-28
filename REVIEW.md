@@ -703,3 +703,67 @@ Verbal: T = True, F = False, CS = Cannot say. "Site scores" is `verifiedAnswer` 
 | V7-Q13 | T | T | T | T | ok |
 | V7-Q14 | F | F (disputed) | F | CS | **suspect** |
 | V7-Q15 | CS | CS | CS | CS | ok |
+
+## Logic Subtest 5: imported figural patterns (extra hard)
+
+17 picture questions imported from `figural-test-extra-hard-part-1/` (not committed; the images are copied to
+`site/img/figural-hard-01.png` … `-17.png`). Built by `python tools/import_figural.py`, which also writes
+`site/data/logic-5.json`. Every question has `"source": "imported"` and shows an "Imported, key from source" label.
+The **scored answer is always the source key** (`jawaban.txt`); where I disagree the question is flagged `disputed`.
+Timer: 17 minutes, set in one place, `SECTIONS.logic.testMinutes[5]` in `site/js/data.js` (the JSON has no `timeLimitSec`).
+
+**Format of the source**
+- Q1–Q11: top row = 5-figure series, bottom row = options (A)–(E), lettered in the image.
+- Q12–Q14: 4-figure series, "Apa yang berikutnya?", **6 options with no letters printed**. The key uses A–F, read
+  left to right; in Q14 the options wrap, so F is the one on the second row. The question text says this.
+- Q15–Q17: analogies (A : B = C : ?; in Q17 the ? is the second figure), options A–E printed in pink.
+- `jawaban.txt` covers all 17. Its note "Soal pilihan A-F" appears after Q11 but only Q12–Q14 have six options;
+  Q15–Q17 have five (their keys C, C, A are all within A–E).
+- **Q3 and Q4 are the same puzzle** (Q4 is a lower-resolution capture with a "subscribe" badge). Both are kept, as
+  asked (17 questions), and both keys say C.
+
+**Blind check.** I solved every question from the images and wrote my answers with a confidence level to
+`tools/figural_blind_answers.txt` before comparing. Caveat: I had already read `jawaban.txt` once in step 1 (format
+check), so this was not perfectly blind; the low-confidence answers below in particular may have been pulled toward
+the key. Result: **16 of 17 agree; 1 disagreement (Q11)**.
+
+| Q | Key | Mine | Confidence | Rule I see |
+|---|---|---|---|---|
+| 1 | A | A | high | Arrow turns 90° and 45° anticlockwise in turn (S, E, NE, NW, W → S); hook on the bar flips down/up → up |
+| 2 | B | B | medium | End symbols reorder by "first to the end" and "swap pairs" in turn, comb flips side; frame 5 = frame 1 → frame 6 = frame 2 |
+| 3 | C | C | **low** | Big symbol = previous frame's small symbol flipped top-to-bottom (S→Ƨ, N→И, L→Γ, ⅄→Y), so the big zigzag fits C and D. The small symbol decides between them and I found no rule for it; I chose C only because S already appeared in frame 1 |
+| 4 | C | C | **low** | Same puzzle as Q3 |
+| 5 | E | E | high | n-sided polygon cut into n regions, n = 3…7 → octagon with 8 regions |
+| 6 | D | D | high | Circle, triangle, square; each new shape appears small inside the previous one first → square holding a pentagon |
+| 7 | B | B | medium | Right side loses lines from the top on even frames: 1, then 3 → 5; left side full |
+| 8 | A | A | medium | Arrow jumps 2 of the 6 sectors clockwise, direction cycling SE, SW, NW; dot moves 1 sector clockwise |
+| 9 | C | C | **low** | Six arcs; I could not find a rule that singles out one option (frame 3 is frame 2 reversed and frame 4 is frame 1 reversed, but that does not give a unique frame 6). C is a guess |
+| 10 | E | E | medium | One symbol moves per step, 2, 3, 4, 2 cells anticlockwise round the border; next the X moves 3 → bottom-middle |
+| **11** | **B** | **A** | high | **Disputed.** See below |
+| 12 | B | B | high | Two squares on a diagonal alternate with four squares; the diagonal switches → top-left + bottom-right |
+| 13 | D | D | **low** | Each frame = previous frame turned 90° clockwise + one new line (checked for frames 2–4). That leaves option 2 (B) and option 4 (D), which differ only in which diagonal is added; I found no rule for the new line's position, so D is no better than B on my reasoning |
+| 14 | F | F | high | Dots 2→6, arrows 1→5; the fan of arrows starts 45° further clockwise each step → S, SW, W, NW, N |
+| 15 | C | C | medium | Big shape gains a side; the two small shapes swap inside/outside; outside shape at top right |
+| 16 | C | C | medium | Big shape joined with its shaded mirror image; rectangles → triangles, middle shaded |
+| 17 | A | A | medium | Small shapes above/below swap; the shape inside the block loses a side (C's pentagon → D's diamond, so A's hexagon → pentagon). At first I misread C's pentagon as a hexagon and picked C; the zoomed image shows a pentagon |
+
+**Q11 (disputed, key kept: B).** Three parts: a top bar with a slanted hook, a middle bar with a slanted hook, and a
+bottom bracket. Frame 5 is the same drawing as frame 1 (measured: 0.4% of pixels differ, vs 5.6% between
+frames 1 and 2). Going 1→2 the middle bar turns 180°
+(hook at the right going down → hook at the left going up); 2→3 the top bar and the bracket both turn 180°; 3→4 the
+middle bar turns back; 4→5 top and bracket turn back. So the steps alternate "middle" and "top + bottom", and
+frame 6 = frame 5 with the middle bar turned = frame 2 = **option A** (by eye the same drawing; measured, A is the
+closest option to frame 2: 3.7% of pixels differ, against 5.6–8.3% for B–E). The key's **B** has
+the middle bar's hook at the right bending *up*, a shape that appears in no frame. I can't find a rule that gives B.
+Confidence that A is right: fairly high, but these puzzles are easy to misread. The site scores B and shows my
+reasoning as a note after you answer.
+
+**Explanations.** One-line explanations are filled in where I'm confident (Q1, 2, 5, 6, 7, 8, 10, 12, 14, 15, 16, 17).
+They are **empty for Q3, Q4, Q9, Q13** (rule not clear to me) and **Q11** (disputed; the flag note explains instead).
+
+### Least sure (figural)
+1. **Q9**: no rule found; my answer is a guess that happens to match the key.
+2. **Q13**: B and D both fit the rotate-and-add rule; the key's D is plausible, not proven.
+3. **Q3 / Q4**: the big symbol is certain (C or D); the small letter that decides between them is not.
+4. **Q11**: the one disagreement; recheck by comparing option A with frame 2.
+5. **Q7**: counting lines in small teeth. The 1, 3, 5 progression is my reading of a low-resolution image.

@@ -153,7 +153,9 @@ function showSection(key) {
     // (app.append would print "undefined"/"false" for a missing element, so only add it when needed)
     ...(section.generated ? [el("p", { class: "flag generated-note" },
       "These questions were generated for practice. They follow the style of the real test but haven't been " +
-      "checked against an official source, so treat an answer you disagree with as a possible error.")] : []),
+      "checked against an official source, so treat an answer you disagree with as a possible error." +
+      (section.importedTests ? ` Subtest ${section.importedTests.join(", ")} is imported from an outside question set ` +
+        "and uses that set's answer key." : ""))] : []),
     el("ul", { class: "test-list" }, ...section.tests.map((n) => testRow(key, n))),
     el("h2", {}, "More practice"),
     el("ul", { class: "test-list" },
@@ -188,8 +190,12 @@ function testRow(key, n) {
   const summary = stats.attempts
     ? `${stats.attempts} attempt${stats.attempts > 1 ? "s" : ""} · best ${stats.best}% · last ${stats.last}%`
     : "Not attempted yet";
+  const imported = section.importedTests?.includes(n);
   return el("li", { class: "test-row" },
-    el("div", {}, el("strong", {}, label), el("p", { class: "muted" }, `${minutes} min · ${summary}`)),
+    el("div", {},
+      el("strong", {}, label),
+      imported && el("span", { class: "chip imported" }, "Imported, key from source"),
+      el("p", { class: "muted" }, `${minutes} min · ${summary}`)),
     el("div", { class: "actions" },
       el("a", { class: "btn primary", href: `#/quiz/${id}/exam` }, "Exam"),
       el("a", { class: "btn", href: `#/quiz/${id}/practice` }, "Practice")));

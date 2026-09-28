@@ -1,0 +1,288 @@
+{
+ "id": "L5",
+ "section": "logic",
+ "test": 5,
+ "title": "Logic – Figural patterns (extra hard)",
+ "source": "imported",
+ "questions": [
+  {
+   "id": "L5-Q01",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-01.png",
+   "imageAlt": "Figure puzzle 1 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "A",
+   "explanation": "The arrow turns 90° then 45° anticlockwise in turn (down, right, up-right, up-left, left, so next is down), and the hook on the bar flips down/up each step, so next it points up.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q02",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-02.png",
+   "imageAlt": "Figure puzzle 2 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "B",
+   "explanation": "The four end symbols change order by 'move the first to the end' and 'swap the pairs' in turn, and the comb flips side each step; figure 5 equals figure 1, so figure 6 equals figure 2.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q03",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-03.png",
+   "imageAlt": "Figure puzzle 3 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "explanation": "",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q04",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-04.png",
+   "imageAlt": "Figure puzzle 4 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "explanation": "",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q05",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-05.png",
+   "imageAlt": "Figure puzzle 5 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "E",
+   "explanation": "Each figure is a polygon with one more side than the last, cut into as many regions as it has sides (3, 4, 5, 6, 7), so next is an 8-sided shape with 8 regions.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q06",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-06.png",
+   "imageAlt": "Figure puzzle 6 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "D",
+   "explanation": "Circle, triangle, square: each new shape first appears small inside the previous one, so next is a square with a small pentagon inside.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q07",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-07.png",
+   "imageAlt": "Figure puzzle 7 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "B",
+   "explanation": "On even frames the right side loses lines from the top: 1 line, then 3 lines, so next 5 lines are gone; the left side is full again.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q08",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-08.png",
+   "imageAlt": "Figure puzzle 8 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "A",
+   "explanation": "The arrow jumps two sectors clockwise each step, its direction cycling SE, SW, NW; the dot moves one sector clockwise each step.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q09",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-09.png",
+   "imageAlt": "Figure puzzle 9 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "explanation": "",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q10",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-10.png",
+   "imageAlt": "Figure puzzle 10 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "E",
+   "explanation": "One symbol moves each step, going 2, 3, 4, then 2 cells anticlockwise round the border; next the X moves 3 cells, to bottom-middle.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q11",
+   "text": "Which figure comes next in the series? The top row is the series; the options A–E are the bottom row.",
+   "image": "img/figural-hard-11.png",
+   "imageAlt": "Figure puzzle 11 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "B",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "disputed",
+    "note": "My answer is A: figure 5 is identical to figure 1, and each step turns either the middle bar or the top and bottom bars by 180°, so figure 6 should equal figure 2, which is option A. The source key gives B, whose middle bar bends up at the right instead. The site scores the source key (B)."
+   }
+  },
+  {
+   "id": "L5-Q12",
+   "text": "Which figure comes next in the series? The options are not lettered in the picture: they are A–F from left to right.",
+   "image": "img/figural-hard-12.png",
+   "imageAlt": "Figure puzzle 12 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E",
+    "F": "Figure F"
+   },
+   "answer": "B",
+   "explanation": "Two squares on a diagonal alternate with four squares, and the diagonal switches each time; next is two squares top-left and bottom-right.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q13",
+   "text": "Which figure comes next in the series? The options are not lettered in the picture: they are A–F from left to right.",
+   "image": "img/figural-hard-13.png",
+   "imageAlt": "Figure puzzle 13 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E",
+    "F": "Figure F"
+   },
+   "answer": "D",
+   "explanation": "",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q14",
+   "text": "Which figure comes next in the series? The options are not lettered in the picture: they are A–F from left to right; F is the one on the second row.",
+   "image": "img/figural-hard-14.png",
+   "imageAlt": "Figure puzzle 14 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E",
+    "F": "Figure F"
+   },
+   "answer": "F",
+   "explanation": "One more dot and one more arrow each step (6 dots, 5 arrows next); the fan of arrows starts 45° further clockwise each time, so next it runs S, SW, W, NW, N.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q15",
+   "text": "The first figure is to the second as the third is to ? Which option replaces the ? (options A–E)",
+   "image": "img/figural-hard-15.png",
+   "imageAlt": "Figure puzzle 15 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "explanation": "The large shape gets one more side and the two small shapes swap places (inside and outside), with the outside one at the top right: a black pentagon holding a square, with a small pentagon outside.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q16",
+   "text": "The first figure is to the second as the third is to ? Which option replaces the ? (options A–E)",
+   "image": "img/figural-hard-16.png",
+   "imageAlt": "Figure puzzle 16 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "explanation": "The large shape is joined by its shaded mirror image, and the rectangles become triangles with the middle one still shaded.",
+   "source": "imported"
+  },
+  {
+   "id": "L5-Q17",
+   "text": "Which option replaces the ? so that the first pair of figures relates in the same way as the second pair? (options A–E)",
+   "image": "img/figural-hard-17.png",
+   "imageAlt": "Figure puzzle 17 from the imported extra-hard set, with the answer options drawn in the picture.",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "A",
+   "explanation": "The small shapes above and below the block swap places and the shape inside the block loses a side (pentagon to diamond), so the hexagon becomes a pentagon.",
+   "source": "imported"
+  }
+ ]
+}

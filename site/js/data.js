@@ -6,6 +6,8 @@
 // testMinutes / testQuestions / testNames: per-test overrides (Logic subtests have their own timers,
 // and the entrance-test papers V8 and N6 are 15 questions in 15 minutes).
 // generated: questions were written for this site, not taken from the source PDF.
+// importedTests: tests in a generated section that were imported from an outside source instead (key from that source).
+// A test's exam timer is testMinutes when set, otherwise the timeLimitSec in its JSON.
 export const SECTIONS = {
   numerical: {
     name: "Numerical Reasoning", short: "Numerical", prefix: "N", tests: [1, 2, 3, 4, 5, 6], minutes: 17, questions: 20,
@@ -17,9 +19,11 @@ export const SECTIONS = {
   },
   english: { name: "English (TOEFL-style)", short: "English", prefix: "E", tests: [1, 2, 3], minutes: 15, questions: 20, generated: true },
   logic: {
-    name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4], minutes: 10, questions: 15, generated: true,
-    testMinutes: { 1: 10, 2: 12, 3: 8, 4: 12 },
-    testNames: { 1: "Number sequences", 2: "Figure patterns", 3: "Analogies", 4: "Syllogisms" },
+    name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4, 5], minutes: 10, questions: 15, generated: true,
+    // Subtest 5 timer: 17 minutes for 17 questions. Change it here (its JSON has no timeLimitSec).
+    testMinutes: { 1: 10, 2: 12, 3: 8, 4: 12, 5: 17 }, testQuestions: { 5: 17 },
+    testNames: { 1: "Number sequences", 2: "Figure patterns", 3: "Analogies", 4: "Syllogisms", 5: "Figural patterns (extra hard)" },
+    importedTests: [5],
   },
   technical: { name: "Technical (Risk Assurance)", short: "Technical", prefix: "T", tests: [1, 2, 3], minutes: 20, questions: 20, generated: true },
 };
@@ -112,7 +116,10 @@ export function shuffle(items) {
 
 export async function singleTestSet(id) {
   const test = await loadTest(id);
-  return { kind: "test", id, section: sectionOfId(id), title: test.title, timeLimitSec: test.timeLimitSec, questions: test.questions };
+  const section = sectionOfId(id);
+  const minutes = SECTIONS[section].testMinutes?.[Number(id.slice(1))];
+  const timeLimitSec = minutes ? minutes * 60 : test.timeLimitSec;
+  return { kind: "test", id, section, title: test.title, timeLimitSec, questions: test.questions };
 }
 
 // Random questions from every test in the section. Unscored (dropped) questions are never included.
