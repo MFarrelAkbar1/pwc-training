@@ -318,7 +318,7 @@ thead th:first-child, tbody th { text-align: left; white-space: normal; font-wei
 }
 .review-item.status-good { border-left-color: var(--good); }
 .review-item.status-bad { border-left-color: var(--bad); }
-.review-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.review-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
 .badge { font-size: 0.8rem; font-weight: 700; padding: 0.1rem 0.6rem; border-radius: 999px; background: var(--surface-2); }
 .badge.good { background: var(--good-bg); color: var(--good); }
 .badge.bad { background: var(--bad-bg); color: var(--bad); }

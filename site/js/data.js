@@ -10,6 +10,8 @@
 // A test's exam timer is testMinutes when set, otherwise the timeLimitSec in its JSON.
 // Timer for each of the four subtests imported from the figural question bank (L6–L9, 17 questions each).
 const FIGURAL_BANK_MINUTES = 17;
+// Timer for subtest 10 (figural-tests.pdf, 16 questions of mixed topics).
+const FIGURAL_TESTS_MINUTES = 16;
 
 export const SECTIONS = {
   numerical: {
@@ -22,20 +24,21 @@ export const SECTIONS = {
   },
   english: { name: "English (TOEFL-style)", short: "English", prefix: "E", tests: [1, 2, 3], minutes: 15, questions: 20, generated: true },
   logic: {
-    name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4, 5, 6, 7, 8, 9], minutes: 10, questions: 15,
+    name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], minutes: 10, questions: 15,
     generated: true,
     // Subtest 5 timer: 17 minutes for 17 questions. Change it here (its JSON has no timeLimitSec).
-    // Subtests 6–9 (figural question bank) all use FIGURAL_BANK_MINUTES above.
+    // Subtests 6–9 (figural question bank) all use FIGURAL_BANK_MINUTES above, subtest 10 FIGURAL_TESTS_MINUTES.
     testMinutes: {
       1: 10, 2: 12, 3: 8, 4: 12, 5: 17,
       6: FIGURAL_BANK_MINUTES, 7: FIGURAL_BANK_MINUTES, 8: FIGURAL_BANK_MINUTES, 9: FIGURAL_BANK_MINUTES,
+      10: FIGURAL_TESTS_MINUTES,
     },
-    testQuestions: { 5: 17, 6: 17, 7: 17, 8: 17, 9: 17 },
+    testQuestions: { 5: 17, 6: 17, 7: 17, 8: 17, 9: 17, 10: 16 },
     testNames: {
       1: "Number sequences", 2: "Figure patterns", 3: "Analogies", 4: "Syllogisms", 5: "Figural patterns (extra hard)",
-      6: "Figural analogies", 7: "Odd one out", 8: "Figural series", 9: "Figural matrices",
+      6: "Figural analogies", 7: "Odd one out", 8: "Figural series", 9: "Figural matrices", 10: "Figural mix",
     },
-    importedTests: [5, 6, 7, 8, 9],
+    importedTests: [5, 6, 7, 8, 9, 10],
   },
   technical: { name: "Technical (Risk Assurance)", short: "Technical", prefix: "T", tests: [1, 2, 3], minutes: 20, questions: 20, generated: true },
 };

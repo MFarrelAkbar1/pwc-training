@@ -19,8 +19,11 @@ GENERATED = {"english", "logic", "technical"}  # sections written for the site, 
 # every question is a picture with the options drawn in it, so an explanation is optional (empty when the rule
 # is unclear, see REVIEW.md). Their timer lives in site/js/data.js (SECTIONS.<section>.testMinutes), not in the JSON.
 # L6–L9 come from the figural question bank PDF (tools/import_figural_bank.py): 4 options, 17 questions each.
+# L10 comes from figural-tests.pdf (tools/import_figural_tests.py): 16 questions of mixed topics, 4 or 5 options,
+# each with its topic.
 IMPORTED = {"L5": {"optionCounts": {5, 6}, "questions": 17},
-            **{f"L{n}": {"optionCounts": {4}, "questions": 17} for n in (6, 7, 8, 9)}}
+            **{f"L{n}": {"optionCounts": {4}, "questions": 17} for n in (6, 7, 8, 9)},
+            "L10": {"optionCounts": {4, 5}, "questions": 16, "topics": {"analogy", "odd one out", "series"}}}
 VERBAL_OPTIONS = {"A": "True", "B": "False", "C": "Cannot say"}
 CUT_MARKER = "[...text cut off in source]"
 
@@ -119,6 +122,8 @@ def check_test(path):
                 say(f"{qid}: imported (image-only) question has no image")
             if not isinstance(q.get("explanation"), str):
                 say(f"{qid}: explanation must be a string (empty when the rule is unclear)")
+            if "topics" in imported and q.get("topic") not in imported["topics"]:
+                say(f"{qid}: topic {q.get('topic')!r} not one of {sorted(imported['topics'])}")
             if (q.get("flag") or {}).get("type") == "ambiguous" and q.get("answerSource") != "dropped":
                 say(f"{qid}: ambiguous question must be dropped (not scored)")
         elif section in GENERATED:

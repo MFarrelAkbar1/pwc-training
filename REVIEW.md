@@ -874,3 +874,83 @@ dropped questions have no explanation; their flag note says why.
 8. **53** (L8, scored A): A and D are both big arrows pointing up-left, about 120° vs 150°.
 9. **20** (L6, scored C): C and A are both cross-hatched triangles; only the 180° turn separates them.
 10. **248** (L9, scored B): D is the same hatched square turned 45°; relies on the matrix only using 90° turns.
+
+## Logic Subtest 10: Figural mix (imported from figural-tests.pdf)
+
+16 picture questions from `figural-tests.pdf` (3 pages; not committed, ignored by `/*.pdf`; no full-page renders
+committed). Built by `python tools/import_figural_tests.py`, which reuses `GAP` and `save_image` from
+`import_figural_bank.py`. All review decisions live in the script's tables (`AMBIGUOUS`, `DISPUTED`, `EXPLANATIONS`),
+so re-running it keeps them. One subtest, **L10**, with source no. 1–16 in source order. Each question has
+`"source": "imported"`, the "Imported, key from source" label, a "Source no. N" label (`sourceRef`), and its `topic`
+(analogy / odd one out / series), which the results review shows as a chip. Timer: 16 minutes
+(`FIGURAL_TESTS_MINUTES` in `site/js/data.js`).
+
+| Source no. | Topic (page 2 heading) | Options |
+|---|---|---|
+| 1–4 | analogy (Analogi Gambar) | A–E |
+| 5–7 | odd one out (Ketidaksamaan Gambar) | A–E |
+| 8–11 | series (Serial) | A–E |
+| 12–16 | series (no heading, "Lengkapilah pola"; `@belajarbro_id` watermark) | A–D, 14: A–E |
+
+**Images.** Page 1 has one embedded JPEG per question (336–777 px wide). The script takes those from **page 1 only**
+(pages 2–3 carry the worked answers). Each image already has the stimulus row on top and the options row below, with
+at most five cells a row, which is the layout `import_figural_bank.py` re-lays its strips into. So the images are
+not re-laid, only given a white margin and reduced to a 64-colour PNG (`site/img/figtests-NN.png`). The watermarks on
+12–16 are kept as they are. At 375 px the exam and the results review have no horizontal scroll. The review's
+header row now wraps (`.review-head` in `style.css`) so the extra topic chip fits.
+
+**Duplicates.** Perceptual hash (8×8 DCT) of all 16 images against the 120 images in `site/img`: the closest distance
+is 10/64 bits (q04 vs figbank-011, a different puzzle when compared by eye), the rest 14–24. No duplicates with L5–L9.
+
+**Key.** Read from the "Jawaban" lines on pages 2 (no. 1–11) and 3 (no. 12–16, numbered 1–5 there). **The key exists
+only once per question, so there is no second copy to cross-check it against.** Key for no. 15 is hedged in the
+source ("Sepertinya B, ada ide lain?", "probably B, any other idea?").
+
+**Blind check.** While inspecting the PDF's structure in phase 1 I viewed pages 2–3, so I had seen the key. The blind
+answers were therefore made by a separate subagent that only got the 16 page-1 images and a neutral question text per
+topic (no key, no explanations, no page 2–3). It wrote `tools/figural_tests_blind_answers.txt` (answer, confidence,
+reasoning) before anything was compared. Result: 13 of 16 match the key. Differences: **1** (blind B, key C),
+**4** (blind A, key B), **8** (blind B, key D). The comparison and every decision below were checked by zooming into
+the images.
+
+**Ambiguity check: 4 dropped** (`answerSource: "dropped"`, `verifiedAnswer: null`, flag `ambiguous`, key kept in
+`answer`):
+
+| No. | Key | Why |
+|---|---|---|
+| 1 | C | The rule gives a two-line ">" with two dots; no option has that. A and C are the same drawing (a three-line arrow with two dots; they differ by 54 px of JPEG noise, different options by 142+ px) |
+| 4 | B | Each tile's change from 1 to 2 fits both a 90° turn and a diagonal flip; on figure 3 the turn gives A, the flip gives B |
+| 11 | A | Next is ↑ top, rectangle bottom and a *new* symbol on the right: A (S) and B (=) both fit |
+| 15 | B | Source key hedged; the blind check found B only with medium confidence (rule: dropped unless an independent high-confidence B) |
+
+**Disputed: 1, scored with the key.** **8** (key D): every symbol moves one side anticlockwise each step and figure 5
+repeats figure 1. The black dot goes out, out, in, out, out, so next it is inside on the lower left, which is B (the
+blind answer). D puts the black dot at the upper right and the white circle outside on the lower left. That breaks the
+anticlockwise movement, and it also breaks the source's own explanation, where the white circle alternates in/out. It
+is not dropped, because B fits and D doesn't. Under the editorial rules the key stays, with a "Disputed" note. (If the dot
+instead repeats every 4 steps, as all the others do, figure 6 would equal figure 2, which isn't offered either.)
+
+**Kept and scored, but note:**
+- **16** (key B, blind B low): the top box shows what the bottom-left box showed one step earlier, and each box steps
+  through 1–3 straight lines, empty, 1–3 wavy lines. B is the only option whose top and bottom-left fit. Its
+  bottom-right (1 wavy line) fits only if that box cycles through the wavy states. C and D are the same drawing, but
+  both are wrong on the top box.
+- **6** (key E): the deciding arrowheads are a few pixels wide; zoomed, C's points clockwise like A, B and D.
+
+**Explanations.** The PDF's explanations were not copied. A one-line explanation is written for 7 of the 12 scored
+questions (2, 3, 5, 6, 12, 13, 14). **Empty: 7** (the key's symmetry rule; I can't state exactly which symmetry each
+figure has), **9** (the arrow's path is clear, but I can't state the triangle's rule with certainty), **10** (the
+figure is built up two strokes a step, but I can't state exactly which strokes come next), **16** (see above), and
+**8** (disputed; its flag note explains). The 4 dropped questions have no explanation; their flag note says why.
+
+### Least sure (figural-tests.pdf)
+1. **8** (scored D, disputed): the key looks wrong; B fits the movement rule.
+2. **16** (scored B): bottom-right box only fits if it cycles through the wavy states; C = D.
+3. **15** (dropped, key B): B is plausible; dropped only because the source itself hedges.
+4. **4** (dropped, key B): the turn vs flip reading. A test maker would likely mean one of them.
+5. **10** (scored A): the build-up rule is plausible, not proven.
+6. **9** (scored E): the arrow rule alone leaves C, D and E; E rests on the triangle, whose rule is unclear.
+7. **7** (scored C): symmetry judged on small low-resolution figures.
+8. **11** (dropped, key A): A and B differ only in the new symbol.
+9. **1** (dropped, key C): no option is exactly right.
+10. **6** (scored E): tiny arrowheads decide it.

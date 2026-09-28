@@ -69,6 +69,11 @@ export function renderSourceRef(q) {
   return q.sourceRef ? el("span", { class: "chip source-ref" }, q.sourceRef) : null;
 }
 
+// The question's topic in a mixed imported test ("series"), shown in the results review.
+export function renderTopic(q) {
+  return q.topic ? el("span", { class: "chip source-ref" }, `Topic: ${q.topic}`) : null;
+}
+
 const CUT_MARKER = "[...text cut off in source]";
 
 function renderPassage(container, passage) {

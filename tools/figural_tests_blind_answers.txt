@@ -1,0 +1,18 @@
+# Blind answers for figural-tests.pdf page 1 (source no. 1–16), solved from the question images only, before the key was seen.
+# Format: source no. | answer | confidence (high/medium/low) | one-line reasoning
+1 | B | low | Fig1->2: lines detach from dots, flip and move to the opposite side, counts kept; the exact answer (2-line ">" on the left, 2 dots on the right) is not offered; A and C are pixel-identical (3 lines, 2 dots), so B (right 2-line ">", but 3 dots) is the best of the rest
+2 | C | high | n-sided shape gets enclosed in an (n+1)-sided shape sharing its top vertex: triangle in diamond, so pentagon in pointed-top hexagon (B's hexagon has a flat top)
+3 | E | high | Fig2 is fig1 turned 180° (row order reversed, each row mirrored); turning fig3 gives dot-fork / arrow-triangle / bar-dot = E (C has the top two rows swapped)
+4 | A | low | Four quadrant tiles each turn 90° (top and bottom quadrants one way, left and right the other); applying that to fig3 gives A, but a per-quadrant-reflection reading fits fig1->2 just as well and gives B
+5 | C | high | Petals on top equal ovals underneath in A(3/3), B(4/4), D(2/2), E(5/5); C has 1 petal but 2 ovals
+6 | E | medium | A-D are rotations of one design with the curved arrow going clockwise; in E it goes counter-clockwise (C's small arrowhead is hard to read but looks clockwise)
+7 | C | medium | A, B, D and E have symmetric black/white arm shading (180° and mirror symmetry); C's shading (vertical bar black on the right all the way, horizontal arms split opposite ways) has no symmetry
+8 | B | medium | = moves outside counter-clockwise (next: out-SE); × and ○ move counter-clockwise, switching between inside and outside (next: × in-NW, ○ out-NE); only B matches all three, and its ● (in-SW) keeps the ● counter-clockwise too
+9 | E | high | Arrow moves counter-clockwise around the square, pointing counter-clockwise (next: on the left, pointing up); triangle alternates in/out, changing side every 2 steps (next: outside bottom, pointing down) = E
+10 | A | medium | The figure is drawn stroke by stroke; A keeps everything in fig5 (outer circle, cross, lower inner half-circle, top-right short line) and continues the inner arc over the top to that line
+11 | A | low | Arrow-type pair jumps to the opposite side and flips (down arrow at the bottom -> up arrow at the top), the rectangle swaps sides (-> bottom), and a new third symbol appears on the right; A (S) and B (=) both fit, with nothing to choose between the symbols (S picked as a single-stroke shape like C, square, circle)
+12 | A | medium | Stick/rectangle side swings NW, SW, SE, SW, back to NW (all options show the fig1 layout); end symbols cycle square, cross, triangle, circle, so the next one is the square again = A (same as fig1)
+13 | D | high | Hourglasses 4,3,2,1 -> 0; each one is replaced by two shoes: 0,2,4,6 -> 8 = D
+14 | D | high | Spokes added one per step (1,2,3 -> 4, now also to the upper-left vertex) and the centre diamond alternates white/black -> black with 4 spokes = D
+15 | B | medium | Crosses 2,1,0 then all 6; the reversed count goes on 6->5, and B is the only option with 5 crosses and 1 circle
+16 | B | low | Each box steps through 1-2-3 straight lines, empty, 1-2-3 wavy lines; fig5 should be top 1 wavy, bottom-left 2 wavy, bottom-right after 3 wavy; B fits top and bottom-left (its bottom-right has 1 wavy line); C and D are pixel-identical (2w, 3w, 1 straight), so neither can be the single answer

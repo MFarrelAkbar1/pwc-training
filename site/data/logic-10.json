@@ -1,0 +1,321 @@
+{
+ "id": "L10",
+ "section": "logic",
+ "test": 10,
+ "title": "Logic – Figural mix (imported)",
+ "source": "imported",
+ "questions": [
+  {
+   "id": "L10-Q01",
+   "text": "Figure 1 is to figure 2 as figure 3 is to ? The top row is the analogy; the bottom row is the options A–E.",
+   "image": "img/figtests-01.png",
+   "imageAlt": "Source question 1 (analogy), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 1",
+   "topic": "analogy",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "Figure 1 → 2 keeps the dots and turns the lines 180° to the other side, so the answer is a two-line '>' on the left with the two dots on the right. No option shows that: A and C are the same drawing (a three-line arrow with two dots) and B has three dots."
+   }
+  },
+  {
+   "id": "L10-Q02",
+   "text": "Figure 1 is to figure 2 as figure 3 is to ? The top row is the analogy; the bottom row is the options A–E.",
+   "image": "img/figtests-02.png",
+   "imageAlt": "Source question 2 (analogy), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 2",
+   "topic": "analogy",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "explanation": "Each shape is put inside a shape with one more side, touching at the top point: the triangle goes into a diamond, so the five-sided house goes into a hexagon with a point at the top.",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q03",
+   "text": "Figure 1 is to figure 2 as figure 3 is to ? The top row is the analogy; the bottom row is the options A–E.",
+   "image": "img/figtests-03.png",
+   "imageAlt": "Source question 3 (analogy), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 3",
+   "topic": "analogy",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "E",
+   "explanation": "Figure 2 is figure 1 turned 180° (row order reversed, each row mirrored), so the answer is figure 3 turned 180°.",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q04",
+   "text": "Figure 1 is to figure 2 as figure 3 is to ? The top row is the analogy; the bottom row is the options A–E.",
+   "image": "img/figtests-04.png",
+   "imageAlt": "Source question 4 (analogy), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 4",
+   "topic": "analogy",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "B",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "Each of the four tiles changes from figure 1 to 2 in a way that fits two rules: a 90° turn (top and bottom tiles one way, left and right tiles the other) or a flip across a diagonal. Applied to figure 3, the turn gives A and the flip gives B, and the example can't tell them apart."
+   }
+  },
+  {
+   "id": "L10-Q05",
+   "text": "Which figure is the odd one out? (options A–E)",
+   "image": "img/figtests-05.png",
+   "imageAlt": "Source question 5 (odd one out), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 5",
+   "topic": "odd one out",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "explanation": "In every figure but C the number of leaves at the top equals the number of ovals at the bottom; C has 1 leaf and 2 ovals.",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q06",
+   "text": "Which figure is the odd one out? (options A–E)",
+   "image": "img/figtests-06.png",
+   "imageAlt": "Source question 6 (odd one out), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 6",
+   "topic": "odd one out",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "E",
+   "explanation": "The small arrowhead on the circle points clockwise in A–D and anticlockwise only in E.",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q07",
+   "text": "Which figure is the odd one out? (options A–E)",
+   "image": "img/figtests-07.png",
+   "imageAlt": "Source question 7 (odd one out), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 7",
+   "topic": "odd one out",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "C",
+   "explanation": "",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q08",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–E.",
+   "image": "img/figtests-08.png",
+   "imageAlt": "Source question 8 (series), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 8",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "D",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "disputed",
+    "note": "Every symbol moves one side anticlockwise each step, and figure 5 repeats figure 1. The black dot goes out, out, in, out, out, so next it goes in, on the lower left: that is B. The key's D has the black dot at the upper right and the white circle outside on the lower left, which breaks the anticlockwise movement."
+   }
+  },
+  {
+   "id": "L10-Q09",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–E.",
+   "image": "img/figtests-09.png",
+   "imageAlt": "Source question 9 (series), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 9",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "E",
+   "explanation": "",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q10",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–E.",
+   "image": "img/figtests-10.png",
+   "imageAlt": "Source question 10 (series), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 10",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "A",
+   "explanation": "",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q11",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–E.",
+   "image": "img/figtests-11.png",
+   "imageAlt": "Source question 11 (series), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 11",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "A",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The steps alternate between swapping (and flipping) two opposite symbols and turning everything one place anticlockwise, and each step brings in one new symbol. Next the ↓ flips to ↑ at the top, the rectangle goes to the bottom and a new symbol appears on the right. A (S) and B (=) both do this; nothing decides which new symbol it is."
+   }
+  },
+  {
+   "id": "L10-Q12",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figtests-12.png",
+   "imageAlt": "Source question 12 (series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Source no. 12",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "A",
+   "explanation": "The stick keeps the same place in every option; the symbol on its end goes square, cross, triangle, circle, so next is the square again.",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q13",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figtests-13.png",
+   "imageAlt": "Source question 13 (series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Source no. 13",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "D",
+   "explanation": "The hourglasses go 4, 3, 2, 1 and the shoe shapes 0, 2, 4, 6, so next is no hourglass and 8 shoes.",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q14",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–E.",
+   "image": "img/figtests-14.png",
+   "imageAlt": "Source question 14 (series), with the answer options A–E drawn in the picture.",
+   "sourceRef": "Source no. 14",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D",
+    "E": "Figure E"
+   },
+   "answer": "D",
+   "explanation": "One more line from the centre each step (1, 2, 3, so 4) and the centre diamond alternates white and black, so next is a black diamond with 4 lines.",
+   "source": "imported"
+  },
+  {
+   "id": "L10-Q15",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figtests-15.png",
+   "imageAlt": "Source question 15 (series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Source no. 15",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "verifiedAnswer": null,
+   "answerSource": "dropped",
+   "explanation": "",
+   "source": "imported",
+   "flag": {
+    "type": "ambiguous",
+    "note": "The source's own key is hedged (\"probably B\"), and the pattern of crosses and circles (2, 1, 0, then 6 crosses) doesn't settle it: the blind check found B only with medium confidence."
+   }
+  },
+  {
+   "id": "L10-Q16",
+   "text": "Which option continues the series? The top row is the series; the bottom row is the options A–D.",
+   "image": "img/figtests-16.png",
+   "imageAlt": "Source question 16 (series), with the answer options A–D drawn in the picture.",
+   "sourceRef": "Source no. 16",
+   "topic": "series",
+   "options": {
+    "A": "Figure A",
+    "B": "Figure B",
+    "C": "Figure C",
+    "D": "Figure D"
+   },
+   "answer": "B",
+   "explanation": "",
+   "source": "imported"
+  }
+ ]
+}
