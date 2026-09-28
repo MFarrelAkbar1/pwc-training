@@ -7,6 +7,7 @@ When there's a problem, the question also gets:
 |---|---|
 | `verifiedAnswer` | The answer the site scores against (`null` = not scored) |
 | `answerSource` | `"recomputed"` (my answer replaces the PDF key) or `"dropped"` (no option is correct) |
+| `acceptedAnswers` | Optional list of letters that all count as correct (only when two options are equally right, e.g. N1-Q13). Must include the scored answer |
 | `flag` | `{ type: "recomputed" \| "dropped" \| "disputed" \| "missing-key" \| "truncated", note }`, shown to you in the quiz |
 
 **Rules for numerical (agreed):**
@@ -31,6 +32,7 @@ Recheck any time with `python tools/verify_numerical.py` (answers) and `python t
 | N1-Q01 | B | **D** | recomputed |
 | N1-Q02 | B | **D** | recomputed |
 | N1-Q07 | C | **E** | recomputed |
+| N1-Q13 | B | B **or C** | disputed, both accepted (verification pass) |
 | N1-Q19 | B | — | dropped |
 | N2-Q02 | E | **D** | recomputed |
 | N2-Q07 | B | B | disputed |
@@ -40,7 +42,7 @@ Recheck any time with `python tools/verify_numerical.py` (answers) and `python t
 | N3-Q04 | B | **E** | disputed, uses E (your decision) |
 | N3-Q08 | D | **E** | recomputed |
 
-In total: 6 recomputed, 1 dropped (N1-Q19), 3 disputed with the PDF key kept, and 1 disputed using my answer (N3-Q04). Tests 4 and 5 have no key problems.
+In total: 6 recomputed, 1 dropped (N1-Q19), 3 disputed with the PDF key kept, 1 disputed using my answer (N3-Q04), and 1 disputed where both B and C are accepted (N1-Q13). Tests 4 and 5 have no key problems.
 
 For every question where the site uses my answer, the `explanation` shows the correct working, so it always matches the answer that's scored. The PDF's original working is kept at the end of the flag note ("PDF working: …").
 
@@ -124,14 +126,14 @@ I judged all 104 statements using only the passage. **I disagree with 12 keys** 
 | V2-Q02 | False | Cannot say | False | disputed | medium |
 | V2-Q03 | True | Cannot say | **Cannot say** | recomputed (your decision) | high |
 | V2-Q10 | Cannot say | Cannot say | Cannot say | truncated | — (agree) |
-| V2-Q11 | Cannot say | True | **True** | recomputed (your decision) | medium |
+| V2-Q11 | Cannot say | True | **True** | recomputed (your decision); flag now **disputed** (verification pass) | medium |
 | V2-Q13 | True | Cannot say | True | disputed | low |
 | V2-Q15 | False | Cannot say | False | disputed | low |
 | V3-Q01 | *none* | Cannot say | **Cannot say** | no key in source (my judgment, confirmed) | high |
 | V3-Q07 | Cannot say | Cannot say | Cannot say | truncated | — (agree) |
 | V3-Q09 | True | Cannot say | **Cannot say** | recomputed (your decision) | medium |
 | V3-Q12 | True | Cannot say* | True | truncated | — (*from visible text only) |
-| V4-Q05 | True | **False** | **False** | recomputed (confirmed) | high |
+| V4-Q05 | True | **False** | **False** | recomputed (confirmed); flag now **disputed** (verification pass) | high |
 | V4-Q06 | False | **True** | **True** | recomputed (confirmed) | high |
 | V4-Q09 | Cannot say | Cannot say | Cannot say | truncated | — (agree) |
 | V4-Q15 | Cannot say | Cannot say | Cannot say | truncated | — (agree) |
@@ -140,6 +142,7 @@ I judged all 104 statements using only the passage. **I disagree with 12 keys** 
 | V7-Q14 | False | Cannot say | False | disputed | medium |
 
 **After your decisions:** 7 recomputed (the 2 switches plus 5 where you chose my answer), 5 disputed with the PDF key kept (V2-Q02, V2-Q13, V2-Q15, V6-Q14, V7-Q14), 1 with no key in source, and 5 truncated with the PDF key kept (V3-Q12 stays True).
+Since the verification pass, V2-Q11 and V4-Q05 still use my answer (`answerSource: "recomputed"`), but their flag type is **disputed**, because another source disagrees (see "Verification pass vs Verified PDF").
 
 Every verbal statement now has a one-line explanation that matches the answer the site uses. For the disputed ones, the explanation ends with "The source key was X; some readings differ."
 
@@ -294,3 +297,409 @@ Regenerate the Logic tests with `python tools/gen_logic.py` (seeded, so the outp
 | T1-Q14 | Evidence reliability ranking: a general rule with exceptions (e.g. a forged external document). |
 | T3-Q17, T3-Q20 | The "best next step" for suspected fraud and for leavers' active accounts can depend on firm policy. The answers follow common practice (escalate, don't act yourself). |
 | **All (fixed)** | The correct option used to be the longest in 52 of 60 Technical questions. `tools/rebalance_options.py` rewrote the options (shorter correct answers, longer distractors); now no Technical question has a correct option that is 3+ characters longer than every distractor, and each test uses A/B/C/D exactly 5 times. The only English exception is E3-Q02 ("would have bought" vs "had bought"), where the length difference *is* the grammar being tested. |
+
+---
+
+# Verification pass vs Verified PDF
+
+Source: `PwC_Aptitude_Test_Verified.pdf` (89 pages, text only, no images; created 2026-09-27 17:39 with LibreOffice).
+**No JSON was changed in this pass.** This section is a report only.
+
+## What the Verified PDF is
+
+- **Coverage:** Numerical Tests 1–5 (100 questions) and Verbal Tests 1–7 (104 questions), so **204 of the site's 414
+  questions**. It does **not** cover N6/V8 (the entrance-test paper) or the generated English/Logic/Technical sections.
+- **Numbering:** It matches the original PDF and the site ids one-to-one (N1-Q01 … V7-Q15, including the missing V4-Q04).
+  I checked this by matching every question's text against the site JSON: all 204 matched and none were missing or extra.
+- **Content:** It has the full question, the options, the chart data as a table (said to be "checked against the page image"),
+  **a verified answer and a worked solution for every question**, and a correction note where it disagrees with the original key.
+  Page 2 lists all its corrections, with a status for each: CORRECT / WRONG ANSWER / WRONG EXPLANATION / AMBIGUOUS / SOURCE ISSUE.
+- **It is not independent of this site.** Many of its solutions repeat the site's explanations almost word for word (e.g.
+  V2-Q06 "the wider push aims at information and protection… doesn't say what the documentation alone is for", V5-Q12
+  "more variety does not necessarily mean more courses", N3-Q04's "$60,000 if departments spend equally", N1-Q19's "29%, closest to D").
+  So when it **agrees** with the site, that is weak confirmation. When it **disagrees**, it is disagreeing with the
+  original PDF key (V2-Q11, V4-Q05) or re-arguing a known ambiguity (N2-Q07). It never brings in new data.
+
+## Method
+
+1. I built a copy of all 204 questions **with `answer`, `verifiedAnswer`, `explanation` and `flag` removed** and answered them from that
+   copy: numerical by recomputing from the chart/table data in `site/data`, verbal from the passage only. I saved those answers
+   to a file before opening any of the Verified PDF's answer lines. *Caveat:* before that step I had already read this REVIEW.md
+   (which holds my earlier judgments) and the Verified PDF's one-page "Corrections at a Glance" while working out its structure, so the
+   pass is blind to the per-question keys but not fully blind to the earlier review.
+2. I then parsed all 204 "Verified Answer" lines and compared the four columns.
+3. No numerical value looked doubtful. My recomputations matched the site's chart data in every case, so I didn't need to go back to the chart images.
+
+## Result by class
+
+| Class | Count | Questions |
+|---|---|---|
+| All four agree | **172** | (includes 6 already-flagged questions where everyone agrees: N2-Q11, N3-Q01 disputed; V2-Q10, V3-Q07, V4-Q09, V4-Q15 truncated) |
+| Site already corrected, Verified PDF and I both confirm | **14** | N1-Q01, N1-Q02, N1-Q07, N1-Q19 (dropped), N2-Q02, N2-Q17, N3-Q04, N3-Q08, V1-Q13, V2-Q03, V3-Q01, V3-Q09, V4-Q06, V7-Q06 |
+| **Likely real fix** (Verified differs from the PDF key and the site still uses the PDF key) | **0** | none |
+| **Needs a decision** (Verified differs from a recomputed/disputed site answer) | **3** | N2-Q07, V2-Q11, V4-Q05 |
+| **Suspect** (Verified differs from my blind answer) | **15** | N1-Q10, N1-Q13, V1-Q02, V1-Q14, V2-Q02, V2-Q06, V2-Q13, V2-Q15, V3-Q10, V3-Q12, V3-Q13, V4-Q10, V5-Q12, V6-Q14, V7-Q14 |
+
+**The Verified PDF finds no wrong answer that the site doesn't already handle.** All 11 of its "WRONG ANSWER" items (N1-Q01, Q02; N2-Q02,
+Q17; N3-Q04, Q08; V1-Q13; V2-Q03; V3-Q09; V4-Q05; V4-Q06) are already corrected on the site. Ten of them match the site's answer. The
+eleventh, V4-Q05, is corrected to a *different* answer (see below).
+
+## Needs a decision
+
+In all three, my blind answer sides with **the site**, not the Verified PDF.
+
+### N2-Q07: site **B (31.31%, PDF key, disputed)**, Verified **A (29.7%)**, mine: 29.2%, no exact option
+- *Verified PDF:* 2009 total = 4.0m × 1.08 = 4.32m; exploration = 1.16m + 0.1m = 1.26m → **29.17%**, "closest to A (29.7%), probably a misprint".
+  It says the key double-counts: exploration grows 8% *and* gets +£100k while the total only grows 8%, so the other divisions must shrink.
+- *PDF key / site:* (0.29 × 4.32m + 0.1m) ÷ 4.32m = **31.31%**, reading "an additional £100,000" as on top of exploration's normal share.
+  That is an exact option match, and nothing stops the other divisions from shrinking a little.
+- *Mine (blind):* both readings are possible. The more literal one gives 29.2%, which **isn't an option** (A is 29.7%).
+- **My recommendation: keep B, disputed (no change).** Under our numerical rules, "recomputed" needs my answer to *match* an option,
+  and 29.2 ≠ 29.7. If you don't want to score an ambiguous question, the other option is to **drop** it (like N1-Q19), not to switch it to A.
+
+### V2-Q11: site **True (recomputed, your earlier decision)**, Verified **Cannot say (= PDF key)**, mine **True**
+- *Verified PDF:* "The study used employees' own ratings of their bosses, so a link with actual incompetence cannot be confirmed."
+- *Site / mine:* the statement is about employees "that have incompetent bosses". The passage says those who *categorised* their boss as
+  incompetent were 25% more at risk of serious heart disease, with external factors controlled. That is a stated link.
+- The Verified PDF's argument is the same "rated, not shown" point already recorded above as "the only argument for Cannot say".
+  It adds nothing new.
+- **My recommendation: keep True.** If you'd rather defer to the key, set it back to Cannot say and flag it **disputed**, with this
+  note as the alternative reading.
+
+### V4-Q05: site **False (recomputed, confirmed)**, Verified **Cannot say**, PDF key **True**, mine **False**
+- *Verified PDF:* 40% is a *future* projection ("is set to rise to 40%"), and today's share isn't given, so Cannot say. But its own step 3
+  says "even using the projection, 40% aged 65+ means 60% under 65, not less than 60%".
+- *Site / mine:* "set to **rise to** 40%" means today's share is below 40%, so more than 60% are under 65 now. Even at 40%, exactly 60%
+  would be under 65, not less. Every reading contradicts "less than 60%", so the statement is **False**.
+- **My recommendation: keep False.** The Verified PDF's own reasoning contradicts its Cannot say: it only works if "rise to" says
+  nothing about the current level.
+
+## Suspect: the Verified PDF differs from my blind answer
+
+Two of these were my mistakes, and I withdraw them after rechecking. For the others, the Verified PDF agrees with the site, so nothing
+changes unless you want it to. None of them is strong enough on its own to change a scored answer.
+
+| Question | Site / Verified | Mine (blind) | Assessment |
+|---|---|---|---|
+| **N1-Q10** | E / E | C | **My error.** Insurance 195/2,704 = 7.2% is also ≈ 7%, as well as Utilities (7.0%). E is right. |
+| **N1-Q13** | B / B | C | **Both are right.** 297:380 = 1:1.28 (B) = 0.78:1 (C). The Verified PDF says so too. The site scores only B, **with no flag**: a user who picks C is marked wrong for a correct answer. **Suggest:** add a `disputed` flag saying B and C are the same ratio (or accept both, if the quiz engine can). |
+| V1-Q02 | CS / CS | F (low) | "Sluggish growth" is still growth, which contradicts a "depression". But "depressed market" can loosely mean a weak one. Verified's reasoning is fair. Keep CS. |
+| V1-Q14 | F / F | CS (low) | "Many… are often inaccurate" doesn't strictly give "most". But "typically they tend to be over-optimistic" supports F. Keep F. |
+| V2-Q02 | F (disputed) / F | CS | Verified: "the law does distinguish by hazard". The passage only says immediate threats must be cleaned up; it never says long-term ones needn't be, and the statement is about *litigation*. This is the existing dispute and the Verified PDF adds nothing new. Keep as is. |
+| **V2-Q06** | CS / CS | F | **My error.** The *push* aims at information and protection, but the protection part is the cooling-off period. The documentation alone could well be only for information. CS is right. |
+| V2-Q13 | T (disputed) / T | CS (low) | Existing dispute; Verified repeats the key's view ("wanting funding implies wanting work"). Keep as is. |
+| V2-Q15 | F (disputed) / F | CS (low) | Verified's reasoning is **weak**: "Italy and Britain must increase *their share*, so other countries also fund it". Having a share doesn't prove there are other contributors. See also the explanation issue below. Keep F disputed. |
+| V3-Q10 | F / F | CS (low) | The passage sets early detection (P-waves) against prediction, so "could be used to predict" is contradicted in its terms. F is defensible. Keep. |
+| V3-Q12 | T (truncated) / T | CS (visible text) | Already flagged truncated. Verified admits it "cannot be fully verified". Keep. |
+| V3-Q13 | F / F | CS (low) | The experiments were run "under scientifically controlled conditions"; the criticism is about realism, not validity. F is defensible. Keep. |
+| V4-Q10 | CS / CS | F (medium) | Stress has other causes (conditions, hours, colleagues), so family time can't guarantee no stress, which leans False. But the passage doesn't address it directly. Keep CS. |
+| V5-Q12 | CS / CS | T (medium) | Verified: "variety ≠ number". Strict but valid. Keep CS. |
+| V6-Q14 | T (disputed) / T | CS | Existing dispute. Verified: "managers are staff and users, so they have passwords". It still doesn't show that *all* managers have *their own*. Keep as is. |
+| V7-Q14 | F (disputed) / F | CS | Existing dispute. Verified asserts "other causes would still have increased the damage", which the passage doesn't quantify. Keep as is. |
+
+## Not covered by the Verified PDF but had problems before
+
+- **N6/V8 (entrance test):** V8-Q06 (recomputed to Cannot say), V8-Q12 and V8-Q14 (disputed, ambiguous relation), N6-Q06 (42, recomputed + disputed),
+  N6-Q15 (464,800, recomputed + disputed), V8-Q04 (corrected word pair) and V8-Q02 (two grammatical readings). These can only be checked against
+  `pdf-pwc-entrance-test-amp-answer_compress.pdf` and `tools/verify_entrance.py`.
+- **English / Logic / Technical (180 generated questions):** no external source at all. The "least sure" list above still applies.
+
+## Stale explanations
+
+I checked all 204 covered explanations against the answer the site scores. The numerical ones were checked by script (does the scored
+option's value appear in the working) and then read one by one. I read all 104 verbal ones.
+
+- **No explanation contradicts its scored answer.** Every recomputed question shows the corrected working, and every disputed one explains the key it keeps.
+- The Verified PDF lists "WRONG EXPLANATION" items that are not in the notes above: N3-Q19 (Level 2/3 labels swapped), N4-Q16 (used 36 enquiries), and
+  N5-Q15 (units). **The site's explanations for all three are already correct.** So are N4-Q20 and the other items listed earlier.
+- **One wording issue, V2-Q15:** the explanation says "the extra cost falls on all the participating countries… **not just Italy and Britain**",
+  but the flag note on the same question says "the passage doesn't say whether other countries participate". The two contradict each other.
+  The answer (False) is unaffected. **Fixed** (see Decisions below).
+- **N1-Q19** (dropped) shows the PDF's working ending in "'24%'". That's intentional, because the question isn't scored and the flag note explains the slip.
+
+## Decisions (applied)
+
+Every other answer stays as it was. No scored answer changed. N1-Q13 now also accepts C.
+
+| Question | Scored | Change |
+|---|---|---|
+| N2-Q07 | B (unchanged) | Flag stays **disputed**. The note now gives both readings: the key's (29% share of the 8%-larger total + £100,000 → 31.31%, B) and the plain one ((1.16m + 0.1m) ÷ 4.32m = 29.2%, which matches no option; A is 29.7%). |
+| V2-Q11 | True (unchanged) | Flag changed from recomputed to **disputed**. The note says the original key and another source say Cannot say, because the passage speaks of employees who *categorised* their boss as incompetent (a perception), not bosses shown to be incompetent. `answerSource` stays `recomputed`, so the quiz still shows "Source PDF key: C · This site uses: A". |
+| V4-Q05 | False (unchanged) | Flag changed from recomputed to **disputed**. The note says the original key was True and another source says Cannot say, then explains why False is used: "set to rise to 40%" implies the current 65+ share is below 40%, so more than 60% are under 65 now, and even the projected 40% gives exactly 60%, not less. `answerSource` stays `recomputed`. |
+| N1-Q13 | B **or C** | New optional field `acceptedAnswers: ["B", "C"]` plus a **disputed** flag explaining that 1:1.28 and 0.78:1 are the same ratio. The explanation shows both divisions. |
+| V2-Q15 | False (unchanged) | The explanation no longer says "not just Italy and Britain". It now says Italy and Britain must increase their share, and that the passage doesn't say they cover the cost alone. |
+
+**Engine change for `acceptedAnswers` (small):** `data.js` gains `acceptedAnswers(q)` (the list, or just the scored answer) and
+`isAccepted(q, letter)`. The attempt score (`quiz.js`), the practice navigator colours (`quiz-view.js`), the option highlighting and the
+verdict (`render.js`) all use it. Every accepted option is highlighted green, and the verdict reads "Correct answers: B (1:1.28) or C (0.78:1)".
+`correctAnswer(q)` is unchanged, so saved attempts and the wrong-answer bank keep working. `tools/check_data.py` checks that
+`acceptedAnswers` lists 2+ distinct options, includes the scored answer and comes with a flag note.
+
+## Full comparison (all 204 covered questions)
+
+Verbal: T = True, F = False, CS = Cannot say. "Site scores" is `verifiedAnswer` if set, otherwise the PDF key, plus the flag type,
+**as it was during the pass, before the decisions above** (since then, N1-Q13 accepts B or C and is flagged disputed, and the flags for V2-Q11 and V4-Q05 are now disputed).
+
+**Numerical 1**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| N1-Q01 | B | D (recomputed) | D | D | fix confirmed |
+| N1-Q02 | B | D (recomputed) | D | D | fix confirmed |
+| N1-Q03 | B | B | B | B | ok |
+| N1-Q04 | C | C | C | C | ok |
+| N1-Q05 | B | B | B | B | ok |
+| N1-Q06 | C | C | C | C | ok |
+| N1-Q07 | C | E (recomputed) | E | E | fix confirmed |
+| N1-Q08 | A | A | A | A | ok |
+| N1-Q09 | E | E | E | E | ok |
+| N1-Q10 | E | E | E | C → **E** on recheck | **suspect** |
+| N1-Q11 | E | E | E | E | ok |
+| N1-Q12 | E | E | E | E | ok |
+| N1-Q13 | B | B | B | C (= B) | **suspect** |
+| N1-Q14 | B | B | B | B | ok |
+| N1-Q15 | A | A | A | A | ok |
+| N1-Q16 | C | C | C | C | ok |
+| N1-Q17 | A | A | A | A | ok |
+| N1-Q18 | C | C | C | C | ok |
+| N1-Q19 | B | — (not scored) (dropped) | no option | none (dropped) | fix confirmed |
+| N1-Q20 | C | C | C | C | ok |
+
+**Numerical 2**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| N2-Q01 | E | E | E | E (264) | ok |
+| N2-Q02 | E | D (recomputed) | D | D | fix confirmed |
+| N2-Q03 | D | D | D | D | ok |
+| N2-Q04 | C | C | C | C | ok |
+| N2-Q05 | A | A | A | A | ok |
+| N2-Q06 | C | C | C | C | ok |
+| N2-Q07 | B | B (disputed) | A | 29.2% → nearest A | **needs decision** |
+| N2-Q08 | C | C | C | C | ok |
+| N2-Q09 | A | A | A | A | ok |
+| N2-Q10 | A | A | A | A | ok |
+| N2-Q11 | B | B (disputed) | B | B (58,000 typo) | ok |
+| N2-Q12 | E | E | E | E | ok |
+| N2-Q13 | D | D | D | D | ok |
+| N2-Q14 | C | C | C | C | ok |
+| N2-Q15 | B | B | B | B | ok |
+| N2-Q16 | B | B | B | B | ok |
+| N2-Q17 | B | A (recomputed) | A | A | fix confirmed |
+| N2-Q18 | B | B | B | B | ok |
+| N2-Q19 | C | C | C | C | ok |
+| N2-Q20 | C | C | C | C | ok |
+
+**Numerical 3**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| N3-Q01 | C | C (disputed) | C | C | ok |
+| N3-Q02 | B | B | B | B | ok |
+| N3-Q03 | C | C | C | C | ok |
+| N3-Q04 | B | E (disputed) | E | E | fix confirmed |
+| N3-Q05 | E | E | E | E | ok |
+| N3-Q06 | A | A | A | A | ok |
+| N3-Q07 | D | D | D | D | ok |
+| N3-Q08 | D | E (recomputed) | E | E | fix confirmed |
+| N3-Q09 | E | E | E | E | ok |
+| N3-Q10 | E | E | E | E | ok |
+| N3-Q11 | C | C | C | C | ok |
+| N3-Q12 | E | E | E | E | ok |
+| N3-Q13 | D | D | D | D | ok |
+| N3-Q14 | E | E | E | E | ok |
+| N3-Q15 | D | D | D | D | ok |
+| N3-Q16 | C | C | C | C | ok |
+| N3-Q17 | A | A | A | A | ok |
+| N3-Q18 | D | D | D | D | ok |
+| N3-Q19 | D | D | D | D | ok |
+| N3-Q20 | D | D | D | D | ok |
+
+**Numerical 4**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| N4-Q01 | D | D | D | D | ok |
+| N4-Q02 | A | A | A | A | ok |
+| N4-Q03 | A | A | A | A | ok |
+| N4-Q04 | E | E | E | E | ok |
+| N4-Q05 | C | C | C | C | ok |
+| N4-Q06 | A | A | A | A | ok |
+| N4-Q07 | E | E | E | E | ok |
+| N4-Q08 | B | B | B | B | ok |
+| N4-Q09 | C | C | C | C | ok |
+| N4-Q10 | A | A | A | A | ok |
+| N4-Q11 | E | E | E | E | ok |
+| N4-Q12 | C | C | C | C | ok |
+| N4-Q13 | A | A | A | A | ok |
+| N4-Q14 | C | C | C | C | ok |
+| N4-Q15 | A | A | A | A | ok |
+| N4-Q16 | C | C | C | C | ok |
+| N4-Q17 | E | E | E | E | ok |
+| N4-Q18 | C | C | C | C | ok |
+| N4-Q19 | A | A | A | A | ok |
+| N4-Q20 | C | C | C | C | ok |
+
+**Numerical 5**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| N5-Q01 | A | A | A | A | ok |
+| N5-Q02 | A | A | A | A | ok |
+| N5-Q03 | D | D | D | D | ok |
+| N5-Q04 | B | B | B | B | ok |
+| N5-Q05 | C | C | C | C | ok |
+| N5-Q06 | C | C | C | C | ok |
+| N5-Q07 | B | B | B | B | ok |
+| N5-Q08 | B | B | B | B | ok |
+| N5-Q09 | E | E | E | E | ok |
+| N5-Q10 | A | A | A | A | ok |
+| N5-Q11 | E | E | E | E | ok |
+| N5-Q12 | C | C | C | C | ok |
+| N5-Q13 | D | D | D | D | ok |
+| N5-Q14 | A | A | A | A | ok |
+| N5-Q15 | D | D | D | D | ok |
+| N5-Q16 | E | E | E | E | ok |
+| N5-Q17 | D | D | D | D | ok |
+| N5-Q18 | E | E | E | E | ok |
+| N5-Q19 | D | D | D | D | ok |
+| N5-Q20 | B | B | B | B | ok |
+
+**Verbal 1**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| V1-Q01 | CS | CS | CS | CS | ok |
+| V1-Q02 | CS | CS | CS | F | **suspect** |
+| V1-Q03 | T | T | T | T | ok |
+| V1-Q04 | CS | CS | CS | CS | ok |
+| V1-Q05 | CS | CS | CS | CS | ok |
+| V1-Q06 | CS | CS | CS | CS | ok |
+| V1-Q07 | F | F | F | F | ok |
+| V1-Q08 | CS | CS | CS | CS | ok |
+| V1-Q09 | F | F | F | F | ok |
+| V1-Q10 | T | T | T | T | ok |
+| V1-Q11 | F | F | F | F | ok |
+| V1-Q12 | CS | CS | CS | CS | ok |
+| V1-Q13 | T | CS (recomputed) | CS | CS | fix confirmed |
+| V1-Q14 | F | F | F | CS | **suspect** |
+| V1-Q15 | T | T | T | T | ok |
+
+**Verbal 2**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| V2-Q01 | T | T | T | T | ok |
+| V2-Q02 | F | F (disputed) | F | CS | **suspect** |
+| V2-Q03 | T | CS (recomputed) | CS | CS | fix confirmed |
+| V2-Q04 | CS | CS | CS | CS | ok |
+| V2-Q05 | CS | CS | CS | CS | ok |
+| V2-Q06 | CS | CS | CS | F | **suspect** |
+| V2-Q07 | F | F | F | F | ok |
+| V2-Q08 | T | T | T | T | ok |
+| V2-Q09 | CS | CS | CS | CS | ok |
+| V2-Q10 | CS | CS (truncated) | CS | CS | ok |
+| V2-Q11 | CS | T (recomputed) | CS | T | **needs decision** |
+| V2-Q12 | T | T | T | T | ok |
+| V2-Q13 | T | T (disputed) | T | CS | **suspect** |
+| V2-Q14 | CS | CS | CS | CS | ok |
+| V2-Q15 | F | F (disputed) | F | CS | **suspect** |
+
+**Verbal 3**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| V3-Q01 | — (none) | CS (missing-key) | CS | CS | fix confirmed |
+| V3-Q02 | T | T | T | T | ok |
+| V3-Q03 | F | F | F | F | ok |
+| V3-Q04 | T | T | T | T | ok |
+| V3-Q05 | CS | CS | CS | CS | ok |
+| V3-Q06 | CS | CS | CS | CS | ok |
+| V3-Q07 | CS | CS (truncated) | CS | CS | ok |
+| V3-Q08 | F | F | F | F | ok |
+| V3-Q09 | T | CS (recomputed) | CS | CS | fix confirmed |
+| V3-Q10 | F | F | F | CS | **suspect** |
+| V3-Q11 | CS | CS | CS | CS | ok |
+| V3-Q12 | T | T (truncated) | T | CS (visible text) | **suspect** |
+| V3-Q13 | F | F | F | CS | **suspect** |
+| V3-Q14 | T | T | T | T | ok |
+| V3-Q15 | CS | CS | CS | CS | ok |
+
+**Verbal 4**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| V4-Q01 | F | F | F | F | ok |
+| V4-Q02 | CS | CS | CS | CS | ok |
+| V4-Q03 | F | F | F | F | ok |
+| V4-Q05 | T | F (recomputed) | CS | F | **needs decision** |
+| V4-Q06 | F | T (recomputed) | T | T | fix confirmed |
+| V4-Q07 | CS | CS | CS | CS | ok |
+| V4-Q08 | T | T | T | T | ok |
+| V4-Q09 | CS | CS (truncated) | CS | CS | ok |
+| V4-Q10 | CS | CS | CS | F | **suspect** |
+| V4-Q11 | F | F | F | F | ok |
+| V4-Q12 | CS | CS | CS | CS | ok |
+| V4-Q13 | T | T | T | T | ok |
+| V4-Q14 | T | T | T | T | ok |
+| V4-Q15 | CS | CS (truncated) | CS | CS | ok |
+
+**Verbal 5**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| V5-Q01 | CS | CS | CS | CS | ok |
+| V5-Q02 | CS | CS | CS | CS | ok |
+| V5-Q03 | T | T | T | T | ok |
+| V5-Q04 | T | T | T | T | ok |
+| V5-Q05 | CS | CS | CS | CS | ok |
+| V5-Q06 | T | T | T | T | ok |
+| V5-Q07 | T | T | T | T | ok |
+| V5-Q08 | T | T | T | T | ok |
+| V5-Q09 | F | F | F | F | ok |
+| V5-Q10 | CS | CS | CS | CS | ok |
+| V5-Q11 | F | F | F | F | ok |
+| V5-Q12 | CS | CS | CS | T | **suspect** |
+| V5-Q13 | F | F | F | F | ok |
+| V5-Q14 | CS | CS | CS | CS | ok |
+| V5-Q15 | T | T | T | T | ok |
+
+**Verbal 6**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| V6-Q01 | F | F | F | F | ok |
+| V6-Q02 | CS | CS | CS | CS | ok |
+| V6-Q03 | F | F | F | F | ok |
+| V6-Q04 | T | T | T | T | ok |
+| V6-Q05 | T | T | T | T | ok |
+| V6-Q06 | F | F | F | F | ok |
+| V6-Q07 | CS | CS | CS | CS | ok |
+| V6-Q08 | T | T | T | T | ok |
+| V6-Q09 | T | T | T | T | ok |
+| V6-Q10 | F | F | F | F | ok |
+| V6-Q11 | CS | CS | CS | CS | ok |
+| V6-Q12 | F | F | F | F | ok |
+| V6-Q13 | CS | CS | CS | CS | ok |
+| V6-Q14 | T | T (disputed) | T | CS | **suspect** |
+| V6-Q15 | F | F | F | F | ok |
+
+**Verbal 7**
+
+| Question | PDF key | Site scores | Verified PDF | Mine (blind) | Class |
+|---|---|---|---|---|---|
+| V7-Q01 | F | F | F | F | ok |
+| V7-Q02 | CS | CS | CS | CS | ok |
+| V7-Q03 | T | T | T | T | ok |
+| V7-Q04 | CS | CS | CS | CS | ok |
+| V7-Q05 | F | F | F | F | ok |
+| V7-Q06 | CS | T (recomputed) | T | T | fix confirmed |
+| V7-Q07 | T | T | T | T | ok |
+| V7-Q08 | T | T | T | T | ok |
+| V7-Q09 | CS | CS | CS | CS | ok |
+| V7-Q10 | F | F | F | F | ok |
+| V7-Q11 | T | T | T | T | ok |
+| V7-Q12 | CS | CS | CS | CS | ok |
+| V7-Q13 | T | T | T | T | ok |
+| V7-Q14 | F | F (disputed) | F | CS | **suspect** |
+| V7-Q15 | CS | CS | CS | CS | ok |

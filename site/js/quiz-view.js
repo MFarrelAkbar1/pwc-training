@@ -1,7 +1,7 @@
 // The question screen, for both exam mode (timed, answers revealed at the end)
 // and practice mode (untimed, feedback after each answer).
 import { el, clear, showModal, closeModals, formatTime } from "./dom.js";
-import { correctAnswer, sectionOf } from "./data.js";
+import { isScored, isAccepted, sectionOf } from "./data.js";
 import { createQuiz, buildAttempt, secondsLeft, elapsedSeconds } from "./quiz.js";
 import { renderContext, contextKey, contextTitle, sourceLabel, renderOptions, renderAnswerReview, renderFlag,
   renderGenerated, renderQuestionImage } from "./render.js";
@@ -140,8 +140,8 @@ function drawNavigator() {
       const chosen = quiz.answers[q.id];
       const classes = ["nav-btn"];
       if (chosen != null) classes.push("answered");
-      if (quiz.mode === "practice" && chosen != null && correctAnswer(q) != null) {
-        classes.push(chosen === correctAnswer(q) ? "right" : "wrong");
+      if (quiz.mode === "practice" && chosen != null && isScored(q)) {
+        classes.push(isAccepted(q, chosen) ? "right" : "wrong");
       }
       if (quiz.marked.has(q.id)) classes.push("marked");
       if (i === quiz.index) classes.push("current");

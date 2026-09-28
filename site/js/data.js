@@ -87,6 +87,16 @@ export function correctAnswer(q) {
 
 export const isScored = (q) => correctAnswer(q) != null;
 
+// Every letter that counts as correct. Usually just correctAnswer(q); acceptedAnswers lists more
+// when two options are equally right (e.g. the same ratio written two ways).
+export function acceptedAnswers(q) {
+  const correct = correctAnswer(q);
+  if (correct == null) return [];
+  return q.acceptedAnswers ?? [correct];
+}
+
+export const isAccepted = (q, letter) => letter != null && acceptedAnswers(q).includes(letter);
+
 export function shuffle(items) {
   const a = [...items];
   for (let i = a.length - 1; i > 0; i--) {

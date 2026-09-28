@@ -182,8 +182,8 @@
       "answerSource": "recomputed",
       "explanation": "Employees who rated their boss incompetent were 25% more at risk of serious heart disease, even after other factors were accounted for.",
       "flag": {
-        "type": "recomputed",
-        "note": "The PDF says Cannot say. Employees who rated their boss incompetent were 25% more at risk of serious heart disease, with external factors taken into account — that is a stated link."
+        "type": "disputed",
+        "note": "The original key and another source say Cannot say: the passage speaks of employees who categorised their boss as incompetent (a perception), not of bosses shown to be incompetent. This site uses True: those employees were 25% more at risk of serious heart disease, with external factors taken into account, which is a stated link."
       }
     },
     {
@@ -238,7 +238,7 @@
         "C": "Cannot say"
       },
       "answer": "B",
-      "explanation": "The extra cost falls on all the participating countries that signed up, not just Italy and Britain. The source key was False; some readings differ.",
+      "explanation": "Costs have risen (the budget almost doubled), and the increase is met by the participating countries that signed up. The passage says Italy and Britain must increase their share; it doesn't say they cover the cost alone. The source key was False; some readings differ.",
       "flag": {
         "type": "disputed",
         "note": "Alternative reading (less likely): Cannot say. Costs have risen (the budget almost doubled) and are met by 'the participating countries', including Italy and Britain. The passage doesn't say whether other countries participate, so it neither confirms nor rules out that Italy and Britain cover the cost."

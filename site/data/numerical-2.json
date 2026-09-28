@@ -200,7 +200,7 @@
       "options": { "A": "29.7%", "B": "31.31%", "C": "38.43%", "D": "30.3%", "E": "Cannot Say" },
       "answer": "B",
       "explanation": "PDF: new total = 1.08 × 4,000,000 = 4,320,000. Exploration = 29% × 4,320,000 + 100,000 = 1,352,800. 1,352,800 ÷ 4,320,000 = 31.31%.",
-      "flag": { "type": "disputed", "note": "Ambiguous. The PDF grows exploration by 8% too and then adds £100,000. Reading 'an additional £100,000' as 2008 exploration + £100,000 gives (1,160,000 + 100,000) ÷ 4,320,000 = 29.2%, which matches no option exactly." }
+      "flag": { "type": "disputed", "note": "Ambiguous; two readings. The key's reading: exploration keeps its 29% share of the 8%-larger total and then gets an extra £100,000: (0.29 × 4,320,000 + 100,000) ÷ 4,320,000 = 31.31% (B). The plain reading: 2009 exploration = 2008 exploration + £100,000: (1,160,000 + 100,000) ÷ 4,320,000 = 29.2%, which matches no option exactly (A is 29.7%). The site keeps the key, B." }
     },
     {
       "id": "N2-Q08", "dataset": "vehicles",

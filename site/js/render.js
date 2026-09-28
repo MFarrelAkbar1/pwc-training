@@ -1,6 +1,6 @@
 // Pieces of the question screen shared by the quiz and the results review.
 import { el, fmt } from "./dom.js";
-import { SECTIONS, correctAnswer, testOf, testIdOf, sectionOf } from "./data.js";
+import { SECTIONS, acceptedAnswers, isAccepted, testOf, testIdOf, sectionOf } from "./data.js";
 import { drawChart, chartHeight, describeChart } from "./charts.js";
 
 // ---------- chart / table / passage panel ----------
@@ -104,13 +104,13 @@ export function optionLabel(q, letter) {
 
 // revealed = show which option is right/wrong. Without onPick the buttons are read-only.
 export function renderOptions(q, { chosen, revealed, onPick }) {
-  const correct = correctAnswer(q);
+  const accepted = acceptedAnswers(q);
   return el("div", { class: "options", role: "radiogroup", "aria-label": "Answer options" },
     ...Object.entries(q.options).map(([letter, text]) => {
       const classes = ["option"];
       if (letter === chosen) classes.push("selected");
-      if (revealed && correct != null) {
-        if (letter === correct) classes.push("correct");
+      if (revealed && accepted.length) {
+        if (accepted.includes(letter)) classes.push("correct");
         else if (letter === chosen) classes.push("wrong");
       }
       return el("button", {
@@ -125,12 +125,13 @@ export function renderOptions(q, { chosen, revealed, onPick }) {
 
 // Verdict + explanation, shown after answering (practice) and on the results screen.
 export function renderAnswerReview(q, chosen) {
-  const correct = correctAnswer(q);
+  const accepted = acceptedAnswers(q);
+  const answerText = `Correct answer${accepted.length > 1 ? "s" : ""}: ${accepted.map((l) => optionLabel(q, l)).join(" or ")}`;
   let verdict;
-  if (correct == null) verdict = el("p", { class: "verdict neutral" }, "Not scored");
-  else if (chosen == null) verdict = el("p", { class: "verdict bad" }, `Not answered. Correct answer: ${optionLabel(q, correct)}`);
-  else if (chosen === correct) verdict = el("p", { class: "verdict good" }, "✓ Correct");
-  else verdict = el("p", { class: "verdict bad" }, `✗ Your answer: ${optionLabel(q, chosen)}. Correct answer: ${optionLabel(q, correct)}`);
+  if (!accepted.length) verdict = el("p", { class: "verdict neutral" }, "Not scored");
+  else if (chosen == null) verdict = el("p", { class: "verdict bad" }, `Not answered. ${answerText}`);
+  else if (isAccepted(q, chosen)) verdict = el("p", { class: "verdict good" }, "✓ Correct");
+  else verdict = el("p", { class: "verdict bad" }, `✗ Your answer: ${optionLabel(q, chosen)}. ${answerText}`);
   return el("div", { class: "review" },
     verdict,
     q.explanation && el("p", { class: "explanation" }, el("strong", {}, "Explanation: "), q.explanation));

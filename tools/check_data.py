@@ -110,6 +110,15 @@ def check_test(path):
                 say(f"{qid}: dropped question should have verifiedAnswer null")
             if q["answerSource"] == "recomputed" and va not in q["options"]:
                 say(f"{qid}: verifiedAnswer {va!r} not an option")
+        if "acceptedAnswers" in q:
+            acc = q["acceptedAnswers"]
+            if not isinstance(acc, list) or len(acc) < 2 or len(set(acc)) != len(acc) \
+                    or any(a not in q["options"] for a in acc):
+                say(f"{qid}: acceptedAnswers {acc!r} must list 2+ distinct options")
+            elif effective_answer(q) not in acc:
+                say(f"{qid}: acceptedAnswers {acc!r} doesn't include the scored answer {effective_answer(q)!r}")
+            if not q.get("flag"):
+                say(f"{qid}: acceptedAnswers set but no flag note")
         if q.get("flag") and q["flag"]["type"] not in FLAGS:
             say(f"{qid}: bad flag type {q['flag']['type']!r}")
         if q.get("flag") is None and "answerSource" in q:

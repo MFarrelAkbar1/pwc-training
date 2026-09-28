@@ -226,8 +226,12 @@
       "text": "What is the ratio of the number of tornados in 2008 to those in 2005?",
       "options": { "A": "1.36:1", "B": "1:1.28", "C": "0.78:1", "D": "1.26:1", "E": "3.1:2" },
       "answer": "B",
-      "explanation": "2008 : 2005 = 297 : 380 = 1 : 1.28.",
-      "flag": null
+      "acceptedAnswers": ["B", "C"],
+      "explanation": "2008 : 2005 = 297 : 380. Dividing by 297 gives 1 : 1.28 (B); dividing by 380 gives 0.78 : 1 (C). Both are the same ratio, so both count as correct.",
+      "flag": {
+        "type": "disputed",
+        "note": "Two options are the same ratio: 297 : 380 = 1 : 1.28 (B) = 0.78 : 1 (C). The source key gives only B, but C is equally correct, so this site accepts either."
+      }
     },
     {
       "id": "N1-Q14", "dataset": "tornados",

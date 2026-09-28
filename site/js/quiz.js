@@ -1,5 +1,5 @@
 // Quiz state and scoring. No DOM code here.
-import { correctAnswer } from "./data.js";
+import { correctAnswer, isAccepted } from "./data.js";
 
 // set = { kind, id, section, title, timeLimitSec, questions } (see data.js)
 export function createQuiz({ set, mode, timeLimitSec }) {
@@ -33,7 +33,7 @@ export function buildAttempt(quiz) {
   const results = quiz.questions.map((q) => {
     const correct = correctAnswer(q);
     const chosen = quiz.answers[q.id] ?? null;
-    return { id: q.id, chosen, correct, scored: correct != null, isCorrect: correct != null && chosen === correct };
+    return { id: q.id, chosen, correct, scored: correct != null, isCorrect: isAccepted(q, chosen) };
   });
   const scored = results.filter((r) => r.scored);
   return {

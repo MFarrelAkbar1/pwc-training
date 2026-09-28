@@ -81,8 +81,8 @@
       "answerSource": "recomputed",
       "explanation": "The 65+ share is 'set to rise' to 40%, so today more than 60% are under 65.",
       "flag": {
-        "type": "recomputed",
-        "note": "The passage says the share aged 65+ in Japan and Germany 'is set to rise to 40%' — so today it is below 40%, meaning more than 60% are under 65. Even once it reaches 40%, exactly 60% would be under 65, not less. The statement is False."
+        "type": "disputed",
+        "note": "The original key was True, and another source says Cannot say (it reads the 40% as only a future projection). This site uses False: 'is set to rise to 40%' implies the current 65+ share is below 40%, so more than 60% are currently under 65. Even the projected 40% would give exactly 60% under 65, not less than 60%."
       }
     },
     {
