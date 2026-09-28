@@ -158,11 +158,13 @@
     "E": "Figure E"
    },
    "answer": "D",
+   "verifiedAnswer": "B",
+   "answerSource": "recomputed",
    "explanation": "",
    "source": "imported",
    "flag": {
-    "type": "disputed",
-    "note": "Every symbol moves one side anticlockwise each step, and figure 5 repeats figure 1. The black dot goes out, out, in, out, out, so next it goes in, on the lower left: that is B. The key's D has the black dot at the upper right and the white circle outside on the lower left, which breaks the anticlockwise movement."
+    "type": "recomputed",
+    "note": "Source key was D; this site scores B by review decision. Every symbol moves one side anticlockwise each step, and the black dot goes out, out, in, out, out, so next it is inside on the lower left: B. D puts the black dot at the upper right and the white circle outside on the lower left, which breaks the anticlockwise movement."
    }
   },
   {

@@ -14,8 +14,9 @@ cells a row, which is what import_figural_bank.py re-lays its strips into, so it
 watermarks on 12–16 are left in.
 
 The key is read from the "Jawaban" lines on pages 2–3. It exists only once per question, so there is nothing to
-cross-check it against (see REVIEW.md). "answer" is always that source key. Decisions from the review live in the
-tables below (AMBIGUOUS, DISPUTED, EXPLANATIONS), so re-running the script keeps them. The blind answers are in
+cross-check it against (see REVIEW.md). "answer" is always that source key; it is also the scored answer, except for
+the OVERRIDES (scored letter in "verifiedAnswer") and the AMBIGUOUS questions (not scored). Decisions from the review
+live in the tables below (AMBIGUOUS, DISPUTED, OVERRIDES, EXPLANATIONS), so re-running the script keeps them. The blind answers are in
 tools/figural_tests_blind_answers.txt. The timer is FIGURAL_TESTS_MINUTES in site/js/data.js.
 
 Run:  python tools/import_figural_tests.py
@@ -66,10 +67,15 @@ AMBIGUOUS = {
 }
 
 # The blind answer differs from the source key and the question is not ambiguous: keep the key, show a note.
-DISPUTED = {
-    8: "Every symbol moves one side anticlockwise each step, and figure 5 repeats figure 1. The black dot goes out, "
-       "out, in, out, out, so next it goes in, on the lower left: that is B. The key's D has the black dot at the "
-       "upper right and the white circle outside on the lower left, which breaks the anticlockwise movement.",
+DISPUTED = {}
+
+# The site scores a different answer than the source key, by review decision: source no. -> (scored letter, note).
+# The source key stays in "answer"; "verifiedAnswer" is the scored letter, answerSource and flag "recomputed".
+OVERRIDES = {
+    8: ("B", "Source key was D; this site scores B by review decision. Every symbol moves one side anticlockwise "
+             "each step, and the black dot goes out, out, in, out, out, so next it is inside on the lower left: B. "
+             "D puts the black dot at the upper right and the white circle outside on the lower left, which breaks "
+             "the anticlockwise movement."),
 }
 
 # One-line explanation of the rule, only where I'm sure of it. Missing = empty explanation (listed in REVIEW.md).
@@ -151,10 +157,15 @@ def build_test(key):
         if n in AMBIGUOUS:
             q["verifiedAnswer"] = None
             q["answerSource"] = "dropped"
+        elif n in OVERRIDES:
+            q["verifiedAnswer"] = OVERRIDES[n][0]
+            q["answerSource"] = "recomputed"
         q["explanation"] = EXPLANATIONS.get(n, "")
         q["source"] = "imported"
         if n in AMBIGUOUS:
             q["flag"] = {"type": "ambiguous", "note": AMBIGUOUS[n]}
+        elif n in OVERRIDES:
+            q["flag"] = {"type": "recomputed", "note": OVERRIDES[n][1]}
         elif n in DISPUTED:
             q["flag"] = {"type": "disputed", "note": DISPUTED[n]}
         questions.append(q)
@@ -170,7 +181,8 @@ def main():
     out.write_text(json.dumps(build_test(key), indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     scored = COUNT - len(AMBIGUOUS)
     print(f"wrote {out.relative_to(ROOT)}: source no. 1–{COUNT} ({scored} scored, {len(AMBIGUOUS)} dropped, "
-          f"{len(DISPUTED)} disputed); key: one copy only (pages 2–3), no cross-check possible")
+          f"{len(OVERRIDES)} overridden, {len(DISPUTED)} disputed); key: one copy only (pages 2–3), no cross-check "
+          "possible")
 
 
 if __name__ == "__main__":

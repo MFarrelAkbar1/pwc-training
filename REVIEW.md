@@ -879,7 +879,7 @@ dropped questions have no explanation; their flag note says why.
 
 16 picture questions from `figural-tests.pdf` (3 pages; not committed, ignored by `/*.pdf`; no full-page renders
 committed). Built by `python tools/import_figural_tests.py`, which reuses `GAP` and `save_image` from
-`import_figural_bank.py`. All review decisions live in the script's tables (`AMBIGUOUS`, `DISPUTED`, `EXPLANATIONS`),
+`import_figural_bank.py`. All review decisions live in the script's tables (`AMBIGUOUS`, `DISPUTED`, `OVERRIDES`, `EXPLANATIONS`),
 so re-running it keeps them. One subtest, **L10**, with source no. 1–16 in source order. Each question has
 `"source": "imported"`, the "Imported, key from source" label, a "Source no. N" label (`sourceRef`), and its `topic`
 (analogy / odd one out / series), which the results review shows as a chip. Timer: 16 minutes
@@ -923,12 +923,14 @@ the images.
 | 11 | A | Next is ↑ top, rectangle bottom and a *new* symbol on the right: A (S) and B (=) both fit |
 | 15 | B | Source key hedged; the blind check found B only with medium confidence (rule: dropped unless an independent high-confidence B) |
 
-**Disputed: 1, scored with the key.** **8** (key D): every symbol moves one side anticlockwise each step and figure 5
-repeats figure 1. The black dot goes out, out, in, out, out, so next it is inside on the lower left, which is B (the
-blind answer). D puts the black dot at the upper right and the white circle outside on the lower left. That breaks the
-anticlockwise movement, and it also breaks the source's own explanation, where the white circle alternates in/out. It
-is not dropped, because B fits and D doesn't. Under the editorial rules the key stays, with a "Disputed" note. (If the dot
-instead repeats every 4 steps, as all the others do, figure 6 would equal figure 2, which isn't offered either.)
+**Key overridden: 1.** **8** (source key D, **scored B** by review decision: `verifiedAnswer: "B"`,
+`answerSource: "recomputed"`, flag `recomputed`, source key kept in `answer`; `OVERRIDES` table in the script). Every
+symbol moves one side anticlockwise each step, and figure 5 repeats figure 1. The black dot goes out, out, in, out,
+out, so next it is inside on the lower left: B, the blind answer. D puts the black dot at the upper right and the
+white circle outside on the lower left. That breaks the anticlockwise movement, and it also breaks the source's own
+explanation, where the white circle alternates in/out. First imported as "disputed" and scored with D, then
+overridden to B. (If the dot instead repeated every 4 steps, as the other symbols do, figure 6 would equal figure 2,
+which isn't offered; B is the only option that fits any reading.) No question is left disputed.
 
 **Kept and scored, but note:**
 - **16** (key B, blind B low): the top box shows what the bottom-left box showed one step earlier, and each box steps
@@ -941,10 +943,10 @@ instead repeats every 4 steps, as all the others do, figure 6 would equal figure
 questions (2, 3, 5, 6, 12, 13, 14). **Empty: 7** (the key's symmetry rule; I can't state exactly which symmetry each
 figure has), **9** (the arrow's path is clear, but I can't state the triangle's rule with certainty), **10** (the
 figure is built up two strokes a step, but I can't state exactly which strokes come next), **16** (see above), and
-**8** (disputed; its flag note explains). The 4 dropped questions have no explanation; their flag note says why.
+**8** (key overridden; its flag note gives the rule). The 4 dropped questions have no explanation; their flag note says why.
 
 ### Least sure (figural-tests.pdf)
-1. **8** (scored D, disputed): the key looks wrong; B fits the movement rule.
+1. **8** (scored B, source key D overridden): B rests on reading the black dot's in/out pattern as repeating every 3 steps.
 2. **16** (scored B): bottom-right box only fits if it cycles through the wavy states; C = D.
 3. **15** (dropped, key B): B is plausible; dropped only because the source itself hedges.
 4. **4** (dropped, key B): the turn vs flip reading. A test maker would likely mean one of them.
