@@ -1,0 +1,349 @@
+{
+  "id": "E5",
+  "section": "english",
+  "test": 5,
+  "title": "English – Test 5: Written Expression",
+  "source": "generated",
+  "questions": [
+    {
+      "id": "E5-Q01",
+      "skill": "written expression",
+      "topic": "word form",
+      "difficulty": "easy",
+      "text": "The {A|ancient} Egyptians {B|developed} a calendar {C|base} on the {D|annual} flooding of the Nile.",
+      "options": {
+        "A": "ancient",
+        "B": "developed",
+        "C": "base",
+        "D": "annual"
+      },
+      "answer": "C",
+      "explanation": "\"Base\" must be the past participle \"based\": a calendar (that was) based on the flooding. \"Ancient\" and \"annual\" are adjectives correctly placed before nouns.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q02",
+      "skill": "written expression",
+      "topic": "singular/plural",
+      "difficulty": "easy",
+      "text": "Many {A|specie} of frogs {B|are} sensitive to small {C|changes} in {D|water quality}.",
+      "options": {
+        "A": "specie",
+        "B": "are",
+        "C": "changes",
+        "D": "water quality"
+      },
+      "answer": "A",
+      "explanation": "After \"many\" the noun must be plural: \"species\" (the same form for singular and plural). \"Are\" is correct because the subject is plural.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q03",
+      "skill": "written expression",
+      "topic": "verb tense",
+      "difficulty": "medium",
+      "text": "In 1928, Alexander Fleming {A|noticed} that a mold {B|has killed} the bacteria {C|growing} in one of {D|his} culture dishes.",
+      "options": {
+        "A": "noticed",
+        "B": "has killed",
+        "C": "growing",
+        "D": "his"
+      },
+      "answer": "B",
+      "explanation": "The killing happened before Fleming noticed it in the past, so it needs the past perfect \"had killed\". \"Growing\" is a correct reduced clause (\"that were growing\").",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q04",
+      "skill": "written expression",
+      "topic": "pronoun agreement",
+      "difficulty": "medium",
+      "text": "A young kangaroo {A|remains} in {B|its} mother's pouch {C|until} {D|they are} about eight months old.",
+      "options": {
+        "A": "remains",
+        "B": "its",
+        "C": "until",
+        "D": "they are"
+      },
+      "answer": "D",
+      "explanation": "The pronoun refers to \"a young kangaroo\", an animal in the singular, so it must be \"it is\". \"Its\" in B shows the correct pronoun for the same noun.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q05",
+      "skill": "written expression",
+      "topic": "preposition",
+      "difficulty": "medium",
+      "text": "The success of the experiment {A|depends} largely {B|in} the {C|accuracy} {D|of} the initial measurements.",
+      "options": {
+        "A": "depends",
+        "B": "in",
+        "C": "accuracy",
+        "D": "of"
+      },
+      "answer": "B",
+      "explanation": "The verb \"depend\" takes the preposition \"on\": \"depends largely on the accuracy\". \"Of\" in D is correct (\"the accuracy of the measurements\").",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q06",
+      "skill": "written expression",
+      "topic": "article",
+      "difficulty": "easy",
+      "text": "{A|An} unusual feature of {B|the} octopus is that it {C|has} three hearts and {D|a} blue blood.",
+      "options": {
+        "A": "An",
+        "B": "the",
+        "C": "has",
+        "D": "a"
+      },
+      "answer": "D",
+      "explanation": "\"Blood\" is an uncountable noun, so it takes no \"a\": \"three hearts and blue blood\". \"The octopus\" (B) is correct: \"the\" + singular noun can name a whole species.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q07",
+      "skill": "written expression",
+      "topic": "parallel structure",
+      "difficulty": "medium",
+      "text": "The study of volcanoes helps scientists {A|predict} eruptions, {B|protect} nearby communities, and {C|understanding} how the Earth's interior {D|works}.",
+      "options": {
+        "A": "predict",
+        "B": "protect",
+        "C": "understanding",
+        "D": "works"
+      },
+      "answer": "C",
+      "explanation": "The three items after \"helps scientists\" must be parallel base verbs: predict, protect, understand. \"Works\" (D) is correct; it agrees with \"the Earth's interior\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q08",
+      "skill": "written expression",
+      "topic": "word form",
+      "difficulty": "medium",
+      "text": "The {A|economy} growth of the Roman Empire {B|depended} heavily on trade routes {C|that} stretched {D|across} the Mediterranean.",
+      "options": {
+        "A": "economy",
+        "B": "depended",
+        "C": "that",
+        "D": "across"
+      },
+      "answer": "A",
+      "explanation": "Before the noun \"growth\" we need the adjective \"economic\", not the noun \"economy\". \"Depended\" (B) correctly takes \"on\", which follows it.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q09",
+      "skill": "written expression",
+      "topic": "verb tense",
+      "difficulty": "hard",
+      "text": "Scientists {A|have been studying} the Antarctic ice sheet {B|since} the 1950s, and last year they {C|have recorded} {D|its} fastest rate of melting.",
+      "options": {
+        "A": "have been studying",
+        "B": "since",
+        "C": "have recorded",
+        "D": "its"
+      },
+      "answer": "C",
+      "explanation": "A finished past time such as \"last year\" takes the simple past: \"recorded\", not the present perfect. \"Have been studying … since the 1950s\" (A) is correct because that action continues to now.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q10",
+      "skill": "written expression",
+      "topic": "singular/plural",
+      "difficulty": "easy",
+      "text": "The human skeleton {A|is made up} of more than two hundred {B|bone}, {C|which} support the body and {D|protect} its organs.",
+      "options": {
+        "A": "is made up",
+        "B": "bone",
+        "C": "which",
+        "D": "protect"
+      },
+      "answer": "B",
+      "explanation": "After a number greater than one the noun must be plural: \"two hundred bones\". \"Support\" and \"protect\" are plural because \"which\" refers to the bones.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q11",
+      "skill": "written expression",
+      "topic": "pronoun agreement",
+      "difficulty": "easy",
+      "text": "A mature oak tree {A|can absorb} large amounts of carbon dioxide {B|through} {C|their} leaves {D|each} year.",
+      "options": {
+        "A": "can absorb",
+        "B": "through",
+        "C": "their",
+        "D": "each"
+      },
+      "answer": "C",
+      "explanation": "The pronoun refers to \"a mature oak tree\" (singular, not a person), so it must be \"its leaves\". \"Can absorb\" (A) is a correct modal + base verb.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q12",
+      "skill": "written expression",
+      "topic": "preposition",
+      "difficulty": "medium",
+      "text": "{A|Contrary of} popular belief, bats are not blind; many species {B|can see} quite well and {C|rely on} echolocation mainly {D|to hunt} in darkness.",
+      "options": {
+        "A": "Contrary of",
+        "B": "can see",
+        "C": "rely on",
+        "D": "to hunt"
+      },
+      "answer": "A",
+      "explanation": "The fixed expression is \"contrary to\": \"Contrary to popular belief\". \"Rely on\" (C) is the correct preposition for \"rely\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q13",
+      "skill": "written expression",
+      "topic": "article",
+      "difficulty": "medium",
+      "text": "The Sahara is {A|a} largest hot desert in {B|the} world, {C|covering} {D|much} of North Africa.",
+      "options": {
+        "A": "a",
+        "B": "the",
+        "C": "covering",
+        "D": "much"
+      },
+      "answer": "A",
+      "explanation": "A superlative (\"largest\") takes \"the\": \"the largest hot desert\". \"The world\" (B) is correct because there is only one.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q14",
+      "skill": "written expression",
+      "topic": "parallel structure",
+      "difficulty": "medium",
+      "text": "Archaeologists study ancient cultures by examining tools, {A|analyzing} bones, and {B|they reconstruct} {C|buildings} {D|from} ruins.",
+      "options": {
+        "A": "analyzing",
+        "B": "they reconstruct",
+        "C": "buildings",
+        "D": "from"
+      },
+      "answer": "B",
+      "explanation": "All three items after \"by\" must be -ing forms: examining, analyzing, reconstructing. \"They reconstruct\" breaks the series with a full clause.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q15",
+      "skill": "written expression",
+      "topic": "word form",
+      "difficulty": "medium",
+      "text": "The population of the city {A|grew} {B|rapidly} during the nineteenth century, and its streets became {C|increasingly} {D|crowd}.",
+      "options": {
+        "A": "grew",
+        "B": "rapidly",
+        "C": "increasingly",
+        "D": "crowd"
+      },
+      "answer": "D",
+      "explanation": "After the linking verb \"became\" we need an adjective: \"crowded\". \"Rapidly\" (B) is correct: an adverb describing the verb \"grew\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q16",
+      "skill": "written expression",
+      "topic": "singular/plural",
+      "difficulty": "hard",
+      "text": "Auroras are among the most {A|beautiful} natural {B|phenomenon}, {C|appearing} as bands of colored light {D|near} the poles.",
+      "options": {
+        "A": "beautiful",
+        "B": "phenomenon",
+        "C": "appearing",
+        "D": "near"
+      },
+      "answer": "B",
+      "explanation": "\"Among the most beautiful …\" needs a plural noun, and the plural of \"phenomenon\" is \"phenomena\". \"Appearing\" (C) is a correct reduced clause describing the auroras.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q17",
+      "skill": "written expression",
+      "topic": "verb tense",
+      "difficulty": "hard",
+      "text": "By the end of the Ice Age, many large mammals {A|had disappeared} from North America, {B|probably} because of climate change and hunting {C|by} humans who {D|arrive} only recently.",
+      "options": {
+        "A": "had disappeared",
+        "B": "probably",
+        "C": "by",
+        "D": "arrive"
+      },
+      "answer": "D",
+      "explanation": "The humans' arrival happened before a past point (the end of the Ice Age), so it needs the past perfect \"had arrived\"; the present tense \"arrive\" doesn't fit a past narrative. \"Had disappeared\" (A) is the correct past perfect for the same reason.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q18",
+      "skill": "written expression",
+      "topic": "word form",
+      "difficulty": "medium",
+      "text": "The {A|discover} of oxygen in the 1770s {B|is} usually {C|credited} {D|to both} Joseph Priestley and Carl Scheele.",
+      "options": {
+        "A": "discover",
+        "B": "is",
+        "C": "credited",
+        "D": "to both"
+      },
+      "answer": "A",
+      "explanation": "The subject needs the noun \"discovery\", not the verb \"discover\". \"Credited to both\" (D) is correct (\"credit something to someone\").",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q19",
+      "skill": "written expression",
+      "topic": "comparison",
+      "difficulty": "hard",
+      "text": "The Nile, {A|which} flows {B|northward}, is longer than {C|any} river in Africa and {D|provides} water to eleven countries.",
+      "options": {
+        "A": "which",
+        "B": "northward",
+        "C": "any",
+        "D": "provides"
+      },
+      "answer": "C",
+      "explanation": "The Nile is itself a river in Africa, so the comparison must exclude it: \"longer than any other river in Africa\". Without \"other\" the sentence says the Nile is longer than itself. \"Provides\" (D) agrees with \"the Nile\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E5-Q20",
+      "skill": "written expression",
+      "topic": "word form",
+      "difficulty": "easy",
+      "text": "Glass is {A|made} by heating sand {B|to} a very high temperature and then {C|cooling} it {D|rapid}.",
+      "options": {
+        "A": "made",
+        "B": "to",
+        "C": "cooling",
+        "D": "rapid"
+      },
+      "answer": "D",
+      "explanation": "\"Rapid\" describes how the glass is cooled, so it must be the adverb \"rapidly\". \"Cooling\" (C) is correct: it is parallel with \"heating\" after \"by\".",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

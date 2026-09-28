@@ -1,0 +1,349 @@
+{
+  "id": "E4",
+  "section": "english",
+  "test": 4,
+  "title": "English – Test 4: Structure",
+  "source": "generated",
+  "questions": [
+    {
+      "id": "E4-Q01",
+      "skill": "structure",
+      "topic": "subject-verb agreement",
+      "difficulty": "easy",
+      "text": "The migration patterns of the monarch butterfly ______ scientists for more than a century.",
+      "options": {
+        "A": "has fascinated",
+        "B": "have fascinated",
+        "C": "fascinating",
+        "D": "to fascinate"
+      },
+      "answer": "B",
+      "explanation": "The subject is \"patterns\" (plural), so the verb is \"have fascinated\". \"Has fascinated\" is tempting because the nearest noun, \"butterfly\", is singular, but a prepositional phrase never changes the subject.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q02",
+      "skill": "structure",
+      "topic": "appositive",
+      "difficulty": "easy",
+      "text": "______, the largest planet in the solar system, has dozens of known moons.",
+      "options": {
+        "A": "Jupiter",
+        "B": "It is Jupiter",
+        "C": "Jupiter is",
+        "D": "Because Jupiter"
+      },
+      "answer": "A",
+      "explanation": "The sentence already has its verb (\"has\"); the blank needs only the subject, which the appositive \"the largest planet…\" then renames. \"Jupiter is\" adds a second verb, leaving \"has\" with no subject.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q03",
+      "skill": "structure",
+      "topic": "reduced clause",
+      "difficulty": "medium",
+      "text": "______ in 1869, the transcontinental railroad cut the journey across the United States from months to about a week.",
+      "options": {
+        "A": "Completed",
+        "B": "Completing",
+        "C": "It was completed",
+        "D": "Having completed"
+      },
+      "answer": "A",
+      "explanation": "A reduced passive clause (\"[It was] completed in 1869\") describes the subject, the railroad, which was completed by others. \"Having completed\" is active: it would mean the railroad completed something.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q04",
+      "skill": "structure",
+      "topic": "inversion",
+      "difficulty": "medium",
+      "text": "Rarely ______ a comet bright enough to be seen in daylight.",
+      "options": {
+        "A": "do astronomers observe",
+        "B": "astronomers observe",
+        "C": "astronomers do observe",
+        "D": "observe astronomers"
+      },
+      "answer": "A",
+      "explanation": "A negative adverb such as \"rarely\" at the start of a sentence requires question word order: auxiliary + subject + verb. \"Astronomers observe\" keeps normal order, which formal English doesn't allow after \"Rarely\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q05",
+      "skill": "structure",
+      "topic": "parallelism",
+      "difficulty": "easy",
+      "text": "Coral reefs protect coastlines, provide habitat for fish, and ______ millions of visitors each year.",
+      "options": {
+        "A": "attracting",
+        "B": "they attract",
+        "C": "attract",
+        "D": "the attraction of"
+      },
+      "answer": "C",
+      "explanation": "The three verbs in the list share the subject \"coral reefs\" and must have the same form: protect, provide, attract. \"Attracting\" breaks the parallel series.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q06",
+      "skill": "structure",
+      "topic": "conditional",
+      "difficulty": "medium",
+      "text": "If the Earth's axis were not tilted, the planet ______ distinct seasons.",
+      "options": {
+        "A": "would not have",
+        "B": "will not have",
+        "C": "had not had",
+        "D": "does not have"
+      },
+      "answer": "A",
+      "explanation": "\"If … were not\" is an unreal present condition, so the result clause takes \"would\" + base verb. \"Will not have\" belongs to a real (first) conditional with a present-tense if-clause.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q07",
+      "skill": "structure",
+      "topic": "noun clause",
+      "difficulty": "medium",
+      "text": "______ the dinosaurs died out remains a subject of scientific debate.",
+      "options": {
+        "A": "Because",
+        "B": "Since",
+        "C": "Why",
+        "D": "For"
+      },
+      "answer": "C",
+      "explanation": "The blank starts a noun clause that is the subject of \"remains\"; \"Why the dinosaurs died out\" is such a clause. \"Because\" starts an adverb clause, which can't be the subject of a verb.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q08",
+      "skill": "structure",
+      "topic": "comparative",
+      "difficulty": "medium",
+      "text": "The deeper a diver descends, ______ the water pressure becomes.",
+      "options": {
+        "A": "greater",
+        "B": "the greater",
+        "C": "the greatest",
+        "D": "it is greater"
+      },
+      "answer": "B",
+      "explanation": "The double comparative is \"the + comparative …, the + comparative …\": \"The deeper …, the greater …\". \"Greater\" without \"the\" breaks the pattern, and \"the greatest\" is a superlative.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q09",
+      "skill": "structure",
+      "topic": "subject-verb agreement",
+      "difficulty": "medium",
+      "text": "The number of languages spoken worldwide ______ to be about seven thousand.",
+      "options": {
+        "A": "are estimated",
+        "B": "estimate",
+        "C": "estimating",
+        "D": "is estimated"
+      },
+      "answer": "D",
+      "explanation": "\"The number of …\" is singular (it is one number), so the verb is \"is estimated\". \"Are estimated\" would suit \"A number of languages\", which means \"many languages\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q10",
+      "skill": "structure",
+      "topic": "reduced clause",
+      "difficulty": "hard",
+      "text": "Most of the solar energy ______ the Earth's surface arrives as visible light or infrared radiation.",
+      "options": {
+        "A": "reaches",
+        "B": "reaching",
+        "C": "is reached",
+        "D": "that reach"
+      },
+      "answer": "B",
+      "explanation": "The main verb is \"arrives\", so the blank must be a reduced relative clause: \"energy reaching\" = \"energy that reaches\". \"That reach\" is tempting but disagrees with \"energy\", which is uncountable (singular); \"reaches\" would give the sentence two main verbs.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q11",
+      "skill": "structure",
+      "topic": "appositive",
+      "difficulty": "easy",
+      "text": "Marie Curie, ______ research on radioactivity earned her two Nobel Prizes, was born in Warsaw.",
+      "options": {
+        "A": "who",
+        "B": "whose",
+        "C": "which",
+        "D": "her"
+      },
+      "answer": "B",
+      "explanation": "The clause needs a possessive relative pronoun before the noun \"research\": \"whose research\". \"Who research\" and \"her research\" are ungrammatical here (\"her\" would create a run-on).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q12",
+      "skill": "structure",
+      "topic": "inversion",
+      "difficulty": "hard",
+      "text": "______ the Moon closer to Earth, ocean tides would be much stronger.",
+      "options": {
+        "A": "If",
+        "B": "Was",
+        "C": "Were",
+        "D": "Had"
+      },
+      "answer": "C",
+      "explanation": "This is an inverted unreal condition: \"Were the Moon closer\" = \"If the Moon were closer\". Formal English uses \"were\" for every subject here, so \"Was\" is wrong; \"If\" leaves the clause without a verb.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q13",
+      "skill": "structure",
+      "topic": "parallelism",
+      "difficulty": "easy",
+      "text": "The new vaccine is effective not only in adults ______ in young children.",
+      "options": {
+        "A": "and also",
+        "B": "but also",
+        "C": "as well",
+        "D": "or else"
+      },
+      "answer": "B",
+      "explanation": "The paired conjunction is \"not only … but also\". \"And also\" can't complete \"not only\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q14",
+      "skill": "structure",
+      "topic": "noun clause",
+      "difficulty": "easy",
+      "text": "The study found ______ honeybees can learn to recognize human faces.",
+      "options": {
+        "A": "what",
+        "B": "which",
+        "C": "about",
+        "D": "that"
+      },
+      "answer": "D",
+      "explanation": "\"Found\" takes a noun clause as its object, introduced by \"that\". \"What\" would need a gap in the clause (\"found what bees recognize\"), but \"honeybees can learn to recognize human faces\" is already complete.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q15",
+      "skill": "structure",
+      "topic": "comparative",
+      "difficulty": "medium",
+      "text": "The heart of a blue whale is roughly ______ a small car.",
+      "options": {
+        "A": "as large than",
+        "B": "larger as",
+        "C": "as large as",
+        "D": "so large that"
+      },
+      "answer": "C",
+      "explanation": "An equal comparison is \"as + adjective + as\". \"As large than\" and \"larger as\" mix the two comparison patterns (as … as / -er … than).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q16",
+      "skill": "structure",
+      "topic": "reduced clause",
+      "difficulty": "medium",
+      "text": "While ______ the Galápagos Islands, Charles Darwin collected specimens of finches and tortoises.",
+      "options": {
+        "A": "he exploring",
+        "B": "was exploring",
+        "C": "explored",
+        "D": "exploring"
+      },
+      "answer": "D",
+      "explanation": "\"While exploring\" is a reduced adverb clause (\"While he was exploring\"); the subject is dropped along with \"was\". \"Explored\" is passive in meaning here: Darwin was the explorer, not the thing explored.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q17",
+      "skill": "structure",
+      "topic": "subject-verb agreement",
+      "difficulty": "hard",
+      "text": "Among the oldest surviving written texts ______ the Epic of Gilgamesh.",
+      "options": {
+        "A": "are",
+        "B": "being",
+        "C": "have been",
+        "D": "is"
+      },
+      "answer": "D",
+      "explanation": "The sentence is inverted: the real subject comes after the verb, and it is \"the Epic of Gilgamesh\" (singular). \"Are\" is tempting because it follows the plural \"texts\", but that noun is inside the introductory prepositional phrase.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q18",
+      "skill": "structure",
+      "topic": "conditional",
+      "difficulty": "medium",
+      "text": "If current trends ______, the glacier will disappear within fifty years.",
+      "options": {
+        "A": "continued",
+        "B": "would continue",
+        "C": "had continued",
+        "D": "continue"
+      },
+      "answer": "D",
+      "explanation": "A real (first) conditional has a present-tense if-clause and \"will\" in the result: \"If current trends continue, … will disappear\". \"Continued\" would need \"would disappear\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q19",
+      "skill": "structure",
+      "topic": "appositive",
+      "difficulty": "medium",
+      "text": "The platypus, ______, is one of the few mammals that lay eggs.",
+      "options": {
+        "A": "is native to eastern Australia",
+        "B": "which native to eastern Australia",
+        "C": "a native of eastern Australia",
+        "D": "it is native to eastern Australia"
+      },
+      "answer": "C",
+      "explanation": "Between the commas the sentence needs an appositive (a noun phrase renaming \"the platypus\"), since the verb \"is\" comes later. \"Which native to…\" is a relative clause with no verb; the others add a second main verb.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E4-Q20",
+      "skill": "structure",
+      "topic": "comparative",
+      "difficulty": "hard",
+      "text": "Sound travels about four times ______ in water as in air.",
+      "options": {
+        "A": "as fast",
+        "B": "faster",
+        "C": "as faster",
+        "D": "so fast"
+      },
+      "answer": "A",
+      "explanation": "The sentence continues with \"as in air\", so it needs \"as fast … as\": \"four times as fast in water as in air\". \"Faster\" would need \"than\" (\"four times faster than in air\"), not \"as\".",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

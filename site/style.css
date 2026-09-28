@@ -205,6 +205,11 @@ thead th:first-child, tbody th { text-align: left; white-space: normal; font-wei
 .q-num { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
 .q-text { font-size: 1.05rem; font-weight: 500; margin: 0.6rem 0; }
 .hint { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 0.6rem; }
+/* Error-identification sentences: each underlined part has its letter beneath it. */
+.q-text:has(.ul-part) { line-height: 2.4; }
+.ul-part { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.3; vertical-align: top; }
+.ul-part u { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.ul-letter { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); }
 
 .options { display: grid; gap: 8px; margin: 12px 0; }
 .option {

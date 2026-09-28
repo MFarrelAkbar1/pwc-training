@@ -4,7 +4,7 @@ import { el, clear, showModal, closeModals, formatTime } from "./dom.js";
 import { isScored, isAccepted, sectionOf } from "./data.js";
 import { createQuiz, buildAttempt, secondsLeft, elapsedSeconds } from "./quiz.js";
 import { renderContext, contextKey, contextTitle, sourceLabel, renderOptions, renderAnswerReview, renderFlag,
-  renderGenerated, renderSourceRef, renderQuestionImage } from "./render.js";
+  renderGenerated, renderSourceRef, renderQuestionImage, renderQuestionText } from "./render.js";
 import { destroyCharts } from "./charts.js";
 import { recordAttempt } from "./storage.js";
 
@@ -105,7 +105,7 @@ function drawQuestion() {
       renderSourceRef(q),
       quiz.marked.has(q.id) && el("span", { class: "chip marked" }, "Marked for review")),
     renderFlag(q, revealed),
-    el("p", { class: "q-text" }, q.text),
+    renderQuestionText(q),
     renderQuestionImage(q),
     sectionOf(q) === "numerical" &&
       el("p", { class: "hint" }, "Estimate first, then calculate. Rule out options that are clearly too big or too small."),

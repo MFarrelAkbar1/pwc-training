@@ -34,6 +34,25 @@ export function sourceLabel(q) {
   return `${SECTIONS[sectionOf(q)].short} Test ${test.slice(1)} · Question ${Number(number.slice(1))}`;
 }
 
+// The question sentence. Error-identification questions (English 5 onwards) mark each underlined part as
+// {A|text}; those parts are drawn underlined with their letter beneath. Older questions are plain text.
+const UNDERLINED_PART = /\{([A-F])\|([^}]*)\}/g;
+
+export function renderQuestionText(q) {
+  const text = el("p", { class: "q-text" });
+  let last = 0;
+  for (const match of q.text.matchAll(UNDERLINED_PART)) {
+    text.append(q.text.slice(last, match.index),
+      el("span", { class: "ul-part" }, el("u", {}, match[2]), el("span", { class: "ul-letter" }, match[1])));
+    last = match.index + match[0].length;
+  }
+  text.append(q.text.slice(last));
+  if (last === 0) return text;
+  return el("div", {},
+    el("p", { class: "hint" }, "Choose the underlined part that must be changed for the sentence to be correct."),
+    text);
+}
+
 // The figure for a question that is itself a picture (Logic figure patterns).
 // Tapping it toggles a zoomed view that scrolls sideways, for small details on a phone.
 export function renderQuestionImage(q) {

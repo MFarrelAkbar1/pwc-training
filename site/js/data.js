@@ -12,6 +12,10 @@
 const FIGURAL_BANK_MINUTES = 17;
 // Timer for subtest 10 (figural-tests.pdf, 16 questions of mixed topics).
 const FIGURAL_TESTS_MINUTES = 16;
+// English tests 4–6 (20 questions each), one timer per question type, at TOEFL ITP pace:
+// Structure and Written Expression: 40 questions in 25 minutes ≈ 37.5 s each, so 20 questions ≈ 13 minutes.
+// Reading: about 1 minute per question plus ~1.5 minutes to read each ~300-word passage: 20 + 3 × 1.5 ≈ 25 minutes.
+const ENGLISH_MINUTES = { structure: 13, writtenExpression: 13, reading: 25 };
 
 export const SECTIONS = {
   numerical: {
@@ -22,7 +26,15 @@ export const SECTIONS = {
     name: "Verbal Reasoning", short: "Verbal", prefix: "V", tests: [1, 2, 3, 4, 5, 6, 7, 8], minutes: 8, questions: 15,
     testMinutes: { 8: 15 },
   },
-  english: { name: "English (TOEFL-style)", short: "English", prefix: "E", tests: [1, 2, 3], minutes: 15, questions: 20, generated: true },
+  english: {
+    name: "English (TOEFL-style)", short: "English", prefix: "E", tests: [1, 2, 3, 4, 5, 6], minutes: 15, questions: 20,
+    generated: true,
+    // Tests 1–3 mix all three question types (15 minutes each, timeLimitSec in their JSON).
+    testMinutes: { 4: ENGLISH_MINUTES.structure, 5: ENGLISH_MINUTES.writtenExpression, 6: ENGLISH_MINUTES.reading },
+    testNames: {
+      1: "Mixed skills", 2: "Mixed skills", 3: "Mixed skills", 4: "Structure", 5: "Written Expression", 6: "Reading",
+    },
+  },
   logic: {
     name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], minutes: 10, questions: 15,
     generated: true,

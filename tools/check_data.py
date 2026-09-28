@@ -3,6 +3,7 @@
 Run:  python tools/check_data.py
 """
 import json
+import re
 from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent / "site"
@@ -24,6 +25,14 @@ GENERATED = {"english", "logic", "technical"}  # sections written for the site, 
 IMPORTED = {"L5": {"optionCounts": {5, 6}, "questions": 17},
             **{f"L{n}": {"optionCounts": {4}, "questions": 17} for n in (6, 7, 8, 9)},
             "L10": {"optionCounts": {4, 5}, "questions": 16, "topics": {"analogy", "odd one out", "series"}}}
+# English 4-6 each test one TOEFL ITP question type (tools/gen_english.py). Their timer lives in site/js/data.js
+# (ENGLISH_MINUTES), not in the JSON. Each has a 6 / 10 / 4 easy / medium / hard mix and uses A-D five times each.
+# Written Expression sentences mark their four underlined parts {A|…}…{D|…}; the options are those parts.
+ENGLISH_TYPED = {"E4": "structure", "E5": "written expression", "E6": "reading"}
+DIFFICULTY_MIX = {"easy": 6, "medium": 10, "hard": 4}
+UNDERLINED_PART = re.compile(r"\{([A-F])\|([^}]*)\}")
+PASSAGE_WORDS = (250, 350)
+PASSAGE_QUESTIONS = (6, 7)
 VERBAL_OPTIONS = {"A": "True", "B": "False", "C": "Cannot say"}
 CUT_MARKER = "[...text cut off in source]"
 
@@ -57,6 +66,62 @@ def check_passages(test, say):
             say(f"{q['id']}: no PDF key but not flagged missing-key")
 
 
+def check_english_typed(test, skill, say):
+    qs = test["questions"]
+    if len(qs) != 20:
+        say(f"{len(qs)} questions, expected 20")
+    if "timeLimitSec" in test:
+        say("typed English test: the timer belongs in data.js ENGLISH_MINUTES, not timeLimitSec")
+    mix = {d: sum(q.get("difficulty") == d for q in qs) for d in DIFFICULTY_MIX}
+    if mix != DIFFICULTY_MIX:
+        say(f"difficulty mix {mix}, expected {DIFFICULTY_MIX}")
+    letters = {letter: sum(q.get("answer") == letter for q in qs) for letter in "ABCD"}
+    if set(letters.values()) != {len(qs) // 4}:
+        say(f"answers {letters} aren't spread evenly over A-D")
+    for q in qs:
+        if q.get("skill") != skill:
+            say(f"{q['id']}: skill {q.get('skill')!r}, expected {skill!r}")
+        if not q.get("topic"):
+            say(f"{q['id']}: no topic")
+        marks = UNDERLINED_PART.findall(q["text"])
+        if skill == "written expression":
+            if [m[0] for m in marks] != list("ABCD"):
+                say(f"{q['id']}: needs underlined parts {{A|…}} to {{D|…}} in order")
+            elif dict(marks) != q["options"]:
+                say(f"{q['id']}: options don't match the underlined parts")
+        elif marks:
+            say(f"{q['id']}: underlined-part marks outside a written-expression question")
+        elif skill == "structure" and q["text"].count("______") != 1:
+            say(f"{q['id']}: sentence needs exactly one blank")
+    if skill == "reading":
+        for key, p in test.get("passages", {}).items():
+            words = len(p["text"].split())
+            if not PASSAGE_WORDS[0] <= words <= PASSAGE_WORDS[1]:
+                say(f"passage {key}: {words} words, expected {PASSAGE_WORDS[0]}-{PASSAGE_WORDS[1]}")
+            used = sum(q.get("passage") == key for q in qs)
+            if not PASSAGE_QUESTIONS[0] <= used <= PASSAGE_QUESTIONS[1]:
+                say(f"passage {key}: {used} questions, expected {PASSAGE_QUESTIONS[0]}-{PASSAGE_QUESTIONS[1]}")
+        if any("passage" not in q for q in qs):
+            say("every reading question needs a passage")
+
+
+def english_timers_in_data_js():
+    """The English 4-6 timers: ENGLISH_MINUTES defined in data.js and used for all three tests."""
+    js = (SITE / "js" / "data.js").read_text(encoding="utf-8")
+    minutes = re.search(r"const ENGLISH_MINUTES = \{([^}]*)\}", js)
+    problems = []
+    if not minutes:
+        problems.append("data.js: ENGLISH_MINUTES missing")
+    else:
+        for key in ("structure", "writtenExpression", "reading"):
+            if not re.search(rf"\b{key}: \d+", minutes[1]):
+                problems.append(f"data.js: ENGLISH_MINUTES.{key} missing")
+    for n, key in ((4, "structure"), (5, "writtenExpression"), (6, "reading")):
+        if f"{n}: ENGLISH_MINUTES.{key}" not in js:
+            problems.append(f"data.js: English test {n} doesn't use ENGLISH_MINUTES.{key}")
+    return problems
+
+
 def check_test(path):
     test = json.loads(path.read_text(encoding="utf-8"))
     problems = []
@@ -69,6 +134,8 @@ def check_test(path):
             say("imported test: the timer belongs in data.js testMinutes, not timeLimitSec")
         if len(test["questions"]) != imported["questions"]:
             say(f"{len(test['questions'])} questions, expected {imported['questions']}")
+    elif test["id"] in ENGLISH_TYPED:
+        check_english_typed(test, ENGLISH_TYPED[test["id"]], say)
     else:
         expected = TIME_LIMIT[section][test["test"]] if section == "logic" else TIME_LIMIT[section]
         expected = ENTRANCE.get(test["id"], {}).get("timeLimitSec", expected)
@@ -170,6 +237,10 @@ def main():
         print(f"{path.name:<18} {n:>3} questions ({s} scored)  {status}")
         for p in problems:
             print("   -", p)
+    timer_problems = english_timers_in_data_js()
+    print(f"{'data.js':<18} English timers  {'ok' if not timer_problems else f'{len(timer_problems)} problem(s)'}")
+    for p in timer_problems:
+        print("   -", p)
     print()
     for section in total:
         print(f"{section.capitalize():<10} {total[section]:>3} questions, {scored[section]} scored")

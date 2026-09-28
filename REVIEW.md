@@ -253,13 +253,14 @@ solutions", "soluations", "It is be inferred"). V8-Q06's explanation is rewritte
 
 # Generated sections: English, Logic, Technical
 
-These 180 questions were **written for this site**, not taken from the PDF. Every one has
+These 240 questions were **written for this site**, not taken from the PDF. Every one has
 `"source": "generated"` and shows a "Generated · unverified" label. The section pages say that
 the questions haven't been checked against an official source.
 
 | Section | Tests | Questions | Timer | How answers were produced |
 |---|---|---|---|---|
 | English (TOEFL-style) | E1–E3 | 3 × 20 (8 sentence completion, 4 error spotting, 8 reading from 2 passages) | 15 min each | Written and checked by hand |
+| English (TOEFL-style) | E4–E6 | 3 × 20: Structure, Written Expression, Reading (3 passages) | 13 / 13 / 25 min | Written by hand in `tools/gen_english.py`, blind-checked (see "English 4–6" below) |
 | Logic (TPA-style) | L1–L4 | 4 × 15 | 10 / 12 / 8 / 12 min | **Computed** by `tools/gen_logic.py` (L1, L2, L4); L3 written by hand |
 | Technical (Risk Assurance) | T1–T3 | 3 × 20 (18 of 60 scenario-based; easy, medium and hard mixed) | 20 min each | Written and checked by hand |
 
@@ -297,6 +298,51 @@ Regenerate the Logic tests with `python tools/gen_logic.py` (seeded, so the outp
 | T1-Q14 | Evidence reliability ranking: a general rule with exceptions (e.g. a forged external document). |
 | T3-Q17, T3-Q20 | The "best next step" for suspected fraud and for leavers' active accounts can depend on firm policy. The answers follow common practice (escalate, don't act yourself). |
 | **All (fixed)** | The correct option used to be the longest in 52 of 60 Technical questions. `tools/rebalance_options.py` rewrote the options (shorter correct answers, longer distractors); now no Technical question has a correct option that is 3+ characters longer than every distractor, and each test uses A/B/C/D exactly 5 times. The only English exception is E3-Q02 ("would have bought" vs "had bought"), where the length difference *is* the grammar being tested. |
+
+## English 4–6: one test per TOEFL ITP question type
+
+Written for this site (original sentences and passages, not taken from TOEFL or prep books), in
+`tools/gen_english.py`, which writes `site/data/english-4..6.json`. Fix a question there and rerun it. Each test
+has 20 questions, 6 easy, 10 medium and 4 hard (`difficulty` field). A–D are each the answer 5 times, and every
+question has an explanation of the rule (or the passage line) plus why the most tempting wrong option fails.
+
+| Test | Content | Timer (`ENGLISH_MINUTES` in `site/js/data.js`) |
+|---|---|---|
+| E4 Structure | Sentence completion: subject-verb agreement, reduced clauses, inversion, parallelism, conditionals, noun clauses, appositives, comparatives | 13 min (ITP: 40 questions in 25 min ≈ 37.5 s each) |
+| E5 Written Expression | Error identification, 4 underlined parts, one wrong: word form, tense, pronouns, prepositions, articles, singular/plural, parallel structure, comparison | 13 min (same pace) |
+| E6 Reading | 3 passages (300–314 words: CAM photosynthesis, railway standard time, Ostrom and the commons), 7 + 7 + 6 questions: main idea, detail, inference, vocabulary, reference, author's purpose | 25 min (1 min per question + ~1.5 min to read each passage) |
+
+**Site change.** Error-identification sentences mark their parts as `{A|text}`. `renderQuestionText` in
+`site/js/render.js` draws them underlined with the letter beneath (quiz and results review). E1–E3 have no marks,
+so they render as before. `check_data.py` checks the typed tests: skill, difficulty mix, A–D spread, marks
+matching the options, passage length, 6–7 questions per passage, and the timers in `data.js`.
+`tools/rebalance_options.py` now only touches E1–E3 (and Technical), so rerunning it can't reshuffle E4–E6.
+
+**Quality check.**
+1. *Blind pass:* a fresh subagent answered all 60 questions without keys (`tools/english_blind_answers.txt`).
+   It agreed with all **60/60** keys. Its one "doubt" (E4-Q17) agreed with the key.
+2. *Length giveaway, fixed:* in E6 the correct option was the longest in 10 of 20 questions (E6-Q01, Q06, Q07,
+   Q09, Q11, Q12, Q14, Q15, Q16, Q20). I shortened those correct options and lengthened a few distractors without
+   changing any meaning or answer. Now no correct option in E4 or E6 is more than 2 characters longer than every
+   distractor.
+3. *Re-check after the fix:* a second fresh subagent, again without keys, judged **every option** of E4 separately
+   (trying to rescue each distractor), listed every wrong part in each E5 sentence, and re-answered E6 from the
+   passages alone. It found no question with two acceptable answers or none, no second error in any E5 sentence,
+   and no reading answer that needs outside knowledge. Its E6 answers matched the keys.
+
+No question needed rewriting because of a disagreement.
+
+### Least sure (E4–E6)
+| Question | Issue |
+|---|---|
+| E4-Q12 | "**Were** the Moon closer…": "Was" is heard in informal inverted conditionals; only "were" is formal. |
+| E4-Q17 | "Among the oldest texts **is** the Epic of Gilgamesh": inverted singular subject. "Are" is a common slip, and the blind pass flagged it as a trap, though it agreed with the key. |
+| E5-Q19 | "longer than **any** river in Africa" → "any other": a logic-of-comparison rule that many readers pass over. |
+| E5-Q04 | "until **they are** eight months old" → "it is": singular "they" is accepted for people, not for an animal. The rule is formal, and some test-takers may not know it. |
+| E6-Q04 | Reference "it" = carbon dioxide. "The stored acid" is grammatically nearby; the passage (what becomes sugar) decides it. |
+
+The grammar sentences contain general facts (a blue whale's heart ≈ a small car, the Nile's eleven countries).
+These are approximate and don't affect any answer.
 
 ---
 

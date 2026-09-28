@@ -230,7 +230,9 @@ def bias(questions):
 
 def main():
     rng = random.Random(4242)
-    for path in sorted(DATA.glob("english-*.json")) + sorted(DATA.glob("technical-*.json")):
+    # English 4-6 are built (already balanced) by tools/gen_english.py; including them here would also shift the
+    # seeded order used for the Technical tests.
+    for path in sorted(DATA.glob("english-[123].json")) + sorted(DATA.glob("technical-*.json")):
         test = json.loads(path.read_text(encoding="utf-8"))
         qs = test["questions"]
         before = bias(qs)

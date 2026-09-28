@@ -1,0 +1,65 @@
+E4-Q01: B
+E4-Q02: A
+E4-Q03: A
+E4-Q04: A
+E4-Q05: C
+E4-Q06: A
+E4-Q07: C
+E4-Q08: B
+E4-Q09: D
+E4-Q10: B
+E4-Q11: B
+E4-Q12: C
+E4-Q13: B
+E4-Q14: D
+E4-Q15: C
+E4-Q16: D
+E4-Q17: D | DOUBT: minor - inverted subject "the Epic of Gilgamesh" is singular so "is" is correct, but "are" (agreeing with plural "texts") is commonly seen; formally only D
+E4-Q18: D
+E4-Q19: C
+E4-Q20: A
+E5-Q01: C
+E5-Q02: A
+E5-Q03: B
+E5-Q04: D
+E5-Q05: B
+E5-Q06: D
+E5-Q07: C
+E5-Q08: A
+E5-Q09: C
+E5-Q10: B
+E5-Q11: C
+E5-Q12: A
+E5-Q13: A
+E5-Q14: B
+E5-Q15: D
+E5-Q16: B
+E5-Q17: D
+E5-Q18: A
+E5-Q19: C
+E5-Q20: D
+E6-Q01: C
+E6-Q02: A
+E6-Q03: C
+E6-Q04: D
+E6-Q05: D
+E6-Q06: B
+E6-Q07: A
+E6-Q08: A
+E6-Q09: B
+E6-Q10: D
+E6-Q11: B
+E6-Q12: D
+E6-Q13: B
+E6-Q14: C
+E6-Q15: C
+E6-Q16: A
+E6-Q17: C
+E6-Q18: D
+E6-Q19: B
+E6-Q20: A
+
+Notes
+- All questions had a single clearly best answer; only E4-Q17 got a mild flag (the key must be D, not A).
+- E5-Q17: the key "arrive" should become "had arrived" (or "had arrived only recently"); no other error found in that sentence.
+- E5-Q19: "any river in Africa" should be "any other river"; the rest of the sentence is fine.

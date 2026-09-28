@@ -1,0 +1,386 @@
+{
+  "id": "E6",
+  "section": "english",
+  "test": 6,
+  "title": "English – Test 6: Reading",
+  "source": "generated",
+  "passages": {
+    "p1": {
+      "title": "Passage 1 of 3",
+      "text": "Most plants open the tiny pores on their leaves, called stomata, during the day. Through these openings they take in the carbon dioxide they need for photosynthesis, the process that uses the energy of sunlight to turn carbon dioxide and water into sugar. The arrangement works well in mild climates, but it carries a cost: every time the stomata open, water vapor escapes. In a hot desert, a plant that kept its pores open through the afternoon could lose more water in a single day than its roots are able to collect in a week.\n\nMany cacti, agaves and other succulents avoid this problem with a method known as crassulacean acid metabolism, or CAM, named after the stonecrop family of plants, in which it was first studied. CAM plants reverse the usual schedule. They open their stomata at night, when the air is cooler and more humid, and absorb carbon dioxide while little water is lost. Because photosynthesis cannot take place without light, the plant cannot use this carbon dioxide at once. Instead, it stores the gas in the form of an acid, which builds up inside its cells until morning. When the sun rises, the stomata close tightly, and the stored acid is broken down to release carbon dioxide inside the leaf, where it is used to make sugar throughout the day.\n\nThe strategy is remarkably economical. Studies of CAM plants have found that they may lose as little as one-fifth as much water as ordinary plants for each gram of carbon they take in. Yet the method has drawbacks. A plant can store only a limited amount of acid overnight, so its daily supply of carbon is restricted, and most CAM species grow slowly as a result. This trade-off helps explain why CAM plants are common in deserts but rarely compete successfully in wetter regions, where faster-growing plants can shade them out.",
+      "truncated": false
+    },
+    "p2": {
+      "title": "Passage 2 of 3",
+      "text": "For most of human history, time was a local matter. Each town set its clocks by the sun, declaring noon at the moment the sun stood highest in its own sky. Because the sun appears to move westward, noon in one town arrived a few minutes earlier or later than in a town some distance to the east or west. As long as people traveled on foot or by horse, these small differences caused little trouble; no one could move fast enough to notice them.\n\nThe railway changed that. By the middle of the nineteenth century, trains were carrying passengers hundreds of kilometers in a single day, and each railway company tended to run its trains by the time of its home city. A traveler changing trains might find that the timetable followed a different clock from the one on the station wall. In the United States alone, railroads used dozens of separate times, and the confusion contributed to missed connections and, on lines with a single track, to dangerous collisions.\n\nBritish railways were among the first to respond. During the 1840s, many lines adopted the time kept at Greenwich, near London, and within a few decades most public clocks in Britain followed it. In North America, the railroad companies acted on their own: on 18 November 1883, they replaced their many local times with a small number of standard time zones, each one hour apart. The following year, delegates from twenty-five nations met in Washington and chose the meridian passing through Greenwich as the starting point for measuring longitude and time around the world.\n\nStandard time was not welcomed everywhere. Some newspapers complained that the railroads had no right to alter the sun, and several cities kept their own local time for years. In the United States, the zones did not become law until 1918, thirty-five years after the railroads first adopted them.",
+      "truncated": false
+    },
+    "p3": {
+      "title": "Passage 3 of 3",
+      "text": "In 1968, the ecologist Garrett Hardin published an essay describing what he called \"the tragedy of the commons.\" Hardin asked readers to imagine a pasture open to every herder in a village. Each herder gains the full benefit of adding one more animal to the pasture, while the cost of the extra grazing is shared by everyone. Acting sensibly in their own interest, the herders keep adding animals until the grass is destroyed. Hardin concluded that shared resources would be ruined unless they were divided into private property or placed under strict government control.\n\nThe political scientist Elinor Ostrom doubted that these were the only two choices. Over several decades, she and her colleagues gathered evidence from communities that had managed shared resources for generations: mountain pastures in Switzerland, forests in Japan, irrigation systems in Spain and fisheries on the coast of Maine. Many of these arrangements had lasted for centuries without private ownership or direction from a distant government.\n\nOstrom found that successful communities tended to share certain features. They defined clearly who was allowed to use the resource. They created their own rules, suited to local conditions, and chose members to watch for people who broke them. Penalties usually started small, such as a modest fine for a first offense, and grew only if the behavior was repeated. Finally, the communities had cheap and quick ways to settle disputes among users.\n\nOstrom did not claim that shared management always works. Where users are strangers to one another, or where a resource is too large to be watched, cooperation may break down just as Hardin predicted. Her point was that the outcome depends on the rules people build, not simply on who owns the resource. In 2009 she became the first woman to receive the Nobel Prize in economics.",
+      "truncated": false
+    }
+  },
+  "questions": [
+    {
+      "id": "E6-Q01",
+      "skill": "reading",
+      "topic": "main idea",
+      "difficulty": "easy",
+      "passage": "p1",
+      "text": "What is the passage mainly about?",
+      "options": {
+        "A": "Why cacti and agaves grow faster than most other plants in the desert",
+        "B": "How the stonecrop family of plants was first discovered",
+        "C": "How desert plants take in carbon dioxide without losing much water",
+        "D": "Why photosynthesis in all plants takes place mainly at night"
+      },
+      "answer": "C",
+      "explanation": "Paragraph 1 sets up the problem (open stomata lose water), paragraph 2 describes the CAM solution and paragraph 3 weighs its benefit and cost. \"Grow faster\" contradicts paragraph 3 (\"most CAM species grow slowly\").",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q02",
+      "skill": "reading",
+      "topic": "detail",
+      "difficulty": "easy",
+      "passage": "p1",
+      "text": "According to the passage, when do CAM plants open their stomata?",
+      "options": {
+        "A": "At night",
+        "B": "In the early morning",
+        "C": "Throughout the afternoon",
+        "D": "Only after it rains"
+      },
+      "answer": "A",
+      "explanation": "Paragraph 2: \"They open their stomata at night, when the air is cooler and more humid.\" In the morning the stomata \"close tightly\", so \"In the early morning\" is wrong.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q03",
+      "skill": "reading",
+      "topic": "vocabulary",
+      "difficulty": "medium",
+      "passage": "p1",
+      "text": "The word \"economical\" in paragraph 3 is closest in meaning to",
+      "options": {
+        "A": "profitable",
+        "B": "expensive",
+        "C": "efficient",
+        "D": "complicated"
+      },
+      "answer": "C",
+      "explanation": "The next sentence explains it: CAM plants lose far less water for each gram of carbon, i.e. they use water efficiently. \"Profitable\" is about making money, which doesn't fit a plant's use of water.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q04",
+      "skill": "reading",
+      "topic": "reference",
+      "difficulty": "hard",
+      "passage": "p1",
+      "text": "In paragraph 2, the word \"it\" in \"where it is used to make sugar throughout the day\" refers to",
+      "options": {
+        "A": "the stored acid",
+        "B": "the leaf",
+        "C": "the sun",
+        "D": "carbon dioxide"
+      },
+      "answer": "D",
+      "explanation": "The acid \"is broken down to release carbon dioxide inside the leaf, where it is used to make sugar\": the carbon dioxide is what photosynthesis turns into sugar (paragraph 1). The acid is tempting but it is the store that is broken down, not what is made into sugar.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q05",
+      "skill": "reading",
+      "topic": "inference",
+      "difficulty": "medium",
+      "passage": "p1",
+      "text": "It can be inferred from the passage that CAM plants growing in a wet region would most likely",
+      "options": {
+        "A": "grow faster than they would in a desert",
+        "B": "switch to opening their stomata by day",
+        "C": "store more acid than desert CAM plants",
+        "D": "be shaded out by plants that grow faster"
+      },
+      "answer": "D",
+      "explanation": "Paragraph 3: CAM plants \"rarely compete successfully in wetter regions, where faster-growing plants can shade them out.\" The passage never says CAM plants change their schedule, so \"switch to opening their stomata by day\" has no support.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q06",
+      "skill": "reading",
+      "topic": "author's purpose",
+      "difficulty": "medium",
+      "passage": "p1",
+      "text": "Why does the author mention that a desert plant could lose more water in a day than its roots collect in a week?",
+      "options": {
+        "A": "To explain why the roots of desert plants are unusually short",
+        "B": "To show how costly the usual schedule would be in a desert",
+        "C": "To compare how quickly CAM plants and other plants grow",
+        "D": "To suggest that desert plants rarely take in carbon dioxide"
+      },
+      "answer": "B",
+      "explanation": "The example follows \"it carries a cost: every time the stomata open, water vapor escapes\" and sets up the problem that CAM solves. Growth rates are compared only in paragraph 3, not in this example.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q07",
+      "skill": "reading",
+      "topic": "detail",
+      "difficulty": "hard",
+      "passage": "p1",
+      "text": "According to the passage, why do most CAM species grow slowly?",
+      "options": {
+        "A": "They can store only a little acid each night.",
+        "B": "They lose too much water through their stomata.",
+        "C": "Their stomata stay open throughout the day.",
+        "D": "They cannot carry out photosynthesis in sunlight."
+      },
+      "answer": "A",
+      "explanation": "Paragraph 3: \"A plant can store only a limited amount of acid overnight, so its daily supply of carbon is restricted, and most CAM species grow slowly as a result.\" Losing too much water is the problem CAM avoids, not the cause of slow growth.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q08",
+      "skill": "reading",
+      "topic": "main idea",
+      "difficulty": "easy",
+      "passage": "p2",
+      "text": "Which of the following would be the best title for the passage?",
+      "options": {
+        "A": "How the Railways Led to Standard Time",
+        "B": "Travel by Horse in the Nineteenth Century",
+        "C": "Why the Sun Appears to Move Westward",
+        "D": "The First Railway Lines in Britain"
+      },
+      "answer": "A",
+      "explanation": "The passage moves from local sun time, to the confusion trains caused, to the adoption of standard time. British railways are only one step in that story (paragraph 3).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q09",
+      "skill": "reading",
+      "topic": "detail",
+      "difficulty": "easy",
+      "passage": "p2",
+      "text": "According to the passage, how did a town decide when it was noon before standard time?",
+      "options": {
+        "A": "By the official clock kept at Greenwich",
+        "B": "By the sun's highest point in its own sky",
+        "C": "By the timetable of the nearest railway",
+        "D": "By agreement with the other towns nearby"
+      },
+      "answer": "B",
+      "explanation": "Paragraph 1: each town declared \"noon at the moment the sun stood highest in its own sky.\" Greenwich time came later, with the railways (paragraph 3).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q10",
+      "skill": "reading",
+      "topic": "vocabulary",
+      "difficulty": "easy",
+      "passage": "p2",
+      "text": "The word \"alter\" in paragraph 4 is closest in meaning to",
+      "options": {
+        "A": "follow",
+        "B": "measure",
+        "C": "admire",
+        "D": "change"
+      },
+      "answer": "D",
+      "explanation": "The newspapers complained that the railroads had no right to change the sun, i.e. the time the sun set. \"Follow\" is the opposite of the complaint: local sun time was what people had followed before.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q11",
+      "skill": "reading",
+      "topic": "reference",
+      "difficulty": "medium",
+      "passage": "p2",
+      "text": "In paragraph 1, the word \"them\" in \"no one could move fast enough to notice them\" refers to",
+      "options": {
+        "A": "the towns to the east or west",
+        "B": "the differences in local time",
+        "C": "people who traveled on foot",
+        "D": "the horses people traveled by"
+      },
+      "answer": "B",
+      "explanation": "The sentence reads \"these small differences caused little trouble; no one could move fast enough to notice them\": travelers were too slow to notice the few minutes between towns. Towns can be noticed at any speed.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q12",
+      "skill": "reading",
+      "topic": "inference",
+      "difficulty": "hard",
+      "passage": "p2",
+      "text": "It can be inferred from the passage that standard time zones in the United States were",
+      "options": {
+        "A": "first proposed by delegates at the meeting in Washington",
+        "B": "rejected by most railroad companies when they first appeared",
+        "C": "based on the local time of each railway's home city",
+        "D": "set up by companies years before they became law"
+      },
+      "answer": "D",
+      "explanation": "Paragraph 3: \"the railroad companies acted on their own\" in 1883; paragraph 4: the zones \"did not become law until 1918.\" The Washington meeting was the following year (1884) and chose the Greenwich meridian, so the zones already existed.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q13",
+      "skill": "reading",
+      "topic": "author's purpose",
+      "difficulty": "medium",
+      "passage": "p2",
+      "text": "Why does the author mention \"dangerous collisions\" in paragraph 2?",
+      "options": {
+        "A": "To explain why British railways adopted standard time first",
+        "B": "To show that the confusion over time had serious consequences",
+        "C": "To argue that lines with a single track should be closed",
+        "D": "To show that trains in the United States were badly built"
+      },
+      "answer": "B",
+      "explanation": "Collisions are listed as a result of \"the confusion\" over dozens of separate times. The passage never links them to Britain; paragraph 2 is about the United States.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q14",
+      "skill": "reading",
+      "topic": "detail",
+      "difficulty": "medium",
+      "passage": "p2",
+      "text": "According to the passage, what was decided at the meeting in Washington?",
+      "options": {
+        "A": "Every city in the United States had to adopt railway time.",
+        "B": "Standard time zones would become law in the United States.",
+        "C": "Longitude and time would be measured from Greenwich.",
+        "D": "Neighboring time zones would be exactly two hours apart."
+      },
+      "answer": "C",
+      "explanation": "Paragraph 3: the delegates \"chose the meridian passing through Greenwich as the starting point for measuring longitude and time.\" The zones became U.S. law only in 1918, by a separate step.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q15",
+      "skill": "reading",
+      "topic": "main idea",
+      "difficulty": "medium",
+      "passage": "p3",
+      "text": "What is the passage mainly about?",
+      "options": {
+        "A": "The reasons that herders in Swiss villages lost their mountain pastures",
+        "B": "How Hardin's essay led to new laws for fisheries on the coast of Maine",
+        "C": "Evidence that communities can manage shared resources on their own",
+        "D": "Why Elinor Ostrom was awarded the Nobel Prize in economics in 2009"
+      },
+      "answer": "C",
+      "explanation": "Paragraphs 2–4 present Ostrom's evidence against Hardin's claim that only private property or government control can save a shared resource. The Nobel Prize is mentioned only in the last sentence.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q16",
+      "skill": "reading",
+      "topic": "detail",
+      "difficulty": "easy",
+      "passage": "p3",
+      "text": "According to Hardin's example, why do the herders keep adding animals to the pasture?",
+      "options": {
+        "A": "Each herder keeps the gain from an extra animal but shares its cost.",
+        "B": "The village pays each herder a fee for every animal on the pasture.",
+        "C": "The grass on the pasture grows back faster than the animals eat it.",
+        "D": "The herders have agreed on rules for sharing the pasture."
+      },
+      "answer": "A",
+      "explanation": "Paragraph 1: \"Each herder gains the full benefit of adding one more animal … while the cost of the extra grazing is shared by everyone.\" Agreed rules are Ostrom's answer to the problem, not part of Hardin's example.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q17",
+      "skill": "reading",
+      "topic": "vocabulary",
+      "difficulty": "medium",
+      "passage": "p3",
+      "text": "The word \"modest\" in paragraph 3 is closest in meaning to",
+      "options": {
+        "A": "humble",
+        "B": "fair",
+        "C": "small",
+        "D": "secret"
+      },
+      "answer": "C",
+      "explanation": "\"Penalties usually started small, such as a modest fine\": a modest fine is a small one. \"Humble\" is another meaning of \"modest\", but it describes people, not amounts.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q18",
+      "skill": "reading",
+      "topic": "reference",
+      "difficulty": "medium",
+      "passage": "p3",
+      "text": "In paragraph 3, the word \"them\" in \"to watch for people who broke them\" refers to",
+      "options": {
+        "A": "the members",
+        "B": "local conditions",
+        "C": "the communities",
+        "D": "the rules"
+      },
+      "answer": "D",
+      "explanation": "\"They created their own rules … and chose members to watch for people who broke them\": what people break is the rules. \"Local conditions\" is also plural, but conditions can't be broken.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q19",
+      "skill": "reading",
+      "topic": "inference",
+      "difficulty": "hard",
+      "passage": "p3",
+      "text": "Based on the passage, Ostrom would most likely say that a fishery used by thousands of people who do not know one another",
+      "options": {
+        "A": "will be managed well because no one owns it",
+        "B": "may be overused, as Hardin predicted",
+        "C": "must be placed under government control",
+        "D": "cannot be affected by the rules its users make"
+      },
+      "answer": "B",
+      "explanation": "Paragraph 4: \"Where users are strangers to one another, or where a resource is too large to be watched, cooperation may break down just as Hardin predicted.\" \"Must be placed under government control\" goes further than the passage: Ostrom's point is that rules matter, not that the state must take over.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "E6-Q20",
+      "skill": "reading",
+      "topic": "author's purpose",
+      "difficulty": "medium",
+      "passage": "p3",
+      "text": "Why does the author mention mountain pastures in Switzerland, forests in Japan and irrigation systems in Spain?",
+      "options": {
+        "A": "To give examples of resources managed well for centuries",
+        "B": "To show the places where Hardin carried out his own research",
+        "C": "To list resources that were ruined by too many users",
+        "D": "To compare the ways different governments control resources"
+      },
+      "answer": "A",
+      "explanation": "Paragraph 2 calls them \"communities that had managed shared resources for generations\" and says many lasted \"for centuries\" without private or government control. They are Ostrom's evidence, not Hardin's.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

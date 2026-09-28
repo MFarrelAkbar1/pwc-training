@@ -3,7 +3,7 @@
 import { el, clear, formatTime } from "./dom.js";
 import { findQuestion } from "./data.js";
 import { renderContext, hasContext, contextTitle, sourceLabel, renderOptions, renderAnswerReview,
-  renderFlag, renderGenerated, renderSourceRef, renderTopic, renderQuestionImage } from "./render.js";
+  renderFlag, renderGenerated, renderSourceRef, renderTopic, renderQuestionImage, renderQuestionText } from "./render.js";
 
 const FILTERS = { all: "All questions", wrong: "Wrong or unanswered", flagged: "Flagged in source" };
 
@@ -95,7 +95,7 @@ function reviewItem(q, r, number, showSource) {
       renderSourceRef(q),
       renderTopic(q),
       el("span", { class: `badge ${tone}` }, label)),
-    el("p", { class: "q-text" }, q.text),
+    renderQuestionText(q),
     renderQuestionImage(q),
     renderOptions(q, { chosen: r.chosen, revealed: true }),
     renderAnswerReview(q, r.chosen),
