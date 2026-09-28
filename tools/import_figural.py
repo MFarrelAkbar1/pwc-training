@@ -5,8 +5,8 @@ The originals are left untouched. Images wider than MAX_WIDTH are scaled down (s
 for the small symbols), the alpha channel is dropped and the colours are reduced to a palette,
 which keeps the page light.
 
-The key is always the source key; where my own solution differs the question is flagged
-"disputed" (see REVIEW.md). The timer is not in the JSON: it is SECTIONS.logic.testMinutes[5] in site/js/data.js.
+"answer" is always the source key. It is also the scored answer, except for the OVERRIDES below (scored
+answer set by review decision, in "verifiedAnswer"). Disagreements are flagged "disputed" (see REVIEW.md). The timer is not in the JSON: it is SECTIONS.logic.testMinutes[5] in site/js/data.js.
 
 Run:  python tools/import_figural.py
 """
@@ -70,6 +70,13 @@ DISPUTED = {
         "bar bends up at the right instead. The site scores the source key (B).",
 }
 
+# The site scores a different answer than the source key, by review decision: number -> (scored letter, flag note).
+# The source key stays in "answer"; the flag is "disputed".
+OVERRIDES = {
+    9: ("D", "Source key was C; this site scores D (the option with three closed ovals) by review decision. "
+             "The rule behind D has not been written up yet."),
+}
+
 
 def read_key():
     text = (SOURCE / "jawaban.txt").read_text(encoding="utf-8")
@@ -94,11 +101,15 @@ def build_test(key):
             "imageAlt": f"Figure puzzle {n} from the imported extra-hard set, with the answer options drawn in the picture.",
             "options": {letter: f"Figure {letter}" for letter in letters},
             "answer": key[n],
-            "explanation": explanation,
-            "source": "imported",
         }
+        if n in OVERRIDES:
+            q["verifiedAnswer"] = OVERRIDES[n][0]
+        q["explanation"] = explanation
+        q["source"] = "imported"
         if n in DISPUTED:
             q["flag"] = {"type": "disputed", "note": DISPUTED[n]}
+        elif n in OVERRIDES:
+            q["flag"] = {"type": "disputed", "note": OVERRIDES[n][1]}
         questions.append(q)
     return {"id": "L5", "section": "logic", "test": 5, "title": "Logic – Figural patterns (extra hard)",
             "source": "imported", "questions": questions}

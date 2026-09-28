@@ -708,7 +708,7 @@ Verbal: T = True, F = False, CS = Cannot say. "Site scores" is `verifiedAnswer` 
 
 17 picture questions imported from `figural-test-extra-hard-part-1/` (not committed; the images are copied to
 `site/img/figural-hard-01.png` … `-17.png`). Built by `python tools/import_figural.py`, which also writes
-`site/data/logic-5.json`. Every question has `"source": "imported"` and shows an "Imported, key from source" label.
+`site/data/logic-5.json`, including the Q9 decision (its `OVERRIDES` table), so re-running it keeps Q9 scored D. Every question has `"source": "imported"` and shows an "Imported, key from source" label.
 The **scored answer is the source key** (`jawaban.txt`) except for **Q9**, which scores D by the owner's decision
 (see below). Disagreements are flagged `disputed`.
 Timer: 17 minutes, set in one place, `SECTIONS.logic.testMinutes[5]` in `site/js/data.js` (the JSON has no `timeLimitSec`).
@@ -767,7 +767,8 @@ explains instead).
 The owner decided the answer is **D** (the option with three closed ovals). The question keeps `answer: "C"` (source
 key), gets `verifiedAnswer: "D"` (scored) and flag `disputed` with a neutral note. **The rule for D was not supplied**
 (the decision left the rule as a placeholder), so the explanation is empty and the note doesn't state a rule. Add the
-rule to the explanation and the note once it's written down.
+rule to the explanation and the note once it's written down: both live in `tools/import_figural.py` (`QUESTIONS[9]`
+and `OVERRIDES[9]`), then re-run the script.
 
 ### Least sure (figural)
 1. **Q9**: scored D by decision (source key C); no written rule yet for either answer.
