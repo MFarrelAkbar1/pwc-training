@@ -64,21 +64,12 @@ _TURN_HIDDEN = ("The example changes a square only by the {fill}; turning a squa
                 "both fit.")
 _SAME = "The rule gives {what}, but options {a} and {b} are the same drawing (only the hatch lines' position differs)."
 _SAME_EXACT = "The rule gives {what}, but options {a} and {b} are the same drawing."
-_ODD_TWO = "Two rules single out different figures: {first}; {second}."
+# Odd-one-out questions where only "the only curved figure" competes with the key (bank 34, 39, 40, 45, 50) are
+# scored with the source key by editorial decision (the key's structural/symmetry rule wins); see REVIEW.md.
 AMBIGUOUS = {
     11: _TURN_HIDDEN.format(fill="cross-hatching", a="B", b="C"),
     21: _TURN_HIDDEN.format(fill="dots", a="A", b="B"),
-    33: _ODD_TWO.format(first="A is the only shaded figure",
-                        second="D is the only one with an odd number of sides (square 4, hexagons 6, pentagon 5)"),
-    34: _ODD_TWO.format(first="A is the only one with an odd number of sides (triangle; hexagon 6, star 10)",
-                        second="B is the only curved figure"),
-    39: _ODD_TWO.format(first="C is the only one with an odd number of sides and the only one pointing down",
-                        second="B is the only curved figure"),
-    40: _ODD_TWO.format(first="A is the only tilted figure (and the only odd-sided one)",
-                        second="D is the only curved figure"),
-    45: _ODD_TWO.format(first="B is the only tilted figure", second="C is the only curved figure (A and D are the same star)"),
-    50: _ODD_TWO.format(first="A is the only one with an odd number of sides (B and C are the same square)",
-                        second="D is the only curved figure"),
+    33: "Dropped: Conflicting rules. A is the only shaded figure, but the source key is D based on even/odd sides.",
     51: _SAME.format(what="a hatched circle (fill cycles none, hatched, cross-hatched)", a="A", b="D"),
     52: _SAME_EXACT.format(what="the square turned like figure 2 (it turns 30° a step and repeats every 90°)", a="B", b="C"),
     54: _SAME_EXACT.format(what="the square turned like figure 2 (it turns 30° a step and repeats every 90°)", a="A", b="B"),

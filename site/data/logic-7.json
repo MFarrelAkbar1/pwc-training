@@ -72,7 +72,7 @@
    "source": "imported",
    "flag": {
     "type": "ambiguous",
-    "note": "Two rules single out different figures: A is the only shaded figure; D is the only one with an odd number of sides (square 4, hexagons 6, pentagon 5)."
+    "note": "Dropped: Conflicting rules. A is the only shaded figure, but the source key is D based on even/odd sides."
    }
   },
   {
@@ -88,14 +88,8 @@
     "D": "Figure D"
    },
    "answer": "A",
-   "verifiedAnswer": null,
-   "answerSource": "dropped",
    "explanation": "",
-   "source": "imported",
-   "flag": {
-    "type": "ambiguous",
-    "note": "Two rules single out different figures: A is the only one with an odd number of sides (triangle; hexagon 6, star 10); B is the only curved figure."
-   }
+   "source": "imported"
   },
   {
    "id": "L7-Q06",
@@ -142,14 +136,8 @@
     "D": "Figure D"
    },
    "answer": "C",
-   "verifiedAnswer": null,
-   "answerSource": "dropped",
    "explanation": "",
-   "source": "imported",
-   "flag": {
-    "type": "ambiguous",
-    "note": "Two rules single out different figures: C is the only one with an odd number of sides and the only one pointing down; B is the only curved figure."
-   }
+   "source": "imported"
   },
   {
    "id": "L7-Q09",
@@ -164,14 +152,8 @@
     "D": "Figure D"
    },
    "answer": "A",
-   "verifiedAnswer": null,
-   "answerSource": "dropped",
    "explanation": "",
-   "source": "imported",
-   "flag": {
-    "type": "ambiguous",
-    "note": "Two rules single out different figures: A is the only tilted figure (and the only odd-sided one); D is the only curved figure."
-   }
+   "source": "imported"
   },
   {
    "id": "L7-Q10",
@@ -250,14 +232,8 @@
     "D": "Figure D"
    },
    "answer": "B",
-   "verifiedAnswer": null,
-   "answerSource": "dropped",
    "explanation": "",
-   "source": "imported",
-   "flag": {
-    "type": "ambiguous",
-    "note": "Two rules single out different figures: B is the only tilted figure; C is the only curved figure (A and D are the same star)."
-   }
+   "source": "imported"
   },
   {
    "id": "L7-Q15",
@@ -304,14 +280,8 @@
     "D": "Figure D"
    },
    "answer": "A",
-   "verifiedAnswer": null,
-   "answerSource": "dropped",
    "explanation": "",
-   "source": "imported",
-   "flag": {
-    "type": "ambiguous",
-    "note": "Two rules single out different figures: A is the only one with an odd number of sides (B and C are the same square); D is the only curved figure."
-   }
+   "source": "imported"
   }
  ]
 }

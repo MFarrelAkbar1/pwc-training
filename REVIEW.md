@@ -791,7 +791,7 @@ Every question has `"source": "imported"`, the "Imported, key from source" label
 | Subtest | Topic in the PDF | Bank numbers (sedang + sulit only) | Scored |
 |---|---|---|---|
 | L6 Figural analogies | Analogi Figural (1–25) | 5, 7, 9–22, 24 | 15 of 17 |
-| L7 Odd one out | Klasifikasi & Pengelompokan Bentuk (26–50) | 28, 29, 31, 33–35, 37, 39–45, 47, 49, 50 | 11 of 17 |
+| L7 Odd one out | Klasifikasi & Pengelompokan Bentuk (26–50) | 28, 29, 31, 33–35, 37, 39–45, 47, 49, 50 | 16 of 17 |
 | L8 Figural series | Seri/Pola Figural (51–75) | 51–57, 59–62, 64, 68, 70–73 | **5 of 17** |
 | L9 Figural matrices | Matriks Figural (226–250) | 227–229, 231, 232, 234–239, 242, 245–248, 250 | 12 of 17 |
 
@@ -806,9 +806,10 @@ stops if they ever differ.
 start of section D (keys 1–160) to the terminal once, and I saw the "Submateri" line (e.g. `"rotate90+hatch"`) of a
 few analogy questions; I didn't use either. Result: **every question I answered with a single letter matches the
 key (43 of 43). No question is disputed.** The two "disagreements" (bank 11 and 21) are cases I had already marked
-ambiguous, and the key picks the other option of the pair.
+ambiguous, and the key picks the other option of the pair. For bank 34, 39, 45 and 50 (later restored, see below) my
+blind answer was "ambiguous" with two candidates, and the key is one of them; for 40 my blind answer (A) matches the key.
 
-**Ambiguity check: 25 questions dropped** (`answerSource: "dropped"`, `verifiedAnswer: null`, flag `ambiguous`, key kept
+**Ambiguity check: 20 questions dropped** (`answerSource: "dropped"`, `verifiedAnswer: null`, flag `ambiguous`, key kept
 in `answer`). They are shown with an "Ambiguous, not scored" note, are left out of the mixed set and the wrong-answer
 bank, and the results screen counts them as not scored. In every case the source key is one of the options that fit.
 
@@ -816,12 +817,7 @@ bank, and the results screen counts them as not scored. In every case the source
 |---|---|---|---|
 | 11 | L6 | C | The example (square → cross-hatched square) can't show a 90° turn. Hatched upright star (B) and hatched turned star (C) both fit |
 | 21 | L6 | B | Same with dots: upright dotted star (A) and turned dotted star (B) both fit |
-| 33 | L7 | D | A is the only shaded figure; D is the only odd-sided one |
-| 34 | L7 | A | A is the only odd-sided figure; B (circle) the only curved one |
-| 39 | L7 | C | C is the only odd-sided / pointing-down figure; B (circle) the only curved one |
-| 40 | L7 | A | A is the only tilted figure; D (circle) the only curved one. *Blind I had A (medium) with D as a weak alternative; I reclassified it after the comparison, for consistency with 39* |
-| 45 | L7 | B | B is the only tilted figure; C (circle) the only curved one |
-| 50 | L7 | A | A is the only odd-sided figure; D (circle) the only curved one |
+| 33 | L7 | D | Conflicting rules: A is the only shaded figure, but the source key is D based on even/odd sides |
 | 51, 60, 61, 64 | L8 | D, A, D, D | Fill cycles plain → hatched → cross-hatched, so the answer is hatched, but two options are the same hatched figure (A=D, A=B, B=D, A=D) |
 | 52, 54 | L8 | B, B | A square turning 30° a step repeats every 90°, so the answer looks like figure 2; two options are that same square (B=C, A=B) |
 | 55, 56, 57 | L8 | D, A, C | Cycle "one plain, two hatched, three cross-hatched" → two hatched shapes; two options are the same (C=D, A=B, B=C) |
@@ -835,10 +831,22 @@ bank, and the results screen counts them as not scored. In every case the source
 "Same" was checked by zooming the two options side by side: they differ only in where the hatch lines start. A
 pixel comparison doesn't catch this reliably because the hatch position shifts, so I relied on the zoomed view.
 
-How I drew the line for odd-one-out (L7): when the key's rule is **count** or **fill** (a clear 3-versus-1 split
-independent of the shapes), a lone circle doesn't make the question ambiguous (bank 29, 44: kept). When the key's
-rule is a shape property (odd/even sides, tilt/orientation), "the only curved figure" is an equally good answer, so
-the question is dropped. This is a judgment call; see "least sure" below.
+**Odd one out (L7), editorial decision: "the only curved figure" is not treated as a competing rule.** In the first
+pass I also dropped bank **34, 39, 40, 45 and 50**, because in each a circle is the only curved figure and competes
+with the key's rule. By editorial decision these five are **restored and scored with the source key**, which follows
+the PDF's structural rules (symmetry / orientation, odd/even sides) rather than the curved-shape distractor:
+
+| Bank | Key | Key's figure | Curved-shape distractor (no longer a reason to drop) |
+|---|---|---|---|
+| 34 | A | Triangle pointing right: the only odd-sided figure | B, the circle |
+| 39 | C | Triangle pointing down: the only odd-sided / pointing-down figure | B, the circle |
+| 40 | A | Tilted arrow: the only tilted, odd-sided figure | D, the circle |
+| 45 | B | Tilted cross: the only tilted figure (A and D are the same star) | C, the circle |
+| 50 | A | Triangle: the only odd-sided figure (B and C are the same square) | D, the circle |
+
+This also settles bank 29 and 44 (count rule, with a lone circle): scored, as before. **Bank 33 stays dropped**: there
+the competing rule is fill (A is the only shaded figure), not a curved shape, and the key's D rests on even/odd sides.
+L7 now has 16 scored questions and 1 dropped (33).
 
 **Kept and scored, but note:**
 - **16, 19** (L6): two wrong options are the same drawing (16: B=C, 19: A=B). The answer D is still the only one that fits.
@@ -849,13 +857,15 @@ the question is dropped. This is a judgment call; see "least sure" below.
   which the diamond can't show (the source's rule is "rotate90+hatch+scale"). Kept because no other option fits at all.
 
 **Explanations.** The PDF's section E explanations are templates and were not used. A one-line explanation is
-written for 42 of the 43 scored questions. **Empty: bank 12** (the turn in the answer isn't shown by the example, so I
-can't state the rule with certainty). The 25 dropped questions have no explanation; their flag note says why.
+written for 42 of the 48 scored questions. **Empty: bank 12** (the turn in the answer isn't shown by the example, so I
+can't state the rule with certainty) and **bank 34, 39, 40, 45, 50** (restored by decision; the source's rule label is
+"orientasi simetris" or odd/even sides, and I can't state the exact symmetry rule for each with certainty). The 20
+dropped questions have no explanation; their flag note says why.
 
 ### Least sure (figural bank)
-1. **29** and **44** (L7, scored A / B): count rule is clear, but B (29) and C (44) are the only curved figures. Under the
-   rule I used for 34/39/40/45/50 they'd be dropped too if you count "curved" as a rule here.
-2. **40** (L7, dropped): reclassified after seeing the key; A is the stronger answer on several attributes.
+1. **34, 39, 45, 50** (L7, restored and scored with the key): a test-taker who picks the lone circle is marked wrong.
+   40 is less of a worry (A differs on several attributes).
+2. **29** and **44** (L7, scored A / B): count rule is clear, but B (29) and C (44) are the only curved figures.
 3. **33** (L7, dropped, key D): A being the only shaded figure is arguably the *more* obvious answer than the key's parity rule.
 4. **12** (L6, scored B): answer is turned; the example can't show that turn.
 5. **68** (L8, scored D): C and D differ by ~6% in size.
