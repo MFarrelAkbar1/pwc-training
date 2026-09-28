@@ -146,8 +146,13 @@
     "E": "Figure E"
    },
    "answer": "C",
+   "verifiedAnswer": "D",
    "explanation": "",
-   "source": "imported"
+   "source": "imported",
+   "flag": {
+    "type": "disputed",
+    "note": "Source key was C; this site scores D (the option with three closed ovals) by review decision. The rule behind D has not been written up yet."
+   }
   },
   {
    "id": "L5-Q10",

@@ -709,7 +709,8 @@ Verbal: T = True, F = False, CS = Cannot say. "Site scores" is `verifiedAnswer` 
 17 picture questions imported from `figural-test-extra-hard-part-1/` (not committed; the images are copied to
 `site/img/figural-hard-01.png` … `-17.png`). Built by `python tools/import_figural.py`, which also writes
 `site/data/logic-5.json`. Every question has `"source": "imported"` and shows an "Imported, key from source" label.
-The **scored answer is always the source key** (`jawaban.txt`); where I disagree the question is flagged `disputed`.
+The **scored answer is the source key** (`jawaban.txt`) except for **Q9**, which scores D by the owner's decision
+(see below). Disagreements are flagged `disputed`.
 Timer: 17 minutes, set in one place, `SECTIONS.logic.testMinutes[5]` in `site/js/data.js` (the JSON has no `timeLimitSec`).
 
 **Format of the source**
@@ -737,7 +738,7 @@ the key. Result: **16 of 17 agree; 1 disagreement (Q11)**.
 | 6 | D | D | high | Circle, triangle, square; each new shape appears small inside the previous one first → square holding a pentagon |
 | 7 | B | B | medium | Right side loses lines from the top on even frames: 1, then 3 → 5; left side full |
 | 8 | A | A | medium | Arrow jumps 2 of the 6 sectors clockwise, direction cycling SE, SW, NW; dot moves 1 sector clockwise |
-| 9 | C | C | **low** | Six arcs; I could not find a rule that singles out one option (frame 3 is frame 2 reversed and frame 4 is frame 1 reversed, but that does not give a unique frame 6). C is a guess |
+| 9 | C | C | **low** | Six arcs; no rule found that singles out one option (frame 3 is frame 2 reversed and frame 4 is frame 1 reversed, but that does not give a unique frame 6). **Now scored D**, see below |
 | 10 | E | E | medium | One symbol moves per step, 2, 3, 4, 2 cells anticlockwise round the border; next the X moves 3 → bottom-middle |
 | **11** | **B** | **A** | high | **Disputed.** See below |
 | 12 | B | B | high | Two squares on a diagonal alternate with four squares; the diagonal switches → top-left + bottom-right |
@@ -759,10 +760,17 @@ Confidence that A is right: fairly high, but these puzzles are easy to misread. 
 reasoning as a note after you answer.
 
 **Explanations.** One-line explanations are filled in where I'm confident (Q1, 2, 5, 6, 7, 8, 10, 12, 14, 15, 16, 17).
-They are **empty for Q3, Q4, Q9, Q13** (rule not clear to me) and **Q11** (disputed; the flag note explains instead).
+They are **empty for Q3, Q4, Q13** (rule not clear to me), **Q9** (see below) and **Q11** (disputed; the flag note
+explains instead).
+
+**Q9 (decision: score D).** Source key C; the blind check also gave C, but only as a low-confidence pick with no rule.
+The owner decided the answer is **D** (the option with three closed ovals). The question keeps `answer: "C"` (source
+key), gets `verifiedAnswer: "D"` (scored) and flag `disputed` with a neutral note. **The rule for D was not supplied**
+(the decision left the rule as a placeholder), so the explanation is empty and the note doesn't state a rule. Add the
+rule to the explanation and the note once it's written down.
 
 ### Least sure (figural)
-1. **Q9**: no rule found; my answer is a guess that happens to match the key.
+1. **Q9**: scored D by decision (source key C); no written rule yet for either answer.
 2. **Q13**: B and D both fit the rotate-and-add rule; the key's D is plausible, not proven.
 3. **Q3 / Q4**: the big symbol is certain (C or D); the small letter that decides between them is not.
 4. **Q11**: the one disagreement; recheck by comparing option A with frame 2.
