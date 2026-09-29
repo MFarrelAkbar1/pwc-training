@@ -1,0 +1,350 @@
+{
+  "id": "T6",
+  "section": "technical",
+  "test": 6,
+  "title": "Technical (Risk Assurance) – Test 6: Governance, Risk & Internal Control",
+  "timeLimitSec": 1200,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "T6-Q01",
+      "type": "definition",
+      "level": "easy",
+      "topic": "COSO",
+      "text": "Which COSO internal control component covers identifying and analysing risks to objectives, including the risk of fraud?",
+      "options": {
+        "A": "Control activities",
+        "B": "Control environment",
+        "C": "Monitoring activities",
+        "D": "Risk assessment"
+      },
+      "answer": "D",
+      "explanation": "Risk assessment (principles 6–9) covers setting objectives, identifying and analysing risks, assessing fraud risk and significant changes. Control activities are the responses to those risks, not their analysis.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q02",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "COSO",
+      "text": "Internal audit carries out periodic separate evaluations of whether controls are present and working, and reports deficiencies to management and the board. Which COSO component is this?",
+      "options": {
+        "A": "Risk assessment",
+        "B": "Monitoring activities",
+        "C": "Control activities",
+        "D": "Information and communication"
+      },
+      "answer": "B",
+      "explanation": "Monitoring activities are ongoing and separate evaluations of the whole system of internal control, plus reporting deficiencies. Control activities are tempting, but those are the controls themselves, not the checking of them.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q03",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "COSO",
+      "text": "A new policy requires approval of all discounts above 10%, but it was only saved to a shared folder and most sales staff don't know about it. Which COSO component is weakest?",
+      "options": {
+        "A": "Risk assessment",
+        "B": "Information and communication",
+        "C": "Monitoring activities",
+        "D": "Control environment"
+      },
+      "answer": "B",
+      "explanation": "The control exists but was never communicated to the people who have to follow it, which is an information and communication failure. Control environment is tempting because it covers culture, but here the gap is that the message never reached staff.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q04",
+      "type": "definition",
+      "level": "hard",
+      "topic": "COSO",
+      "text": "COSO's Internal Control – Integrated Framework (2013) supports its five components with how many principles?",
+      "options": {
+        "A": "17",
+        "B": "20",
+        "C": "12",
+        "D": "5"
+      },
+      "answer": "A",
+      "explanation": "COSO 2013 has 17 principles spread over the 5 components, and each must be present and functioning for effective internal control. Five is the number of components, not principles.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q05",
+      "type": "definition",
+      "level": "medium",
+      "topic": "COBIT",
+      "text": "In COBIT 2019, how is governance distinguished from management?",
+      "options": {
+        "A": "There is no difference; the two words refer to the same set of IT activities",
+        "B": "Governance evaluates, directs and monitors; management plans, builds and runs",
+        "C": "Governance is carried out by IT staff, while management is done by the business",
+        "D": "Governance covers legal compliance, while management covers operations and delivery"
+      },
+      "answer": "B",
+      "explanation": "COBIT separates governance (evaluate, direct, monitor, usually by the board) from management (plan, build, run, monitor, by executives). IT staff vs business is tempting, but both sides involve business leaders.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q06",
+      "type": "definition",
+      "level": "hard",
+      "topic": "COBIT",
+      "text": "Which COBIT 2019 domain contains the governance objectives?",
+      "options": {
+        "A": "Deliver, Service and Support (DSS)",
+        "B": "Evaluate, Direct and Monitor (EDM)",
+        "C": "Align, Plan and Organise (APO)",
+        "D": "Monitor, Evaluate and Assess (MEA)"
+      },
+      "answer": "B",
+      "explanation": "EDM holds the five governance objectives; APO, BAI, DSS and MEA hold the 35 management objectives. MEA is tempting because it also \"monitors\", but it is a management domain for performance and conformance.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q07",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "Three Lines Model",
+      "text": "The head of internal audit is asked to also design and run the company's new risk management process. Under the IIA Three Lines Model, what is the main concern?",
+      "options": {
+        "A": "The board isn't allowed to oversee how risk management is done",
+        "B": "Internal audit isn't permitted to advise management on risk topics",
+        "C": "Risk management must be run by the first line, not the second",
+        "D": "Internal audit would later be auditing work it designed and runs"
+      },
+      "answer": "D",
+      "explanation": "The third line must stay independent of management responsibilities; running the process would mean auditing its own work. It may still give advice, so saying it can't advise is too strict.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q08",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "Three Lines Model",
+      "text": "A sales manager checks and approves discounts above a set limit for the sales team. In the Three Lines Model, whose role is this?",
+      "options": {
+        "A": "A first-line role",
+        "B": "The governing body's",
+        "C": "A third-line role",
+        "D": "A second-line role"
+      },
+      "answer": "A",
+      "explanation": "The first line provides products and services and manages the risks that come with them, including day-to-day controls. Second-line roles (risk, compliance) support and challenge the first line; they don't approve its discounts.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q09",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "risk assessment",
+      "text": "Payment fraud risk is rated likelihood 4 and impact 5 (scales of 1–5) before controls. After dual approval is introduced, likelihood falls to 2 and impact stays the same. Using likelihood × impact, what is the residual risk score?",
+      "options": {
+        "A": "8",
+        "B": "20",
+        "C": "10",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "Residual risk is the risk after controls: 2 × 5 = 10. The inherent score was 4 × 5 = 20, which is tempting if you forget that the control changed the likelihood.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q10",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "risk response",
+      "text": "A company buys cyber insurance to cover losses from a possible data breach. Which risk response is this?",
+      "options": {
+        "A": "Accept (retain)",
+        "B": "Reduce (mitigate)",
+        "C": "Avoid (exit)",
+        "D": "Share (transfer)"
+      },
+      "answer": "D",
+      "explanation": "Insurance moves part of the financial impact to the insurer. It doesn't lower the chance of a breach, so it is not \"reduce\".",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q11",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "risk response",
+      "text": "After controls, a risk's residual rating is still above the risk appetite approved by the board. What is the most appropriate next step?",
+      "options": {
+        "A": "Re-rate the inherent risk lower so the residual fits appetite",
+        "B": "Accept the risk, since some controls are already in place",
+        "C": "Add further controls or escalate it for a formal decision",
+        "D": "Remove it from the risk register until the event happens"
+      },
+      "answer": "C",
+      "explanation": "A risk outside appetite needs more treatment, or a decision by someone with authority to accept it. Accepting it just because controls exist is tempting, but that isn't within anyone's authority when the board set the appetite lower.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q12",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "control types",
+      "text": "The ERP blocks any payment to a vendor that is not in the approved vendor master file. What type of control is this?",
+      "options": {
+        "A": "Automated preventive",
+        "B": "Manual preventive",
+        "C": "Manual detective",
+        "D": "Automated detective"
+      },
+      "answer": "A",
+      "explanation": "The system (automated) stops the payment before it happens (preventive). Detective is tempting if you think of an exception report, but here nothing is reported after the fact; the payment never happens.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q13",
+      "type": "definition",
+      "level": "medium",
+      "topic": "key controls",
+      "text": "In testing internal control over financial reporting, what makes a control a \"key control\"?",
+      "options": {
+        "A": "It is carried out by the most senior person in the process",
+        "B": "It is the control that costs the most money to operate",
+        "C": "It runs automatically in the system, with no human input needed",
+        "D": "It is relied on to prevent or detect a material misstatement"
+      },
+      "answer": "D",
+      "explanation": "Key controls are the ones that address the significant risks of material misstatement, so they are what the auditor tests. Seniority is tempting, but a clerk's control can be key and a director's can be redundant.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q14",
+      "type": "definition",
+      "level": "hard",
+      "topic": "ICFR / SOX",
+      "text": "In ICFR (e.g. under SOX), what is a material weakness?",
+      "options": {
+        "A": "A deficiency found in any control that is performed by the members of senior management staff",
+        "B": "Any control deficiency, however small, that the external auditor identifies during the year's annual audit",
+        "C": "A deficiency making it reasonably possible that a material misstatement is not prevented or detected in time",
+        "D": "A deficiency that has already led to a restatement of the company's prior-year financial statements"
+      },
+      "answer": "C",
+      "explanation": "A material weakness is a deficiency, or combination of deficiencies, with a reasonable possibility that a material misstatement won't be prevented or detected on time. A restatement is a strong indicator, which makes it tempting, but a weakness doesn't require that a misstatement has already happened.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q15",
+      "type": "definition",
+      "level": "easy",
+      "topic": "ICFR / SOX",
+      "text": "Who is primarily responsible for designing and maintaining internal control over financial reporting?",
+      "options": {
+        "A": "The securities regulator",
+        "B": "Internal audit",
+        "C": "Management",
+        "D": "The external auditor"
+      },
+      "answer": "C",
+      "explanation": "Management owns ICFR and (under SOX 404(a)) assesses it. The external auditor is tempting because it gives an opinion on ICFR for larger listed companies, but auditing controls doesn't make it responsible for them.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q16",
+      "type": "definition",
+      "level": "medium",
+      "topic": "sampling",
+      "text": "Why do auditors usually test more items for a control performed many times a day than for one performed once a quarter?",
+      "options": {
+        "A": "More occurrences give more chances to fail, so more evidence is needed",
+        "B": "Daily controls are usually manual, so they are less reliable",
+        "C": "Quarterly controls are done by senior staff, so they need less testing",
+        "D": "Sample sizes are set mainly by how much time the audit budget allows"
+      },
+      "answer": "A",
+      "explanation": "Sample size grows with control frequency because a small sample covers a smaller share of many occurrences. Daily controls can be automated or manual, so frequency says nothing about how reliable they are.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q17",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "testing automated controls",
+      "text": "An automated three-way match in the ERP is configured correctly, and ITGCs over the ERP were effective all year. What testing of the automated control's operation is usually enough?",
+      "options": {
+        "A": "Every transaction processed in the year, one by one",
+        "B": "25 items, the same as for a manual control done daily",
+        "C": "One instance of each relevant scenario (a test of one)",
+        "D": "No direct testing, since the ITGCs were effective"
+      },
+      "answer": "C",
+      "explanation": "An automated control does the same thing every time, so with effective ITGCs one example per scenario (match, mismatch) is enough. 25 items is tempting but comes from manual-control sampling. Effective ITGCs don't remove the need to test the control itself once.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q18",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "audit evidence",
+      "text": "The finance manager tells the auditor that the CFO reviews all journals over IDR 1 billion. What should the auditor do next?",
+      "options": {
+        "A": "Report that the control does not exist in the company",
+        "B": "Corroborate it, e.g. inspect a sample of signed journals",
+        "C": "Ask the CFO to confirm the same statement by email",
+        "D": "Accept the statement, as the finance manager is a senior person"
+      },
+      "answer": "B",
+      "explanation": "Inquiry alone isn't enough evidence that a control operates; it must be backed by inspection, observation or reperformance. An email from the CFO is tempting, but it is still just inquiry, only from another person.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q19",
+      "type": "definition",
+      "level": "easy",
+      "topic": "audit evidence",
+      "text": "Which audit procedure means the auditor independently redoes a control or calculation?",
+      "options": {
+        "A": "Reperformance",
+        "B": "Observation",
+        "C": "Inspection",
+        "D": "Inquiry"
+      },
+      "answer": "A",
+      "explanation": "Reperformance is independently carrying out the control again and comparing the results. Inspection only examines documents or records that the control produced.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T6-Q20",
+      "type": "definition",
+      "level": "easy",
+      "topic": "governance",
+      "text": "In a listed company, which body oversees financial reporting, the external auditor and internal audit?",
+      "options": {
+        "A": "The finance department",
+        "B": "The IT steering committee",
+        "C": "The general meeting of shareholders",
+        "D": "The audit committee"
+      },
+      "answer": "D",
+      "explanation": "The audit committee (a committee of the board, or in Indonesia of the board of commissioners) oversees reporting, the external auditor and internal audit. Shareholders appoint the board but don't oversee day to day.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

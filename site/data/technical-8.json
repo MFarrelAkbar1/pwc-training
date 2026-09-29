@@ -1,0 +1,350 @@
+{
+  "id": "T8",
+  "section": "technical",
+  "test": 8,
+  "title": "Technical (Risk Assurance) – Test 8: Mixed Mock Exam",
+  "timeLimitSec": 1200,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "T8-Q01",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "ITGC scope",
+      "text": "An auditor is deciding which systems are in scope for ITGC testing in a financial statement audit. Which is most likely in scope?",
+      "options": {
+        "A": "The staff canteen's meal ordering app on phones",
+        "B": "The meeting room booking system at head office",
+        "C": "The ERP that records sales and posts to the ledger",
+        "D": "The company's public marketing website on the internet"
+      },
+      "answer": "C",
+      "explanation": "ITGCs are tested for systems that support financial reporting, where a failure could affect the figures. A public website matters for cybersecurity, but it doesn't process the company's accounting.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q02",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "change management",
+      "text": "A company uses a SaaS ERP whose vendor releases updates every month. What change-management control is still expected at the company?",
+      "options": {
+        "A": "Leave it to the vendor, which is responsible for ERP changes",
+        "B": "Review the release notes and test the impact on key processes",
+        "C": "Block vendor updates permanently to keep the ERP stable and unchanged",
+        "D": "Approve each line of the vendor's source code before release"
+      },
+      "answer": "B",
+      "explanation": "The vendor controls its code, but the customer must understand how updates affect its configuration, reports and controls. \"The vendor is responsible\" is tempting, but it ignores the customer's side of the shared model.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q03",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "MFA",
+      "text": "Attackers logged in to a company's VPN using an employee's stolen password. Which control would most directly have stopped this?",
+      "options": {
+        "A": "Annual security awareness training for staff",
+        "B": "Encrypting laptop hard drives",
+        "C": "A longer password expiry period",
+        "D": "Multi-factor authentication on the VPN"
+      },
+      "answer": "D",
+      "explanation": "With MFA, a stolen password alone isn't enough to log in. Awareness training might have reduced the chance of the password being stolen, but it wouldn't stop the login once it was.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q04",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "ISO/IEC 27001",
+      "text": "A software company that builds its own applications excludes the Annex A control on secure development from its Statement of Applicability, giving no reason. What should the ISO/IEC 27001 auditor conclude?",
+      "options": {
+        "A": "Acceptable, as Annex A is guidance that certified firms may set aside",
+        "B": "Acceptable, as any Annex A control may be excluded without explanation",
+        "C": "A nonconformity: the exclusion is unjustified and doesn't fit the risks",
+        "D": "Acceptable while no incident has been caused by the exclusion"
+      },
+      "answer": "C",
+      "explanation": "The Statement of Applicability must justify every exclusion, and an exclusion must follow from the risk assessment. A developer excluding secure development with no reason fails both. Annex A isn't optional guidance: its controls must be compared with the ones chosen.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q05",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "NIST CSF 2.0",
+      "text": "After an outage, the team restores systems from backups, confirms they work and updates stakeholders on progress. Which NIST CSF 2.0 function is this?",
+      "options": {
+        "A": "Respond",
+        "B": "Identify",
+        "C": "Recover",
+        "D": "Protect"
+      },
+      "answer": "C",
+      "explanation": "Recover covers restoring assets and operations and communicating about recovery. Respond is tempting, but it covers managing and containing the incident itself, not restoring normal operations.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q06",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "phishing",
+      "text": "In a phishing simulation, 30% of staff clicked the test link. What is the most appropriate response?",
+      "options": {
+        "A": "Stop the simulations, since the results were so poor",
+        "B": "Block incoming external email for the whole company",
+        "C": "Formal disciplinary action for every employee who clicked",
+        "D": "Targeted awareness training plus stronger email filtering"
+      },
+      "answer": "D",
+      "explanation": "People and technical controls work together: training for those who clicked, filtering to cut how many phishing emails arrive. Disciplining everyone is tempting as a firm response but discourages reporting.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q07",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "COSO",
+      "text": "A company requires two signatures on every payment above a set limit. Which COSO component does this belong to?",
+      "options": {
+        "A": "Control activities",
+        "B": "Monitoring activities",
+        "C": "Control environment",
+        "D": "Risk assessment"
+      },
+      "answer": "A",
+      "explanation": "Dual authorisation is a control activity: an action set by policy to reduce a risk. Monitoring would be a later check that the dual-signature rule is actually followed.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q08",
+      "type": "definition",
+      "level": "easy",
+      "topic": "Three Lines Model",
+      "text": "In the IIA Three Lines Model, who is accountable to stakeholders for oversight of the organisation?",
+      "options": {
+        "A": "The external auditor",
+        "B": "Internal audit",
+        "C": "Management",
+        "D": "The governing body"
+      },
+      "answer": "D",
+      "explanation": "The governing body (e.g. the board) is accountable to stakeholders for oversight. Internal audit is tempting because it reports to the board, but it provides assurance and advice; it doesn't own oversight.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q09",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "ICFR / SOX",
+      "text": "A key review control failed testing, but a separate control that detects the same misstatements was tested and found effective. How does this affect the evaluation?",
+      "options": {
+        "A": "The failed control is no longer treated as a deficiency",
+        "B": "The compensating control has to be ignored in the evaluation",
+        "C": "The compensating control may reduce how severe the deficiency is",
+        "D": "Both controls now have to be reported as material weaknesses"
+      },
+      "answer": "C",
+      "explanation": "Compensating controls are considered when judging the severity of a deficiency, but the deficiency itself remains and is still reported at the right level. Saying it disappears is the tempting mistake.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q10",
+      "type": "definition",
+      "level": "medium",
+      "topic": "audit evidence",
+      "text": "What is the main limitation of observation as audit evidence?",
+      "options": {
+        "A": "It is less reliable than just asking the staff member about it",
+        "B": "It shows only that the control ran while being watched",
+        "C": "It can't be written up in the audit working papers",
+        "D": "It isn't accepted as evidence for IT controls"
+      },
+      "answer": "B",
+      "explanation": "Observation is good evidence at that moment, but people may act differently when watched, and it says nothing about the rest of the period. It is more reliable than inquiry, not less.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q11",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "UU PDP",
+      "text": "A retailer collected customers' phone numbers to arrange deliveries and now wants to use them for marketing messages. Under UU PDP, what is needed?",
+      "options": {
+        "A": "A valid basis for the new purpose, e.g. explicit consent",
+        "B": "Deleting the numbers, as phone numbers can't be stored",
+        "C": "Just a limit of one marketing message a month",
+        "D": "No new step, since the retailer already holds the numbers"
+      },
+      "answer": "A",
+      "explanation": "UU PDP requires processing to be limited to specific purposes and to have a lawful basis (Articles 16 and 20). A new purpose needs its own basis, typically consent for marketing. Already holding the data is not a basis.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q12",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "UU PDP",
+      "text": "A customer asks a company to erase their personal data. No law requires the company to keep it and there is no legal dispute. What should the company do?",
+      "options": {
+        "A": "Keep the data indefinitely for future analytics projects",
+        "B": "Refuse the request, because consent was given earlier",
+        "C": "Erase the customer's name but keep the other fields",
+        "D": "Erase the data and inform the customer that it was erased"
+      },
+      "answer": "D",
+      "explanation": "Data subjects may ask for erasure, and the controller must erase or destroy the data and tell the subject it has done so (Articles 8, 43–45). Earlier consent doesn't block this, since consent can be withdrawn.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q13",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "cloud",
+      "text": "Before moving its accounting system to a cloud provider, which document best gives the company independent assurance over the provider's controls?",
+      "options": {
+        "A": "A recent SOC 1 or SOC 2 Type 2 report on the service",
+        "B": "The provider's marketing brochure about its security",
+        "C": "The provider's own self-assessment questionnaire",
+        "D": "A reference call with one of the provider's customers"
+      },
+      "answer": "A",
+      "explanation": "A Type 2 SOC report is an independent auditor's opinion on controls tested over a period. A self-assessment is tempting because it is detailed, but it is written by the provider itself.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q14",
+      "type": "definition",
+      "level": "hard",
+      "topic": "SOC reports",
+      "text": "Which SOC report is meant for general use and can be published, e.g. on the provider's website?",
+      "options": {
+        "A": "SOC 3",
+        "B": "SOC 1 Type 1",
+        "C": "SOC 1 Type 2",
+        "D": "SOC 2 Type 2"
+      },
+      "answer": "A",
+      "explanation": "SOC 3 is a short general-use report on the trust services criteria. SOC 2 Type 2 covers the same criteria in detail, which is why it is tempting, but its use is restricted to people who understand the system.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q15",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "BCP / DR",
+      "text": "A disaster recovery test restored the ERP at the backup site in 10 hours. The ERP's recovery time objective (RTO) is 4 hours. The IT manager records the test as \"passed\" because the system came back. What should the auditor conclude?",
+      "options": {
+        "A": "The test missed its RTO; the gap needs a remediation plan",
+        "B": "The test failed its recovery point objective, not the RTO",
+        "C": "The test passed, because the system was fully recovered",
+        "D": "The RTO should simply be changed to 10 hours to match"
+      },
+      "answer": "A",
+      "explanation": "The RTO is the target the test measures, so 10 hours against 4 means the plan doesn't meet business needs. Raising the RTO is tempting, but the RTO comes from the business impact analysis; it can't be changed to fit a test result.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q16",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "third-party risk",
+      "text": "Your key cloud vendor uses a subcontractor to run its data centres. What should your vendor due diligence cover?",
+      "options": {
+        "A": "The subcontractor's marketing and brand policies",
+        "B": "How the vendor oversees its own subcontractors",
+        "C": "No review, as you have no contract with the subcontractor",
+        "D": "The subcontractor's prices for its services"
+      },
+      "answer": "B",
+      "explanation": "Risk flows through the supply chain, so due diligence covers how the vendor manages its fourth parties. Having no direct contract is tempting as a reason to stop, but the data is still exposed there.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q17",
+      "type": "definition",
+      "level": "medium",
+      "topic": "data analytics",
+      "text": "In journal entry testing, which entries would an auditor usually treat as higher risk?",
+      "options": {
+        "A": "Entries created automatically by the billing interface",
+        "B": "Entries that are matched to approved purchase orders",
+        "C": "Recurring monthly depreciation entries set up by the finance team",
+        "D": "Manual entries posted at unusual times or by unusual users"
+      },
+      "answer": "D",
+      "explanation": "Fraud through management override often shows up as manual entries at odd times, by unexpected users, with round amounts or odd accounts. Automated interface entries are routine and covered by other controls.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q18",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "privileged access",
+      "text": "Most employees have local administrator rights on their company laptops. What is the main risk?",
+      "options": {
+        "A": "The laptops will need to be backed up more often than other laptops",
+        "B": "Users can install software, including malware, and turn off security",
+        "C": "Users are more likely to forget the password for their own laptop",
+        "D": "The network will become slower for other users across the company"
+      },
+      "answer": "B",
+      "explanation": "Admin rights let users (and any malware running as them) install programs and disable protection. Backups and network speed aren't affected by who is an administrator.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q19",
+      "type": "definition",
+      "level": "easy",
+      "topic": "encryption",
+      "text": "Which control protects data sent between a user's browser and a web application?",
+      "options": {
+        "A": "Full-disk encryption",
+        "B": "Account lockout",
+        "C": "TLS (HTTPS)",
+        "D": "Database backups"
+      },
+      "answer": "C",
+      "explanation": "TLS encrypts data in transit between browser and server. Full-disk encryption is tempting as \"encryption\", but it protects data at rest on a device.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T8-Q20",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "data governance",
+      "text": "The customer master file has many duplicate customers, created by different branches for the same person. Which control best prevents new duplicates?",
+      "options": {
+        "A": "A once-a-year clean-up by IT without any business input",
+        "B": "A system duplicate check when a new customer is created",
+        "C": "Encrypting the customer master file on the database",
+        "D": "Letting each branch keep its own separate customer list"
+      },
+      "answer": "B",
+      "explanation": "A check at the point of entry stops duplicates before they exist (preventive). A yearly clean-up is tempting but detective and after the fact, and without the business it can merge the wrong records.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

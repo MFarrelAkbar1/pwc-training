@@ -253,7 +253,7 @@ solutions", "soluations", "It is be inferred"). V8-Q06's explanation is rewritte
 
 # Generated sections: English, Logic, Technical
 
-These 240 questions were **written for this site**, not taken from the PDF. Every one has
+These 340 questions were **written for this site**, not taken from the PDF. Every one has
 `"source": "generated"` and shows a "Generated · unverified" label. The section pages say that
 the questions haven't been checked against an official source.
 
@@ -263,6 +263,7 @@ the questions haven't been checked against an official source.
 | English (TOEFL-style) | E4–E6 | 3 × 20: Structure, Written Expression, Reading (3 passages) | 13 / 13 / 25 min | Written by hand in `tools/gen_english.py`, blind-checked (see "English 4–6" below) |
 | Logic (TPA-style) | L1–L4 | 4 × 15 | 10 / 12 / 8 / 12 min | **Computed** by `tools/gen_logic.py` (L1, L2, L4); L3 written by hand |
 | Technical (Risk Assurance) | T1–T3 | 3 × 20 (18 of 60 scenario-based; easy, medium and hard mixed) | 20 min each | Written and checked by hand |
+| Technical (Risk Assurance) | T4–T8 | 5 × 20 by topic + a mixed mock (58 of 100 scenario-based) | 20 min each | Written by hand in `tools/gen_technical.py`, facts checked against sources, blind-checked (see "Technical 4–8" below) |
 
 Regenerate the Logic tests with `python tools/gen_logic.py` (seeded, so the output is the same each time).
 `python tools/check_data.py` checks the structure of every test file in `site/data`.
@@ -343,6 +344,90 @@ No question needed rewriting because of a disagreement.
 
 The grammar sentences contain general facts (a blue whale's heart ≈ a small car, the Nile's eleven countries).
 These are approximate and don't affect any answer.
+
+## Technical 4–8: one test per topic area, plus a mock exam
+
+Written for this site in `tools/gen_technical.py`, which writes `site/data/technical-4..8.json`. Fix a question there
+and rerun it. The schema is the same as T1–T3 (`type` scenario/definition, `level`, 4 options, 20 minutes in
+`timeLimitSec`) plus a `topic`, which the results review shows. Each test has 6 easy, 10 medium and 4 hard questions,
+uses A–D five times each, and every question has an explanation of why the key is right and why the most tempting
+wrong option is wrong. The generator refuses to write a test that repeats a T1–T8 question or breaks these rules.
+
+| Test | Content | Scenario-based |
+|---|---|---|
+| T4 IT general controls | RBAC, privileged access, SoD, access review (completeness of the user list), movers, provisioning timing, change testing/approval/completeness of the change population, emergency changes, job scheduler access, backups, incidents vs problems, ITGC reliance | 12 / 20 |
+| T5 Cybersecurity & frameworks | ISO/IEC 27001:2022 (clauses 4–10, the four Annex A themes, risk treatment, management review), NIST CSF 2.0 functions, phishing, MFA, ransomware, encryption and hashing, patching, SQL injection, broken access control, incident response, scan vs pen test | 9 / 20 |
+| T6 Governance, risk & internal control | COSO 2013 components and 17 principles, COBIT 2019 governance vs management and EDM, IIA Three Lines, inherent/residual scoring, risk responses, control types, key controls, material weakness, sampling by frequency, testing automated controls, evidence | 10 / 20 |
+| T7 Data, privacy, cloud & third parties | UU PDP (specific data, 3 × 24 h notice, controller/processor, DPIA for automated decisions, sub-processors, rights, 2% fine, cross-border transfer), data owner, analytics follow-up and completeness, shared responsibility (SaaS, IaaS), SOC 1/2 types and CUECs, vendor tiering and scope gaps, RPO, BIA | 12 / 20 |
+| T8 Mixed mock exam | All of the above, new questions (ITGC scope, SaaS updates, SoA exclusions, CSF Recover, compensating controls, UU PDP purpose and erasure, SOC 3, DR test vs RTO, fourth parties, JE testing…) | 15 / 20 |
+
+**Site change.** `site/js/data.js` lists Technical tests 1–8 and names them (T1–T3 "Mixed topics"). `check_data.py`
+checks T4–T8 for the level mix, A–D spread, scenario share (40%, T8 50%), a type and topic on every question, the
+length giveaway below, and repeated question texts across all Technical tests. `tools/rebalance_options.py` now only
+touches T1–T3, so it can't reshuffle T4–T8. (Rerunning it isn't idempotent even for T1–T3, so don't rerun it casually.)
+
+**Quality check.**
+1. *Facts checked first* (sources below). Questions avoid details likely to change: no OWASP rank numbers (the Top 10
+   was revised in 2025), no NIST SP 800-61 phase names (Rev. 3, April 2025, replaced the old four-phase lifecycle with
+   the CSF 2.0 functions), and nothing that depends on the UU PDP implementing regulation or the new data protection
+   authority.
+2. *Length giveaway, fixed before the blind pass:* in the first draft the correct option was the longest in 8–10
+   questions per test (up to 11 characters ahead). I lengthened distractors and trimmed keys: now it is the longest in
+   2 / 3 / 5 / 3 / 4 questions (T4–T8), and never more than 4 characters longer than every distractor (the one
+   exception is T6-Q03, whose options are fixed COSO component names; "Information and communication" is also a
+   distractor in T6-Q02).
+3. *Absolute-word giveaway, fixed:* 78 distractors but only 2 keys contained words like "always / never / only /
+   nothing / at all", so "pick the one without an absolute" would have worked. I rewrote about 50 distractors to remove
+   that pattern without changing any answer.
+4. *Blind pass:* a fresh subagent answered all 100 questions without keys (`tools/technical_blind_answers.txt`). It
+   agreed with **100/100** keys. It listed 8 minor doubts. None was a disagreement, but I tightened four questions:
+   - T6-Q14: the key said "go undetected"; it now uses the full definition ("not prevented or detected in time").
+   - T7-Q13: the key left out the third route for transfers abroad (consent); now "Equal or higher protection,
+     binding safeguards, or consent".
+   - T7-Q16: the question asked what the auditor should do in general (reading exceptions, bridge letters…); it now
+     asks what to do *about the CUECs*.
+   - T8-Q04: the key covered only the missing reason; it now says the exclusion is unjustified and doesn't fit the risks.
+5. *Re-check:* a second fresh subagent answered the four changed questions blind and matched all four keys, with no
+   other option it found defensible.
+
+No question needed rewriting because of a disagreement.
+
+**Browser test.** A full exam run of T4 (timer 20:00; the review shows topic, key and explanation for all 20; the
+3 wrong answers went to the wrong-answer bank), and T8 once (submitted with one question unanswered and one wrong,
+scored 18/20, review correct). At 375 px width the section page, the quiz and the results review have no horizontal
+overflow. The test attempts were removed from the browser's progress afterwards.
+
+### Sources used for T4–T8
+- ISO/IEC 27001:2022 Annex A, 93 controls in 4 themes (37 / 8 / 14 / 34):
+  [Secureframe](https://secureframe.com/hub/iso-27001/controls), [ISMS.online](https://www.isms.online/iso-27001/annex-a-2022/),
+  [GAICC](https://gaicc.org/blog/iso-27001-annex-a-controls-list/)
+- NIST CSF 2.0, six functions with Govern new: [NIST CSWP 29](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf)
+- NIST SP 800-61 Rev. 3 (April 2025): [NIST news](https://www.nist.gov/news-events/news/2025/04/nist-revises-sp-800-61-incident-response-recommendations-and-considerations),
+  [CSRC](https://csrc.nist.gov/projects/incident-response)
+- UU PDP (Law 27/2022): official text [JDIH BPK](https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022),
+  [pasal.id](https://pasal.id/peraturan/uu/uu-no-27-tahun-2022), bilingual text
+  [ABNR](https://www.abnrlaw.com/lib/files/IND-ENG-UU%2027-2022%20Pelindungan%20Data%20Pribadi%20(ABNR).pdf).
+  Articles used: 4 (specific vs general data), 9 (withdraw consent), 16 and 20 (principles and bases), 34 (impact
+  assessment incl. automated decisions), 43–45 (erasure/destruction and notifying the subject), 46 (3 × 24 h notice),
+  51 (processor on instructions; written approval before another processor), 53 (DPO), 56 (transfers abroad),
+  57 (fine up to 2% of annual revenue), 74 (2-year transition, ended 17 Oct 2024).
+- SOC 1 / SOC 2 / Type 1 vs 2, trust services criteria: [AICPA SOC 2 description criteria](https://www.aicpa-cima.com/resources/download/get-description-criteria-for-your-organizations-soc-2-r-report),
+  [Linford & Co](https://linfordco.com/blog/soc-1-vs-soc-2-audit-reports/), [System and organization controls (Wikipedia)](https://en.wikipedia.org/wiki/System_and_organization_controls)
+- IIA Three Lines Model (2020): [IIA position paper](https://www.theiia.org/globalassets/documents/resources/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense-july-2020/three-lines-model-updated-english.pdf)
+- COBIT 2019, 40 objectives, EDM governance domain: [ISACA](https://www.isaca.org/resources/news-and-trends/industry-news/2019/employing-cobit-2019-for-enterprise-governance-strategy)
+- OWASP Top 10:2025 (broken access control still includes IDOR): [OWASP](https://owasp.org/Top10/2025/)
+- Cloud shared responsibility: [Microsoft Learn](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
+- COSO 2013 (5 components, 17 principles) and the PCAOB AS 2201 material-weakness definition are well established and
+  already used by T1–T3; they weren't looked up again.
+
+### Least sure (T4–T8)
+| Question | Issue |
+|---|---|
+| T7-Q07 | Fine "up to 2% of annual revenue": Article 57(3) says 2% of annual income or revenue *for the violation variable*. How that variable is calculated awaits the implementing regulation, so the question asks only for the cap. |
+| T7-Q13 | Transfers abroad: the key summarises Article 56's three routes. The details (who judges "equal or higher" protection) are left to implementing rules and the new authority. Sector rules (e.g. financial services) may add localisation requirements the question doesn't cover. |
+| T6-Q17 | "Test of one" for an automated control with effective ITGCs is common Big 4 practice, not a rule in a standard. Some methodologies test a few items. |
+| T8-Q12 | Erasure on request assumes none of the exceptions apply (the question says so). The duty to tell the subject comes from Article 45. |
+| T4-Q10 | "40% emergency changes most likely indicates bypassing": an inference. The key is the only option that fits, but a real audit would investigate first. |
 
 ---
 

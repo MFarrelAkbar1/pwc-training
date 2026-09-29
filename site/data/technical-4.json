@@ -1,0 +1,350 @@
+{
+  "id": "T4",
+  "section": "technical",
+  "test": 4,
+  "title": "Technical (Risk Assurance) – Test 4: IT General Controls",
+  "timeLimitSec": 1200,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "T4-Q01",
+      "type": "definition",
+      "level": "easy",
+      "topic": "logical access",
+      "text": "What does role-based access control (RBAC) mean?",
+      "options": {
+        "A": "Access is granted according to each person's seniority",
+        "B": "Users get the same standard access so work isn't held up",
+        "C": "Users pick their own permissions within an overall limit",
+        "D": "Access is granted through roles that match job functions"
+      },
+      "answer": "D",
+      "explanation": "RBAC bundles permissions into roles designed around job functions, and users get roles, not ad-hoc rights. Access by seniority is tempting because senior staff often have more access, but rank is not a job need.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q02",
+      "type": "definition",
+      "level": "easy",
+      "topic": "privileged access",
+      "text": "Why do auditors pay special attention to privileged accounts such as database or domain administrators?",
+      "options": {
+        "A": "They can bypass controls and change data, settings and access",
+        "B": "They are used by more staff than any other kind of user account",
+        "C": "They are created automatically and can't be removed later",
+        "D": "They cost more in licence fees than normal user accounts"
+      },
+      "answer": "A",
+      "explanation": "Privileged accounts can change configurations, security settings, data and other users' rights, so misuse can defeat other controls. They are usually held by few people, not most staff, which is why they must be restricted.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q03",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "segregation of duties",
+      "text": "The IT security administrator who creates user accounts in the ERP also holds a finance role in the same ERP that allows posting journal entries. What is the main risk?",
+      "options": {
+        "A": "They may forget their password more often with two separate roles",
+        "B": "They could give themselves extra access and post unauthorised entries",
+        "C": "The ERP may slow down because one person holds two quite different roles",
+        "D": "Their journal entries may be posted to the wrong accounting period"
+      },
+      "answer": "B",
+      "explanation": "Administering access is incompatible with using the system for transactions: the person could grant rights and use them without anyone else being involved. Posting to the wrong period is a normal processing error, not the segregation-of-duties risk this combination creates.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q04",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "periodic access review",
+      "text": "A manager signs off the quarterly access review of the general ledger system using a user list emailed by IT. To rely on this control, what else should the auditor check?",
+      "options": {
+        "A": "That the review was signed within one working day after the quarter ended",
+        "B": "That the list was sent as a password-protected spreadsheet file",
+        "C": "That the manager has a professional qualification in IT security",
+        "D": "That the user list was complete and accurate when it was extracted"
+      },
+      "answer": "D",
+      "explanation": "A review is only as good as its input: if the report the reviewer relies on is incomplete (information produced by the entity), some users are never reviewed. Signing within one day isn't required; the review just has to be timely enough to be effective.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q05",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "access modification",
+      "text": "An employee moved from the procurement team to the sales team six months ago and still has purchase-approval rights in the ERP. Which access control failed?",
+      "options": {
+        "A": "Changing access when a user moves to a new role",
+        "B": "Enforcing a minimum password length for all ERP users",
+        "C": "Removing access when an employee leaves the company",
+        "D": "Approving program changes before they reach production"
+      },
+      "answer": "A",
+      "explanation": "This is a mover: access should be adjusted, and old rights removed, when a role changes. The leaver process is tempting, but the employee hasn't left, so leaver controls wouldn't have caught this.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q06",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "privileged access",
+      "text": "Database administrators (DBAs) need unrestricted access to the production database to do their jobs. Which control best reduces the risk of this access being misused?",
+      "options": {
+        "A": "Remove all DBA access and let the software vendor do the work",
+        "B": "Change the DBA passwords every 30 days and keep them complex",
+        "C": "Ask the DBAs to sign an acceptable use policy once every year",
+        "D": "Log DBA activity and have someone independent review the logs"
+      },
+      "answer": "D",
+      "explanation": "When access can't be restricted further, an independent review of what privileged users actually did is the compensating control. Changing passwords protects against outsiders using the account, not against the DBAs themselves misusing it.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q07",
+      "type": "definition",
+      "level": "easy",
+      "topic": "change management",
+      "text": "Why should program changes be tested in an environment separate from production?",
+      "options": {
+        "A": "So the change can go live without business sign-off",
+        "B": "So a faulty change can't affect live data or users",
+        "C": "So developers don't need to document what they change",
+        "D": "So users can use new features before they are approved"
+      },
+      "answer": "B",
+      "explanation": "A separate test environment lets errors show up without damaging live data or disrupting users. It doesn't remove the need for documentation or approval; those are separate change-management steps.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q08",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "change management",
+      "text": "An auditor selects 25 changes from the change ticketing system to test for approval. Which extra step best addresses the risk that some changes reached production without any ticket at all?",
+      "options": {
+        "A": "Select a larger sample of changes from the same ticketing system",
+        "B": "Compare a system-generated list of production changes to the tickets",
+        "C": "Check that every ticket in the sample has an attached test script",
+        "D": "Interview the developers about how they usually log and record their changes"
+      },
+      "answer": "B",
+      "explanation": "Changes made outside the process never appear in the ticketing system, so the population must come from the system itself (e.g. change logs or object timestamps) and be matched to tickets. A bigger sample from the ticketing system is tempting, but it can only find problems with changes that were logged.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q09",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "change management",
+      "text": "At a small company, one developer both builds changes and is the only person able to move them into production. Segregating these duties isn't possible. Which compensating control is most appropriate?",
+      "options": {
+        "A": "Ask the developer to test every change twice before releasing it",
+        "B": "Independent review of production change logs against approved tickets",
+        "C": "Have the developer email the CIO a short summary note after every release",
+        "D": "Limit the developer's production access to normal office hours"
+      },
+      "answer": "B",
+      "explanation": "Someone independent checks, after the fact, that everything that reached production was approved, which catches unauthorised changes. An email from the developer is tempting, but it is self-reported, so it would leave out exactly the changes that matter.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q10",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "emergency changes",
+      "text": "An auditor finds that 40% of all changes to the ERP last year were logged as emergency changes. What does this most likely indicate?",
+      "options": {
+        "A": "The ERP has too few users to justify a standard change process",
+        "B": "The change management process is working quickly and efficiently",
+        "C": "The emergency route may be used to bypass normal change controls",
+        "D": "Testing of normal changes is more thorough than it needs to be"
+      },
+      "answer": "C",
+      "explanation": "Emergency changes should be rare because they skip some approval and testing before release. A high share suggests the lighter route is being used for convenience. Speed is not a sign of a working control when the checks are being skipped.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q11",
+      "type": "definition",
+      "level": "medium",
+      "topic": "change management",
+      "text": "Which is the best evidence that a change was tested and accepted before it was released?",
+      "options": {
+        "A": "A production log showing the date and time the change was deployed",
+        "B": "Approval of the change request by the IT manager after the release",
+        "C": "Test results signed off by the business user before the release date",
+        "D": "A written statement by the developer that the change was fully tested"
+      },
+      "answer": "C",
+      "explanation": "Dated user acceptance before release shows both that testing happened and that it came first. The developer's own statement is tempting, but it isn't independent and doesn't show what was tested.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q12",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "job scheduling",
+      "text": "Any member of the IT support team can add, change or delete jobs in the batch scheduler that runs the monthly interest calculation. What is the main risk?",
+      "options": {
+        "A": "The scheduler could run out of disk space during month-end processing",
+        "B": "Support staff would need more training to use the batch scheduler",
+        "C": "Jobs could run faster than the finance team is able to review them",
+        "D": "Jobs could be changed without authorisation, affecting financial data"
+      },
+      "answer": "D",
+      "explanation": "The scheduler decides what runs, when and with which parameters, so unrestricted edit rights let anyone alter financial processing. Disk space is an operational capacity issue, not an authorisation risk.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q13",
+      "type": "definition",
+      "level": "easy",
+      "topic": "backup",
+      "text": "Why are backup copies kept at a separate location, such as another site or cloud region?",
+      "options": {
+        "A": "So that the company needs to take backups less frequently",
+        "B": "So that backup jobs finish faster over the company's internal network",
+        "C": "So that restoring data from backup no longer needs approval",
+        "D": "So a disaster at the main site doesn't destroy the backups too"
+      },
+      "answer": "D",
+      "explanation": "Backups exist to survive the loss of the primary site; if they sit in the same building, a fire or flood takes both. Offsite copies usually make backups slower, not faster.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q14",
+      "type": "definition",
+      "level": "medium",
+      "topic": "incident management",
+      "text": "In IT service management (e.g. ITIL), what is the difference between an incident and a problem?",
+      "options": {
+        "A": "A problem is a minor incident that is logged in a separate queue",
+        "B": "An incident is a disruption; a problem is the cause behind incidents",
+        "C": "An incident is caused by users; a problem is caused by IT staff",
+        "D": "Incidents affect users, while problems affect servers and networks"
+      },
+      "answer": "B",
+      "explanation": "An incident is an unplanned interruption or loss of service quality; a problem is the cause, or potential cause, of one or more incidents. Treating a problem as a small incident mixes up restoring service with fixing the root cause.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q15",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "incident management",
+      "text": "The IT incident log shows high-priority incidents are recorded, but many are closed with no note of how they were resolved, and several keep coming back. What should the auditor recommend?",
+      "options": {
+        "A": "Let users close their own incidents once the service works again",
+        "B": "Reduce the number of priority levels so fewer incidents are high",
+        "C": "Require resolution notes and root-cause review for recurring incidents",
+        "D": "Stop logging low-priority incidents so support staff can focus on the important ones"
+      },
+      "answer": "C",
+      "explanation": "Without resolution records, nobody can check that the fix was proper, and recurring incidents point to an unaddressed cause that problem management should investigate. Fewer priority levels only relabels incidents.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q16",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "backup",
+      "text": "Nightly backups of the finance server are scheduled. Failure alerts go to a shared mailbox nobody monitors, and 12 backups failed during the year without being rerun. What should the auditor conclude?",
+      "options": {
+        "A": "There is no issue because no data was actually lost during the year",
+        "B": "The control is effective because about 97% of the backups succeeded",
+        "C": "The control isn't operating effectively, as failures aren't followed up",
+        "D": "The control is effective because the backups are scheduled every night"
+      },
+      "answer": "C",
+      "explanation": "The control is not just scheduling a backup; it includes detecting and fixing failures. Nobody does that, so the control failed each time. A high success rate is tempting, but the failures were random and unnoticed, so any day's data could have been unrecoverable.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q17",
+      "type": "definition",
+      "level": "medium",
+      "topic": "ITGC reliance",
+      "text": "Why does it matter to an auditor relying on automated application controls if the ITGCs over that system are ineffective?",
+      "options": {
+        "A": "The auditor can't assume the automated controls ran consistently",
+        "B": "The company's financial statements must then be restated",
+        "C": "Automated controls turn into manual controls once the ITGCs have failed",
+        "D": "The auditor has to stop further testing of that system"
+      },
+      "answer": "A",
+      "explanation": "Effective ITGCs (especially change and access) give comfort that a configured control stayed the same all year. Without them, it could have been changed or bypassed, so more testing is needed. A restatement doesn't follow: ITGC failures raise risk, they are not misstatements.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q18",
+      "type": "definition",
+      "level": "easy",
+      "topic": "logical access",
+      "text": "An ERP locks a user account after five failed login attempts. What does this setting mainly protect against?",
+      "options": {
+        "A": "Attackers guessing passwords",
+        "B": "Changes made without approval",
+        "C": "Leavers keeping their access",
+        "D": "Staff sharing their passwords"
+      },
+      "answer": "A",
+      "explanation": "Lockout limits how many guesses an attacker gets. Password sharing is tempting, but a colleague who is given the right password logs in on the first try, so lockout doesn't stop it.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q19",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "segregation of duties",
+      "text": "An SoD analysis shows 40 users with conflicting access in the ERP. Management says the conflicts are needed because the finance team is small. What is the most appropriate response?",
+      "options": {
+        "A": "Recommend removing all ERP access for the 40 users straight away",
+        "B": "Accept management's explanation and take no further audit action",
+        "C": "Check whether mitigating controls exist and work for these users",
+        "D": "Report all 40 users to the audit committee as confirmed fraud cases"
+      },
+      "answer": "C",
+      "explanation": "Conflicts can be acceptable if a mitigating control (e.g. an independent review of their transactions) covers the risk, so the auditor tests for that before rating the issue. Removing all access is tempting but ignores the business need; conflicting access alone isn't fraud either.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T4-Q20",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "access provisioning",
+      "text": "When testing new user accounts, an auditor finds that for 4 of 25 new users the approval is dated after the account was created. What is this?",
+      "options": {
+        "A": "A control exception: access was granted before it was approved",
+        "B": "A matter for the users' managers rather than an exception",
+        "C": "A design weakness in the password settings of the application",
+        "D": "Not an issue, because each of the users was approved in the end"
+      },
+      "answer": "A",
+      "explanation": "The provisioning control is approval before access. Approval after the fact means the users had unauthorised access for a time. \"Approved in the end\" is tempting, but a late approval can't stop what happened in between.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

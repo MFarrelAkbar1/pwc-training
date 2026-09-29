@@ -52,7 +52,15 @@ export const SECTIONS = {
     },
     importedTests: [5, 6, 7, 8, 9, 10],
   },
-  technical: { name: "Technical (Risk Assurance)", short: "Technical", prefix: "T", tests: [1, 2, 3], minutes: 20, questions: 20, generated: true },
+  technical: {
+    name: "Technical (Risk Assurance)", short: "Technical", prefix: "T", tests: [1, 2, 3, 4, 5, 6, 7, 8], minutes: 20, questions: 20,
+    generated: true,
+    // Tests 4–8 are built by tools/gen_technical.py; all use the 20-minute timeLimitSec in their JSON.
+    testNames: {
+      1: "Mixed topics", 2: "Mixed topics", 3: "Mixed topics", 4: "IT general controls", 5: "Cybersecurity & frameworks",
+      6: "Governance, risk & internal control", 7: "Data, privacy, cloud & third parties", 8: "Mixed mock exam",
+    },
+  },
 };
 
 // "N" -> "numerical", "L" -> "logic", …

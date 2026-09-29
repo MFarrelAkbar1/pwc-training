@@ -1,0 +1,350 @@
+{
+  "id": "T5",
+  "section": "technical",
+  "test": 5,
+  "title": "Technical (Risk Assurance) – Test 5: Cybersecurity & Frameworks",
+  "timeLimitSec": 1200,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "T5-Q01",
+      "type": "definition",
+      "level": "hard",
+      "topic": "ISO/IEC 27001",
+      "text": "Which part of ISO/IEC 27001:2022 contains the mandatory management-system requirements, such as leadership, risk assessment, internal audit and management review?",
+      "options": {
+        "A": "Annex A",
+        "B": "Clauses 1 to 3",
+        "C": "Clauses 4 to 10",
+        "D": "ISO/IEC 27002"
+      },
+      "answer": "C",
+      "explanation": "Clauses 4–10 (context, leadership, planning, support, operation, performance evaluation, improvement) are the requirements for the ISMS. Annex A is tempting, but it is the reference list of controls that the risk treatment process uses; clauses 1–3 are scope, references and terms, and ISO/IEC 27002 is guidance.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q02",
+      "type": "definition",
+      "level": "easy",
+      "topic": "ISO/IEC 27001",
+      "text": "ISO/IEC 27001:2022 groups its Annex A controls into four themes. Which list is correct?",
+      "options": {
+        "A": "Organizational, people, physical, technological",
+        "B": "Identify, protect, detect, respond",
+        "C": "Preventive, detective, corrective, compensating",
+        "D": "Policy, access, operations, compliance"
+      },
+      "answer": "A",
+      "explanation": "The 2022 edition has 93 controls in four themes: organizational (37), people (8), physical (14) and technological (34). \"Identify, protect, detect, respond\" are NIST CSF functions, and preventive / detective / corrective are control types, not themes.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q03",
+      "type": "definition",
+      "level": "medium",
+      "topic": "ISO/IEC 27001",
+      "text": "Under ISO/IEC 27001:2022 Annex A, which theme contains the control on screening (background checks) of job candidates?",
+      "options": {
+        "A": "Organizational",
+        "B": "People",
+        "C": "Physical",
+        "D": "Technological"
+      },
+      "answer": "B",
+      "explanation": "Screening is control 6.1, the first of the eight people controls, which cover the employment life cycle. Organizational is tempting because HR policies feel organisation-wide, but the 2022 edition puts screening under people.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q04",
+      "type": "definition",
+      "level": "medium",
+      "topic": "ISO/IEC 27001",
+      "text": "An ISMS risk assessment finds a risk above the organisation's acceptance criteria. Which is NOT an acceptable way to handle it?",
+      "options": {
+        "A": "Add controls to reduce the risk",
+        "B": "Ignore it and record no decision",
+        "C": "Stop the activity causing the risk",
+        "D": "Share the risk, e.g. by insurance"
+      },
+      "answer": "B",
+      "explanation": "Reducing, sharing, avoiding and (formally) retaining a risk are all valid treatments, but each must be a documented decision that the risk owner approves. Retaining a risk is allowed; silently ignoring it isn't.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q05",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "ISO/IEC 27001",
+      "text": "A company certified to ISO/IEC 27001 hasn't held a management review of its ISMS for two years, although the security team meets every week. What should the auditor conclude?",
+      "options": {
+        "A": "An opportunity for improvement, not a nonconformity",
+        "B": "No issue, since management review is optional guidance in the standard",
+        "C": "A nonconformity: top management must review the ISMS at planned intervals",
+        "D": "No issue, since the weekly security team meetings replace the formal review"
+      },
+      "answer": "C",
+      "explanation": "Clause 9.3 requires top management to review the ISMS at planned intervals, with set inputs and outputs. Team meetings are tempting as a substitute, but they aren't top management reviewing the whole ISMS, and a required activity that is missing is a nonconformity, not just an improvement point.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q06",
+      "type": "definition",
+      "level": "easy",
+      "topic": "NIST CSF 2.0",
+      "text": "Which function was added to the NIST Cybersecurity Framework in version 2.0 (2024)?",
+      "options": {
+        "A": "Prepare",
+        "B": "Monitor",
+        "C": "Govern",
+        "D": "Comply"
+      },
+      "answer": "C",
+      "explanation": "CSF 2.0 has six functions: Govern, Identify, Protect, Detect, Respond and Recover. Govern is new and sits at the centre. \"Monitor\" and \"Prepare\" are common security words but are not CSF functions.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q07",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "NIST CSF 2.0",
+      "text": "A company sets up alerts in its SIEM for unusual logins outside working hours. Which NIST CSF 2.0 function does this mainly support?",
+      "options": {
+        "A": "Protect",
+        "B": "Govern",
+        "C": "Respond",
+        "D": "Detect"
+      },
+      "answer": "D",
+      "explanation": "Detect covers finding and analysing possible attacks and anomalies, including continuous monitoring. Protect is tempting, but an alert doesn't stop the login; it reveals it.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q08",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "NIST CSF 2.0",
+      "text": "The board approves a cybersecurity risk strategy, sets roles and responsibilities, and defines security expectations for suppliers. Which NIST CSF 2.0 function covers these activities?",
+      "options": {
+        "A": "Protect",
+        "B": "Govern",
+        "C": "Recover",
+        "D": "Identify"
+      },
+      "answer": "B",
+      "explanation": "Govern covers strategy, roles, policy, oversight and cybersecurity supply chain risk management. Identify is tempting (in version 1.1 some of this sat there), but in 2.0 it covers understanding assets and risks, not setting strategy.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q09",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "phishing",
+      "text": "Several staff receive an email that appears to come from the CEO, urgently asking them to buy gift cards and send the codes. What kind of attack is this?",
+      "options": {
+        "A": "Denial of service",
+        "B": "Brute-force password guessing attack",
+        "C": "SQL injection",
+        "D": "Phishing (social engineering)"
+      },
+      "answer": "D",
+      "explanation": "It tricks people, not systems, by impersonating a trusted sender and creating urgency. Nothing is flooded (denial of service) or guessed (brute force).",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q10",
+      "type": "definition",
+      "level": "easy",
+      "topic": "MFA",
+      "text": "Which of these is true multi-factor authentication?",
+      "options": {
+        "A": "Two different passwords entered one after the other",
+        "B": "A password plus the answer to a secret security question",
+        "C": "A password plus a code from an app on the user's phone",
+        "D": "A username plus a long and complex password"
+      },
+      "answer": "C",
+      "explanation": "MFA needs factors of different types: something you know, have or are. The phone app is something you have. A security question is tempting, but it is a second thing you know, so it's the same factor twice.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q11",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "ransomware",
+      "text": "After a ransomware attack, a company finds that its backups, kept on a network drive in the same domain, were also encrypted. Which control would best have protected the backups?",
+      "options": {
+        "A": "A longer and more complex password for the backup service account",
+        "B": "Stronger antivirus software installed on all employee laptops",
+        "C": "Running backups more often to the same network drive as before",
+        "D": "Offline or immutable backup copies kept apart from the main network"
+      },
+      "answer": "D",
+      "explanation": "Ransomware encrypts everything it can reach, so at least one copy must be unreachable or unchangeable. More frequent backups to the same drive are tempting, but they would have been encrypted as well.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q12",
+      "type": "definition",
+      "level": "easy",
+      "topic": "encryption",
+      "text": "What is the main purpose of full-disk encryption on a company laptop?",
+      "options": {
+        "A": "Stopping users from copying company files to USB drives",
+        "B": "Protecting the laptop from being infected by malware",
+        "C": "Keeping data unreadable if the laptop is lost or stolen",
+        "D": "Protecting data while it is sent over the internet"
+      },
+      "answer": "C",
+      "explanation": "Disk encryption protects data at rest: without the key, a thief can't read the drive. Data sent over the internet is data in transit, which TLS protects, not disk encryption.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q13",
+      "type": "definition",
+      "level": "hard",
+      "topic": "encryption",
+      "text": "Why should an application store user passwords as salted hashes rather than in encrypted form?",
+      "options": {
+        "A": "ISO/IEC 27001 requires hashing and forbids encrypting passwords",
+        "B": "Salted hashes let administrators recover passwords users forget",
+        "C": "Hashing makes the password database smaller and faster to search",
+        "D": "A hash is one-way, so stored passwords can't simply be decrypted"
+      },
+      "answer": "D",
+      "explanation": "Encrypted passwords can be decrypted by anyone who gets the key; a hash can only be checked, not reversed, and the salt stops precomputed-table attacks. Recovering forgotten passwords is exactly what a hash prevents; users reset them instead.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q14",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "patching",
+      "text": "A vendor releases a critical patch for a vulnerability that is being actively exploited. Company policy applies all patches in a quarterly cycle. What should the auditor recommend?",
+      "options": {
+        "A": "Patch by risk, fixing critical exploited flaws within days",
+        "B": "Keep the quarterly cycle so that all patches are treated alike",
+        "C": "Wait for the next major version upgrade rather than patching",
+        "D": "Apply every patch to production the same day, skipping tests"
+      },
+      "answer": "A",
+      "explanation": "A risk-based policy speeds up critical, actively exploited fixes while routine patches follow the normal cycle, still with suitable testing. Patching everything with no testing is tempting as the fast answer, but it trades one risk for another.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q15",
+      "type": "definition",
+      "level": "medium",
+      "topic": "OWASP",
+      "text": "Which is the most effective control against SQL injection in a web application?",
+      "options": {
+        "A": "Requiring HTTPS for every page of the website",
+        "B": "Parameterised queries (prepared statements)",
+        "C": "Encrypting the database files stored on disk",
+        "D": "Hiding detailed error messages from all users"
+      },
+      "answer": "B",
+      "explanation": "Parameterised queries keep user input as data, so it can never be run as SQL. Hiding error messages is tempting and helps a little, but the injection still works; it just gives the attacker less feedback.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q16",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "OWASP",
+      "text": "Logged in as customer 1001, a tester changes the URL from /invoice?id=1001 to /invoice?id=1002 and sees another customer's invoice. What kind of weakness is this?",
+      "options": {
+        "A": "Broken access control",
+        "B": "Cross-site scripting (XSS)",
+        "C": "Weak encryption in transit",
+        "D": "Denial of service"
+      },
+      "answer": "A",
+      "explanation": "The server doesn't check that the logged-in user may see the requested record (an insecure direct object reference), which OWASP groups under broken access control. XSS would inject a script into a page; nothing is injected here.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q17",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "incident response",
+      "text": "The security team confirms that malware on one server is spreading to other machines on the network. What should they do first?",
+      "options": {
+        "A": "Email every customer to tell them about the attack",
+        "B": "Wipe the server and rebuild it from scratch right away",
+        "C": "Write the lessons-learned report for management",
+        "D": "Contain it, e.g. isolate the server from the network"
+      },
+      "answer": "D",
+      "explanation": "While the malware is spreading, stopping it comes first; containment limits the damage and keeps evidence. Rebuilding is tempting but comes after containment and analysis, and wiping first destroys evidence.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q18",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "incident response",
+      "text": "During a suspected breach, an IT administrator wants to shut down and reimage a compromised server at once to \"clean it up\". What is the main concern?",
+      "options": {
+        "A": "Reimaging a server usually takes longer than restoring a backup",
+        "B": "Evidence such as memory and logs could be lost before analysis",
+        "C": "All users of the server would need to reset their passwords",
+        "D": "The operating system licence may become invalid after reimaging"
+      },
+      "answer": "B",
+      "explanation": "Shutting down erases memory, and reimaging overwrites the disk, so the team may never learn how the attacker got in or what was taken. Password resets may be needed anyway, but they are a separate step, not a reason to wait.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q19",
+      "type": "definition",
+      "level": "easy",
+      "topic": "incident response",
+      "text": "What is the main purpose of a post-incident (lessons-learned) review?",
+      "options": {
+        "A": "Improve controls so similar incidents are less likely",
+        "B": "Decide which employee should be disciplined for the incident",
+        "C": "Work out the insurance claim for the incident",
+        "D": "Close the incident ticket as quickly as possible"
+      },
+      "answer": "A",
+      "explanation": "The review looks at what happened and how the response went, then feeds improvements back into controls and plans. It is deliberately not about blame, so people report honestly.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T5-Q20",
+      "type": "definition",
+      "level": "medium",
+      "topic": "vulnerability management",
+      "text": "What is the main difference between a vulnerability scan and a penetration test?",
+      "options": {
+        "A": "A pen test tries to exploit weaknesses; a scan only finds them",
+        "B": "They are the same test, sold under different names",
+        "C": "A pen test covers the physical security of the building",
+        "D": "A scan is done by hand, while a pen test is fully automated"
+      },
+      "answer": "A",
+      "explanation": "A scan is a mostly automated check for known weaknesses; a penetration test goes further and tries to exploit them, showing the real impact. \"Scan by hand, pen test automated\" has it backwards: scans are the automated part.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}

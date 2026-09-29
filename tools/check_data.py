@@ -33,6 +33,13 @@ DIFFICULTY_MIX = {"easy": 6, "medium": 10, "hard": 4}
 UNDERLINED_PART = re.compile(r"\{([A-F])\|([^}]*)\}")
 PASSAGE_WORDS = (250, 350)
 PASSAGE_QUESTIONS = (6, 7)
+# Technical 4-8 (tools/gen_technical.py): 20 questions, a 6 / 10 / 4 easy / medium / hard mix in "level", A-D five
+# times each, a topic on every question, and at least this share of scenario questions ("type").
+TECHNICAL_TYPED = {"T4": 0.4, "T5": 0.4, "T6": 0.4, "T7": 0.4, "T8": 0.5}
+# Length giveaway: the correct option may be the longest in at most a quarter of the questions, and lead every
+# distractor by at most this many characters (options that are fixed names, e.g. COSO components, are exempt).
+MAX_CORRECT_LEAD = 4
+FIXED_NAME_OPTIONS = {"Information and communication"}
 VERBAL_OPTIONS = {"A": "True", "B": "False", "C": "Cannot say"}
 CUT_MARKER = "[...text cut off in source]"
 
@@ -105,6 +112,46 @@ def check_english_typed(test, skill, say):
             say("every reading question needs a passage")
 
 
+def check_technical_typed(test, min_scenario, say):
+    qs = test["questions"]
+    if len(qs) != 20:
+        say(f"{len(qs)} questions, expected 20")
+    mix = {d: sum(q.get("level") == d for q in qs) for d in DIFFICULTY_MIX}
+    if mix != DIFFICULTY_MIX:
+        say(f"level mix {mix}, expected {DIFFICULTY_MIX}")
+    letters = {letter: sum(q.get("answer") == letter for q in qs) for letter in "ABCD"}
+    if set(letters.values()) != {len(qs) // 4}:
+        say(f"answers {letters} aren't spread evenly over A-D")
+    scenarios = sum(q.get("type") == "scenario" for q in qs)
+    if scenarios < min_scenario * len(qs):
+        say(f"{scenarios} scenario questions, expected at least {min_scenario:.0%}")
+    longest = 0
+    for q in qs:
+        if q.get("type") not in ("scenario", "definition"):
+            say(f"{q['id']}: type {q.get('type')!r}, expected scenario or definition")
+        if not q.get("topic"):
+            say(f"{q['id']}: no topic")
+        correct = q["options"].get(q["answer"], "")
+        lead = len(correct) - max(len(v) for k, v in q["options"].items() if k != q["answer"])
+        longest += lead > 0
+        if lead > MAX_CORRECT_LEAD and correct not in FIXED_NAME_OPTIONS:
+            say(f"{q['id']}: correct option is {lead} characters longer than every distractor")
+    if longest > len(qs) // 4:
+        say(f"correct option is the longest in {longest} of {len(qs)} questions")
+
+
+def repeated_technical_questions():
+    """Question texts that appear more than once across all Technical tests."""
+    seen, problems = {}, []
+    for path in sorted((SITE / "data").glob("technical-*.json")):
+        for q in json.loads(path.read_text(encoding="utf-8"))["questions"]:
+            key = " ".join(q["text"].lower().split())
+            if key in seen:
+                problems.append(f"{q['id']}: same question as {seen[key]}")
+            seen.setdefault(key, q["id"])
+    return problems
+
+
 def english_timers_in_data_js():
     """The English 4-6 timers: ENGLISH_MINUTES defined in data.js and used for all three tests."""
     js = (SITE / "js" / "data.js").read_text(encoding="utf-8")
@@ -137,6 +184,8 @@ def check_test(path):
     elif test["id"] in ENGLISH_TYPED:
         check_english_typed(test, ENGLISH_TYPED[test["id"]], say)
     else:
+        if test["id"] in TECHNICAL_TYPED:
+            check_technical_typed(test, TECHNICAL_TYPED[test["id"]], say)
         expected = TIME_LIMIT[section][test["test"]] if section == "logic" else TIME_LIMIT[section]
         expected = ENTRANCE.get(test["id"], {}).get("timeLimitSec", expected)
         if test.get("timeLimitSec") != expected:
@@ -240,6 +289,10 @@ def main():
     timer_problems = english_timers_in_data_js()
     print(f"{'data.js':<18} English timers  {'ok' if not timer_problems else f'{len(timer_problems)} problem(s)'}")
     for p in timer_problems:
+        print("   -", p)
+    repeats = repeated_technical_questions()
+    print(f"{'technical-*':<18} repeated questions  {'none' if not repeats else f'{len(repeats)} problem(s)'}")
+    for p in repeats:
         print("   -", p)
     print()
     for section in total:

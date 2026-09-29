@@ -1,0 +1,350 @@
+{
+  "id": "T7",
+  "section": "technical",
+  "test": 7,
+  "title": "Technical (Risk Assurance) – Test 7: Data, Privacy, Cloud & Third Parties",
+  "timeLimitSec": 1200,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "T7-Q01",
+      "type": "definition",
+      "level": "easy",
+      "topic": "UU PDP",
+      "text": "Under Indonesia's Personal Data Protection Law (UU PDP, Law No. 27 of 2022), which of these is specific (sensitive) personal data?",
+      "options": {
+        "A": "Nationality",
+        "B": "Full name",
+        "C": "Marital status",
+        "D": "Health data"
+      },
+      "answer": "D",
+      "explanation": "Article 4 lists specific data as health, biometric, genetic, criminal records, children's data and personal financial data. Name, nationality and marital status are listed as general personal data.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q02",
+      "type": "definition",
+      "level": "medium",
+      "topic": "UU PDP",
+      "text": "Under UU PDP, how quickly must a controller give written notice to the data subjects and the authority after a personal data protection failure?",
+      "options": {
+        "A": "Within 30 days",
+        "B": "Within 14 working days",
+        "C": "Within 7 calendar days",
+        "D": "Within 3 × 24 hours"
+      },
+      "answer": "D",
+      "explanation": "Article 46 requires written notice within 3 × 24 hours (72 hours) to the data subjects and the institution, saying what data was exposed, when and how, and how it is being handled.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q03",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "UU PDP",
+      "text": "A bank hires a payroll provider to process its employees' salary data on the bank's instructions. Under UU PDP, what are the two parties?",
+      "options": {
+        "A": "Both are joint controllers with equal responsibility",
+        "B": "The provider is the controller because it holds the data",
+        "C": "The bank is the controller; the provider is a processor",
+        "D": "The provider is the controller; the bank is a processor"
+      },
+      "answer": "C",
+      "explanation": "The controller decides the purposes and control of processing; a processor acts on its behalf and on its instructions (Article 51). Holding the data doesn't make the provider a controller.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q04",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "UU PDP",
+      "text": "A fintech plans to use an automated credit-scoring model that approves or rejects loans with no human review. What does UU PDP require before it starts this processing?",
+      "options": {
+        "A": "Certification of the model by an auditor",
+        "B": "Publishing the model's source code",
+        "C": "Customers' acceptance of the terms of use",
+        "D": "A data protection impact assessment"
+      },
+      "answer": "D",
+      "explanation": "Article 34 requires an impact assessment for high-risk processing, which explicitly includes automated decisions with legal or significant effects on the data subject. Consent to terms is tempting, but consent is a basis for processing, not a replacement for the assessment.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q05",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "UU PDP",
+      "text": "A data processor wants to hand part of the processing to another company (a sub-processor). What does UU PDP require first?",
+      "options": {
+        "A": "An update to its privacy policy",
+        "B": "A notice to the data subjects",
+        "C": "Written approval from the controller",
+        "D": "Approval from the processor's board"
+      },
+      "answer": "C",
+      "explanation": "Article 51(5) requires the processor to get the controller's written approval before involving another processor. The controller stays responsible for the processing, which is why its consent is needed.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q06",
+      "type": "definition",
+      "level": "easy",
+      "topic": "UU PDP",
+      "text": "Which of these is a right of the data subject under UU PDP?",
+      "options": {
+        "A": "Setting the controller's internal retention policy",
+        "B": "Seeing other people's data held by the controller",
+        "C": "Choosing which employee processes their own data",
+        "D": "Withdrawing consent they gave for processing"
+      },
+      "answer": "D",
+      "explanation": "Data subjects may withdraw consent (Article 9), and also have rights to information, access, correction, erasure and portability. They can access their own data, not other people's.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q07",
+      "type": "definition",
+      "level": "medium",
+      "topic": "UU PDP",
+      "text": "What is the maximum administrative fine under UU PDP?",
+      "options": {
+        "A": "10% of annual profit",
+        "B": "2% of annual revenue",
+        "C": "4% of global turnover",
+        "D": "A flat IDR 5 billion"
+      },
+      "answer": "B",
+      "explanation": "Article 57(3) caps the administrative fine at 2% of annual income or revenue for the violation. 4% of global turnover is tempting because it is the EU GDPR maximum.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q08",
+      "type": "definition",
+      "level": "easy",
+      "topic": "data governance",
+      "text": "In data governance, who is normally accountable for deciding the quality rules and access for a data set such as the customer master file?",
+      "options": {
+        "A": "The data owner in the business",
+        "B": "Any user who works with the data",
+        "C": "The IT database administrator",
+        "D": "The external auditor of the company"
+      },
+      "answer": "A",
+      "explanation": "The business data owner is accountable for the data's quality, use and access. The database administrator is tempting, but that is the custodian role: running and protecting the data as the owner decides.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q09",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "data analytics",
+      "text": "Analytics over a full year of payments finds 120 cases with the same vendor, invoice number and amount paid more than once. What should the auditor do next?",
+      "options": {
+        "A": "Investigate them to confirm which are real duplicate payments",
+        "B": "Ignore them, as analytics results often include false positives",
+        "C": "Report all 120 to management as confirmed losses to the company",
+        "D": "Delete the duplicate entries from the ERP to correct the ledger"
+      },
+      "answer": "A",
+      "explanation": "Analytics results are exceptions to follow up, not conclusions: some may be credit-note reversals or split payments. Reporting all 120 as losses is tempting but not yet supported. Auditors never change the client's records.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q10",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "data analytics",
+      "text": "An auditor receives a journal entry file extracted by the client for a full-year analytics test. What should the auditor do before running the tests?",
+      "options": {
+        "A": "Convert the file to PDF format so no one can change it during testing",
+        "B": "Ask the client to confirm by email that the file contains every entry",
+        "C": "Remove all entries below a set amount so the analysis runs more quickly",
+        "D": "Reconcile the file's totals to the trial balance to check it is complete"
+      },
+      "answer": "D",
+      "explanation": "Analytics on an incomplete or altered extract gives false comfort, so the auditor first reconciles it to the ledger and checks record counts. An email confirmation is tempting, but it is only the client's word.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q11",
+      "type": "scenario",
+      "level": "easy",
+      "topic": "cloud",
+      "text": "A company uses a SaaS email service. Under the shared responsibility model, who manages which staff have accounts and what access they have?",
+      "options": {
+        "A": "The company's auditor",
+        "B": "The customer company",
+        "C": "The internet provider",
+        "D": "The SaaS provider"
+      },
+      "answer": "B",
+      "explanation": "Whatever the service model, the customer is responsible for its identities, accounts and data. The SaaS provider runs the application and infrastructure, but it can't know who joined or left the company.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q12",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "cloud",
+      "text": "A company runs its own virtual servers on an IaaS platform. An unpatched operating system on those servers is exploited. Under the shared responsibility model, who should have patched the operating system?",
+      "options": {
+        "A": "The hardware vendor",
+        "B": "The cloud provider",
+        "C": "The customer",
+        "D": "Both equally, by default"
+      },
+      "answer": "C",
+      "explanation": "In IaaS the provider secures the physical hosts, network and virtualisation layer; the guest operating system and everything above it are the customer's. In PaaS the provider would patch the OS, which is why the provider is tempting.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q13",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "UU PDP",
+      "text": "An Indonesian company plans to move customer personal data to a cloud region outside Indonesia. What does UU PDP expect it to ensure?",
+      "options": {
+        "A": "A transfer ban: personal data must stay in Indonesia",
+        "B": "Equal or higher protection, binding safeguards, or consent",
+        "C": "That the cloud provider has a registered office in Indonesia",
+        "D": "A separate written approval from each customer's own bank"
+      },
+      "answer": "B",
+      "explanation": "Article 56 allows cross-border transfer if the recipient country's protection is equal or higher; otherwise adequate and binding safeguards are needed, and failing both, the data subject's consent. A total ban is tempting but wrong: the law regulates transfers, it doesn't forbid them.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q14",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "SOC reports",
+      "text": "A company outsources payroll processing. Its external auditor wants assurance that the provider's controls relevant to financial reporting worked throughout the year. Which report fits best?",
+      "options": {
+        "A": "SOC 3",
+        "B": "SOC 1 Type 2",
+        "C": "SOC 2 Type 1",
+        "D": "SOC 1 Type 1"
+      },
+      "answer": "B",
+      "explanation": "SOC 1 covers controls relevant to user entities' financial reporting, and Type 2 tests operating effectiveness over a period. SOC 1 Type 1 is tempting, but it only covers design at a point in time.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q15",
+      "type": "definition",
+      "level": "easy",
+      "topic": "SOC reports",
+      "text": "What is the main difference between a SOC 2 Type 1 report and a SOC 2 Type 2 report?",
+      "options": {
+        "A": "Type 2 also tests if controls operated over a period",
+        "B": "Type 1 is for general use; Type 2 has restricted use",
+        "C": "Type 2 covers privacy, while Type 1 covers security",
+        "D": "Type 1 is done by internal audit; Type 2 by a CPA"
+      },
+      "answer": "A",
+      "explanation": "Type 1 reports on the design of controls at a point in time; Type 2 adds tests of operating effectiveness over a period (often 6–12 months). The trust services criteria covered don't depend on the type.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q16",
+      "type": "scenario",
+      "level": "hard",
+      "topic": "SOC reports",
+      "text": "A clean SOC 1 Type 2 report on a cloud payroll provider lists complementary user entity controls (CUECs), such as customers reviewing user access to the payroll portal. What should the customer's auditor do about the CUECs?",
+      "options": {
+        "A": "Ask the provider to perform the CUECs instead",
+        "B": "Test that the customer performs the listed CUECs",
+        "C": "Set the report aside because it lists CUECs",
+        "D": "Rely on the report fully, with no further audit work"
+      },
+      "answer": "B",
+      "explanation": "The provider's controls only achieve their objectives if the customer performs its complementary controls, so the auditor must test them at the customer. A clean opinion is tempting, but it assumes the CUECs are in place.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q17",
+      "type": "definition",
+      "level": "medium",
+      "topic": "third-party risk",
+      "text": "Which is the most appropriate way to manage third-party risk across hundreds of vendors?",
+      "options": {
+        "A": "Tier vendors by risk and do deeper due diligence on high-risk ones",
+        "B": "Do the same full on-site audit of every vendor, however small, each year",
+        "C": "Assess the vendors with the largest contracts and skip the rest",
+        "D": "Rely on the signed contracts instead of doing assessments"
+      },
+      "answer": "A",
+      "explanation": "Risk tiering puts effort where the risk is: data access, criticality, regulatory impact. Contract value is tempting, but a small vendor with access to customer data can be high risk.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q18",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "third-party risk",
+      "text": "A vendor's SOC 2 report covers only its Singapore data centre, but your company's data is processed at its Jakarta facility. What should you do?",
+      "options": {
+        "A": "Get other assurance for Jakarta, as it's outside the report",
+        "B": "End the contract at once because the report is not useful",
+        "C": "Ask the vendor to add Jakarta to the report's cover letter",
+        "D": "Rely on the report, since it is issued for the same vendor"
+      },
+      "answer": "A",
+      "explanation": "A SOC report gives assurance only for the systems and locations in its scope. Relying on it because it's the same vendor is tempting, but the Jakarta controls were never tested.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q19",
+      "type": "scenario",
+      "level": "medium",
+      "topic": "BCP / DR",
+      "text": "A system has a recovery point objective (RPO) of 1 hour, but its database is backed up only once a night. What is the gap?",
+      "options": {
+        "A": "Recovery of the system could take longer than the 1-hour target allows",
+        "B": "Backups are taken more often than the target actually needs",
+        "C": "Up to a day of data could be lost, well beyond the 1-hour target",
+        "D": "There is no gap, since a backup is taken each day of the week"
+      },
+      "answer": "C",
+      "explanation": "RPO is about how much data can be lost; with nightly backups, a failure late in the day loses almost a day of work. Recovery time is the RTO, a different measure, which makes \"recovery could take longer\" tempting.",
+      "source": "generated",
+      "flag": null
+    },
+    {
+      "id": "T7-Q20",
+      "type": "definition",
+      "level": "easy",
+      "topic": "BCP / DR",
+      "text": "What is the purpose of a business impact analysis (BIA) in business continuity planning?",
+      "options": {
+        "A": "List every IT asset the company owns for insurance cover",
+        "B": "Test whether the backups of key systems can be restored",
+        "C": "Find the critical processes and how fast each must recover",
+        "D": "Decide which vendor to buy disaster recovery software from"
+      },
+      "answer": "C",
+      "explanation": "The BIA identifies critical processes, the impact of disruption over time, and so the recovery objectives (e.g. RTO and RPO). Testing backups is a later step that checks the plan works.",
+      "source": "generated",
+      "flag": null
+    }
+  ]
+}
