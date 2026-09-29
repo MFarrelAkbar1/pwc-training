@@ -1,0 +1,235 @@
+{
+  "id": "L16",
+  "section": "logic",
+  "test": 16,
+  "title": "Logic – Syllogisms 3",
+  "timeLimitSec": 720,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "L16-Q01",
+      "text": "Statements: All violinists are musicians. No musicians are tone-deaf people. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some violinists are not musicians.",
+        "B": "Some tone-deaf people are violinists.",
+        "C": "All musicians are violinists.",
+        "D": "No violinists are tone-deaf people.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "Every violinist is a musician and no musician is tone-deaf, so no violinist is tone-deaf. 'All musicians are violinists' reverses the first statement.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L16-Q02",
+      "text": "Statements: All lawyers are graduates. Some lawyers are partners. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some partners are graduates.",
+        "B": "Some graduates are not partners.",
+        "C": "All partners are graduates.",
+        "D": "All graduates are lawyers.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "The lawyers who are partners are also graduates (every lawyer is), so some partners are graduates. The partners who aren't lawyers may or may not be graduates.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L16-Q03",
+      "text": "Statements: Some laptops are not encrypted devices. Some encrypted devices are phones. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All encrypted devices are laptops.",
+        "B": "No laptops are phones.",
+        "C": "Some phones are not laptops.",
+        "D": "Some laptops are phones.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows. The statements link laptops and phones only through encrypted devices, and in different ways ('some are not' and 'some are'), so laptops and phones may or may not overlap.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L16-Q04",
+      "text": "Statements: No reptiles are warm-blooded animals. All mammals are warm-blooded animals. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some warm-blooded animals are reptiles.",
+        "B": "All warm-blooded animals are mammals.",
+        "C": "No mammals are reptiles.",
+        "D": "Some mammals are reptiles.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "C",
+      "explanation": "Every mammal is warm-blooded and no reptile is, so no mammal is a reptile. 'All warm-blooded animals are mammals' reverses the second statement.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L16-Q05",
+      "text": "Statements: Some auditors are not accountants. All auditors are graduates. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some accountants are not graduates.",
+        "B": "Some graduates are not accountants.",
+        "C": "No graduates are accountants.",
+        "D": "Some auditors are not graduates.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "B",
+      "explanation": "The auditors who aren't accountants are graduates (every auditor is), so some graduates are not accountants. Other graduates could be accountants, so 'no graduates are accountants' doesn't follow.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L16-Q06",
+      "text": "Statements: No full-time staff are freelancers. All freelancers are invoice senders. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "No invoice senders are full-time staff.",
+        "B": "Some full-time staff are not invoice senders.",
+        "C": "Some full-time staff are invoice senders.",
+        "D": "Some invoice senders are not full-time staff.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "There is at least one freelancer; every freelancer sends invoices and none is full-time, so some invoice senders are not full-time staff. Full-time staff could also send invoices, so 'no invoice senders are full-time staff' doesn't follow.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L16-Q07",
+      "text": "Statements: No temporary workers are union members. Some drivers are not union members. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All union members are drivers.",
+        "B": "Some drivers are not temporary workers.",
+        "C": "No drivers are temporary workers.",
+        "D": "Some drivers are temporary workers.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows. Both temporary workers and some drivers are outside the union, but that doesn't tell us whether any driver is a temporary worker: they may overlap or not.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L16-Q08",
+      "text": "Statements: All interns are trainees. All trainees are badge holders. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "No interns are badge holders.",
+        "B": "Some badge holders are not trainees.",
+        "C": "All badge holders are interns.",
+        "D": "Some badge holders are interns.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "Interns are inside trainees, which are inside badge holders, and there is at least one intern, so some badge holders are interns. 'All badge holders are interns' reverses the direction.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L16-Q09",
+      "text": "Statements: No night-shift workers are office-based staff. All night-shift workers are security staff. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some security staff are not office-based staff.",
+        "B": "No security staff are office-based staff.",
+        "C": "Some office-based staff are not security staff.",
+        "D": "All office-based staff are security staff.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "There is at least one night-shift worker; each is security staff and none is office-based, so some security staff are not office-based. Other security staff could be office-based.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L16-Q10",
+      "text": "Statements: All pilots are licence holders. Some instructors are pilots. No licence holders are trainees. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some instructors are not trainees.",
+        "B": "Some instructors are trainees.",
+        "C": "No instructors are trainees.",
+        "D": "Some trainees are not instructors.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "The instructors who are pilots are licence holders, so they can't be trainees: some instructors are not trainees. The other instructors might be trainees.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L16-Q11",
+      "text": "Statements: All editors are writers. Some writers are poets. All poets are readers. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "It is not true that all readers are writers.",
+        "B": "Some editors are poets.",
+        "C": "No editors are readers.",
+        "D": "Some editors are readers.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows. The writers who are poets need not include any editor, so nothing links editors to poets or readers: 'some editors are readers' and 'no editors are readers' can each be false. All readers could be writers (for example if every reader is a poet), so the 'it is not true' option doesn't follow either.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L16-Q12",
+      "text": "Statements: Some award winners are designers. All designers are portfolio owners. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All portfolio owners are designers.",
+        "B": "No award winners are portfolio owners.",
+        "C": "Some portfolio owners are award winners.",
+        "D": "Some award winners are not portfolio owners.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "C",
+      "explanation": "The award winners who are designers own portfolios (every designer does), so some portfolio owners are award winners. Nothing is said about the other award winners.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L16-Q13",
+      "text": "Statements: No shortlisted candidates are late applicants. All interviewed candidates are shortlisted candidates. All hired candidates are interviewed candidates. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All interviewed candidates are hired candidates.",
+        "B": "No hired candidates are late applicants.",
+        "C": "Some late applicants are shortlisted candidates.",
+        "D": "Some shortlisted candidates are not hired candidates.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "B",
+      "explanation": "Hired candidates are inside interviewed candidates, which are inside shortlisted candidates, and no shortlisted candidate applied late, so no hired candidate is a late applicant. It could be that every shortlisted candidate was hired, so 'some shortlisted candidates are not hired' doesn't follow.",
+      "source": "generated",
+      "difficulty": "hard"
+    },
+    {
+      "id": "L16-Q14",
+      "text": "Statements: All consultants are graduates. No managers are consultants. All directors are managers. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All graduates are consultants.",
+        "B": "No directors are graduates.",
+        "C": "No directors are consultants.",
+        "D": "Some directors are not graduates.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "C",
+      "explanation": "Directors are inside managers, and no manager is a consultant, so no director is a consultant. Nothing links directors to graduates: they may or may not be graduates.",
+      "source": "generated",
+      "difficulty": "hard"
+    },
+    {
+      "id": "L16-Q15",
+      "text": "Statements: No trainees are managers. All trainees are employees. All employees are ID-card holders. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "It is not true that all ID-card holders are employees.",
+        "B": "It is not true that all ID-card holders are managers.",
+        "C": "No ID-card holders are managers.",
+        "D": "Some managers are trainees.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "B",
+      "explanation": "There is at least one trainee; every trainee is an employee and so an ID-card holder, and no trainee is a manager. So at least one ID-card holder is not a manager: it is not true that all ID-card holders are managers. 'No ID-card holders are managers' goes too far, and every ID-card holder could be an employee.",
+      "source": "generated",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "id": "L15",
+  "section": "logic",
+  "test": 15,
+  "title": "Logic – Syllogisms 2",
+  "timeLimitSec": 720,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "L15-Q01",
+      "text": "Statements: All interns are students. All students are library members. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All library members are interns.",
+        "B": "Some library members are not interns.",
+        "C": "No interns are library members.",
+        "D": "All interns are library members.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "Interns are inside students, and students are inside library members, so every intern is a library member. The reverse ('all library members are …') doesn't follow: there may be library members who aren't students.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L15-Q02",
+      "text": "Statements: No pilots are smokers. All captains are pilots. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All pilots are captains.",
+        "B": "No captains are smokers.",
+        "C": "Some pilots are not captains.",
+        "D": "Some smokers are captains.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "B",
+      "explanation": "Every captain is a pilot and no pilot is a smoker, so no captain is a smoker. Whether some pilots aren't captains isn't stated: all pilots could be captains.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L15-Q03",
+      "text": "Statements: All cyclists are helmet owners. Some teachers are cyclists. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All teachers are helmet owners.",
+        "B": "Some teachers are helmet owners.",
+        "C": "All helmet owners are cyclists.",
+        "D": "Some teachers are not helmet owners.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "B",
+      "explanation": "The teachers who are cyclists are also helmet owners, so some teachers are helmet owners. We know nothing about the other teachers, so 'all teachers' and 'some teachers are not' don't follow.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L15-Q04",
+      "text": "Statements: Some doctors are runners. Some runners are vegetarians. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "It is not true that all runners are doctors.",
+        "B": "Some vegetarians are not doctors.",
+        "C": "No doctors are vegetarians.",
+        "D": "Some doctors are vegetarians.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows. The runners who are doctors and the runners who are vegetarians may be different people or the same people, so 'some doctors are vegetarians' and 'no doctors are vegetarians' can each be false. Every runner could also be a doctor, so 'it is not true that all runners are doctors' doesn't follow either.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L15-Q05",
+      "text": "Statements: No volunteers are paid staff. Some organisers are volunteers. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some organisers are not paid staff.",
+        "B": "Some organisers are paid staff.",
+        "C": "Some paid staff are not organisers.",
+        "D": "No organisers are paid staff.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "The organisers who are volunteers can't be paid staff, so some organisers are not paid staff. The other organisers may or may not be paid staff, so 'no organisers are paid staff' doesn't follow.",
+      "source": "generated",
+      "difficulty": "easy"
+    },
+    {
+      "id": "L15-Q06",
+      "text": "Statements: All sprinters are athletes. No chess players are athletes. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some athletes are not sprinters.",
+        "B": "All athletes are sprinters.",
+        "C": "Some athletes are chess players.",
+        "D": "No sprinters are chess players.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "Every sprinter is an athlete and no chess player is an athlete, so no sprinter is a chess player. 'Some athletes are not sprinters' doesn't follow: all athletes could be sprinters.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L15-Q07",
+      "text": "Statements: All managers are graduates. Some team leaders are not graduates. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some team leaders are not managers.",
+        "B": "No team leaders are managers.",
+        "C": "Some managers are not team leaders.",
+        "D": "Some graduates are not managers.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "The team leaders who aren't graduates can't be managers (every manager is a graduate), so some team leaders are not managers. It could still be that every manager is a team leader.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L15-Q08",
+      "text": "Statements: All engineers are problem solvers. No artists are engineers. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All problem solvers are engineers.",
+        "B": "Some artists are not problem solvers.",
+        "C": "Some artists are problem solvers.",
+        "D": "No artists are problem solvers.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows. Artists are outside the engineers, but that says nothing about whether they are problem solvers: 'no artists are problem solvers' and 'some artists are problem solvers' can each be false.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L15-Q09",
+      "text": "Statements: Some volunteers are retirees. All volunteers are first-aiders. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some retirees are not first-aiders.",
+        "B": "All retirees are first-aiders.",
+        "C": "Some retirees are first-aiders.",
+        "D": "No retirees are first-aiders.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "C",
+      "explanation": "The retirees who are volunteers are first-aiders (every volunteer is), so some retirees are first-aiders. Nothing is said about the other retirees.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L15-Q10",
+      "text": "Statements: No smokers are marathon runners. Some club members are marathon runners. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "No club members are smokers.",
+        "B": "Some smokers are not club members.",
+        "C": "Some smokers are club members.",
+        "D": "Some club members are not smokers.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "D",
+      "explanation": "The club members who are marathon runners can't be smokers, so some club members are not smokers. Other club members could be smokers, so 'no club members are smokers' doesn't follow.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L15-Q11",
+      "text": "Statements: All contracts are signed documents. No signed documents are drafts. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "No drafts are contracts.",
+        "B": "All signed documents are contracts.",
+        "C": "Some signed documents are not contracts.",
+        "D": "Some contracts are drafts.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "A",
+      "explanation": "Every contract is signed and no signed document is a draft, so no draft is a contract. 'Some signed documents are not contracts' doesn't follow: every signed document could be a contract.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L15-Q12",
+      "text": "Statements: No freelancers are pension members. No pension members are part-timers. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some part-timers are not freelancers.",
+        "B": "No freelancers are part-timers.",
+        "C": "Some freelancers are part-timers.",
+        "D": "All freelancers are part-timers.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "E",
+      "explanation": "None follows. Two 'no' statements only say that freelancers and part-timers are both outside pension members; they may overlap completely, partly or not at all.",
+      "source": "generated",
+      "difficulty": "medium"
+    },
+    {
+      "id": "L15-Q13",
+      "text": "Statements: All nurses are shift workers. All nurses are first-aiders. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All shift workers are first-aiders.",
+        "B": "Some first-aiders are not shift workers.",
+        "C": "Some shift workers are first-aiders.",
+        "D": "No shift workers are first-aiders.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "C",
+      "explanation": "The nurses are both shift workers and first-aiders, and there is at least one nurse, so some shift workers are first-aiders. 'All shift workers are first-aiders' goes too far: there may be shift workers who aren't nurses.",
+      "source": "generated",
+      "difficulty": "hard"
+    },
+    {
+      "id": "L15-Q14",
+      "text": "Statements: All apprentices are mentees. All mentees are workshop attendees. No workshop attendees are remote workers. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "All workshop attendees are apprentices.",
+        "B": "No apprentices are remote workers.",
+        "C": "Some workshop attendees are not apprentices.",
+        "D": "Some remote workers are mentees.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "B",
+      "explanation": "Apprentices are inside mentees, mentees are inside workshop attendees, and no workshop attendee is a remote worker, so no apprentice is a remote worker. The reverse inclusions don't follow.",
+      "source": "generated",
+      "difficulty": "hard"
+    },
+    {
+      "id": "L15-Q15",
+      "text": "Statements: Some suppliers are exporters. All exporters are registered traders. No registered traders are tax-exempt businesses. Assuming the statements are true, which conclusion must follow?",
+      "options": {
+        "A": "Some tax-exempt businesses are not suppliers.",
+        "B": "No suppliers are tax-exempt businesses.",
+        "C": "Some suppliers are not tax-exempt businesses.",
+        "D": "Some exporters are tax-exempt businesses.",
+        "E": "None of these conclusions follows."
+      },
+      "answer": "C",
+      "explanation": "The suppliers who are exporters are registered traders, so they can't be tax-exempt: some suppliers are not tax-exempt businesses. Other suppliers might be tax-exempt, so 'no suppliers are tax-exempt businesses' doesn't follow.",
+      "source": "generated",
+      "difficulty": "hard"
+    }
+  ]
+}

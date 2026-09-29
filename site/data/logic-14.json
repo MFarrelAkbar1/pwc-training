@@ -1,0 +1,250 @@
+{
+  "id": "L14",
+  "section": "logic",
+  "test": 14,
+  "title": "Logic – Analogies 3",
+  "timeLimitSec": 480,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "L14-Q01",
+      "text": "Begin : Start  =  Finish : ?",
+      "options": {
+        "A": "Race",
+        "B": "End",
+        "C": "Line",
+        "D": "Goal",
+        "E": "Winner"
+      },
+      "answer": "B",
+      "explanation": "Relation: synonym (the two words mean the same). Begin → Start, so Finish → End. A race has a finish, but only 'end' means the same as finish.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "synonym"
+    },
+    {
+      "id": "L14-Q02",
+      "text": "Cut : Bleeding  =  Burn : ?",
+      "options": {
+        "A": "Blister",
+        "B": "Heat",
+        "C": "Skin",
+        "D": "Bandage",
+        "E": "Fire"
+      },
+      "answer": "A",
+      "explanation": "Relation: cause-effect (the first causes the second). Cut → Bleeding, so Burn → Blister. Fire and heat cause a burn (the wrong direction); a burn causes a blister.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "cause-effect"
+    },
+    {
+      "id": "L14-Q03",
+      "text": "Tree : Oak  =  Flower : ?",
+      "options": {
+        "A": "Petal",
+        "B": "Bee",
+        "C": "Rose",
+        "D": "Seed",
+        "E": "Garden"
+      },
+      "answer": "C",
+      "explanation": "Relation: category-member (the second is a member of the first category). Tree → Oak, so Flower → Rose. A petal is part of a flower, not a kind of flower.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "category-member"
+    },
+    {
+      "id": "L14-Q04",
+      "text": "Leaf : Tree  =  Feather : ?",
+      "options": {
+        "A": "Nest",
+        "B": "Fly",
+        "C": "Bird",
+        "D": "Sky",
+        "E": "Light"
+      },
+      "answer": "C",
+      "explanation": "Relation: part-whole (the first is a part of the second). Leaf → Tree, so Feather → Bird. A nest is where a bird lives and 'fly' is what it does; the feather is part of the bird.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "part-whole"
+    },
+    {
+      "id": "L14-Q05",
+      "text": "Plough : Farmer  =  Whistle : ?",
+      "options": {
+        "A": "Referee",
+        "B": "Ball",
+        "C": "Match",
+        "D": "Stadium",
+        "E": "Sound"
+      },
+      "answer": "A",
+      "explanation": "Relation: tool-user (the first is a tool used by the second). Plough → Farmer, so Whistle → Referee. A whistle makes a sound and is used in a match, but the person who uses it is the referee.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "tool-user"
+    },
+    {
+      "id": "L14-Q06",
+      "text": "Umbrella : Rain  =  Helmet : ?",
+      "options": {
+        "A": "Soldier",
+        "B": "Bicycle",
+        "C": "Plastic",
+        "D": "Injury",
+        "E": "Strap"
+      },
+      "answer": "D",
+      "explanation": "Relation: function (the first is used for the second). Umbrella → Rain, so Helmet → Injury. An umbrella protects against rain; a helmet protects against injury. A soldier or cyclist wears it, and plastic and a strap are what it is made of.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "function"
+    },
+    {
+      "id": "L14-Q07",
+      "text": "Whisper : Shout  =  Drizzle : ?",
+      "options": {
+        "A": "Umbrella",
+        "B": "Cloud",
+        "C": "Puddle",
+        "D": "Mist",
+        "E": "Downpour"
+      },
+      "answer": "E",
+      "explanation": "Relation: degree (the second is a stronger form of the first). Whisper → Shout, so Drizzle → Downpour. Mist is even lighter than a drizzle; a downpour is the heavy form, as a shout is of a whisper.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "degree"
+    },
+    {
+      "id": "L14-Q08",
+      "text": "Shallow : Deep  =  Rare : ?",
+      "options": {
+        "A": "Precious",
+        "B": "Few",
+        "C": "Unusual",
+        "D": "Valuable",
+        "E": "Common"
+      },
+      "answer": "E",
+      "explanation": "Relation: antonym (the two words are opposites). Shallow → Deep, so Rare → Common. 'Unusual' is a synonym of rare; the opposite is common.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "antonym"
+    },
+    {
+      "id": "L14-Q09",
+      "text": "Egg : Chick  =  Seed : ?",
+      "options": {
+        "A": "Soil",
+        "B": "Sprout",
+        "C": "Fruit",
+        "D": "Flower",
+        "E": "Water"
+      },
+      "answer": "B",
+      "explanation": "Relation: sequence (the second comes right after the first). Egg → Chick, so Seed → Sprout. A chick is the next stage after an egg, and a sprout the next stage after a seed. A flower comes later, and fruit contains the seed.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "sequence"
+    },
+    {
+      "id": "L14-Q10",
+      "text": "Bacteria : Decay  =  Wind : ?",
+      "options": {
+        "A": "Breeze",
+        "B": "Air",
+        "C": "Storm",
+        "D": "Erosion",
+        "E": "Sail"
+      },
+      "answer": "D",
+      "explanation": "Relation: cause-effect (the first causes the second). Bacteria → Decay, so Wind → Erosion. A breeze and a storm are kinds of wind, not results of it; wind wears rock away (erosion).",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "cause-effect"
+    },
+    {
+      "id": "L14-Q11",
+      "text": "Verse : Song  =  Ingredient : ?",
+      "options": {
+        "A": "Chef",
+        "B": "Kitchen",
+        "C": "Recipe",
+        "D": "Taste",
+        "E": "Oven"
+      },
+      "answer": "C",
+      "explanation": "Relation: part-whole (the first is a part of the second). Verse → Song, so Ingredient → Recipe. A verse is one part of a song; an ingredient is one part of a recipe. The chef and kitchen are who and where.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "part-whole"
+    },
+    {
+      "id": "L14-Q12",
+      "text": "Hostile : Unfriendly  =  Hesitant : ?",
+      "options": {
+        "A": "Hidden",
+        "B": "Impatient",
+        "C": "Eager",
+        "D": "Reluctant",
+        "E": "Confident"
+      },
+      "answer": "D",
+      "explanation": "Relation: synonym (the two words mean the same). Hostile → Unfriendly, so Hesitant → Reluctant. 'Eager' and 'confident' are near-opposites of hesitant; reluctant means the same.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "synonym"
+    },
+    {
+      "id": "L14-Q13",
+      "text": "Content : Ecstatic  =  Uneasy : ?",
+      "options": {
+        "A": "Courageous",
+        "B": "Curious",
+        "C": "Calm",
+        "D": "Nervous",
+        "E": "Terrified"
+      },
+      "answer": "E",
+      "explanation": "Relation: degree (the second is a stronger form of the first). Content → Ecstatic, so Uneasy → Terrified. 'Nervous' is about as strong as uneasy; terrified is the extreme form, as ecstatic is of content.",
+      "source": "generated",
+      "difficulty": "hard",
+      "relation": "degree"
+    },
+    {
+      "id": "L14-Q14",
+      "text": "Ash : Fire  =  Scar : ?",
+      "options": {
+        "A": "Wound",
+        "B": "Skin",
+        "C": "Face",
+        "D": "Doctor",
+        "E": "Bandage"
+      },
+      "answer": "A",
+      "explanation": "Relation: effect-cause (the first is left behind by (is the result of) the second). Ash → Fire, so Scar → Wound. Ash is what a fire leaves behind; a scar is what a wound leaves behind. Skin and face are where the scar is.",
+      "source": "generated",
+      "difficulty": "hard",
+      "relation": "effect-cause"
+    },
+    {
+      "id": "L14-Q15",
+      "text": "Anchor : Ship  =  Leash : ?",
+      "options": {
+        "A": "Park",
+        "B": "Dog",
+        "C": "Owner",
+        "D": "Walk",
+        "E": "Rope"
+      },
+      "answer": "B",
+      "explanation": "Relation: function (the first is used for the second). Anchor → Ship, so Leash → Dog. An anchor holds a ship in place; a leash holds a dog in place. The owner holds the leash (the user, not the thing held), a walk and a park are where it is used, and rope is what a leash is like.",
+      "source": "generated",
+      "difficulty": "hard",
+      "relation": "function"
+    }
+  ]
+}

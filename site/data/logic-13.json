@@ -1,0 +1,250 @@
+{
+  "id": "L13",
+  "section": "logic",
+  "test": 13,
+  "title": "Logic – Analogies 2",
+  "timeLimitSec": 480,
+  "source": "generated",
+  "questions": [
+    {
+      "id": "L13-Q01",
+      "text": "Ancient : Modern  =  Victory : ?",
+      "options": {
+        "A": "Success",
+        "B": "Defeat",
+        "C": "Battle",
+        "D": "Army",
+        "E": "Trophy"
+      },
+      "answer": "B",
+      "explanation": "Relation: antonym (the two words are opposites). Ancient → Modern, so Victory → Defeat. 'Success' means nearly the same as victory, not the opposite.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "antonym"
+    },
+    {
+      "id": "L13-Q02",
+      "text": "Finger : Hand  =  Toe : ?",
+      "options": {
+        "A": "Foot",
+        "B": "Sock",
+        "C": "Nail",
+        "D": "Walk",
+        "E": "Shoe"
+      },
+      "answer": "A",
+      "explanation": "Relation: part-whole (the first is a part of the second). Finger → Hand, so Toe → Foot. A nail is part of the toe: the relation the wrong way round.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "part-whole"
+    },
+    {
+      "id": "L13-Q03",
+      "text": "Stethoscope : Doctor  =  Brush : ?",
+      "options": {
+        "A": "Canvas",
+        "B": "Painter",
+        "C": "Colour",
+        "D": "Paint",
+        "E": "Wall"
+      },
+      "answer": "B",
+      "explanation": "Relation: tool-user (the first is a tool used by the second). Stethoscope → Doctor, so Brush → Painter. Canvas and paint are what the brush is used on or with, not the person who uses it.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "tool-user"
+    },
+    {
+      "id": "L13-Q04",
+      "text": "Metal : Iron  =  Colour : ?",
+      "options": {
+        "A": "Paint",
+        "B": "Rainbow",
+        "C": "Bright",
+        "D": "Blue",
+        "E": "Light"
+      },
+      "answer": "D",
+      "explanation": "Relation: category-member (the second is a member of the first category). Metal → Iron, so Colour → Blue. A rainbow contains colours but isn't one; 'bright' describes a colour.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "category-member"
+    },
+    {
+      "id": "L13-Q05",
+      "text": "Monday : Tuesday  =  March : ?",
+      "options": {
+        "A": "May",
+        "B": "February",
+        "C": "April",
+        "D": "Spring",
+        "E": "Month"
+      },
+      "answer": "C",
+      "explanation": "Relation: sequence (the second comes right after the first). Monday → Tuesday, so March → April. February comes before March and May two months after; only April comes straight after.",
+      "source": "generated",
+      "difficulty": "easy",
+      "relation": "sequence"
+    },
+    {
+      "id": "L13-Q06",
+      "text": "Warm : Hot  =  Cool : ?",
+      "options": {
+        "A": "Breeze",
+        "B": "Winter",
+        "C": "Cold",
+        "D": "Wet",
+        "E": "Ice"
+      },
+      "answer": "C",
+      "explanation": "Relation: degree (the second is a stronger form of the first). Warm → Hot, so Cool → Cold. Ice and winter are cold things, not a stronger word for 'cool'.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "degree"
+    },
+    {
+      "id": "L13-Q07",
+      "text": "Brief : Short  =  Vast : ?",
+      "options": {
+        "A": "Empty",
+        "B": "Ocean",
+        "C": "Huge",
+        "D": "Narrow",
+        "E": "Distant"
+      },
+      "answer": "C",
+      "explanation": "Relation: synonym (the two words mean the same). Brief → Short, so Vast → Huge. An ocean is vast, but it is an example, not a word with the same meaning.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "synonym"
+    },
+    {
+      "id": "L13-Q08",
+      "text": "Refrigerator : Cool  =  Oven : ?",
+      "options": {
+        "A": "Bread",
+        "B": "Chef",
+        "C": "Electricity",
+        "D": "Kitchen",
+        "E": "Bake"
+      },
+      "answer": "E",
+      "explanation": "Relation: function (the first is used for the second). Refrigerator → Cool, so Oven → Bake. Bread is what gets baked and a kitchen is where the oven is; neither is what the oven does.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "function"
+    },
+    {
+      "id": "L13-Q09",
+      "text": "Brick : Wall  =  Link : ?",
+      "options": {
+        "A": "Chain",
+        "B": "Rope",
+        "C": "Ring",
+        "D": "Metal",
+        "E": "Lock"
+      },
+      "answer": "A",
+      "explanation": "Relation: part-whole (the first is a part of the second). Brick → Wall, so Link → Chain. Metal is what a link is made of (material), not the whole it is part of.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "part-whole"
+    },
+    {
+      "id": "L13-Q10",
+      "text": "Generous : Stingy  =  Cautious : ?",
+      "options": {
+        "A": "Slow",
+        "B": "Careful",
+        "C": "Nervous",
+        "D": "Reckless",
+        "E": "Wise"
+      },
+      "answer": "D",
+      "explanation": "Relation: antonym (the two words are opposites). Generous → Stingy, so Cautious → Reckless. 'Careful' is a synonym of cautious; the opposite is reckless.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "antonym"
+    },
+    {
+      "id": "L13-Q11",
+      "text": "Baton : Conductor  =  Scalpel : ?",
+      "options": {
+        "A": "Surgeon",
+        "B": "Operation",
+        "C": "Hospital",
+        "D": "Knife",
+        "E": "Patient"
+      },
+      "answer": "A",
+      "explanation": "Relation: tool-user (the first is a tool used by the second). Baton → Conductor, so Scalpel → Surgeon. The patient is who the scalpel is used on, and an operation is what it is used for; the user is the surgeon.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "tool-user"
+    },
+    {
+      "id": "L13-Q12",
+      "text": "Overeating : Obesity  =  Insomnia : ?",
+      "options": {
+        "A": "Bed",
+        "B": "Dream",
+        "C": "Night",
+        "D": "Fatigue",
+        "E": "Pillow"
+      },
+      "answer": "D",
+      "explanation": "Relation: cause-effect (the first causes the second). Overeating → Obesity, so Insomnia → Fatigue. Insomnia (not being able to sleep) leads to fatigue; the other options are only linked to sleep.",
+      "source": "generated",
+      "difficulty": "medium",
+      "relation": "cause-effect"
+    },
+    {
+      "id": "L13-Q13",
+      "text": "Conceal : Reveal  =  Scatter : ?",
+      "options": {
+        "A": "Break",
+        "B": "Gather",
+        "C": "Hide",
+        "D": "Sow",
+        "E": "Spread"
+      },
+      "answer": "B",
+      "explanation": "Relation: antonym (the two words are opposites). Conceal → Reveal, so Scatter → Gather. 'Spread' is close to scatter, and 'hide' copies the first pair's word; the opposite of scatter is gather.",
+      "source": "generated",
+      "difficulty": "hard",
+      "relation": "antonym"
+    },
+    {
+      "id": "L13-Q14",
+      "text": "Nibble : Devour  =  Glance : ?",
+      "options": {
+        "A": "Look",
+        "B": "Ignore",
+        "C": "Blink",
+        "D": "Eye",
+        "E": "Stare"
+      },
+      "answer": "E",
+      "explanation": "Relation: degree (the second is a stronger form of the first). Nibble → Devour, so Glance → Stare. 'Look' is the neutral word; a stare is the long, intense form of a glance, as devouring is of nibbling.",
+      "source": "generated",
+      "difficulty": "hard",
+      "relation": "degree"
+    },
+    {
+      "id": "L13-Q15",
+      "text": "Ruler : Length  =  Clock : ?",
+      "options": {
+        "A": "Hour",
+        "B": "Watch",
+        "C": "Wall",
+        "D": "Alarm",
+        "E": "Time"
+      },
+      "answer": "E",
+      "explanation": "Relation: function (the first is used for the second). Ruler → Length, so Clock → Time. A ruler measures length, a clock measures time. An hour is a unit of time (like a centimetre), and a watch is another clock.",
+      "source": "generated",
+      "difficulty": "hard",
+      "relation": "function"
+    }
+  ]
+}

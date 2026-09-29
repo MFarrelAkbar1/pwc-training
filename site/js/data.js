@@ -36,19 +36,25 @@ export const SECTIONS = {
     },
   },
   logic: {
-    name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], minutes: 10, questions: 15,
+    name: "Logic (TPA-style)", short: "Logic", prefix: "L", tests: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+    minutes: 10, questions: 15,
     generated: true,
     // Subtest 5 timer: 17 minutes for 17 questions. Change it here (its JSON has no timeLimitSec).
     // Subtests 6–9 (figural question bank) all use FIGURAL_BANK_MINUTES above, subtest 10 FIGURAL_TESTS_MINUTES.
+    // Subtests 11–16 (tools/gen_logic.py) keep the pace of their topic's first set: sequences like 1, analogies like 3,
+    // syllogisms like 4. Their JSON timeLimitSec says the same; tools/check_data.py checks that the two agree.
     testMinutes: {
       1: 10, 2: 12, 3: 8, 4: 12, 5: 17,
       6: FIGURAL_BANK_MINUTES, 7: FIGURAL_BANK_MINUTES, 8: FIGURAL_BANK_MINUTES, 9: FIGURAL_BANK_MINUTES,
       10: FIGURAL_TESTS_MINUTES,
+      11: 10, 12: 10, 13: 8, 14: 8, 15: 12, 16: 12,
     },
     testQuestions: { 5: 17, 6: 17, 7: 17, 8: 17, 9: 17, 10: 16 },
     testNames: {
       1: "Number sequences", 2: "Figure patterns", 3: "Analogies", 4: "Syllogisms", 5: "Figural patterns (extra hard)",
       6: "Figural analogies", 7: "Odd one out", 8: "Figural series", 9: "Figural matrices", 10: "Figural mix",
+      11: "Number sequences 2", 12: "Number sequences 3", 13: "Analogies 2", 14: "Analogies 3",
+      15: "Syllogisms 2", 16: "Syllogisms 3",
     },
     importedTests: [5, 6, 7, 8, 9, 10],
   },

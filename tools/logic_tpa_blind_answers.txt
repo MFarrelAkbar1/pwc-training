@@ -1,0 +1,95 @@
+# Blind pass (no answer keys consulted) - L11-L16 answers worked out independently
+L11-Q01  D  rule: add 6
+L11-Q02  B  rule: multiply by 2
+L11-Q03  B  rule: subtract 6
+L11-Q04  A  rule: squares 2^2..7^2
+L11-Q05  D  rule: interleaved 2,4,6,8 and 10,20,30
+L11-Q06  E  rule: differences 2,4,6,8,10,12
+L11-Q07  E  rule: alternate x2, +3
+L11-Q08  B  rule: each term = sum of previous two (19+31)
+L11-Q09  C  rule: n^2+1
+L11-Q10  C  rule: consecutive primes
+L11-Q11  C  rule: n/(n+1)
+L11-Q12  A  rule: cubes n^3
+L11-Q13  A  rule: differences double 1,2,4,...,32
+L11-Q14  E  rule: interleaved 5,8,11,14 (+3) and 40,35,30 (-5)
+L11-Q15  D  rule: n/(n+2): 1/3,2/4,3/5,4/6,5/7
+L12-Q01  C  rule: subtract 7
+L12-Q02  D  rule: multiply by 4
+L12-Q03  C  rule: divide by 2
+L12-Q04  A  rule: n(n+1)
+L12-Q05  C  rule: alternate x3, -2
+L12-Q06  B  rule: differences 3,6,9,12,15
+L12-Q07  E  rule: each term = sum of previous two
+L12-Q08  A  rule: n^3-1
+L12-Q09  D  rule: 2 x consecutive primes (2,3,5,7,11,13,17)
+L12-Q10  B  rule: (2/3)^n
+L12-Q11  A  rule: interleaved 3,6,12,24 (x2) and 20,17,14,11 (-3)
+L12-Q12  D  rule: x3 - 1
+L12-Q13  E  rule: sum of previous three (tribonacci)
+L12-Q14  B  rule: alternate +5, x2
+L12-Q15  E  rule: 1 - 1/2^n
+L13-Q01  B  relation: antonym
+L13-Q02  A  relation: part-whole
+L13-Q03  B  relation: tool-user
+L13-Q04  D  relation: category-member
+L13-Q05  C  relation: sequence
+L13-Q06  C  relation: degree
+L13-Q07  C  relation: synonym
+L13-Q08  E  relation: function
+L13-Q09  A  relation: part-whole
+L13-Q10  D  relation: antonym
+L13-Q11  A  relation: tool-user
+L13-Q12  D  relation: cause-effect
+L13-Q13  B  relation: antonym
+L13-Q14  E  relation: degree
+L13-Q15  E  relation: function
+L14-Q01  B  relation: synonym
+L14-Q02  A  relation: cause-effect
+L14-Q03  C  relation: category-member
+L14-Q04  C  relation: part-whole
+L14-Q05  A  relation: tool-user
+L14-Q06  D  relation: function | DOUBT: E (Head) defensible if read as "protects the head" rather than "protects against X"; D matches Umbrella:Rain (what it protects against)
+L14-Q07  E  relation: degree
+L14-Q08  E  relation: antonym
+L14-Q09  B  relation: sequence
+L14-Q10  D  relation: cause-effect
+L14-Q11  C  relation: part-whole
+L14-Q12  D  relation: synonym
+L14-Q13  E  relation: degree
+L14-Q14  A  relation: effect-cause
+L14-Q15  B  relation: function | DOUBT: answer is clear, but the relation could also be labelled part-whole (brake is part of a car)
+L15-Q01  D
+L15-Q02  B
+L15-Q03  B
+L15-Q04  E
+L15-Q05  A
+L15-Q06  D
+L15-Q07  A
+L15-Q08  E
+L15-Q09  C
+L15-Q10  D
+L15-Q11  A
+L15-Q12  E
+L15-Q13  C
+L15-Q14  B
+L15-Q15  C
+L16-Q01  D
+L16-Q02  A
+L16-Q03  E
+L16-Q04  C
+L16-Q05  B
+L16-Q06  D
+L16-Q07  E
+L16-Q08  D
+L16-Q09  A
+L16-Q10  A
+L16-Q11  E
+L16-Q12  C
+L16-Q13  B
+L16-Q14  C
+L16-Q15  B
+
+# Re-check after the fixes (a second fresh subagent, no keys, only these two questions as rewritten):
+# L14-Q06 Umbrella : Rain = Helmet : ? (distractor "Head" replaced by "Strap")  ->  D (Injury), relation: function; no second option defensible
+# L14-Q15 rewritten as Anchor : Ship = Leash : ? (was "Brake : Car", which also reads as part-whole)  ->  B (Dog), relation: function; no second option defensible

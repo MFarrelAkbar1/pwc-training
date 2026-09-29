@@ -10,7 +10,8 @@ SITE = Path(__file__).resolve().parent.parent / "site"
 SOURCES = {"recomputed", "dropped"}
 FLAGS = {"recomputed", "dropped", "disputed", "missing-key", "truncated", "ambiguous"}
 TIME_LIMIT = {"numerical": 1020, "verbal": 480, "english": 900, "technical": 1200,
-              "logic": {1: 600, 2: 720, 3: 480, 4: 720}}  # Logic: per subtest
+              "logic": {1: 600, 2: 720, 3: 480, 4: 720, 11: 600, 12: 600, 13: 480, 14: 480, 15: 720, 16: 720}}
+# (Logic: per subtest)
 OPTION_COUNT = {"numerical": 5, "verbal": 3, "english": 4, "logic": 5, "technical": 4}
 # PwC entrance-test papers: 15 questions in 15 minutes, 4 options (verbal V8 also has 3-option True/False/Cannot say
 # questions), and N6's data-interpretation questions use a passage instead of a chart.
@@ -40,6 +41,18 @@ TECHNICAL_TYPED = {"T4": 0.4, "T5": 0.4, "T6": 0.4, "T7": 0.4, "T8": 0.5}
 # distractor by at most this many characters (options that are fixed names, e.g. COSO components, are exempt).
 MAX_CORRECT_LEAD = 4
 FIXED_NAME_OPTIONS = {"Information and communication"}
+# Logic 11-16 (tools/gen_logic.py): second and third sets of number sequences (L11-12), analogies (L13-14) and
+# syllogisms (L15-16). 15 questions, A-E three times each, and an easy / medium / hard mix; the second set of each
+# topic has one easy question fewer. The timer is in both the JSON and data.js testMinutes, and they must agree.
+LOGIC_TYPED = {"L11": "sequence", "L12": "sequence", "L13": "analogy", "L14": "analogy",
+               "L15": "syllogism", "L16": "syllogism"}
+LOGIC_MIX = {"L11": {"easy": 5, "medium": 7, "hard": 3}, "L13": {"easy": 5, "medium": 7, "hard": 3},
+             "L15": {"easy": 5, "medium": 7, "hard": 3}, "L12": {"easy": 4, "medium": 8, "hard": 3},
+             "L14": {"easy": 4, "medium": 8, "hard": 3}, "L16": {"easy": 4, "medium": 8, "hard": 3}}
+LOGIC_RELATIONS = {"synonym", "antonym", "part-whole", "cause-effect", "effect-cause", "category-member",
+                   "tool-user", "degree", "function", "sequence"}
+NONE_FOLLOWS = "None of these conclusions follows."
+MAX_LOGIC_LONGEST = 3  # the correct option may be the unique longest in at most 3 of 15 questions
 VERBAL_OPTIONS = {"A": "True", "B": "False", "C": "Cannot say"}
 CUT_MARKER = "[...text cut off in source]"
 
@@ -140,6 +153,58 @@ def check_technical_typed(test, min_scenario, say):
         say(f"correct option is the longest in {longest} of {len(qs)} questions")
 
 
+def check_logic_typed(test, kind, say):
+    qs = test["questions"]
+    if len(qs) != 15:
+        say(f"{len(qs)} questions, expected 15")
+    mix = {d: sum(q.get("difficulty") == d for q in qs) for d in ("easy", "medium", "hard")}
+    if mix != LOGIC_MIX[test["id"]]:
+        say(f"difficulty mix {mix}, expected {LOGIC_MIX[test['id']]}")
+    letters = {letter: sum(q.get("answer") == letter for q in qs) for letter in "ABCDE"}
+    if set(letters.values()) != {3}:
+        say(f"answers {letters} aren't spread evenly over A-E")
+    longest = 0
+    for q in qs:
+        lengths = [len(v) for v in q["options"].values()]
+        correct = len(q["options"].get(q["answer"], ""))
+        longest += correct == max(lengths) and lengths.count(correct) == 1
+        if kind == "analogy" and q.get("relation") not in LOGIC_RELATIONS:
+            say(f"{q['id']}: relation {q.get('relation')!r} not one of the known types")
+        if kind == "syllogism" and q["options"].get("E") != NONE_FOLLOWS:
+            say(f"{q['id']}: option E must be '{NONE_FOLLOWS}'")
+        if kind == "sequence" and not re.match(r"What number (comes next|is missing)\?", q["text"]):
+            say(f"{q['id']}: not a 'comes next' / 'is missing' question")
+    if longest > MAX_LOGIC_LONGEST:
+        say(f"correct option is the unique longest in {longest} of {len(qs)} questions")
+
+
+def logic_timers_in_data_js():
+    """Logic 1-4 and 11-16 have a timer in their JSON and in data.js testMinutes; the two must agree."""
+    js = (SITE / "js" / "data.js").read_text(encoding="utf-8")
+    block = re.search(r'prefix: "L".*?testMinutes: \{(.*?)\}', js, re.S)
+    if not block:
+        return ["data.js: Logic testMinutes missing"]
+    minutes = {int(n): int(m) for n, m in re.findall(r"\b(\d+): (\d+)\b", block[1])}
+    return [f"data.js: Logic subtest {n} is {minutes.get(n)} min, its JSON says {sec // 60}"
+            for n, sec in TIME_LIMIT["logic"].items() if minutes.get(n) * 60 != sec]
+
+
+def repeated_logic_questions():
+    """Generated Logic questions (L1-L4, L11-L16) whose text appears more than once."""
+    seen, problems = {}, []
+    for n in [*range(1, 5), *range(11, 17)]:
+        path = SITE / "data" / f"logic-{n}.json"
+        if not path.exists():
+            problems.append(f"{path.name} missing")
+            continue
+        for q in json.loads(path.read_text(encoding="utf-8"))["questions"]:
+            key = (" ".join(q["text"].lower().split()), q.get("image"))  # L2 shares one text, differs by image
+            if key in seen:
+                problems.append(f"{q['id']}: same question as {seen[key]}")
+            seen.setdefault(key, q["id"])
+    return problems
+
+
 def repeated_technical_questions():
     """Question texts that appear more than once across all Technical tests."""
     seen, problems = {}, []
@@ -186,6 +251,8 @@ def check_test(path):
     else:
         if test["id"] in TECHNICAL_TYPED:
             check_technical_typed(test, TECHNICAL_TYPED[test["id"]], say)
+        if test["id"] in LOGIC_TYPED:
+            check_logic_typed(test, LOGIC_TYPED[test["id"]], say)
         expected = TIME_LIMIT[section][test["test"]] if section == "logic" else TIME_LIMIT[section]
         expected = ENTRANCE.get(test["id"], {}).get("timeLimitSec", expected)
         if test.get("timeLimitSec") != expected:
@@ -289,6 +356,14 @@ def main():
     timer_problems = english_timers_in_data_js()
     print(f"{'data.js':<18} English timers  {'ok' if not timer_problems else f'{len(timer_problems)} problem(s)'}")
     for p in timer_problems:
+        print("   -", p)
+    logic_timers = logic_timers_in_data_js()
+    print(f"{'data.js':<18} Logic timers  {'ok' if not logic_timers else f'{len(logic_timers)} problem(s)'}")
+    for p in logic_timers:
+        print("   -", p)
+    logic_repeats = repeated_logic_questions()
+    print(f"{'logic-*':<18} repeated questions  {'none' if not logic_repeats else f'{len(logic_repeats)} problem(s)'}")
+    for p in logic_repeats:
         print("   -", p)
     repeats = repeated_technical_questions()
     print(f"{'technical-*':<18} repeated questions  {'none' if not repeats else f'{len(repeats)} problem(s)'}")

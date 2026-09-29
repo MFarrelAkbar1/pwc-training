@@ -253,7 +253,7 @@ solutions", "soluations", "It is be inferred"). V8-Q06's explanation is rewritte
 
 # Generated sections: English, Logic, Technical
 
-These 340 questions were **written for this site**, not taken from the PDF. Every one has
+These 430 questions were **written for this site**, not taken from the PDF. Every one has
 `"source": "generated"` and shows a "Generated · unverified" label. The section pages say that
 the questions haven't been checked against an official source.
 
@@ -262,6 +262,7 @@ the questions haven't been checked against an official source.
 | English (TOEFL-style) | E1–E3 | 3 × 20 (8 sentence completion, 4 error spotting, 8 reading from 2 passages) | 15 min each | Written and checked by hand |
 | English (TOEFL-style) | E4–E6 | 3 × 20: Structure, Written Expression, Reading (3 passages) | 13 / 13 / 25 min | Written by hand in `tools/gen_english.py`, blind-checked (see "English 4–6" below) |
 | Logic (TPA-style) | L1–L4 | 4 × 15 | 10 / 12 / 8 / 12 min | **Computed** by `tools/gen_logic.py` (L1, L2, L4); L3 written by hand |
+| Logic (TPA-style) | L11–L16 | 6 × 15: two more sets each of sequences, analogies, syllogisms | 10 / 10 / 8 / 8 / 12 / 12 min | Written in `tools/gen_logic.py`; sequences and syllogisms **checked in code**, all blind-checked (see "Logic Subtests 11–16" below) |
 | Technical (Risk Assurance) | T1–T3 | 3 × 20 (18 of 60 scenario-based; easy, medium and hard mixed) | 20 min each | Written and checked by hand |
 | Technical (Risk Assurance) | T4–T8 | 5 × 20 by topic + a mixed mock (58 of 100 scenario-based) | 20 min each | Written by hand in `tools/gen_technical.py`, facts checked against sources, blind-checked (see "Technical 4–8" below) |
 
@@ -1087,3 +1088,100 @@ figure is built up two strokes a step, but I can't state exactly which strokes c
 8. **11** (dropped, key A): A and B differ only in the new symbol.
 9. **1** (dropped, key C): no option is exactly right.
 10. **6** (scored E): tiny arrowheads decide it.
+
+## Logic Subtests 11–16: more sequences, analogies and syllogisms
+
+Written for this site in `tools/gen_logic.py` (same file and format as L1, L3 and L4), which now also writes
+`site/data/logic-11..16.json`. Fix a question there and rerun `python tools/gen_logic.py`. The run is seeded and still
+produces L1–L4 (and the L2 pictures) byte-identical to before.
+
+| Subtest | Name | Questions | Timer | Easy / medium / hard |
+|---|---|---|---|---|
+| L11 | Number sequences 2 | 15 | 10 min (as L1) | 5 / 7 / 3 |
+| L12 | Number sequences 3 | 15 | 10 min | 4 / 8 / 3 |
+| L13 | Analogies 2 | 15 | 8 min (as L3) | 5 / 7 / 3 |
+| L14 | Analogies 3 | 15 | 8 min | 4 / 8 / 3 |
+| L15 | Syllogisms 2 | 15 | 12 min (as L4) | 5 / 7 / 3 |
+| L16 | Syllogisms 3 | 15 | 12 min | 4 / 8 / 3 |
+
+Each question has a `difficulty`. The third set of each topic swaps one easy question for a medium one and uses
+harder rules within each level (L12: tribonacci, alternating operations with a missing middle term, 1 − 1/2ⁿ; L16:
+five 3-statement questions against two in L15). Every question has its own explanation: the rule, the relation and
+why the tempting option fails, or why the conclusion follows and why the others don't. The timers are in
+`testMinutes` in `site/js/data.js` and in each JSON's `timeLimitSec`; `check_data.py` checks that they agree.
+
+**Content.**
+- *Sequences:* arithmetic and geometric, second differences, two interleaved series, alternating operations
+  (× 2 + 3, × 3 − 2, + 5 × 2), squares, cubes, n(n + 1), primes and doubled primes, Fibonacci-like and tribonacci,
+  and fractions (n/(n+1), n/(n+2) in lowest terms, × 2/3, 1 − 1/2ⁿ). 9 of the 30 ask for a **missing middle term**
+  ("What number is missing?").
+- *Analogies:* the same "A : B = C : ?" format as L3. The relations are antonym, synonym, part-whole, cause-effect
+  (plus one effect-cause), category-member, tool-user, degree, function and sequence, with only everyday words.
+- *Syllogisms:* the same format as L4 (options A–D are conclusions and E is "None of these conclusions follows"). Each
+  set has 3 "none follows" questions and mixes all / no / some / some…not. Negative conclusions ("No …", "Some … are
+  not …", and in L16-Q15 "It is not true that all …") are the key in 17 of the 24 questions that have one.
+
+**Logic convention (the same as L4).** L4's checker assumes that **every group named in a question has at least one
+member** (existential import), so "All A are B" implies "Some A are B". "Some" means at least one, possibly all.
+L15–L16 use exactly the same rule. Five keys are valid *only* under it: L15-Q13, L16-Q06, L16-Q08, L16-Q09 and L16-Q15
+(checked by re-running the brute force with empty groups allowed). Their explanations say "there is at least one …".
+
+**Checks in code (they run on every build and stop it with an error).**
+- *Sequences:* each answer is computed from the rule that builds the sequence. The generator checks that exactly one
+  option has that value, and that **no rival rule fits the sequence with any wrong option filled in**. The rival rules
+  are constant 1st, 2nd and 3rd differences (polynomials up to degree 3), a constant ratio, "m × previous + c",
+  two alternating +k or ×k operations, two interleaved arithmetic or geometric series, p × previous + q × the one before,
+  tribonacci, consecutive primes × 1–3 ± 10, n², n³, 2ⁿ and n(n + 1) ± a constant, and for fractions, numerator and
+  denominator rules. A rival rule only counts if it is over-determined (fits at least two terms it didn't need), so it
+  can't fit by accident. A self-test makes sure the detectors fire on known patterns. They recognise 29 of the 30
+  intended rules; the odd one out is L11-Q15, whose n/(n+2) is hidden by lowest terms and was checked by hand. Also
+  checked: no run of 4 terms is repeated from L1 or between the new sets, and the correct value's rank among the 5
+  options is spread evenly (3 × smallest, 3 × second, … 3 × largest), so it isn't always the middle value.
+- *Syllogisms:* every arrangement of the groups (every set of non-empty Venn regions with no group empty: 109 for
+  3 groups, 32,297 for 4) is tried. The key must hold in every arrangement where the statements hold, and **every
+  wrong option must fail in at least one**. For a "none follows" question, all four must fail. No two options may
+  mean the same, no option may repeat a statement, and no statement set may repeat L4.
+- *All six sets:* 15 questions, 5 options, A–E the answer 3 times each (L1 and L4 are lopsided), the difficulty
+  mix, the correct option the unique longest in at most 3 of 15 (actual: L13 3, L14 1, the others 0), no key form
+  in more than half the syllogisms, and no empty explanation.
+
+**What the checks caught.**
+1. L15-Q05 offered "Some organisers are paid staff" *and* "Some paid staff are organisers", which mean the same
+   (the equivalence check). One was replaced.
+2. The length check failed for L15 (4) and L16 (6): "Some … are not …" keys are naturally the longest sentences.
+   The distractors were rebalanced so each such key has an equally long distractor, e.g. the reverse "Some … are not …".
+   "It is not true that all …" distractors were added to three questions (L15-Q04, L16-Q11, L16-Q15), where
+   the fixed E option would otherwise have been the longest.
+3. While checking the output I found a bug of my own: the syllogism data had 4 wrong conclusions for questions with a
+   key, and E then overwrote one of them. The data now has 3 (4 for "none follows"), and the generator asserts it.
+4. No sequence distractor was rejected by the rival-rule check: the wrong options were hand-picked slips (repeating
+   the last step, the wrong one of two series, the wrong operation, averaging the neighbours).
+
+**Blind check.** A fresh subagent answered all 90 questions from a copy without keys, explanations or relations,
+and named the relation of each analogy (`tools/logic_tpa_blind_answers.txt`). It agreed with **90/90** keys and with
+all 30 relation labels. It raised two doubts, and I rewrote both:
+
+| Question | Doubt | Change |
+|---|---|---|
+| L14-Q06 Umbrella : Rain = Helmet : **Injury** | "Head" defensible as "what it protects" | Distractor "Head" replaced by "Strap"; explanation updated |
+| L14-Q15 Anchor : Ship = Brake : **Car** | A brake is also *part of* a car, so the relation reads two ways (and "Wheel" gets close) | Rewritten as Anchor : Ship = Leash : **Dog** (holds in place), with Owner / Walk / Park / Rope |
+
+A second fresh subagent answered the two rewritten questions blind and found both clean (D and B, "function", no
+second defensible option). I also extended the explanations of L15-Q04 and L16-Q11 to cover their "It is not true
+that …" option, which a test answer during the browser check showed was missing.
+
+**Site check.** `check_data.py` has new checks for L11–L16: 15 questions, the difficulty mix, A–E 3 each, the
+length giveaway, a relation on every analogy, "None of these conclusions follows." as option E on every syllogism,
+the `data.js` timers matching the JSON, and no repeated question across L1–L4 and L11–L16. In Chrome I ran a full L15
+exam (15 answers, 3 wrong on purpose): 12/15, 12:00 timer, the 3 wrong answers in the wrong-answer bank, and the
+review filter works. I also ran L13 (8:00) and viewed its results review at 375 px, with no horizontal scroll. The test
+attempts were removed and the saved progress restored exactly.
+
+### Least sure (L11–L16)
+| Question | Issue |
+|---|---|
+| L14-Q06 | Helmet : **Injury** ("protects against"). Rewritten after the blind pass; the abstract answer may still feel less natural than a concrete one. |
+| L14-Q15 | Leash : **Dog**. New after the blind pass and checked by one subagent only. "Owner" is the tempting wrong answer. |
+| L13-Q15 | Ruler : Length = Clock : **Time** ("measures"). "Hour" (a unit) and "Watch" (another clock) are deliberate traps; labelled "function". |
+| L15-Q13 | "All nurses are shift workers; all nurses are first-aiders → some shift workers are first-aiders." Valid **only** under the at-least-one-member convention, the same as L4. Under modern logic, E would be the answer. |
+| L11-Q15 | 1/3, 1/2, 3/5, 2/3 → **5/7** (n/(n+2) with 2/4 and 4/6 reduced). The only intended rule the rival-rule detectors don't recognise, so it was checked by hand; it is hard because the pattern is hidden by lowest terms. |
