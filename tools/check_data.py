@@ -9,7 +9,7 @@ from pathlib import Path
 SITE = Path(__file__).resolve().parent.parent / "site"
 SOURCES = {"recomputed", "dropped"}
 FLAGS = {"recomputed", "dropped", "disputed", "missing-key", "truncated", "ambiguous"}
-TIME_LIMIT = {"numerical": 1020, "verbal": 480, "english": 900, "technical": 1200,
+TIME_LIMIT = {"numerical": 1020, "verbal": 780, "english": 900, "technical": 1200,
               "logic": {1: 600, 2: 720, 3: 480, 4: 720, 11: 600, 12: 600, 13: 480, 14: 480, 15: 720, 16: 720}}
 # (Logic: per subtest)
 OPTION_COUNT = {"numerical": 5, "verbal": 3, "english": 4, "logic": 5, "technical": 4}

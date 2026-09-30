@@ -23,7 +23,7 @@ export const SECTIONS = {
     testMinutes: { 6: 15 }, testQuestions: { 6: 15 },
   },
   verbal: {
-    name: "Verbal Reasoning", short: "Verbal", prefix: "V", tests: [1, 2, 3, 4, 5, 6, 7, 8], minutes: 8, questions: 15,
+    name: "Verbal Reasoning", short: "Verbal", prefix: "V", tests: [1, 2, 3, 4, 5, 6, 7, 8], minutes: 13, questions: 15,
     testMinutes: { 8: 15 },
   },
   english: {
