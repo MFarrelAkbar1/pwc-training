@@ -9,13 +9,13 @@ from pathlib import Path
 SITE = Path(__file__).resolve().parent.parent / "site"
 SOURCES = {"recomputed", "dropped"}
 FLAGS = {"recomputed", "dropped", "disputed", "missing-key", "truncated", "ambiguous"}
-TIME_LIMIT = {"numerical": 1020, "verbal": 780, "english": 900, "technical": 1200,
+TIME_LIMIT = {"numerical": 1800, "verbal": 780, "english": 900, "technical": 1200,
               "logic": {1: 600, 2: 720, 3: 480, 4: 720, 11: 600, 12: 600, 13: 480, 14: 480, 15: 720, 16: 720}}
 # (Logic: per subtest)
 OPTION_COUNT = {"numerical": 5, "verbal": 3, "english": 4, "logic": 5, "technical": 4}
 # PwC entrance-test papers: 15 questions in 15 minutes, 4 options (verbal V8 also has 3-option True/False/Cannot say
 # questions), and N6's data-interpretation questions use a passage instead of a chart.
-ENTRANCE = {"V8": {"timeLimitSec": 900, "extraOptionCount": 4}, "N6": {"timeLimitSec": 900, "optionCount": 4}}
+ENTRANCE = {"V8": {"timeLimitSec": 900, "extraOptionCount": 4}, "N6": {"timeLimitSec": 1800, "optionCount": 4}}
 GENERATED = {"english", "logic", "technical"}  # sections written for the site, not from the PDF
 # Tests imported from an outside question set (source "imported", key from that source). They are image-only:
 # every question is a picture with the options drawn in it, so an explanation is optional (empty when the rule

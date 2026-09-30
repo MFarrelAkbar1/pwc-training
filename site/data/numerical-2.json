@@ -3,7 +3,7 @@
   "section": "numerical",
   "test": 2,
   "title": "Numerical Reasoning – Test 2",
-  "timeLimitSec": 1020,
+  "timeLimitSec": 1800,
   "datasets": {
     "ipg": {
       "title": "Operating Performance for International Paper Goods (IPG), EUR million",

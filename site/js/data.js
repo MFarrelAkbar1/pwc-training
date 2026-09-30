@@ -19,8 +19,8 @@ const ENGLISH_MINUTES = { structure: 13, writtenExpression: 13, reading: 25 };
 
 export const SECTIONS = {
   numerical: {
-    name: "Numerical Reasoning", short: "Numerical", prefix: "N", tests: [1, 2, 3, 4, 5, 6], minutes: 17, questions: 20,
-    testMinutes: { 6: 15 }, testQuestions: { 6: 15 },
+    name: "Numerical Reasoning", short: "Numerical", prefix: "N", tests: [1, 2, 3, 4, 5, 6], minutes: 30, questions: 20,
+    testQuestions: { 6: 15 },
   },
   verbal: {
     name: "Verbal Reasoning", short: "Verbal", prefix: "V", tests: [1, 2, 3, 4, 5, 6, 7, 8], minutes: 13, questions: 15,

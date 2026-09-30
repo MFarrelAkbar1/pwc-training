@@ -3,7 +3,7 @@
   "section": "numerical",
   "test": 5,
   "title": "Numerical Reasoning – Test 5",
-  "timeLimitSec": 1020,
+  "timeLimitSec": 1800,
   "datasets": {
     "claims": {
       "title": "Business Insurance claims per annum per 100,000 policies",

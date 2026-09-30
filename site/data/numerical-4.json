@@ -3,7 +3,7 @@
   "section": "numerical",
   "test": 4,
   "title": "Numerical Reasoning – Test 4",
-  "timeLimitSec": 1020,
+  "timeLimitSec": 1800,
   "datasets": {
     "gdp": {
       "title": "GDP per person (£), UK vs France, and 2009 country figures",

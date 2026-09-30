@@ -3,7 +3,7 @@
   "section": "numerical",
   "test": 3,
   "title": "Numerical Reasoning – Test 3",
-  "timeLimitSec": 1020,
+  "timeLimitSec": 1800,
   "datasets": {
     "drugs": {
       "title": "Regional Drug Sales: Tequental & Parnol (% of each drug's sales)",
